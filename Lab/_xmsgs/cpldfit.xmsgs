@@ -5,7 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">SevenSegDriver.ise</arg>&apos;.
+<msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">TopLevel.ise</arg>&apos;.
+</msg>
+
+<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">Clock</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P44</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">Clock</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="error" file="Cpld" num="1248" delta="new" >DRC error: too many Asynchronous Set/Resets (AP/AR) in design. At least <arg fmt="%s" index="1">6</arg> function blocks are required to implement them, only <arg fmt="%s" index="2">4</arg> are available in this device.
+</msg>
+
+<msg type="error" file="Cpld" num="1064" delta="old" >Design rules checking error. Fitting process stopped.
+</msg>
+
+<msg type="error" file="Cpld" num="868" delta="old" >Cannot fit the design into any of the specified devices with the selected implementation options.
 </msg>
 
 </messages>

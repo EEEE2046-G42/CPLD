@@ -1,0 +1,15 @@
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'TopLevel.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'Clock' based upon the LOC
+   constraint 'P44'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'Clock'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+ERROR:Cpld:1248 - DRC error: too many Asynchronous Set/Resets (AP/AR) in design.
+   At least 6 function blocks are required to implement them, only 4 are
+   available in this device.
+ERROR:Cpld:1064 - Design rules checking error. Fitting process stopped.
+ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
+   the selected implementation options.

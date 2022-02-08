@@ -1,1 +1,17 @@
 xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Implementation.ucf -p xc2c64a-VQ44-5 "TopLevel.ngc" TopLevel.ngd  
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Implementation.ucf -p xc2c64a-VQ44-5 "TopLevel.ngc" TopLevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevel.ngd 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Implementation.ucf -p xc2c64a-VQ44-5 "TopLevel.ngc" TopLevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevel.ngd 
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevel.ngd 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.xst" -ofn "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Implementation.ucf -p xc2c64a-VQ44-5 "TopLevel.ngc" TopLevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevel.ngd 

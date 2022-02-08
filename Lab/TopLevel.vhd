@@ -44,9 +44,9 @@ end TopLevel;
 architecture Behavioral of TopLevel is
 	--signal updateSevenSeg : STD_LOGIC;	-- 7seg update signal
 	signal divClock : STD_LOGIC;	-- Divided clock
-	signal read_Enable : STD_LOGIC := 0;	-- Enable shift register
-	signal sample : STD_LOGIC := 0;	-- Trigger shift register to sample
-	signal clear : STD_LOGIC := 0;	-- Clear shift register
+	signal read_Enable : STD_LOGIC := '0';	-- Enable shift register
+	signal sample : STD_LOGIC := '0';	-- Trigger shift register to sample
+	signal clear : STD_LOGIC := '0';	-- Clear shift register
 	signal received : STD_LOGIC_VECTOR (7 downto 0);
 	
 	
@@ -101,22 +101,20 @@ Controller: ControlLogicVHDL PORT MAP (
 	data_in => data,
 	read_enable => read_enable,
 	sample => sample,
-	clear => clear
+	clear => clear 
 );
 		  
 LowerSevenSeg: SevenSegDriverVHDL PORT MAP (
-	BCD => received(3 downto 0),--LowerBCD,
-	sevenSeg => Display(7 downto 0)--,
-	--clk => updateSevenSeg
+	BCD => received(3 downto 0),
+	sevenSeg => Display(7 downto 0)
 );
 
 UpperSevenSeg: SevenSegDriverVHDL PORT MAP (
 	BCD => received(7 downto 4),
-	sevenSeg => Display(15 downto 8)--,
-	--clk => updateSevenSeg
+	sevenSeg => Display(15 downto 8)
 );
 
-UARTRecv: UARTReceiver PORT MAP(
+UARTRecv: UARTReceiver PORT MAP (
 	CLK => sample, 
 	Data_in => data, 
 	EN => read_enable, 

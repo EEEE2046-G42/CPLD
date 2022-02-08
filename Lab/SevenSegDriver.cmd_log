@@ -35,3 +35,6 @@ cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -l
 XSLTProcess SevenSegDriver_build.xml 
 tsim -intstyle ise SevenSegDriver SevenSegDriver.nga 
 hprep6 -s IEEE1149 -i SevenSegDriver 
+XSLTProcess SevenSegDriver_build.xml 
+XSLTProcess SevenSegDriver_build.xml 
+XSLTProcess SevenSegDriver_build.xml 

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 13.4
 --  \   \         Application : sch2hdl
 --  /   /         Filename : UARTReceiver.vhf
--- /___/   /\     Timestamp : 02/07/2022 11:53:13
+-- /___/   /\     Timestamp : 02/08/2022 15:43:27
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -18,6 +18,98 @@
 --    This vhdl netlist is translated from an ECS schematic. It can be 
 --    synthesized and simulated, but it should not be modified. 
 --
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+
+entity FD_MXILINX_UARTReceiver is
+   generic( INIT : bit :=  '0');
+   port ( C : in    std_logic; 
+          D : in    std_logic; 
+          Q : out   std_logic);
+end FD_MXILINX_UARTReceiver;
+
+architecture BEHAVIORAL of FD_MXILINX_UARTReceiver is
+   attribute BOX_TYPE   : string ;
+   signal XLXN_4 : std_logic;
+   component GND
+      port ( G : out   std_logic);
+   end component;
+   attribute BOX_TYPE of GND : component is "BLACK_BOX";
+   
+   component FDCP
+      generic( INIT : bit :=  '0');
+      port ( C   : in    std_logic; 
+             CLR : in    std_logic; 
+             D   : in    std_logic; 
+             PRE : in    std_logic; 
+             Q   : out   std_logic);
+   end component;
+   attribute BOX_TYPE of FDCP : component is "BLACK_BOX";
+   
+begin
+   I_36_43 : GND
+      port map (G=>XLXN_4);
+   
+   U0 : FDCP
+   generic map( INIT => INIT)
+      port map (C=>C,
+                CLR=>XLXN_4,
+                D=>D,
+                PRE=>XLXN_4,
+                Q=>Q);
+   
+end BEHAVIORAL;
+
+
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+
+entity ClockDiv2_MUSER_UARTReceiver is
+   port ( CLKIN  : in    std_logic; 
+          CLKOUT : out   std_logic);
+end ClockDiv2_MUSER_UARTReceiver;
+
+architecture BEHAVIORAL of ClockDiv2_MUSER_UARTReceiver is
+   attribute HU_SET     : string ;
+   attribute BOX_TYPE   : string ;
+   signal XLXN_1       : std_logic;
+   signal CLKOUT_DUMMY : std_logic;
+   component FD_MXILINX_UARTReceiver
+      generic( INIT : bit :=  '0');
+      port ( C : in    std_logic; 
+             D : in    std_logic; 
+             Q : out   std_logic);
+   end component;
+   
+   component INV
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute BOX_TYPE of INV : component is "BLACK_BOX";
+   
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_5";
+begin
+   CLKOUT <= CLKOUT_DUMMY;
+   XLXI_4 : FD_MXILINX_UARTReceiver
+      port map (C=>CLKIN,
+                D=>XLXN_1,
+                Q=>CLKOUT_DUMMY);
+   
+   XLXI_6 : INV
+      port map (I=>CLKOUT_DUMMY,
+                O=>XLXN_1);
+   
+end BEHAVIORAL;
+
+
 
 library ieee;
 use ieee.std_logic_1164.ALL;
@@ -211,9 +303,10 @@ end UARTReceiver;
 
 architecture BEHAVIORAL of UARTReceiver is
    attribute HU_SET     : string ;
-   attribute BOX_TYPE   : string ;
    signal XLXN_17  : std_logic_vector (7 downto 0);
    signal XLXN_41  : std_logic;
+   signal XLXN_42  : std_logic;
+   signal XLXN_43  : std_logic;
    component SR8CE_MXILINX_UARTReceiver
       port ( C   : in    std_logic; 
              CE  : in    std_logic; 
@@ -230,14 +323,13 @@ architecture BEHAVIORAL of UARTReceiver is
              Q   : out   std_logic_vector (7 downto 0));
    end component;
    
-   component CLK_DIV8
-      port ( CLKIN : in    std_logic; 
-             CLKDV : out   std_logic);
+   component ClockDiv2_MUSER_UARTReceiver
+      port ( CLKIN  : in    std_logic; 
+             CLKOUT : out   std_logic);
    end component;
-   attribute BOX_TYPE of CLK_DIV8 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_8 : label is "XLXI_8_1";
-   attribute HU_SET of XLXI_9 : label is "XLXI_9_0";
+   attribute HU_SET of XLXI_8 : label is "XLXI_8_7";
+   attribute HU_SET of XLXI_9 : label is "XLXI_9_6";
 begin
    XLXI_8 : SR8CE_MXILINX_UARTReceiver
       port map (C=>CLK,
@@ -253,9 +345,17 @@ begin
                 D(7 downto 0)=>XLXN_17(7 downto 0),
                 Q(7 downto 0)=>Data_out(7 downto 0));
    
-   XLXI_13 : CLK_DIV8
+   XLXI_17 : ClockDiv2_MUSER_UARTReceiver
       port map (CLKIN=>CLK,
-                CLKDV=>XLXN_41);
+                CLKOUT=>XLXN_42);
+   
+   XLXI_18 : ClockDiv2_MUSER_UARTReceiver
+      port map (CLKIN=>XLXN_42,
+                CLKOUT=>XLXN_43);
+   
+   XLXI_19 : ClockDiv2_MUSER_UARTReceiver
+      port map (CLKIN=>XLXN_43,
+                CLKOUT=>XLXN_41);
    
 end BEHAVIORAL;
 

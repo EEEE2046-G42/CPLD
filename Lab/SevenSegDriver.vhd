@@ -29,14 +29,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SevenSegDriver is
+entity SevenSegDriverVHDL is
     Port ( BCD : in  std_logic_vector (3 downto 0);
-           sevenSeg : out  std_logic_vector (7 downto 0)--;
-			  --clk : in STD_LOGIC
+           sevenSeg : out  std_logic_vector (7 downto 0)
 			  );
-end SevenSegDriver;
+end SevenSegDriverVHDL;
 
-architecture Behavioral of SevenSegDriver is
+architecture Behavioral of SevenSegDriverVHDL is
 
 begin
 

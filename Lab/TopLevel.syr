@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.23 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> Reading design: TopLevel.prj
 
@@ -76,19 +76,355 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" in Library work.
-Entity <ClockDiv> compiled.
-Entity <ClockDiv> (Architecture <BEHAVIORAL>) compiled.
+Architecture behavioral of Entity fd_mxilinx_clockdiv is up to date.
+Architecture behavioral of Entity clockdiv2_muser_clockdiv is up to date.
+Architecture behavioral of Entity clockdiv is up to date.
 Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
-Architecture behavioral of Entity controllogicvhdl is up to date.
+Entity <controllogicvhdl> compiled.
+Entity <controllogicvhdl> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" in Library work.
+WARNING:HDLParsers:1406 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" Line 42. No sensitivity list and no wait in the process
+Architecture behavioral of Entity sevensegdrivervhdl is up to date.
+Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" in Library work.
+Architecture behavioral of Entity fd_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity clockdiv2_muser_uartreceiver is up to date.
+Architecture behavioral of Entity sr8ce_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity fdd8ce_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity uartreceiver is up to date.
 Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" in Library work.
-Entity <toplevel> compiled.
-ERROR:HDLParsers:800 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" Line 110. Type of clk is incompatible with type of updateSevenSeg.
-ERROR:HDLParsers:800 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" Line 116. Type of clk is incompatible with type of updateSevenSeg.
+Architecture behavioral of Entity toplevel is up to date.
+Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" in Library work.
+Architecture behavioral of Entity fd_mxilinx_clockdiv2 is up to date.
+Architecture behavioral of Entity clockdiv2 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopLevel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDiv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ControlLogicVHDL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SevenSegDriverVHDL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <UARTReceiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDiv2_MUSER_ClockDiv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SR8CE_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FDD8CE_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDiv2_MUSER_UARTReceiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FD_MXILINX_ClockDiv> in library <work> (architecture <behavioral>) with generics.
+	INIT = '0'
+
+Analyzing hierarchy for entity <FD_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>) with generics.
+	INIT = '0'
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopLevel> in library <work> (Architecture <behavioral>).
+Entity <TopLevel> analyzed. Unit <TopLevel> generated.
+
+Analyzing Entity <ClockDiv> in library <work> (Architecture <behavioral>).
+Entity <ClockDiv> analyzed. Unit <ClockDiv> generated.
+
+Analyzing Entity <ClockDiv2_MUSER_ClockDiv> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  XLXI_4_8" for instance <XLXI_4> in unit <ClockDiv2_MUSER_ClockDiv>.
+Entity <ClockDiv2_MUSER_ClockDiv> analyzed. Unit <ClockDiv2_MUSER_ClockDiv> generated.
+
+Analyzing generic Entity <FD_MXILINX_ClockDiv> in library <work> (Architecture <behavioral>).
+	INIT = '0'
+    Set user-defined property "INIT =  0" for instance <U0> in unit <FD_MXILINX_ClockDiv>.
+Entity <FD_MXILINX_ClockDiv> analyzed. Unit <FD_MXILINX_ClockDiv> generated.
+
+Analyzing Entity <ControlLogicVHDL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" line 49: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data_in>
+Entity <ControlLogicVHDL> analyzed. Unit <ControlLogicVHDL> generated.
+
+Analyzing Entity <SevenSegDriverVHDL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <BCD>
+Entity <SevenSegDriverVHDL> analyzed. Unit <SevenSegDriverVHDL> generated.
+
+Analyzing Entity <UARTReceiver> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  XLXI_8_7" for instance <XLXI_8> in unit <UARTReceiver>.
+    Set user-defined property "HU_SET =  XLXI_9_6" for instance <XLXI_9> in unit <UARTReceiver>.
+Entity <UARTReceiver> analyzed. Unit <UARTReceiver> generated.
+
+Analyzing Entity <SR8CE_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  0" for instance <Q0> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q1> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q2> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q3> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q4> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q5> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q6> in unit <SR8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <Q7> in unit <SR8CE_MXILINX_UARTReceiver>.
+Entity <SR8CE_MXILINX_UARTReceiver> analyzed. Unit <SR8CE_MXILINX_UARTReceiver> generated.
+
+Analyzing Entity <FDD8CE_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <FDD8CE_MXILINX_UARTReceiver>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <FDD8CE_MXILINX_UARTReceiver>.
+Entity <FDD8CE_MXILINX_UARTReceiver> analyzed. Unit <FDD8CE_MXILINX_UARTReceiver> generated.
+
+Analyzing Entity <ClockDiv2_MUSER_UARTReceiver> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  XLXI_4_5" for instance <XLXI_4> in unit <ClockDiv2_MUSER_UARTReceiver>.
+Entity <ClockDiv2_MUSER_UARTReceiver> analyzed. Unit <ClockDiv2_MUSER_UARTReceiver> generated.
+
+Analyzing generic Entity <FD_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
+	INIT = '0'
+    Set user-defined property "INIT =  0" for instance <U0> in unit <FD_MXILINX_UARTReceiver>.
+Entity <FD_MXILINX_UARTReceiver> analyzed. Unit <FD_MXILINX_UARTReceiver> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ControlLogicVHDL>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd".
+WARNING:Xst:1305 - Output <clear> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <read_enable>.
+    Found 4-bit adder for signal <$add0000> created at line 68.
+    Found 8-bit adder for signal <$add0001> created at line 75.
+    Found 9-bit subtractor for signal <$sub0000> created at line 65.
+    Found 8-bit register for signal <counter>.
+    Found 8-bit comparator greater for signal <sample$cmp_gt0000> created at line 65.
+    Found 4-bit register for signal <sampleCount>.
+    Found 1-bit register for signal <startDetected>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <ControlLogicVHDL> synthesized.
+
+
+Synthesizing Unit <SevenSegDriverVHDL>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd".
+    Found 16x8-bit ROM for signal <sevenSeg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SevenSegDriverVHDL> synthesized.
+
+
+Synthesizing Unit <FD_MXILINX_ClockDiv>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+Unit <FD_MXILINX_ClockDiv> synthesized.
+
+
+Synthesizing Unit <SR8CE_MXILINX_UARTReceiver>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
+Unit <SR8CE_MXILINX_UARTReceiver> synthesized.
+
+
+Synthesizing Unit <FDD8CE_MXILINX_UARTReceiver>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
+Unit <FDD8CE_MXILINX_UARTReceiver> synthesized.
+
+
+Synthesizing Unit <FD_MXILINX_UARTReceiver>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
+Unit <FD_MXILINX_UARTReceiver> synthesized.
+
+
+Synthesizing Unit <ClockDiv2_MUSER_ClockDiv>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+Unit <ClockDiv2_MUSER_ClockDiv> synthesized.
+
+
+Synthesizing Unit <ClockDiv2_MUSER_UARTReceiver>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
+Unit <ClockDiv2_MUSER_UARTReceiver> synthesized.
+
+
+Synthesizing Unit <ClockDiv>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+Unit <ClockDiv> synthesized.
+
+
+Synthesizing Unit <UARTReceiver>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
+Unit <UARTReceiver> synthesized.
+
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd".
+WARNING:Xst:1780 - Signal <UpperBCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <LowerBCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <TopLevel> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 14
+ 1-bit register                                        : 14
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <startDetected> in Unit <ControlLogicVHDL> is equivalent to the following FF/Latch, which will be removed : <read_enable> 
+
+Optimizing unit <TopLevel> ...
+
+Optimizing unit <SevenSegDriverVHDL> ...
+
+Optimizing unit <FD_MXILINX_ClockDiv> ...
+  implementation constraint: INIT=0	 : U0
+
+Optimizing unit <SR8CE_MXILINX_UARTReceiver> ...
+  implementation constraint: INIT=0	 : Q0
+  implementation constraint: INIT=0	 : Q1
+  implementation constraint: INIT=0	 : Q2
+  implementation constraint: INIT=0	 : Q3
+  implementation constraint: INIT=0	 : Q4
+  implementation constraint: INIT=0	 : Q5
+  implementation constraint: INIT=0	 : Q6
+  implementation constraint: INIT=0	 : Q7
+
+Optimizing unit <FDD8CE_MXILINX_UARTReceiver> ...
+  implementation constraint: INIT=0	 : XLXI_1
+  implementation constraint: INIT=0	 : XLXI_2
+  implementation constraint: INIT=0	 : XLXI_3
+  implementation constraint: INIT=0	 : XLXI_4
+  implementation constraint: INIT=0	 : XLXI_5
+  implementation constraint: INIT=0	 : XLXI_6
+  implementation constraint: INIT=0	 : XLXI_7
+  implementation constraint: INIT=0	 : XLXI_8
+
+Optimizing unit <FD_MXILINX_UARTReceiver> ...
+  implementation constraint: INIT=0	 : U0
+
+Optimizing unit <ControlLogicVHDL> ...
+  implementation constraint: INIT=r	 : startDetected
+  implementation constraint: INIT=r	 : sampleCount_3
+  implementation constraint: INIT=r	 : sampleCount_2
+  implementation constraint: INIT=r	 : sampleCount_1
+  implementation constraint: INIT=r	 : sampleCount_0
+  implementation constraint: INIT=r	 : counter_7
+  implementation constraint: INIT=r	 : counter_6
+  implementation constraint: INIT=r	 : counter_5
+  implementation constraint: INIT=r	 : counter_4
+  implementation constraint: INIT=r	 : counter_3
+  implementation constraint: INIT=r	 : counter_2
+  implementation constraint: INIT=r	 : counter_1
+  implementation constraint: INIT=r	 : counter_0
+
+Optimizing unit <ClockDiv2_MUSER_ClockDiv> ...
+
+Optimizing unit <ClockDiv2_MUSER_UARTReceiver> ...
+
+Optimizing unit <ClockDiv> ...
+
+Optimizing unit <UARTReceiver> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopLevel.ngr
+Top Level Output File Name         : TopLevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 216
+#      AND2                        : 76
+#      AND3                        : 9
+#      AND4                        : 6
+#      GND                         : 6
+#      INV                         : 76
+#      OR2                         : 25
+#      OR3                         : 2
+#      OR4                         : 1
+#      VCC                         : 1
+#      XOR2                        : 14
+# FlipFlops/Latches                : 34
+#      FDCE                        : 9
+#      FDCP                        : 13
+#      FDCPE                       : 4
+#      FDDCE                       : 8
+# IO Buffers                       : 18
+#      IBUF                        : 2
+#      OBUF                        : 16
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.31 secs
+ 
 --> 
 
-Total memory usage is 222708 kilobytes
+Total memory usage is 233120 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

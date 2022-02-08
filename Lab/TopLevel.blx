@@ -1,0 +1,463 @@
+# XPLAOPT Version 9.99.99.99
+# XPLAOPT -run s -it b -i TopLevel.blx -dev XC2C64A-5VQ44 -reg -xor a -mode 1 
+#         -th 28 -fi 32 -bfi 38 -pre keep -unused keeper -terminate keeper -no_output_files 
+#$ MODULE TopLevel
+#$ PINS 4 "Data":16 "Display<0>":36 "Display<10>":33 "Display<11>":30 
+#$ PINS 4 "Display<12>":3 "Display<13>":2 "Display<14>":1 "Display<15>":44 
+#$ PINS 4 "Display<1>":37 "Display<2>":38 "Display<3>":34 "Display<4>":42 
+#$ PINS 4 "Display<5>":41 "Display<6>":40 "Display<7>":39 "Display<8>":31 
+#$ PINS 1 "Display<9>":32 
+#$ NODES 2 "Controller/_add0000<1>" "Controller/_add0000<2>" 
+#$ NODES 2 "Controller/_add0000<3>" "Controller/_add0001<1>" 
+#$ NODES 2 "Controller/_add0001<2>" "Controller/_add0001<3>" 
+#$ NODES 2 "Controller/_add0001<4>" "Controller/_add0001<5>" 
+#$ NODES 2 "Controller/_add0001<6>" "Controller/_add0001<7>" 
+#$ NODES 2 "Controller/counter<0>" "Controller/counter<1>" 
+#$ NODES 2 "Controller/counter<2>" "Controller/counter<3>" 
+#$ NODES 2 "Controller/counter<4>" "Controller/counter<5>" 
+#$ NODES 2 "Controller/counter<6>" "Controller/counter<7>" 
+#$ NODES 2 "Controller/sampleCount<0>" "Controller/sampleCount<1>" 
+#$ NODES 2 "Controller/sampleCount<2>" "Controller/sampleCount<3>" 
+#$ NODES 2 "Controller/sample_cmp_gt0000" "UARTRecv/XLXN_17<0>" 
+#$ NODES 3 "UARTRecv/XLXN_17<1>" "UARTRecv/XLXN_17<2>" "UARTRecv/XLXN_17<3>" 
+#$ NODES 3 "UARTRecv/XLXN_17<4>" "UARTRecv/XLXN_17<5>" "UARTRecv/XLXN_17<6>" 
+#$ NODES 3 "UARTRecv/XLXN_17<7>" "UARTRecv/XLXN_41" "UARTRecv/XLXN_42" 
+#$ NODES 4 "UARTRecv/XLXN_43" "read_Enable" "received<0>" "received<1>" 
+#$ NODES 4 "received<2>" "received<3>" "received<4>" "received<5>" 
+#$ NODES 2 "received<6>" "received<7>" 
+#$ PROPERTY xpla USER_SLEW_RATE Display<0> Display<10> Display<11> 
+#$ PROPERTY xpla USER_SLEW_RATE Display<12> Display<13> Display<14> 
+#$ PROPERTY xpla USER_SLEW_RATE Display<15> Display<1> Display<2> 
+#$ PROPERTY xpla USER_SLEW_RATE Display<3> Display<4> Display<5> 
+#$ PROPERTY xpla USER_SLEW_RATE Display<6> Display<7> Display<8> 
+#$ PROPERTY xpla USER_SLEW_RATE Display<9>  
+#$ PROPERTY xpla DUAL_EDGE received<0> received<1> received<2> 
+#$ PROPERTY xpla DUAL_EDGE received<3> received<4> received<5> 
+#$ PROPERTY xpla DUAL_EDGE received<6> received<7>  
+#$ PROPERTY xpla unused_keeper 
+#$ PROPERTY xpla IOSTD Data 2 -1
+#$ PROPERTY xpla IOSTD Display<0> 2 -1
+#$ PROPERTY xpla IOSTD Display<10> 2 -1
+#$ PROPERTY xpla IOSTD Display<11> 2 -1
+#$ PROPERTY xpla IOSTD Display<12> 2 -1
+#$ PROPERTY xpla IOSTD Display<13> 2 -1
+#$ PROPERTY xpla IOSTD Display<14> 2 -1
+#$ PROPERTY xpla IOSTD Display<15> 2 -1
+#$ PROPERTY xpla IOSTD Display<1> 2 -1
+#$ PROPERTY xpla IOSTD Display<2> 2 -1
+#$ PROPERTY xpla IOSTD Display<3> 2 -1
+#$ PROPERTY xpla IOSTD Display<4> 2 -1
+#$ PROPERTY xpla IOSTD Display<5> 2 -1
+#$ PROPERTY xpla IOSTD Display<6> 2 -1
+#$ PROPERTY xpla IOSTD Display<7> 2 -1
+#$ PROPERTY xpla IOSTD Display<8> 2 -1
+#$ PROPERTY xpla IOSTD Display<9> 2 -1
+.model TopLevel
+.inputs  "Data" "Controller/sampleCount<0>".Q "Controller/sampleCount<1>".Q 
+         "Controller/sampleCount<2>".Q "Controller/sampleCount<3>".Q "read_Enable".Q 
+         "received<1>".Q "received<5>".Q "received<2>".Q "received<6>".Q 
+         "received<3>".Q "received<7>".Q "received<0>".Q "received<4>".Q 
+         "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+         "Controller/counter<3>".Q "Controller/counter<4>".Q "Controller/counter<5>".Q 
+         "Controller/counter<6>".Q "Controller/counter<7>".Q "UARTRecv/XLXN_17<0>".Q 
+         "UARTRecv/XLXN_17<1>".Q "UARTRecv/XLXN_17<2>".Q "UARTRecv/XLXN_17<3>".Q 
+         "UARTRecv/XLXN_17<4>".Q "UARTRecv/XLXN_17<5>".Q "UARTRecv/XLXN_17<6>".Q 
+         "UARTRecv/XLXN_17<7>".Q "UARTRecv/XLXN_41".Q "UARTRecv/XLXN_42".Q 
+         "UARTRecv/XLXN_43".Q "Controller/_add0000<2>" "Controller/_add0000<3>" 
+         "Controller/_add0001<2>" "Controller/_add0001<3>" "Controller/_add0001<4>" 
+         "Controller/_add0001<5>" "Controller/_add0001<6>" "Controller/_add0001<7>"
+.outputs "Controller/_add0000<2>".X1 "Controller/_add0000<2>".X2 
+         "Controller/_add0000<3>".X1 "Controller/_add0000<3>".X2 
+         "Controller/_add0001<2>".X1 "Controller/_add0001<2>".X2 
+         "Controller/_add0001<3>".X1 "Controller/_add0001<3>".X2 
+         "Controller/_add0001<4>".X1 "Controller/_add0001<4>".X2 
+         "Controller/_add0001<5>".X1 "Controller/_add0001<5>".X2 
+         "Controller/_add0001<6>".X1 "Controller/_add0001<6>".X2 
+         "Controller/_add0001<7>".X1 "Controller/_add0001<7>".X2 
+         "Controller/sampleCount<0>".CLK "Controller/sampleCount<0>".AP 
+         "Controller/sampleCount<0>".AR "Controller/sampleCount<1>".CLK 
+         "Controller/sampleCount<1>".AP "Controller/sampleCount<1>".AR 
+         "Controller/sampleCount<2>".CLK "Controller/sampleCount<2>".AP 
+         "Controller/sampleCount<2>".AR "Controller/sampleCount<3>".CLK 
+         "Controller/sampleCount<3>".AP "Controller/sampleCount<3>".AR 
+         "read_Enable".CLK "read_Enable".AR "received<1>".D "received<1>".CLK 
+         "received<1>".CE "received<5>".D "received<5>".CLK "received<5>".CE 
+         "received<2>".D "received<2>".CLK "received<2>".CE "received<6>".D 
+         "received<6>".CLK "received<6>".CE "received<3>".D "received<3>".CLK 
+         "received<3>".CE "received<7>".D "received<7>".CLK "received<7>".CE 
+         "received<0>".D "received<0>".CLK "received<0>".CE "received<4>".D 
+         "received<4>".CLK "received<4>".CE "Controller/counter<0>".D 
+         "Controller/counter<0>".CLK "Controller/counter<0>".AP 
+         "Controller/counter<0>".AR "Controller/counter<1>".D 
+         "Controller/counter<1>".CLK "Controller/counter<1>".AP 
+         "Controller/counter<1>".AR "Controller/counter<2>".D 
+         "Controller/counter<2>".CLK "Controller/counter<2>".AP 
+         "Controller/counter<2>".AR "Controller/counter<3>".D 
+         "Controller/counter<3>".CLK "Controller/counter<3>".AP 
+         "Controller/counter<3>".AR "Controller/counter<4>".D 
+         "Controller/counter<4>".CLK "Controller/counter<4>".AP 
+         "Controller/counter<4>".AR "Controller/counter<5>".D 
+         "Controller/counter<5>".CLK "Controller/counter<5>".AP 
+         "Controller/counter<5>".AR "Controller/counter<6>".D 
+         "Controller/counter<6>".CLK "Controller/counter<6>".AP 
+         "Controller/counter<6>".AR "Controller/counter<7>".D 
+         "Controller/counter<7>".CLK "Controller/counter<7>".AP 
+         "Controller/counter<7>".AR "UARTRecv/XLXN_17<0>".D "UARTRecv/XLXN_17<0>".CLK 
+         "UARTRecv/XLXN_17<0>".CE "UARTRecv/XLXN_17<1>".D "UARTRecv/XLXN_17<1>".CLK 
+         "UARTRecv/XLXN_17<1>".CE "UARTRecv/XLXN_17<2>".D "UARTRecv/XLXN_17<2>".CLK 
+         "UARTRecv/XLXN_17<2>".CE "UARTRecv/XLXN_17<3>".D "UARTRecv/XLXN_17<3>".CLK 
+         "UARTRecv/XLXN_17<3>".CE "UARTRecv/XLXN_17<4>".D "UARTRecv/XLXN_17<4>".CLK 
+         "UARTRecv/XLXN_17<4>".CE "UARTRecv/XLXN_17<5>".D "UARTRecv/XLXN_17<5>".CLK 
+         "UARTRecv/XLXN_17<5>".CE "UARTRecv/XLXN_17<6>".D "UARTRecv/XLXN_17<6>".CLK 
+         "UARTRecv/XLXN_17<6>".CE "UARTRecv/XLXN_17<7>".D "UARTRecv/XLXN_17<7>".CLK 
+         "UARTRecv/XLXN_17<7>".CE "Display<14>" "Display<6>" "UARTRecv/XLXN_41".CLK 
+         "UARTRecv/XLXN_42".CLK "UARTRecv/XLXN_43".CLK "Display<0>" "Display<11>" 
+         "Display<13>" "Display<1>" "Display<3>" "Display<5>" "Display<8>" "Display<9>" 
+         "Display<10>" "Display<12>" "Display<15>" "Display<2>" "Display<4>" 
+         "Display<7>" "UARTRecv/XLXN_41".T "UARTRecv/XLXN_42".T "UARTRecv/XLXN_43".T 
+         "Controller/sampleCount<0>".D "Controller/sampleCount<1>".D 
+         "Controller/sampleCount<2>".D "Controller/sampleCount<3>".D "read_Enable".D
+.names "Controller/_add0001<2>" "Controller/counter<2>".Q "Controller/counter<3>".Q 
+       "Controller/counter<4>".Q "Controller/counter<5>".Q "Controller/counter<6>".Q 
+       "Controller/counter<7>".Q  "Controller/sample_cmp_gt0000"
+--00000 1
+00-0000 1
+.names "Controller/sampleCount<0>".Q "Controller/sampleCount<1>".Q 
+        "Controller/_add0000<1>"
+01 1
+10 1
+.names "Controller/sampleCount<2>".Q  "Controller/_add0000<2>".X1
+1 1
+.names "Controller/sampleCount<0>".Q "Controller/sampleCount<1>".Q 
+        "Controller/_add0000<2>".X2
+11 1
+.names "Controller/sampleCount<3>".Q  "Controller/_add0000<3>".X1
+1 1
+.names "Controller/_add0000<2>" "Controller/sampleCount<2>".Q 
+        "Controller/_add0000<3>".X2
+01 1
+.names "Controller/counter<0>".Q "Controller/counter<1>".Q  "Controller/_add0001<1>"
+01 1
+10 1
+.names "Controller/counter<2>".Q  "Controller/_add0001<2>".X1
+1 1
+.names "Controller/counter<0>".Q "Controller/counter<1>".Q  "Controller/_add0001<2>".X2
+11 1
+.names "Controller/counter<3>".Q  "Controller/_add0001<3>".X1
+1 1
+.names "Controller/_add0001<2>" "Controller/counter<2>".Q  "Controller/_add0001<3>".X2
+01 1
+.names "Controller/counter<4>".Q  "Controller/_add0001<4>".X1
+1 1
+.names "Controller/_add0001<3>" "Controller/counter<3>".Q  "Controller/_add0001<4>".X2
+01 1
+.names "Controller/counter<5>".Q  "Controller/_add0001<5>".X1
+1 1
+.names "Controller/_add0001<4>" "Controller/counter<4>".Q  "Controller/_add0001<5>".X2
+01 1
+.names "Controller/counter<6>".Q  "Controller/_add0001<6>".X1
+1 1
+.names "Controller/_add0001<5>" "Controller/counter<5>".Q  "Controller/_add0001<6>".X2
+01 1
+.names "Controller/counter<7>".Q  "Controller/_add0001<7>".X1
+1 1
+.names "Controller/_add0001<6>" "Controller/counter<6>".Q  "Controller/_add0001<7>".X2
+01 1
+.names "Data"  "Controller/sampleCount<0>".CLK-
+1 1
+.names "Controller/sample_cmp_gt0000" "Controller/sampleCount<0>".Q "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<0>".AP
+0010101 1
+.names "Controller/sample_cmp_gt0000" "Controller/sampleCount<0>".Q "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<0>".AR
+0110101 1
+.names "Data"  "Controller/sampleCount<1>".CLK-
+1 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<1>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<1>".AP
+0110101 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<1>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<1>".AR
+0010101 1
+.names "Data"  "Controller/sampleCount<2>".CLK-
+1 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<2>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<2>".AP
+0110101 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<2>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<2>".AR
+0010101 1
+.names "Data"  "Controller/sampleCount<3>".CLK-
+1 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<3>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<3>".AP
+0110101 1
+.names "Controller/sample_cmp_gt0000" "Controller/_add0000<3>" "read_Enable".Q 
+       "Controller/counter<0>".Q "Controller/counter<1>".Q "Controller/counter<2>".Q 
+       "Controller/counter<3>".Q  "Controller/sampleCount<3>".AR
+0010101 1
+.names "Data"  "read_Enable".CLK-
+1 1
+.names "Controller/sampleCount<0>".Q "Controller/sampleCount<1>".Q 
+       "Controller/sampleCount<2>".Q "Controller/sampleCount<3>".Q  "read_Enable".AR
+0001 1
+.names "UARTRecv/XLXN_17<1>".Q  "received<1>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<1>".CLK
+1 1
+.names "read_Enable".Q  "received<1>".CE
+1 1
+.names "UARTRecv/XLXN_17<5>".Q  "received<5>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<5>".CLK
+1 1
+.names "read_Enable".Q  "received<5>".CE
+1 1
+.names "UARTRecv/XLXN_17<2>".Q  "received<2>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<2>".CLK
+1 1
+.names "read_Enable".Q  "received<2>".CE
+1 1
+.names "UARTRecv/XLXN_17<6>".Q  "received<6>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<6>".CLK
+1 1
+.names "read_Enable".Q  "received<6>".CE
+1 1
+.names "UARTRecv/XLXN_17<3>".Q  "received<3>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<3>".CLK
+1 1
+.names "read_Enable".Q  "received<3>".CE
+1 1
+.names "UARTRecv/XLXN_17<7>".Q  "received<7>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<7>".CLK
+1 1
+.names "read_Enable".Q  "received<7>".CE
+1 1
+.names "UARTRecv/XLXN_17<0>".Q  "received<0>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<0>".CLK
+1 1
+.names "read_Enable".Q  "received<0>".CE
+1 1
+.names "UARTRecv/XLXN_17<4>".Q  "received<4>".D
+1 1
+.names "UARTRecv/XLXN_41".Q  "received<4>".CLK
+1 1
+.names "read_Enable".Q  "received<4>".CE
+1 1
+.names  "Controller/counter<0>".D
+.names "Data"  "Controller/counter<0>".CLK-
+1 1
+.names "read_Enable".Q "Controller/counter<0>".Q  "Controller/counter<0>".AP
+10 1
+.names "Controller/counter<0>".Q "read_Enable".Q  "Controller/counter<0>".AR
+11 1
+.names  "Controller/counter<1>".D
+.names "Data"  "Controller/counter<1>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<1>"  "Controller/counter<1>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<1>"  "Controller/counter<1>".AR
+10 1
+.names  "Controller/counter<2>".D
+.names "Data"  "Controller/counter<2>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<2>"  "Controller/counter<2>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<2>"  "Controller/counter<2>".AR
+10 1
+.names  "Controller/counter<3>".D
+.names "Data"  "Controller/counter<3>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<3>"  "Controller/counter<3>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<3>"  "Controller/counter<3>".AR
+10 1
+.names  "Controller/counter<4>".D
+.names "Data"  "Controller/counter<4>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<4>"  "Controller/counter<4>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<4>"  "Controller/counter<4>".AR
+10 1
+.names  "Controller/counter<5>".D
+.names "Data"  "Controller/counter<5>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<5>"  "Controller/counter<5>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<5>"  "Controller/counter<5>".AR
+10 1
+.names  "Controller/counter<6>".D
+.names "Data"  "Controller/counter<6>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<6>"  "Controller/counter<6>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<6>"  "Controller/counter<6>".AR
+10 1
+.names  "Controller/counter<7>".D
+.names "Data"  "Controller/counter<7>".CLK-
+1 1
+.names "read_Enable".Q "Controller/_add0001<7>"  "Controller/counter<7>".AP
+11 1
+.names "read_Enable".Q "Controller/_add0001<7>"  "Controller/counter<7>".AR
+10 1
+.names "Data"  "UARTRecv/XLXN_17<0>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<0>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<0>".CE
+1 1
+.names "UARTRecv/XLXN_17<0>".Q  "UARTRecv/XLXN_17<1>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<1>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<1>".CE
+1 1
+.names "UARTRecv/XLXN_17<1>".Q  "UARTRecv/XLXN_17<2>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<2>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<2>".CE
+1 1
+.names "UARTRecv/XLXN_17<2>".Q  "UARTRecv/XLXN_17<3>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<3>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<3>".CE
+1 1
+.names "UARTRecv/XLXN_17<3>".Q  "UARTRecv/XLXN_17<4>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<4>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<4>".CE
+1 1
+.names "UARTRecv/XLXN_17<4>".Q  "UARTRecv/XLXN_17<5>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<5>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<5>".CE
+1 1
+.names "UARTRecv/XLXN_17<5>".Q  "UARTRecv/XLXN_17<6>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<6>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<6>".CE
+1 1
+.names "UARTRecv/XLXN_17<6>".Q  "UARTRecv/XLXN_17<7>".D
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_17<7>".CLK
+010101 1
+.names "read_Enable".Q  "UARTRecv/XLXN_17<7>".CE
+1 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<14>"
+0001 1
+0100 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<6>"
+0001 1
+0100 1
+.names "UARTRecv/XLXN_43".Q  "UARTRecv/XLXN_41".CLK
+1 1
+.names "Controller/sample_cmp_gt0000" "read_Enable".Q "Controller/counter<0>".Q 
+       "Controller/counter<1>".Q "Controller/counter<2>".Q "Controller/counter<3>".Q 
+        "UARTRecv/XLXN_42".CLK
+010101 1
+.names "UARTRecv/XLXN_42".Q  "UARTRecv/XLXN_43".CLK
+1 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q  "Display<0>"-
+1-1 1
+-11 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<11>"
+--01 1
+010- 1
+00-1 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<13>"-
+00-- 1
+-00- 1
+1-01 1
+0-00 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<1>"-
+00-- 1
+-10- 1
+--01 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<3>"
+--01 1
+010- 1
+00-1 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<5>"-
+00-- 1
+-00- 1
+1-01 1
+0-00 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q  "Display<8>"-
+1-1 1
+-11 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<9>"-
+00-- 1
+-10- 1
+--01 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<10>"
+1101 1
+0001 1
+0100 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<12>"
+000- 1
+1101 1
+.names "received<5>".Q "received<6>".Q "received<7>".Q "received<4>".Q  "Display<15>"
+1-01 1
+0001 1
+1000 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<2>"
+1101 1
+0001 1
+0100 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<4>"
+000- 1
+1101 1
+.names "received<1>".Q "received<2>".Q "received<3>".Q "received<0>".Q  "Display<7>"
+1-01 1
+0001 1
+1000 1
+.names  "UARTRecv/XLXN_41".T
+1
+.names  "UARTRecv/XLXN_42".T
+1
+.names  "UARTRecv/XLXN_43".T
+1
+.names "Controller/sampleCount<0>".Q "read_Enable".Q  "Controller/sampleCount<0>".D
+11 1
+.names "Controller/sampleCount<1>".Q "read_Enable".Q  "Controller/sampleCount<1>".D
+11 1
+.names "Controller/sampleCount<2>".Q "read_Enable".Q  "Controller/sampleCount<2>".D
+11 1
+.names "Controller/sampleCount<3>".Q "read_Enable".Q  "Controller/sampleCount<3>".D
+11 1
+.names  "read_Enable".D
+1
+.end

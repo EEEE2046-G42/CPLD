@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-02-08T10:48:04</DateModified>
+  <DateModified>2022-02-08T18:35:58</DateModified>
   <ModuleName>TopLevel</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/iseconfig/TopLevel.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/David/Documents/GitHub/CPLD/Lab/iseconfig/TopLevel.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/David/Documents/GitHub/CPLD/Lab\</ImplementationReportsDirectory>
   <DateInitialized>2022-02-08T10:40:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

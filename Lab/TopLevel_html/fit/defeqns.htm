@@ -1,0 +1,307 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** UnMapped Logic **********
+</td></tr><tr><td>
+** Outputs **
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(0) <= NOT (((received(1) AND received(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(3) AND received(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(1) <= NOT (((NOT received(1) AND NOT received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(3) AND received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(3) AND received(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(2) <= ((received(1) AND NOT received(3) AND received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(3) <= ((NOT received(3) AND received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(2) AND received(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(4) <= ((NOT received(1) AND NOT received(3) AND NOT received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(1) AND NOT received(3) AND received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(5) <= NOT (((NOT received(1) AND NOT received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(3) AND NOT received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(1) AND NOT received(3) AND received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND NOT received(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(6) <= ((NOT received(1) AND NOT received(3) AND received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(7) <= ((received(1) AND NOT received(3) AND received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(1) AND NOT received(3) AND NOT received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(8) <= NOT (((received(5) AND received(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(6) AND received(7))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(9) <= NOT (((NOT received(5) AND NOT received(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(6) AND NOT received(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(7) AND received(4))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(10) <= ((received(5) AND received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(11) <= ((NOT received(7) AND received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND received(6) AND NOT received(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND NOT received(6) AND received(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(12) <= ((NOT received(5) AND NOT received(6) AND NOT received(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(5) AND received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(13) <= NOT (((NOT received(5) AND NOT received(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(6) AND NOT received(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(5) AND NOT received(7) AND received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND NOT received(7) AND NOT received(4))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(14) <= ((NOT received(5) AND received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Display(15) <= ((received(5) AND NOT received(7) AND received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(5) AND NOT received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4)));
+</td></tr><tr><td>
+** Buried Nodes **
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0000(1) <= ((Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sampleCount(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/sampleCount(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0000(2) <= Controller/sampleCount(2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/sampleCount(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0000(3) <= Controller/sampleCount(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/sampleCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/_add0000(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(1) <= ((Controller/counter(0) AND NOT Controller/counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/counter(0) AND Controller/counter(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(2) <= Controller/counter(2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(0) AND Controller/counter(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(3) <= Controller/counter(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(2) AND NOT Controller/_add0001(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(4) <= Controller/counter(4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(3) AND NOT Controller/_add0001(3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(5) <= Controller/counter(5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(4) AND NOT Controller/_add0001(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(6) <= Controller/counter(6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(5) AND NOT Controller/_add0001(5));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/_add0001(7) <= Controller/counter(7)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (Controller/counter(6) AND NOT Controller/_add0001(6));
+</td></tr><tr><td>
+FDCPE_Controller/counter0: FDCPE port map (Controller/counter(0),'0',Data,Controller/counter_CLR(0),Controller/counter_PRE(0),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(0) <= (read_Enable AND Controller/counter(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(0) <= (read_Enable AND NOT Controller/counter(0));
+</td></tr><tr><td>
+FDCPE_Controller/counter1: FDCPE port map (Controller/counter(1),'0',Data,Controller/counter_CLR(1),Controller/counter_PRE(1),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(1) <= (read_Enable AND NOT Controller/_add0001(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(1) <= (read_Enable AND Controller/_add0001(1));
+</td></tr><tr><td>
+FDCPE_Controller/counter2: FDCPE port map (Controller/counter(2),'0',Data,Controller/counter_CLR(2),Controller/counter_PRE(2),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(2) <= (read_Enable AND NOT Controller/_add0001(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(2) <= (read_Enable AND Controller/_add0001(2));
+</td></tr><tr><td>
+FDCPE_Controller/counter3: FDCPE port map (Controller/counter(3),'0',Data,Controller/counter_CLR(3),Controller/counter_PRE(3),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(3) <= (read_Enable AND NOT Controller/_add0001(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(3) <= (read_Enable AND Controller/_add0001(3));
+</td></tr><tr><td>
+FDCPE_Controller/counter4: FDCPE port map (Controller/counter(4),'0',Data,Controller/counter_CLR(4),Controller/counter_PRE(4),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(4) <= (read_Enable AND NOT Controller/_add0001(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(4) <= (read_Enable AND Controller/_add0001(4));
+</td></tr><tr><td>
+FDCPE_Controller/counter5: FDCPE port map (Controller/counter(5),'0',Data,Controller/counter_CLR(5),Controller/counter_PRE(5),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(5) <= (read_Enable AND NOT Controller/_add0001(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(5) <= (read_Enable AND Controller/_add0001(5));
+</td></tr><tr><td>
+FDCPE_Controller/counter6: FDCPE port map (Controller/counter(6),'0',Data,Controller/counter_CLR(6),Controller/counter_PRE(6),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(6) <= (read_Enable AND NOT Controller/_add0001(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(6) <= (read_Enable AND Controller/_add0001(6));
+</td></tr><tr><td>
+FDCPE_Controller/counter7: FDCPE port map (Controller/counter(7),'0',Data,Controller/counter_CLR(7),Controller/counter_PRE(7),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_CLR(7) <= (read_Enable AND NOT Controller/_add0001(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/counter_PRE(7) <= (read_Enable AND Controller/_add0001(7));
+</td></tr><tr><td>
+FDCPE_Controller/sampleCount0: FDCPE port map (Controller/sampleCount(0),Controller/sampleCount_D(0),Data,Controller/sampleCount_CLR(0),Controller/sampleCount_PRE(0),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_D(0) <= (read_Enable AND Controller/sampleCount(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_CLR(0) <= (read_Enable AND Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/counter(0) AND Controller/counter(1) AND NOT Controller/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(3) AND NOT Controller/sample_cmp_gt0000);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_PRE(0) <= (read_Enable AND NOT Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/counter(0) AND Controller/counter(1) AND NOT Controller/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(3) AND NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_Controller/sampleCount1: FDCPE port map (Controller/sampleCount(1),Controller/sampleCount_D(1),Data,Controller/sampleCount_CLR(1),Controller/sampleCount_PRE(1),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_D(1) <= (read_Enable AND Controller/sampleCount(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_CLR(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_PRE(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(1));
+</td></tr><tr><td>
+FDCPE_Controller/sampleCount2: FDCPE port map (Controller/sampleCount(2),Controller/sampleCount_D(2),Data,Controller/sampleCount_CLR(2),Controller/sampleCount_PRE(2),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_D(2) <= (read_Enable AND Controller/sampleCount(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_CLR(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_PRE(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(2));
+</td></tr><tr><td>
+FDCPE_Controller/sampleCount3: FDCPE port map (Controller/sampleCount(3),Controller/sampleCount_D(3),Data,Controller/sampleCount_CLR(3),Controller/sampleCount_PRE(3),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_D(3) <= (read_Enable AND Controller/sampleCount(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_CLR(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/sampleCount_PRE(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Controller/sample_cmp_gt0000 <= ((NOT Controller/counter(3) AND NOT Controller/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/counter(5) AND NOT Controller/counter(6) AND NOT Controller/counter(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/counter(2) AND NOT Controller/_add0001(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/counter(4) AND NOT Controller/counter(5) AND NOT Controller/counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/counter(7)));
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_170: FDCPE port map (UARTRecv/XLXN_17(0),Data,UARTRecv/XLXN_17_C(0),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(0) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_171: FDCPE port map (UARTRecv/XLXN_17(1),UARTRecv/XLXN_17(0),UARTRecv/XLXN_17_C(1),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_172: FDCPE port map (UARTRecv/XLXN_17(2),UARTRecv/XLXN_17(1),UARTRecv/XLXN_17_C(2),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_173: FDCPE port map (UARTRecv/XLXN_17(3),UARTRecv/XLXN_17(2),UARTRecv/XLXN_17_C(3),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_174: FDCPE port map (UARTRecv/XLXN_17(4),UARTRecv/XLXN_17(3),UARTRecv/XLXN_17_C(4),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(4) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_175: FDCPE port map (UARTRecv/XLXN_17(5),UARTRecv/XLXN_17(4),UARTRecv/XLXN_17_C(5),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(5) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_176: FDCPE port map (UARTRecv/XLXN_17(6),UARTRecv/XLXN_17(5),UARTRecv/XLXN_17_C(6),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(6) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FDCPE_UARTRecv/XLXN_177: FDCPE port map (UARTRecv/XLXN_17(7),UARTRecv/XLXN_17(6),UARTRecv/XLXN_17_C(7),'0','0',read_Enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_17_C(7) <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FTCPE_UARTRecv/XLXN_41: FTCPE port map (UARTRecv/XLXN_41,'0',UARTRecv/XLXN_43,'0','0','1');
+</td></tr><tr><td>
+FTCPE_UARTRecv/XLXN_42: FTCPE port map (UARTRecv/XLXN_42,'0',UARTRecv/XLXN_42_C,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTRecv/XLXN_42_C <= (read_Enable AND NOT Controller/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sample_cmp_gt0000);
+</td></tr><tr><td>
+FTCPE_UARTRecv/XLXN_43: FTCPE port map (UARTRecv/XLXN_43,'0',UARTRecv/XLXN_42,'0','0','1');
+</td></tr><tr><td>
+FDCPE_read_Enable: FDCPE port map (read_Enable,NOT '0',Data,read_Enable_CLR,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read_Enable_CLR <= (NOT Controller/sampleCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/sampleCount(1) AND NOT Controller/sampleCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/sampleCount(3));
+</td></tr><tr><td>
+FDDCPE_received0: FDDCPE port map (received(0),UARTRecv/XLXN_17(0),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received1: FDDCPE port map (received(1),UARTRecv/XLXN_17(1),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received2: FDDCPE port map (received(2),UARTRecv/XLXN_17(2),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received3: FDDCPE port map (received(3),UARTRecv/XLXN_17(3),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received4: FDDCPE port map (received(4),UARTRecv/XLXN_17(4),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received5: FDDCPE port map (received(5),UARTRecv/XLXN_17(5),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received6: FDDCPE port map (received(6),UARTRecv/XLXN_17(6),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+FDDCPE_received7: FDDCPE port map (received(7),UARTRecv/XLXN_17(7),UARTRecv/XLXN_41,'0','0',read_Enable);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

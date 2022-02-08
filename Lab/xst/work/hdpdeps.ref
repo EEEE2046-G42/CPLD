@@ -1,31 +1,98 @@
-V3 18
-FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" 2022/02/08.09:43:25 O.87xd
-EN work/ClockDiv 1644315112 \
+V3 49
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" 2022/02/08.15:43:29 O.87xd
+EN work/FD_MXILINX_ClockDiv 1644337270 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/ClockDiv/BEHAVIORAL 1644315113 \
+AR work/FD_MXILINX_ClockDiv/BEHAVIORAL 1644337271 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
-      EN work/ClockDiv 1644315112 CP CLK_DIV4
-FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" 2022/02/07.16:26:41 O.87xd
-EN work/ControlLogicVHDL 1644315114 \
+      EN work/FD_MXILINX_ClockDiv 1644337270 CP GND CP FDCP
+EN work/ClockDiv2_MUSER_ClockDiv 1644337272 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/ClockDiv2_MUSER_ClockDiv/BEHAVIORAL 1644337273 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
+      EN work/ClockDiv2_MUSER_ClockDiv 1644337272 CP FD_MXILINX_ClockDiv CP INV
+EN work/ClockDiv 1644337274 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/ClockDiv/BEHAVIORAL 1644337275 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" \
+      EN work/ClockDiv 1644337274 CP ClockDiv2_MUSER_ClockDiv
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" 2022/02/08.15:43:27 O.87xd
+EN work/FD_MXILINX_ClockDiv2 1644337292 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/FD_MXILINX_ClockDiv2/BEHAVIORAL 1644337293 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" \
+      EN work/FD_MXILINX_ClockDiv2 1644337292 CP GND CP FDCP
+EN work/ClockDiv2 1644337294 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/ClockDiv2/BEHAVIORAL 1644337295 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" \
+      EN work/ClockDiv2 1644337294 CP FD_MXILINX_ClockDiv2 CP INV
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" 2022/02/08.16:21:05 O.87xd
+EN work/ControlLogicVHDL 1644337276 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" \
       PB ieee/std_logic_1164 1325952872
-AR work/ControlLogicVHDL/Behavioral 1644315115 \
+AR work/ControlLogicVHDL/Behavioral 1644337277 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" \
-      EN work/ControlLogicVHDL 1644315114
-FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" 2022/02/08.10:06:49 O.87xd
-EN work/SevenSegDriver 1644314819 \
+      EN work/ControlLogicVHDL 1644337276
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" 2022/02/08.15:25:21 O.87xd
+EN work/SevenSegDriverVHDL 1644337278 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" \
       PB ieee/std_logic_1164 1325952872
-AR work/SevenSegDriver/Behavioral 1644314820 \
+AR work/SevenSegDriverVHDL/Behavioral 1644337279 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" \
-      EN work/SevenSegDriver 1644314819
-FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" 2022/02/08.10:11:49 O.87xd
-EN work/TopLevel 1644315116 \
+      EN work/SevenSegDriverVHDL 1644337278
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" 2022/02/08.15:25:37 O.87xd
+EN work/TopLevel 1644337290 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" \
       PB ieee/std_logic_1164 1325952872
-AR work/TopLevel/Behavioral 1644315117 \
+AR work/TopLevel/Behavioral 1644337291 \
       FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" \
-      EN work/TopLevel 1644315116 CP ClockDiv CP ControlLogicVHDL \
+      EN work/TopLevel 1644337290 CP ClockDiv CP ControlLogicVHDL \
       CP SevenSegDriverVHDL CP UARTReceiver
+FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" 2022/02/08.15:43:28 O.87xd
+EN work/FD_MXILINX_UARTReceiver 1644337280 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/FD_MXILINX_UARTReceiver/BEHAVIORAL 1644337281 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      EN work/FD_MXILINX_UARTReceiver 1644337280 CP GND CP FDCP
+EN work/ClockDiv2_MUSER_UARTReceiver 1644337282 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/ClockDiv2_MUSER_UARTReceiver/BEHAVIORAL 1644337283 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      EN work/ClockDiv2_MUSER_UARTReceiver 1644337282 CP FD_MXILINX_UARTReceiver \
+      CP INV
+EN work/SR8CE_MXILINX_UARTReceiver 1644337284 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/SR8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644337285 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      EN work/SR8CE_MXILINX_UARTReceiver 1644337284 CP FDCE
+EN work/FDD8CE_MXILINX_UARTReceiver 1644337286 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/FDD8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644337287 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      EN work/FDD8CE_MXILINX_UARTReceiver 1644337286 CP FDDCE
+EN work/UARTReceiver 1644337288 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/UARTReceiver/BEHAVIORAL 1644337289 \
+      FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" \
+      EN work/UARTReceiver 1644337288 CP SR8CE_MXILINX_UARTReceiver \
+      CP FDD8CE_MXILINX_UARTReceiver CP ClockDiv2_MUSER_UARTReceiver

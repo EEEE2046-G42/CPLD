@@ -1,0 +1,481 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version O.87xd                            Xilinx Inc.
+                                  No Fit Report
+Design Name: TopLevel                            Date:  2- 8-2022,  4:21PM
+Device Used: XC2C64A-5-VQ44
+Fitting Status: Design Rule Checking Failed
+
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'TopLevel.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'Clock' based upon the LOC
+   constraint 'P44'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'Clock'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+ERROR:Cpld:1248 - DRC error: too many Asynchronous Set/Resets (AP/AR) in design.
+   At least 6 function blocks are required to implement them, only 4 are
+   available in this device.
+ERROR:Cpld:1064 - Design rules checking error. Fitting process stopped.
+ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
+   the selected implementation options.
+*************************  Mapped Resource Summary  **************************
+
+No logic has been mapped.
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+0  /64  (  0%) 0   /224  (  0%) 0   /160  (  0%) 0  /64  (  0%) 0  /33  (  0%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB2       0/16      0/40     0/56     0/ 9    0/1      0/1      0/1      0/1
+FB3       0/16      0/40     0/56     0/ 9    0/1      0/1      0/1      0/1
+FB4       0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total     0/64      0/160    0/224    0/33    0/4      0/4      0/4      0/4 
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+0/3         0/1         0/4         0/0
+
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    1           0    |  I/O              :     0     25
+Output        :   16           0    |  GCK/IO           :     0      3
+Bidirectional :    0           0    |  GTS/IO           :     0      4
+GCK           :    0           0    |  GSR/IO           :     0      1
+GTS           :    0           0    |  
+GSR           :    0           0    |  
+                 ----        ----
+        Total     17           0
+
+End of Mapped Resource Summary
+*************************  Summary of UnMapped Logic  ************************
+
+** 16 Outputs **
+
+Signal                        Total Total I/O      User
+Name                          Pts   Inps  STD      Assignment
+Display<0>                    2     3     LVCMOS18 
+Display<1>                    3     4     LVCMOS18 
+Display<2>                    3     4     LVCMOS18 
+Display<3>                    3     4     LVCMOS18 
+Display<4>                    2     4     LVCMOS18 
+Display<5>                    4     4     LVCMOS18 
+Display<6>                    2     4     LVCMOS18 
+Display<7>                    3     4     LVCMOS18 
+Display<8>                    2     3     LVCMOS18 
+Display<9>                    3     4     LVCMOS18 
+Display<10>                   3     4     LVCMOS18 
+Display<11>                   3     4     LVCMOS18 
+Display<12>                   2     4     LVCMOS18 
+Display<13>                   4     4     LVCMOS18 
+Display<14>                   2     4     LVCMOS18 
+Display<15>                   3     4     LVCMOS18 
+
+** 43 Buried Nodes **
+
+Signal                        Total Total User
+Name                          Pts   Inps  Assignment
+Controller/_add0000<1>        2     2     
+Controller/_add0000<2>        2     3     
+Controller/_add0000<3>        2     3     
+Controller/_add0001<1>        2     2     
+Controller/_add0001<2>        2     3     
+Controller/_add0001<3>        2     3     
+Controller/_add0001<4>        2     3     
+Controller/_add0001<5>        2     3     
+Controller/_add0001<6>        2     3     
+Controller/_add0001<7>        2     3     
+Controller/counter<0>         3     3     
+Controller/counter<1>         3     3     
+Controller/counter<2>         3     3     
+Controller/counter<3>         3     3     
+Controller/counter<4>         3     3     
+Controller/counter<5>         3     3     
+Controller/counter<6>         3     3     
+Controller/counter<7>         3     3     
+Controller/sampleCount<0>     4     8     
+Controller/sampleCount<1>     4     9     
+Controller/sampleCount<2>     4     9     
+Controller/sampleCount<3>     4     9     
+Controller/sample_cmp_gt0000  2     7     
+UARTRecv/XLXN_17<0>           3     7     
+UARTRecv/XLXN_17<1>           3     7     
+UARTRecv/XLXN_17<2>           3     7     
+UARTRecv/XLXN_17<3>           3     7     
+UARTRecv/XLXN_17<4>           3     7     
+UARTRecv/XLXN_17<5>           3     7     
+UARTRecv/XLXN_17<6>           3     7     
+UARTRecv/XLXN_17<7>           3     7     
+UARTRecv/XLXN_41              1     1     
+UARTRecv/XLXN_42              1     6     
+UARTRecv/XLXN_43              1     1     
+read_Enable                   2     5     
+received<0>                   3     3     
+received<1>                   3     3     
+received<2>                   3     3     
+received<3>                   3     3     
+received<4>                   3     3     
+
+Signal                        Total Total User
+Name                          Pts   Inps  Assignment
+received<5>                   3     3     
+received<6>                   3     3     
+received<7>                   3     3     
+
+** 1 Inputs **
+
+Signal                        I/O      User
+Name                          STD      Assignment
+Data                          LVCMOS18 P16
+
+*******************************  Equations  ********************************
+
+********** UnMapped Logic **********
+
+** Outputs **
+
+
+Display(0) <= NOT (((received(1) AND received(3))
+	OR (received(3) AND received(2))));
+
+
+Display(1) <= NOT (((NOT received(1) AND NOT received(2))
+	OR (NOT received(3) AND received(2))
+	OR (NOT received(3) AND received(0))));
+
+
+Display(2) <= ((received(1) AND NOT received(3) AND received(2) AND 
+	received(0))
+	OR (NOT received(1) AND NOT received(3) AND received(2) AND 
+	NOT received(0))
+	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+	received(0)));
+
+
+Display(3) <= ((NOT received(3) AND received(0))
+	OR (NOT received(1) AND NOT received(3) AND received(2))
+	OR (NOT received(1) AND NOT received(2) AND received(0)));
+
+
+Display(4) <= ((NOT received(1) AND NOT received(3) AND NOT received(2))
+	OR (received(1) AND NOT received(3) AND received(2) AND 
+	received(0)));
+
+
+Display(5) <= NOT (((NOT received(1) AND NOT received(2))
+	OR (NOT received(3) AND NOT received(2))
+	OR (received(1) AND NOT received(3) AND received(0))
+	OR (NOT received(1) AND NOT received(3) AND NOT received(0))));
+
+
+Display(6) <= ((NOT received(1) AND NOT received(3) AND received(2) AND 
+	NOT received(0))
+	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+	received(0)));
+
+
+Display(7) <= ((received(1) AND NOT received(3) AND received(0))
+	OR (received(1) AND NOT received(3) AND NOT received(2) AND 
+	NOT received(0))
+	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
+	received(0)));
+
+
+Display(8) <= NOT (((received(5) AND received(7))
+	OR (received(6) AND received(7))));
+
+
+Display(9) <= NOT (((NOT received(5) AND NOT received(6))
+	OR (received(6) AND NOT received(7))
+	OR (NOT received(7) AND received(4))));
+
+
+Display(10) <= ((received(5) AND received(6) AND NOT received(7) AND 
+	received(4))
+	OR (NOT received(5) AND received(6) AND NOT received(7) AND 
+	NOT received(4))
+	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+	received(4)));
+
+
+Display(11) <= ((NOT received(7) AND received(4))
+	OR (NOT received(5) AND received(6) AND NOT received(7))
+	OR (NOT received(5) AND NOT received(6) AND received(4)));
+
+
+Display(12) <= ((NOT received(5) AND NOT received(6) AND NOT received(7))
+	OR (received(5) AND received(6) AND NOT received(7) AND 
+	received(4)));
+
+
+Display(13) <= NOT (((NOT received(5) AND NOT received(6))
+	OR (NOT received(6) AND NOT received(7))
+	OR (received(5) AND NOT received(7) AND received(4))
+	OR (NOT received(5) AND NOT received(7) AND NOT received(4))));
+
+
+Display(14) <= ((NOT received(5) AND received(6) AND NOT received(7) AND 
+	NOT received(4))
+	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+	received(4)));
+
+
+Display(15) <= ((received(5) AND NOT received(7) AND received(4))
+	OR (received(5) AND NOT received(6) AND NOT received(7) AND 
+	NOT received(4))
+	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
+	received(4)));
+
+** Buried Nodes **
+
+
+Controller/_add0000(1) <= ((Controller/sampleCount(0) AND 
+	NOT Controller/sampleCount(1))
+	OR (NOT Controller/sampleCount(0) AND 
+	Controller/sampleCount(1)));
+
+
+Controller/_add0000(2) <= Controller/sampleCount(2)
+	XOR (Controller/sampleCount(0) AND 
+	Controller/sampleCount(1));
+
+
+Controller/_add0000(3) <= Controller/sampleCount(3)
+	XOR (Controller/sampleCount(2) AND 
+	NOT Controller/_add0000(2));
+
+
+Controller/_add0001(1) <= ((Controller/counter(0) AND NOT Controller/counter(1))
+	OR (NOT Controller/counter(0) AND Controller/counter(1)));
+
+
+Controller/_add0001(2) <= Controller/counter(2)
+	XOR (Controller/counter(0) AND Controller/counter(1));
+
+
+Controller/_add0001(3) <= Controller/counter(3)
+	XOR (Controller/counter(2) AND NOT Controller/_add0001(2));
+
+
+Controller/_add0001(4) <= Controller/counter(4)
+	XOR (Controller/counter(3) AND NOT Controller/_add0001(3));
+
+
+Controller/_add0001(5) <= Controller/counter(5)
+	XOR (Controller/counter(4) AND NOT Controller/_add0001(4));
+
+
+Controller/_add0001(6) <= Controller/counter(6)
+	XOR (Controller/counter(5) AND NOT Controller/_add0001(5));
+
+
+Controller/_add0001(7) <= Controller/counter(7)
+	XOR (Controller/counter(6) AND NOT Controller/_add0001(6));
+
+FDCPE_Controller/counter0: FDCPE port map (Controller/counter(0),'0',Data,Controller/counter_CLR(0),Controller/counter_PRE(0),'1');
+Controller/counter_CLR(0) <= (read_Enable AND Controller/counter(0));
+Controller/counter_PRE(0) <= (read_Enable AND NOT Controller/counter(0));
+
+FDCPE_Controller/counter1: FDCPE port map (Controller/counter(1),'0',Data,Controller/counter_CLR(1),Controller/counter_PRE(1),'1');
+Controller/counter_CLR(1) <= (read_Enable AND NOT Controller/_add0001(1));
+Controller/counter_PRE(1) <= (read_Enable AND Controller/_add0001(1));
+
+FDCPE_Controller/counter2: FDCPE port map (Controller/counter(2),'0',Data,Controller/counter_CLR(2),Controller/counter_PRE(2),'1');
+Controller/counter_CLR(2) <= (read_Enable AND NOT Controller/_add0001(2));
+Controller/counter_PRE(2) <= (read_Enable AND Controller/_add0001(2));
+
+FDCPE_Controller/counter3: FDCPE port map (Controller/counter(3),'0',Data,Controller/counter_CLR(3),Controller/counter_PRE(3),'1');
+Controller/counter_CLR(3) <= (read_Enable AND NOT Controller/_add0001(3));
+Controller/counter_PRE(3) <= (read_Enable AND Controller/_add0001(3));
+
+FDCPE_Controller/counter4: FDCPE port map (Controller/counter(4),'0',Data,Controller/counter_CLR(4),Controller/counter_PRE(4),'1');
+Controller/counter_CLR(4) <= (read_Enable AND NOT Controller/_add0001(4));
+Controller/counter_PRE(4) <= (read_Enable AND Controller/_add0001(4));
+
+FDCPE_Controller/counter5: FDCPE port map (Controller/counter(5),'0',Data,Controller/counter_CLR(5),Controller/counter_PRE(5),'1');
+Controller/counter_CLR(5) <= (read_Enable AND NOT Controller/_add0001(5));
+Controller/counter_PRE(5) <= (read_Enable AND Controller/_add0001(5));
+
+FDCPE_Controller/counter6: FDCPE port map (Controller/counter(6),'0',Data,Controller/counter_CLR(6),Controller/counter_PRE(6),'1');
+Controller/counter_CLR(6) <= (read_Enable AND NOT Controller/_add0001(6));
+Controller/counter_PRE(6) <= (read_Enable AND Controller/_add0001(6));
+
+FDCPE_Controller/counter7: FDCPE port map (Controller/counter(7),'0',Data,Controller/counter_CLR(7),Controller/counter_PRE(7),'1');
+Controller/counter_CLR(7) <= (read_Enable AND NOT Controller/_add0001(7));
+Controller/counter_PRE(7) <= (read_Enable AND Controller/_add0001(7));
+
+FDCPE_Controller/sampleCount0: FDCPE port map (Controller/sampleCount(0),Controller/sampleCount_D(0),Data,Controller/sampleCount_CLR(0),Controller/sampleCount_PRE(0),'1');
+Controller/sampleCount_D(0) <= (read_Enable AND Controller/sampleCount(0));
+Controller/sampleCount_CLR(0) <= (read_Enable AND Controller/sampleCount(0) AND 
+	NOT Controller/counter(0) AND Controller/counter(1) AND NOT Controller/counter(2) AND 
+	Controller/counter(3) AND NOT Controller/sample_cmp_gt0000);
+Controller/sampleCount_PRE(0) <= (read_Enable AND NOT Controller/sampleCount(0) AND 
+	NOT Controller/counter(0) AND Controller/counter(1) AND NOT Controller/counter(2) AND 
+	Controller/counter(3) AND NOT Controller/sample_cmp_gt0000);
+
+FDCPE_Controller/sampleCount1: FDCPE port map (Controller/sampleCount(1),Controller/sampleCount_D(1),Data,Controller/sampleCount_CLR(1),Controller/sampleCount_PRE(1),'1');
+Controller/sampleCount_D(1) <= (read_Enable AND Controller/sampleCount(1));
+Controller/sampleCount_CLR(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(1));
+Controller/sampleCount_PRE(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(1));
+
+FDCPE_Controller/sampleCount2: FDCPE port map (Controller/sampleCount(2),Controller/sampleCount_D(2),Data,Controller/sampleCount_CLR(2),Controller/sampleCount_PRE(2),'1');
+Controller/sampleCount_D(2) <= (read_Enable AND Controller/sampleCount(2));
+Controller/sampleCount_CLR(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(2));
+Controller/sampleCount_PRE(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(2));
+
+FDCPE_Controller/sampleCount3: FDCPE port map (Controller/sampleCount(3),Controller/sampleCount_D(3),Data,Controller/sampleCount_CLR(3),Controller/sampleCount_PRE(3),'1');
+Controller/sampleCount_D(3) <= (read_Enable AND Controller/sampleCount(3));
+Controller/sampleCount_CLR(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND NOT Controller/_add0000(3));
+Controller/sampleCount_PRE(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000 AND Controller/_add0000(3));
+
+
+Controller/sample_cmp_gt0000 <= ((NOT Controller/counter(3) AND NOT Controller/counter(4) AND 
+	NOT Controller/counter(5) AND NOT Controller/counter(6) AND NOT Controller/counter(7))
+	OR (NOT Controller/counter(2) AND NOT Controller/_add0001(2) AND 
+	NOT Controller/counter(4) AND NOT Controller/counter(5) AND NOT Controller/counter(6) AND 
+	NOT Controller/counter(7)));
+
+FDCPE_UARTRecv/XLXN_170: FDCPE port map (UARTRecv/XLXN_17(0),Data,UARTRecv/XLXN_17_C(0),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(0) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_171: FDCPE port map (UARTRecv/XLXN_17(1),UARTRecv/XLXN_17(0),UARTRecv/XLXN_17_C(1),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(1) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_172: FDCPE port map (UARTRecv/XLXN_17(2),UARTRecv/XLXN_17(1),UARTRecv/XLXN_17_C(2),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(2) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_173: FDCPE port map (UARTRecv/XLXN_17(3),UARTRecv/XLXN_17(2),UARTRecv/XLXN_17_C(3),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(3) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_174: FDCPE port map (UARTRecv/XLXN_17(4),UARTRecv/XLXN_17(3),UARTRecv/XLXN_17_C(4),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(4) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_175: FDCPE port map (UARTRecv/XLXN_17(5),UARTRecv/XLXN_17(4),UARTRecv/XLXN_17_C(5),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(5) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_176: FDCPE port map (UARTRecv/XLXN_17(6),UARTRecv/XLXN_17(5),UARTRecv/XLXN_17_C(6),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(6) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FDCPE_UARTRecv/XLXN_177: FDCPE port map (UARTRecv/XLXN_17(7),UARTRecv/XLXN_17(6),UARTRecv/XLXN_17_C(7),'0','0',read_Enable);
+UARTRecv/XLXN_17_C(7) <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FTCPE_UARTRecv/XLXN_41: FTCPE port map (UARTRecv/XLXN_41,'0',UARTRecv/XLXN_43,'0','0','1');
+
+FTCPE_UARTRecv/XLXN_42: FTCPE port map (UARTRecv/XLXN_42,'0',UARTRecv/XLXN_42_C,'0','0','1');
+UARTRecv/XLXN_42_C <= (read_Enable AND NOT Controller/counter(0) AND 
+	Controller/counter(1) AND NOT Controller/counter(2) AND Controller/counter(3) AND 
+	NOT Controller/sample_cmp_gt0000);
+
+FTCPE_UARTRecv/XLXN_43: FTCPE port map (UARTRecv/XLXN_43,'0',UARTRecv/XLXN_42,'0','0','1');
+
+FDCPE_read_Enable: FDCPE port map (read_Enable,NOT '0',Data,read_Enable_CLR,'0','1');
+read_Enable_CLR <= (NOT Controller/sampleCount(0) AND 
+	NOT Controller/sampleCount(1) AND NOT Controller/sampleCount(2) AND 
+	Controller/sampleCount(3));
+
+FDDCPE_received0: FDDCPE port map (received(0),UARTRecv/XLXN_17(0),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received1: FDDCPE port map (received(1),UARTRecv/XLXN_17(1),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received2: FDDCPE port map (received(2),UARTRecv/XLXN_17(2),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received3: FDDCPE port map (received(3),UARTRecv/XLXN_17(3),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received4: FDDCPE port map (received(4),UARTRecv/XLXN_17(4),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received5: FDDCPE port map (received(5),UARTRecv/XLXN_17(5),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received6: FDDCPE port map (received(6),UARTRecv/XLXN_17(6),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+FDDCPE_received7: FDDCPE port map (received(7),UARTRecv/XLXN_17(7),UARTRecv/XLXN_41,'0','0',read_Enable);
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c64a-5-VQ44
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : KEEPER
+Default Voltage Standard for All Outputs    : LVCMOS18
+Input Limit                                 : 32
+Pterm Limit                                 : 28
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

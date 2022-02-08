@@ -1,0 +1,25 @@
+
+----------------------------------
+|  P a r t i t i o n    F a i l  |
+----------------------------------
+
+There are 59 outputs and 1 inputs not partitioned
+Output: Display<0> Display<10> Display<11> Display<12> Display<13> Display<14> Display<15> Display<1> 
+        Display<2> Display<3> Display<4> Display<5> Display<6> Display<7> Display<8> Display<9> 
+        Controller/_add0000<1> Controller/_add0000<2> Controller/_add0000<3> Controller/_add0001<1> 
+        Controller/_add0001<2> Controller/_add0001<3> Controller/_add0001<4> Controller/_add0001<5> 
+        Controller/_add0001<6> Controller/_add0001<7> Controller/counter<0> Controller/counter<1> 
+        Controller/counter<2> Controller/counter<3> Controller/counter<4> Controller/counter<5> 
+        Controller/counter<6> Controller/counter<7> Controller/sampleCount<0> Controller/sampleCount<1> 
+        Controller/sampleCount<2> Controller/sampleCount<3> Controller/sample_cmp_gt0000 UARTRecv/XLXN_17<0> 
+        UARTRecv/XLXN_17<1> UARTRecv/XLXN_17<2> UARTRecv/XLXN_17<3> UARTRecv/XLXN_17<4> UARTRecv/XLXN_17<5> 
+        UARTRecv/XLXN_17<6> UARTRecv/XLXN_17<7> UARTRecv/XLXN_41 UARTRecv/XLXN_42 UARTRecv/XLXN_43 
+        read_Enable received<0> received<1> received<2> received<3> received<4> received<5> received<6> 
+        received<7>
+Input: Data
+0 Group(s)
+
+----------------- B l o c k 0 ------------------
+----------------- B l o c k 1 ------------------
+----------------- B l o c k 2 ------------------
+----------------- B l o c k 3 ------------------
