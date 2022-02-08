@@ -1,0 +1,2 @@
+vhdl isim_temp "ControlLogicVHDL.vhd"
+vhdl isim_temp "ControlLogicTest.vhd"

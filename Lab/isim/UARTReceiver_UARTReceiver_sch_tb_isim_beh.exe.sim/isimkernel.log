@@ -1,0 +1,29 @@
+Command line:
+   UARTReceiver_UARTReceiver_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55345
+
+Mon Feb 07 14:56:21 2022
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 813.494 Meg
+
+ Total Signals          : 171
+ Total Nets             : 95
+ Total Signal Drivers   : 61
+ Total Blocks           : 36
+ Total Primitive Blocks : 24
+ Total Processes        : 60
+ Total Traceable Variables  : 327
+ Total Scalar Nets and Variables : 5069
+Total Line Count : 252
+
+ Total Simulation Time: 0.265625 sec
+
+ Current Memory Usage: 1128.59 Meg
+
+Mon Feb 07 14:56:55 2022
+

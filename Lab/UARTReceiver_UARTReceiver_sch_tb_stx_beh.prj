@@ -1,0 +1,2 @@
+vhdl isim_temp "UARTReceiver.vhf"
+vhdl isim_temp "UARTReceiverTest.vhd"

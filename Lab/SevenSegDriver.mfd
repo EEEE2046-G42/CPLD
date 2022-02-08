@@ -1,0 +1,84 @@
+MDF Database:  version 1.0
+MDF_INFO | SevenSegDriver | XC2C64A-5-VQ44
+MACROCELL | 0 | 12 | sevenSeg<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | BCD<3>  | BCD<2>  | BCD<1>
+INPUTP | 3 | 17 | 16 | 13
+EQ | 2 | 
+   !sevenSeg<0> = BCD<3> & BCD<2>
+	# BCD<3> & BCD<1>;	// (2 pt, 3 inp)
+
+MACROCELL | 0 | 1 | sevenSeg<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<2>  | BCD<0>  | BCD<1>
+INPUTP | 4 | 17 | 16 | 12 | 13
+EQ | 3 | 
+   !sevenSeg<1> = !BCD<3> & BCD<2>
+	# !BCD<3> & BCD<0>
+	# !BCD<2> & !BCD<1>;	// (3 pt, 4 inp)
+
+MACROCELL | 0 | 10 | sevenSeg<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<2>  | BCD<1>  | BCD<0>
+INPUTP | 4 | 17 | 16 | 13 | 12
+EQ | 3 | 
+   sevenSeg<2> = !BCD<3> & BCD<2> & BCD<1> & BCD<0>
+	# !BCD<3> & BCD<2> & !BCD<1> & !BCD<0>
+	# !BCD<3> & !BCD<2> & !BCD<1> & BCD<0>;	// (3 pt, 4 inp)
+
+MACROCELL | 0 | 2 | sevenSeg<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<0>  | BCD<2>  | BCD<1>
+INPUTP | 4 | 17 | 12 | 16 | 13
+EQ | 3 | 
+   sevenSeg<3> = !BCD<3> & BCD<0>
+	# !BCD<3> & BCD<2> & !BCD<1>
+	# !BCD<2> & !BCD<1> & BCD<0>;	// (3 pt, 4 inp)
+
+MACROCELL | 0 | 11 | sevenSeg<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<2>  | BCD<1>  | BCD<0>
+INPUTP | 4 | 17 | 16 | 13 | 12
+EQ | 2 | 
+   sevenSeg<4> = !BCD<3> & !BCD<2> & !BCD<1>
+	# !BCD<3> & BCD<2> & BCD<1> & BCD<0>;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 0 | sevenSeg<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<2>  | BCD<1>  | BCD<0>
+INPUTP | 4 | 17 | 16 | 13 | 12
+EQ | 4 | 
+   !sevenSeg<5> = !BCD<3> & !BCD<2>
+	# !BCD<2> & !BCD<1>
+	# !BCD<3> & BCD<1> & BCD<0>
+	# !BCD<3> & !BCD<1> & !BCD<0>;	// (4 pt, 4 inp)
+
+MACROCELL | 0 | 9 | sevenSeg<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<2>  | BCD<1>  | BCD<0>
+INPUTP | 4 | 17 | 16 | 13 | 12
+EQ | 2 | 
+   sevenSeg<6> = !BCD<3> & BCD<2> & !BCD<1> & !BCD<0>
+	# !BCD<3> & !BCD<2> & !BCD<1> & BCD<0>;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 8 | sevenSeg<7>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | BCD<3>  | BCD<1>  | BCD<0>  | BCD<2>
+INPUTP | 4 | 17 | 13 | 12 | 16
+EQ | 3 | 
+   sevenSeg<7> = !BCD<3> & BCD<1> & BCD<0>
+	# !BCD<3> & !BCD<2> & BCD<1> & !BCD<0>
+	# !BCD<3> & !BCD<2> & !BCD<1> & BCD<0>;	// (3 pt, 4 inp)
+
+PIN | BCD<0> | 64 | 16 | LVCMOS18 | 12 | 7 | 0 | 1 | 0 | 10 | 0 | 2 | 0 | 11 | 0 | 0 | 0 | 9 | 0 | 8
+PIN | BCD<1> | 64 | 16 | LVCMOS18 | 13 | 8 | 0 | 12 | 0 | 1 | 0 | 10 | 0 | 2 | 0 | 11 | 0 | 0 | 0 | 9 | 0 | 8
+PIN | BCD<2> | 64 | 16 | LVCMOS18 | 16 | 8 | 0 | 12 | 0 | 1 | 0 | 10 | 0 | 2 | 0 | 11 | 0 | 0 | 0 | 9 | 0 | 8
+PIN | BCD<3> | 64 | 16 | LVCMOS18 | 17 | 8 | 0 | 12 | 0 | 1 | 0 | 10 | 0 | 2 | 0 | 11 | 0 | 0 | 0 | 9 | 0 | 8
+PIN | sevenSeg<0> | 536871040 | 0 | LVCMOS18 | 78
+PIN | sevenSeg<1> | 536871040 | 0 | LVCMOS18 | 10
+PIN | sevenSeg<2> | 536871040 | 0 | LVCMOS18 | 81
+PIN | sevenSeg<3> | 536871040 | 0 | LVCMOS18 | 9
+PIN | sevenSeg<4> | 536871040 | 0 | LVCMOS18 | 80
+PIN | sevenSeg<5> | 536871040 | 0 | LVCMOS18 | 11
+PIN | sevenSeg<6> | 536871040 | 0 | LVCMOS18 | 1
+PIN | sevenSeg<7> | 536871040 | 0 | LVCMOS18 | 2

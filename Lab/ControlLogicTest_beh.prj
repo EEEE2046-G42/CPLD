@@ -1,0 +1,2 @@
+vhdl work "ControlLogicVHDL.vhd"
+vhdl work "ControlLogicTest.vhd"

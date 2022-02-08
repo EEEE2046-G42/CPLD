@@ -1,0 +1,3 @@
+vhdl work "ControlLogicVHDL.vhd"
+vhdl work "ClockDiv.vhf"
+vhdl work "TopLevel.vhd"

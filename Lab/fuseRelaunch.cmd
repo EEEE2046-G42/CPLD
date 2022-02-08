@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest_isim_beh.exe" -prj "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest_beh.prj" "work.ControlLogicTest" 
