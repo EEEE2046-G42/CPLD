@@ -1,0 +1,2448 @@
+NDS Database:  version O.87xd
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-5-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | TopLevel | 0 | 0 | 1073758214 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | Data_II | TopLevel_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Data | 5841 | PI | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | Inv | Display<0>_MC | TopLevel_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<0>_MC.Q | 5961 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<0>_MC.Q | Display<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<0>_MC.SI | Display<0>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<0>_MC.D1 | 5844 | ? | 0 | 0 | Display<0>_MC | NULL | NULL | Display<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<0>_MC.D2 | 5843 | ? | 0 | 0 | Display<0>_MC | NULL | NULL | Display<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | received<1> | IV_TRUE | received<3>
+SPPTERM | 2 | IV_TRUE | received<3> | IV_TRUE | received<2>
+
+SRFF_INSTANCE | Display<0>_MC.REG | Display<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<0>_MC.D | 5842 | ? | 0 | 0 | Display<0>_MC | NULL | NULL | Display<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<0>_MC.Q | 5960 | ? | 0 | 0 | Display<0>_MC | NULL | NULL | Display<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<1>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<1> | 5850 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<1>_MC.Q | Controller/bitsReceived<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<1>_MC.SI | received<1>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<1> | 5850 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<1>_MC.Q | Controller/bitsReceived<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<1>_MC.D1 | 5849 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<1>_MC.D2 | 5848 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<1>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<1>_MC.CLKF | 5937 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<1>_MC.REG | received<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<1>_MC.D | 5847 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<1>_MC.CLKF | 5937 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<1>_MC.Q | 5846 | ? | 0 | 0 | received<1>_MC | NULL | NULL | received<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<1>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<1> | 5850 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<1>_MC.Q | Controller/bitsReceived<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<1> | 5850 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<1>_MC.Q | Controller/bitsReceived<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<1>_MC.SI | Controller/bitsReceived<1>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<1> | 5850 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<1>_MC.Q | Controller/bitsReceived<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<1>_MC.D1 | 5853 | ? | 0 | 0 | Controller/bitsReceived<1>_MC | NULL | NULL | Controller/bitsReceived<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<1>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<1>_MC.D2 | 5854 | ? | 0 | 0 | Controller/bitsReceived<1>_MC | NULL | NULL | Controller/bitsReceived<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Controller/bitsReceived<1> | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+SPPTERM | 7 | IV_FALSE | Controller/bitsReceived<1> | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+
+SRFF_INSTANCE | Controller/bitsReceived<1>_MC.REG | Controller/bitsReceived<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<1>_MC.D | 5852 | ? | 0 | 0 | Controller/bitsReceived<1>_MC | NULL | NULL | Controller/bitsReceived<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<1>_MC.Q | 5851 | ? | 0 | 0 | Controller/bitsReceived<1>_MC | NULL | NULL | Controller/bitsReceived<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Controller/state<1>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 5935 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/state<1>_MC.SI | Controller/state<1>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/state<1>_MC.D1 | 5860 | ? | 0 | 0 | Controller/state<1>_MC | NULL | NULL | Controller/state<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/state<1>_MC.D2 | 5859 | ? | 0 | 0 | Controller/state<1>_MC | NULL | NULL | Controller/state<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0>
+SPPTERM | 3 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0>
+
+SRFF_INSTANCE | Controller/state<1>_MC.REG | Controller/state<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/state<1>_MC.D | 5858 | ? | 0 | 0 | Controller/state<1>_MC | NULL | NULL | Controller/state<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 5935 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/state<1>_MC.Q | 5857 | ? | 0 | 0 | Controller/state<1>_MC | NULL | NULL | Controller/state<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Controller/state<0>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/state<0>_MC.SI | Controller/state<0>_MC | 0 | 3 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/state<0>_MC.D1 | 5865 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/state<0>_MC.D2 | 5864 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_FALSE | Controller/state<0>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Controller/state<0>_MC.CLKF | 5866 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+
+SRFF_INSTANCE | Controller/state<0>_MC.REG | Controller/state<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/state<0>_MC.D | 5863 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Controller/state<0>_MC.CLKF | 5866 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/state<0>_MC.Q | 5862 | ? | 0 | 0 | Controller/state<0>_MC | NULL | NULL | Controller/state<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_90_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_cmp_eq0000 | 5872 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_cmp_eq0000_MC.Q | Controller/count_cmp_eq0000_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_90_MC.SI | N_PZ_90_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_cmp_eq0000 | 5872 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_cmp_eq0000_MC.Q | Controller/count_cmp_eq0000_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_90_MC.D1 | 5871 | ? | 0 | 0 | N_PZ_90_MC | NULL | NULL | N_PZ_90_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_90_MC.D2 | 5870 | ? | 0 | 0 | N_PZ_90_MC | NULL | NULL | N_PZ_90_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_FALSE | Controller/state<0>
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_cmp_eq0000
+
+SRFF_INSTANCE | N_PZ_90_MC.REG | N_PZ_90_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_90_MC.D | 5869 | ? | 0 | 0 | N_PZ_90_MC | NULL | NULL | N_PZ_90_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_90_MC.Q | 5868 | ? | 0 | 0 | N_PZ_90_MC | NULL | NULL | N_PZ_90_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | Controller/count_cmp_eq0000_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count_cmp_eq0000 | 5872 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_cmp_eq0000_MC.Q | Controller/count_cmp_eq0000_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count_cmp_eq0000_MC.SI | Controller/count_cmp_eq0000_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count_cmp_eq0000_MC.D1 | 5876 | ? | 0 | 0 | Controller/count_cmp_eq0000_MC | NULL | NULL | Controller/count_cmp_eq0000_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count_cmp_eq0000_MC.D2 | 5875 | ? | 0 | 0 | Controller/count_cmp_eq0000_MC | NULL | NULL | Controller/count_cmp_eq0000_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+SPPTERM | 4 | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+
+SRFF_INSTANCE | Controller/count_cmp_eq0000_MC.REG | Controller/count_cmp_eq0000_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count_cmp_eq0000_MC.D | 5874 | ? | 0 | 0 | Controller/count_cmp_eq0000_MC | NULL | NULL | Controller/count_cmp_eq0000_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count_cmp_eq0000_MC.Q | 5873 | ? | 0 | 0 | Controller/count_cmp_eq0000_MC | NULL | NULL | Controller/count_cmp_eq0000_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Controller/bitCounter<0>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitCounter<0>_MC.SI | Controller/bitCounter<0>_MC | 0 | 5 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitCounter<0>_MC.D1 | 5881 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitCounter<0>_MC.D2 | 5880 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | N_PZ_86
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Controller/bitCounter<0>_MC.CLKF | 5912 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+
+SRFF_INSTANCE | Controller/bitCounter<0>_MC.REG | Controller/bitCounter<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitCounter<0>_MC.D | 5879 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Controller/bitCounter<0>_MC.CLKF | 5912 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitCounter<0>_MC.Q | 5878 | ? | 0 | 0 | Controller/bitCounter<0>_MC | NULL | NULL | Controller/bitCounter<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_86_MC | TopLevel_COPY_0_COPY_0 | 0 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_86_MC.SI | N_PZ_86_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_86_MC.D1 | 5885 | ? | 0 | 0 | N_PZ_86_MC | NULL | NULL | N_PZ_86_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 5 | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_86_MC.D2 | 5886 | ? | 0 | 0 | N_PZ_86_MC | NULL | NULL | N_PZ_86_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | N_PZ_86_MC.REG | N_PZ_86_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_86_MC.D | 5884 | ? | 0 | 0 | N_PZ_86_MC | NULL | NULL | N_PZ_86_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_86_MC.Q | 5883 | ? | 0 | 0 | N_PZ_86_MC | NULL | NULL | N_PZ_86_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv | Controller/count_add0000<3>_MC | TopLevel_COPY_0_COPY_0 | 256 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count_add0000<3>_MC.SI | Controller/count_add0000<3>_MC | 0 | 9 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count_add0000<3>_MC.D1 | 5890 | ? | 0 | 0 | Controller/count_add0000<3>_MC | NULL | NULL | Controller/count_add0000<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/count_add0000<3>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count_add0000<3>_MC.D2 | 5891 | ? | 0 | 0 | Controller/count_add0000<3>_MC | NULL | NULL | Controller/count_add0000<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/count_add0000<3>
+SPPTERM | 4 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+SPPTERM | 4 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+SPPTERM | 8 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_FALSE | Controller/count_add0000<4>
+
+SRFF_INSTANCE | Controller/count_add0000<3>_MC.REG | Controller/count_add0000<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count_add0000<3>_MC.D | 5889 | ? | 0 | 0 | Controller/count_add0000<3>_MC | NULL | NULL | Controller/count_add0000<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count_add0000<3>_MC.Q | 5888 | ? | 0 | 0 | Controller/count_add0000<3>_MC | NULL | NULL | Controller/count_add0000<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | Controller/count<0>_MC | TopLevel_COPY_0_COPY_0 | 0 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count<0>_MC.SI | Controller/count<0>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count<0>_MC.D1 | 5896 | ? | 0 | 0 | Controller/count<0>_MC | NULL | NULL | Controller/count<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count<0>_MC.D2 | 5895 | ? | 0 | 0 | Controller/count<0>_MC | NULL | NULL | Controller/count<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Controller/state<0> | IV_FALSE | Controller/count<0>
+SPPTERM | 2 | IV_TRUE | N_PZ_90 | IV_FALSE | Controller/count<0>
+
+SRFF_INSTANCE | Controller/count<0>_MC.REG | Controller/count<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count<0>_MC.D | 5894 | ? | 0 | 0 | Controller/count<0>_MC | NULL | NULL | Controller/count<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count<0>_MC.Q | 5893 | ? | 0 | 0 | Controller/count<0>_MC | NULL | NULL | Controller/count<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | Controller/count_add0000<1>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count_add0000<1>_MC.SI | Controller/count_add0000<1>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count_add0000<1>_MC.D1 | 5900 | ? | 0 | 0 | Controller/count_add0000<1>_MC | NULL | NULL | Controller/count_add0000<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | Controller/count<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count_add0000<1>_MC.D2 | 5901 | ? | 0 | 0 | Controller/count_add0000<1>_MC | NULL | NULL | Controller/count_add0000<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<1>
+SPPTERM | 2 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count_add0000<1>
+
+SRFF_INSTANCE | Controller/count_add0000<1>_MC.REG | Controller/count_add0000<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count_add0000<1>_MC.D | 5899 | ? | 0 | 0 | Controller/count_add0000<1>_MC | NULL | NULL | Controller/count_add0000<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count_add0000<1>_MC.Q | 5898 | ? | 0 | 0 | Controller/count_add0000<1>_MC | NULL | NULL | Controller/count_add0000<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv | Controller/count_add0000<2>_MC | TopLevel_COPY_0_COPY_0 | 256 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count_add0000<2>_MC.SI | Controller/count_add0000<2>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count_add0000<2>_MC.D1 | 5906 | ? | 0 | 0 | Controller/count_add0000<2>_MC | NULL | NULL | Controller/count_add0000<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count_add0000<2>_MC.D2 | 5905 | ? | 0 | 0 | Controller/count_add0000<2>_MC | NULL | NULL | Controller/count_add0000<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90
+SPPTERM | 2 | IV_FALSE | Controller/count<0> | IV_FALSE | Controller/count_add0000<2>
+SPPTERM | 2 | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2>
+SPPTERM | 3 | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+
+SRFF_INSTANCE | Controller/count_add0000<2>_MC.REG | Controller/count_add0000<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count_add0000<2>_MC.D | 5904 | ? | 0 | 0 | Controller/count_add0000<2>_MC | NULL | NULL | Controller/count_add0000<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count_add0000<2>_MC.Q | 5903 | ? | 0 | 0 | Controller/count_add0000<2>_MC | NULL | NULL | Controller/count_add0000<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv | Controller/count_add0000<4>_MC | TopLevel_COPY_0_COPY_0 | 256 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/count_add0000<4>_MC.SI | Controller/count_add0000<4>_MC | 0 | 9 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/count_add0000<4>_MC.D1 | 5910 | ? | 0 | 0 | Controller/count_add0000<4>_MC | NULL | NULL | Controller/count_add0000<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/count_add0000<4>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/count_add0000<4>_MC.D2 | 5911 | ? | 0 | 0 | Controller/count_add0000<4>_MC | NULL | NULL | Controller/count_add0000<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/count_add0000<4>
+SPPTERM | 5 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+SPPTERM | 5 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+SPPTERM | 7 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+
+SRFF_INSTANCE | Controller/count_add0000<4>_MC.REG | Controller/count_add0000<4>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/count_add0000<4>_MC.D | 5909 | ? | 0 | 0 | Controller/count_add0000<4>_MC | NULL | NULL | Controller/count_add0000<4>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/count_add0000<4>_MC.Q | 5908 | ? | 0 | 0 | Controller/count_add0000<4>_MC | NULL | NULL | Controller/count_add0000<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_115_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_115_MC.SI | N_PZ_115_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_115_MC.D1 | 5917 | ? | 0 | 0 | N_PZ_115_MC | NULL | NULL | N_PZ_115_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_115_MC.D2 | 5916 | ? | 0 | 0 | N_PZ_115_MC | NULL | NULL | N_PZ_115_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/state_or000012
+SPPTERM | 4 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/state_or000012
+
+SRFF_INSTANCE | N_PZ_115_MC.REG | N_PZ_115_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_115_MC.D | 5915 | ? | 0 | 0 | N_PZ_115_MC | NULL | NULL | N_PZ_115_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_115_MC.Q | 5914 | ? | 0 | 0 | N_PZ_115_MC | NULL | NULL | N_PZ_115_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | Controller/state_or000012_MC | TopLevel_COPY_0_COPY_0 | 0 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/state_or000012_MC.SI | Controller/state_or000012_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<3> | 5887 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<3>_MC.Q | Controller/count_add0000<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count<0> | 5892 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count<0>_MC.Q | Controller/count<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<1> | 5897 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<1>_MC.Q | Controller/count_add0000<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<2> | 5902 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<2>_MC.Q | Controller/count_add0000<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/count_add0000<4> | 5907 | ? | 0 | 16 | TopLevel_COPY_0_COPY_0 | NULL | Controller/count_add0000<4>_MC.Q | Controller/count_add0000<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/state_or000012_MC.D1 | 5922 | ? | 0 | 0 | Controller/state_or000012_MC | NULL | NULL | Controller/state_or000012_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/state_or000012_MC.D2 | 5921 | ? | 0 | 0 | Controller/state_or000012_MC | NULL | NULL | Controller/state_or000012_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_FALSE | Controller/state<0>
+SPPTERM | 2 | IV_TRUE | Controller/state<1> | IV_TRUE | N_PZ_86
+SPPTERM | 6 | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_FALSE | Controller/count_add0000<4>
+
+SRFF_INSTANCE | Controller/state_or000012_MC.REG | Controller/state_or000012_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/state_or000012_MC.D | 5920 | ? | 0 | 0 | Controller/state_or000012_MC | NULL | NULL | Controller/state_or000012_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/state_or000012_MC.Q | 5919 | ? | 0 | 0 | Controller/state_or000012_MC | NULL | NULL | Controller/state_or000012_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Controller/bitCounter<1>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitCounter<1>_MC.SI | Controller/bitCounter<1>_MC | 0 | 6 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitCounter<1>_MC.D1 | 5927 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitCounter<1>_MC.D2 | 5926 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1>
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1>
+SPPTERM | 5 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_FALSE | Controller/bitCounter<1>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Controller/bitCounter<1>_MC.CLKF | 5928 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+
+SRFF_INSTANCE | Controller/bitCounter<1>_MC.REG | Controller/bitCounter<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitCounter<1>_MC.D | 5925 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Controller/bitCounter<1>_MC.CLKF | 5928 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitCounter<1>_MC.Q | 5924 | ? | 0 | 0 | Controller/bitCounter<1>_MC | NULL | NULL | Controller/bitCounter<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Controller/bitCounter<2>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitCounter<2>_MC.SI | Controller/bitCounter<2>_MC | 0 | 7 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_115 | 5913 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_115_MC.Q | N_PZ_115_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitCounter<2>_MC.D1 | 5933 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitCounter<2>_MC.D2 | 5932 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<2>
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<2>
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+SPPTERM | 6 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Controller/bitCounter<2>_MC.CLKF | 5934 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+
+SRFF_INSTANCE | Controller/bitCounter<2>_MC.REG | Controller/bitCounter<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitCounter<2>_MC.D | 5931 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Controller/bitCounter<2>_MC.CLKF | 5934 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitCounter<2>_MC.Q | 5930 | ? | 0 | 0 | Controller/bitCounter<2>_MC | NULL | NULL | Controller/bitCounter<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<3>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<3> | 5943 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<3>_MC.Q | Controller/bitsReceived<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<3>_MC.SI | received<3>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<3> | 5943 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<3>_MC.Q | Controller/bitsReceived<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<3>_MC.D1 | 5942 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<3>_MC.D2 | 5941 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<3>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<3>_MC.CLKF | 5948 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<3>_MC.REG | received<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<3>_MC.D | 5940 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<3>_MC.CLKF | 5948 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<3>_MC.Q | 5939 | ? | 0 | 0 | received<3>_MC | NULL | NULL | received<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<3>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<3> | 5943 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<3>_MC.Q | Controller/bitsReceived<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<3> | 5943 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<3>_MC.Q | Controller/bitsReceived<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<3>_MC.SI | Controller/bitsReceived<3>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<3> | 5943 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<3>_MC.Q | Controller/bitsReceived<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<3>_MC.D1 | 5946 | ? | 0 | 0 | Controller/bitsReceived<3>_MC | NULL | NULL | Controller/bitsReceived<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<3>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<3>_MC.D2 | 5947 | ? | 0 | 0 | Controller/bitsReceived<3>_MC | NULL | NULL | Controller/bitsReceived<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<3>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<3>
+
+SRFF_INSTANCE | Controller/bitsReceived<3>_MC.REG | Controller/bitsReceived<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<3>_MC.D | 5945 | ? | 0 | 0 | Controller/bitsReceived<3>_MC | NULL | NULL | Controller/bitsReceived<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<3>_MC.Q | 5944 | ? | 0 | 0 | Controller/bitsReceived<3>_MC | NULL | NULL | Controller/bitsReceived<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<2>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<2> | 5954 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<2>_MC.Q | Controller/bitsReceived<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<2>_MC.SI | received<2>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<2> | 5954 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<2>_MC.Q | Controller/bitsReceived<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<2>_MC.D1 | 5953 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<2>_MC.D2 | 5952 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<2>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<2>_MC.CLKF | 5959 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<2>_MC.REG | received<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<2>_MC.D | 5951 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<2>_MC.CLKF | 5959 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<2>_MC.Q | 5950 | ? | 0 | 0 | received<2>_MC | NULL | NULL | received<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<2>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<2> | 5954 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<2>_MC.Q | Controller/bitsReceived<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<2> | 5954 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<2>_MC.Q | Controller/bitsReceived<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<2>_MC.SI | Controller/bitsReceived<2>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<2> | 5954 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<2>_MC.Q | Controller/bitsReceived<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<2>_MC.D1 | 5957 | ? | 0 | 0 | Controller/bitsReceived<2>_MC | NULL | NULL | Controller/bitsReceived<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<2>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<2>_MC.D2 | 5958 | ? | 0 | 0 | Controller/bitsReceived<2>_MC | NULL | NULL | Controller/bitsReceived<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<2>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<2>
+
+SRFF_INSTANCE | Controller/bitsReceived<2>_MC.REG | Controller/bitsReceived<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<2>_MC.D | 5956 | ? | 0 | 0 | Controller/bitsReceived<2>_MC | NULL | NULL | Controller/bitsReceived<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<2>_MC.Q | 5955 | ? | 0 | 0 | Controller/bitsReceived<2>_MC | NULL | NULL | Controller/bitsReceived<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<0> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<0>_MC.Q | 5961 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<0>_MC.Q | Display<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<0> | 5962 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<10>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<10>_MC.Q | 6012 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<10>_MC.Q | Display<10>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<10>_MC.SI | Display<10>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<10>_MC.D1 | 5965 | ? | 0 | 0 | Display<10>_MC | NULL | NULL | Display<10>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<10>_MC.D2 | 5964 | ? | 0 | 0 | Display<10>_MC | NULL | NULL | Display<10>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+SPPTERM | 4 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+SPPTERM | 4 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<10>_MC.REG | Display<10>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<10>_MC.D | 5963 | ? | 0 | 0 | Display<10>_MC | NULL | NULL | Display<10>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<10>_MC.Q | 6011 | ? | 0 | 0 | Display<10>_MC | NULL | NULL | Display<10>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<5>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<5> | 5971 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<5>_MC.Q | Controller/bitsReceived<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<5>_MC.SI | received<5>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<5> | 5971 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<5>_MC.Q | Controller/bitsReceived<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<5>_MC.D1 | 5970 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<5>_MC.D2 | 5969 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<5>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<5>_MC.CLKF | 5977 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<5>_MC.REG | received<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<5>_MC.D | 5968 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<5>_MC.CLKF | 5977 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<5>_MC.Q | 5967 | ? | 0 | 0 | received<5>_MC | NULL | NULL | received<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<5>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<5> | 5971 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<5>_MC.Q | Controller/bitsReceived<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<5> | 5971 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<5>_MC.Q | Controller/bitsReceived<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<5>_MC.SI | Controller/bitsReceived<5>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<5> | 5971 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<5>_MC.Q | Controller/bitsReceived<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<5>_MC.D1 | 5974 | ? | 0 | 0 | Controller/bitsReceived<5>_MC | NULL | NULL | Controller/bitsReceived<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<5>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<5>_MC.D2 | 5975 | ? | 0 | 0 | Controller/bitsReceived<5>_MC | NULL | NULL | Controller/bitsReceived<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<5>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<5>
+
+SRFF_INSTANCE | Controller/bitsReceived<5>_MC.REG | Controller/bitsReceived<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<5>_MC.D | 5973 | ? | 0 | 0 | Controller/bitsReceived<5>_MC | NULL | NULL | Controller/bitsReceived<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<5>_MC.Q | 5972 | ? | 0 | 0 | Controller/bitsReceived<5>_MC | NULL | NULL | Controller/bitsReceived<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<6>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<6> | 5983 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<6>_MC.Q | Controller/bitsReceived<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<6>_MC.SI | received<6>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<6> | 5983 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<6>_MC.Q | Controller/bitsReceived<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<6>_MC.D1 | 5982 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<6>_MC.D2 | 5981 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<6>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<6>_MC.CLKF | 5988 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<6>_MC.REG | received<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<6>_MC.D | 5980 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<6>_MC.CLKF | 5988 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<6>_MC.Q | 5979 | ? | 0 | 0 | received<6>_MC | NULL | NULL | received<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<6>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<6> | 5983 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<6>_MC.Q | Controller/bitsReceived<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<6> | 5983 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<6>_MC.Q | Controller/bitsReceived<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<6>_MC.SI | Controller/bitsReceived<6>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<6> | 5983 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<6>_MC.Q | Controller/bitsReceived<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<6>_MC.D1 | 5986 | ? | 0 | 0 | Controller/bitsReceived<6>_MC | NULL | NULL | Controller/bitsReceived<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<6>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<6>_MC.D2 | 5987 | ? | 0 | 0 | Controller/bitsReceived<6>_MC | NULL | NULL | Controller/bitsReceived<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<6>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<6>
+
+SRFF_INSTANCE | Controller/bitsReceived<6>_MC.REG | Controller/bitsReceived<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<6>_MC.D | 5985 | ? | 0 | 0 | Controller/bitsReceived<6>_MC | NULL | NULL | Controller/bitsReceived<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<6>_MC.Q | 5984 | ? | 0 | 0 | Controller/bitsReceived<6>_MC | NULL | NULL | Controller/bitsReceived<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<7>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<7> | 5994 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<7>_MC.Q | Controller/bitsReceived<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<7>_MC.SI | received<7>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<7> | 5994 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<7>_MC.Q | Controller/bitsReceived<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<7>_MC.D1 | 5993 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<7>_MC.D2 | 5992 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<7>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<7>_MC.CLKF | 5999 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<7>_MC.REG | received<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<7>_MC.D | 5991 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<7>_MC.CLKF | 5999 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<7>_MC.Q | 5990 | ? | 0 | 0 | received<7>_MC | NULL | NULL | received<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<7>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<7> | 5994 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<7>_MC.Q | Controller/bitsReceived<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<7> | 5994 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<7>_MC.Q | Controller/bitsReceived<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<7>_MC.SI | Controller/bitsReceived<7>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<7> | 5994 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<7>_MC.Q | Controller/bitsReceived<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<7>_MC.D1 | 5997 | ? | 0 | 0 | Controller/bitsReceived<7>_MC | NULL | NULL | Controller/bitsReceived<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<7>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<7>_MC.D2 | 5998 | ? | 0 | 0 | Controller/bitsReceived<7>_MC | NULL | NULL | Controller/bitsReceived<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<7>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<7>
+
+SRFF_INSTANCE | Controller/bitsReceived<7>_MC.REG | Controller/bitsReceived<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<7>_MC.D | 5996 | ? | 0 | 0 | Controller/bitsReceived<7>_MC | NULL | NULL | Controller/bitsReceived<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<7>_MC.Q | 5995 | ? | 0 | 0 | Controller/bitsReceived<7>_MC | NULL | NULL | Controller/bitsReceived<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<4>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<4> | 6005 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<4>_MC.Q | Controller/bitsReceived<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<4>_MC.SI | received<4>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<4> | 6005 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<4>_MC.Q | Controller/bitsReceived<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<4>_MC.D1 | 6004 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<4>_MC.D2 | 6003 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<4>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<4>_MC.CLKF | 6010 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<4>_MC.REG | received<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<4>_MC.D | 6002 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<4>_MC.CLKF | 6010 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<4>_MC.Q | 6001 | ? | 0 | 0 | received<4>_MC | NULL | NULL | received<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<4>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<4> | 6005 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<4>_MC.Q | Controller/bitsReceived<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<4> | 6005 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<4>_MC.Q | Controller/bitsReceived<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<4>_MC.SI | Controller/bitsReceived<4>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<4> | 6005 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<4>_MC.Q | Controller/bitsReceived<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<4>_MC.D1 | 6008 | ? | 0 | 0 | Controller/bitsReceived<4>_MC | NULL | NULL | Controller/bitsReceived<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<4>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<4>_MC.D2 | 6009 | ? | 0 | 0 | Controller/bitsReceived<4>_MC | NULL | NULL | Controller/bitsReceived<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<4>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<4>
+
+SRFF_INSTANCE | Controller/bitsReceived<4>_MC.REG | Controller/bitsReceived<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<4>_MC.D | 6007 | ? | 0 | 0 | Controller/bitsReceived<4>_MC | NULL | NULL | Controller/bitsReceived<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<4>_MC.Q | 6006 | ? | 0 | 0 | Controller/bitsReceived<4>_MC | NULL | NULL | Controller/bitsReceived<4>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<10> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<10>_MC.Q | 6012 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<10>_MC.Q | Display<10>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<10> | 6013 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<10> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<11>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<11>_MC.Q | 6018 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<11>_MC.Q | Display<11>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<11>_MC.SI | Display<11>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<11>_MC.D1 | 6016 | ? | 0 | 0 | Display<11>_MC | NULL | NULL | Display<11>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<11>_MC.D2 | 6015 | ? | 0 | 0 | Display<11>_MC | NULL | NULL | Display<11>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<7> | IV_TRUE | received<4>
+SPPTERM | 3 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7>
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<11>_MC.REG | Display<11>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<11>_MC.D | 6014 | ? | 0 | 0 | Display<11>_MC | NULL | NULL | Display<11>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<11>_MC.Q | 6017 | ? | 0 | 0 | Display<11>_MC | NULL | NULL | Display<11>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<11> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<11>_MC.Q | 6018 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<11>_MC.Q | Display<11>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<11> | 6019 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<11> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<12>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<12>_MC.Q | 6024 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<12>_MC.Q | Display<12>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<12>_MC.SI | Display<12>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<12>_MC.D1 | 6022 | ? | 0 | 0 | Display<12>_MC | NULL | NULL | Display<12>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<12>_MC.D2 | 6021 | ? | 0 | 0 | Display<12>_MC | NULL | NULL | Display<12>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7>
+SPPTERM | 4 | IV_TRUE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<12>_MC.REG | Display<12>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<12>_MC.D | 6020 | ? | 0 | 0 | Display<12>_MC | NULL | NULL | Display<12>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<12>_MC.Q | 6023 | ? | 0 | 0 | Display<12>_MC | NULL | NULL | Display<12>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<12> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<12>_MC.Q | 6024 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<12>_MC.Q | Display<12>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<12> | 6025 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<12> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Display<13>_MC | TopLevel_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<13>_MC.Q | 6030 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<13>_MC.Q | Display<13>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<13>_MC.SI | Display<13>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<13>_MC.D1 | 6028 | ? | 0 | 0 | Display<13>_MC | NULL | NULL | Display<13>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<13>_MC.D2 | 6027 | ? | 0 | 0 | Display<13>_MC | NULL | NULL | Display<13>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<5> | IV_FALSE | received<6>
+SPPTERM | 2 | IV_FALSE | received<6> | IV_FALSE | received<7>
+SPPTERM | 3 | IV_TRUE | received<5> | IV_FALSE | received<7> | IV_TRUE | received<4>
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<7> | IV_FALSE | received<4>
+
+SRFF_INSTANCE | Display<13>_MC.REG | Display<13>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<13>_MC.D | 6026 | ? | 0 | 0 | Display<13>_MC | NULL | NULL | Display<13>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<13>_MC.Q | 6029 | ? | 0 | 0 | Display<13>_MC | NULL | NULL | Display<13>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<13> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<13>_MC.Q | 6030 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<13>_MC.Q | Display<13>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<13> | 6031 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<13> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<14>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<14>_MC.Q | 6036 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<14>_MC.Q | Display<14>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<14>_MC.SI | Display<14>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<14>_MC.D1 | 6034 | ? | 0 | 0 | Display<14>_MC | NULL | NULL | Display<14>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<14>_MC.D2 | 6033 | ? | 0 | 0 | Display<14>_MC | NULL | NULL | Display<14>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+SPPTERM | 4 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<14>_MC.REG | Display<14>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<14>_MC.D | 6032 | ? | 0 | 0 | Display<14>_MC | NULL | NULL | Display<14>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<14>_MC.Q | 6035 | ? | 0 | 0 | Display<14>_MC | NULL | NULL | Display<14>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<14> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<14>_MC.Q | 6036 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<14>_MC.Q | Display<14>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<14> | 6037 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<14> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<15>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<15>_MC.Q | 6042 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<15>_MC.Q | Display<15>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<15>_MC.SI | Display<15>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<15>_MC.D1 | 6040 | ? | 0 | 0 | Display<15>_MC | NULL | NULL | Display<15>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<15>_MC.D2 | 6039 | ? | 0 | 0 | Display<15>_MC | NULL | NULL | Display<15>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | received<5> | IV_FALSE | received<7> | IV_TRUE | received<4>
+SPPTERM | 4 | IV_TRUE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+SPPTERM | 4 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<15>_MC.REG | Display<15>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<15>_MC.D | 6038 | ? | 0 | 0 | Display<15>_MC | NULL | NULL | Display<15>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<15>_MC.Q | 6041 | ? | 0 | 0 | Display<15>_MC | NULL | NULL | Display<15>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<15> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<15>_MC.Q | 6042 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<15>_MC.Q | Display<15>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<15> | 6043 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<15> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Display<1>_MC | TopLevel_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<1>_MC.Q | 6059 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<1>_MC.Q | Display<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<1>_MC.SI | Display<1>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<1>_MC.D1 | 6046 | ? | 0 | 0 | Display<1>_MC | NULL | NULL | Display<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<1>_MC.D2 | 6045 | ? | 0 | 0 | Display<1>_MC | NULL | NULL | Display<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<1> | IV_FALSE | received<2>
+SPPTERM | 2 | IV_FALSE | received<3> | IV_TRUE | received<2>
+SPPTERM | 2 | IV_FALSE | received<3> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<1>_MC.REG | Display<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<1>_MC.D | 6044 | ? | 0 | 0 | Display<1>_MC | NULL | NULL | Display<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<1>_MC.Q | 6058 | ? | 0 | 0 | Display<1>_MC | NULL | NULL | Display<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | received<0>_MC | TopLevel_COPY_0_COPY_0 | 1088 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<0> | 6052 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<0>_MC.Q | Controller/bitsReceived<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | received<0>_MC.SI | received<0>_MC | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<0> | 6052 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<0>_MC.Q | Controller/bitsReceived<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | received<0>_MC.D1 | 6051 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | received<0>_MC.D2 | 6050 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<0>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | received<0>_MC.CLKF | 6057 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+
+SRFF_INSTANCE | received<0>_MC.REG | received<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | received<0>_MC.D | 6049 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | received<0>_MC.CLKF | 6057 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | received<0>_MC.Q | 6048 | ? | 0 | 0 | received<0>_MC | NULL | NULL | received<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Controller/bitsReceived<0>_MC | TopLevel_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<0> | 6052 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<0>_MC.Q | Controller/bitsReceived<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Controller/bitsReceived<0> | 6052 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<0>_MC.Q | Controller/bitsReceived<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Controller/bitsReceived<0>_MC.SI | Controller/bitsReceived<0>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitsReceived<0> | 6052 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitsReceived<0>_MC.Q | Controller/bitsReceived<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Data_II/UIM | 5855 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Data_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<1> | 5856 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<1>_MC.Q | Controller/state<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state<0> | 5861 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state<0>_MC.Q | Controller/state<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<0> | 5877 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<0>_MC.Q | Controller/bitCounter<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<1> | 5923 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<1>_MC.Q | Controller/bitCounter<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/bitCounter<2> | 5929 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/bitCounter<2>_MC.Q | Controller/bitCounter<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Controller/bitsReceived<0>_MC.D1 | 6055 | ? | 0 | 0 | Controller/bitsReceived<0>_MC | NULL | NULL | Controller/bitsReceived<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Controller/bitsReceived<0>_MC.D2 | 6056 | ? | 0 | 0 | Controller/bitsReceived<0>_MC | NULL | NULL | Controller/bitsReceived<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<0>
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<0>
+
+SRFF_INSTANCE | Controller/bitsReceived<0>_MC.REG | Controller/bitsReceived<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Controller/bitsReceived<0>_MC.D | 6054 | ? | 0 | 0 | Controller/bitsReceived<0>_MC | NULL | NULL | Controller/bitsReceived<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Controller/bitsReceived<0>_MC.Q | 6053 | ? | 0 | 0 | Controller/bitsReceived<0>_MC | NULL | NULL | Controller/bitsReceived<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<1> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<1>_MC.Q | 6059 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<1>_MC.Q | Display<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<1> | 6060 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<2>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<2>_MC.Q | 6065 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<2>_MC.Q | Display<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<2>_MC.SI | Display<2>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<2>_MC.D1 | 6063 | ? | 0 | 0 | Display<2>_MC | NULL | NULL | Display<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<2>_MC.D2 | 6062 | ? | 0 | 0 | Display<2>_MC | NULL | NULL | Display<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_TRUE | received<0>
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_FALSE | received<0>
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<2>_MC.REG | Display<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<2>_MC.D | 6061 | ? | 0 | 0 | Display<2>_MC | NULL | NULL | Display<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<2>_MC.Q | 6064 | ? | 0 | 0 | Display<2>_MC | NULL | NULL | Display<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<2> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<2>_MC.Q | 6065 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<2>_MC.Q | Display<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<2> | 6066 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<3>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<3>_MC.Q | 6071 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<3>_MC.Q | Display<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<3>_MC.SI | Display<3>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<3>_MC.D1 | 6069 | ? | 0 | 0 | Display<3>_MC | NULL | NULL | Display<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<3>_MC.D2 | 6068 | ? | 0 | 0 | Display<3>_MC | NULL | NULL | Display<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<3> | IV_TRUE | received<0>
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2>
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<2> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<3>_MC.REG | Display<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<3>_MC.D | 6067 | ? | 0 | 0 | Display<3>_MC | NULL | NULL | Display<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<3>_MC.Q | 6070 | ? | 0 | 0 | Display<3>_MC | NULL | NULL | Display<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<3> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<3>_MC.Q | 6071 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<3>_MC.Q | Display<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<3> | 6072 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<4>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<4>_MC.Q | 6077 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<4>_MC.Q | Display<4>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<4>_MC.SI | Display<4>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<4>_MC.D1 | 6075 | ? | 0 | 0 | Display<4>_MC | NULL | NULL | Display<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<4>_MC.D2 | 6074 | ? | 0 | 0 | Display<4>_MC | NULL | NULL | Display<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2>
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<4>_MC.REG | Display<4>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<4>_MC.D | 6073 | ? | 0 | 0 | Display<4>_MC | NULL | NULL | Display<4>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<4>_MC.Q | 6076 | ? | 0 | 0 | Display<4>_MC | NULL | NULL | Display<4>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<4> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<4>_MC.Q | 6077 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<4>_MC.Q | Display<4>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<4> | 6078 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<4> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Display<5>_MC | TopLevel_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<5>_MC.Q | 6083 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<5>_MC.Q | Display<5>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<5>_MC.SI | Display<5>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<5>_MC.D1 | 6081 | ? | 0 | 0 | Display<5>_MC | NULL | NULL | Display<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<5>_MC.D2 | 6080 | ? | 0 | 0 | Display<5>_MC | NULL | NULL | Display<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<1> | IV_FALSE | received<2>
+SPPTERM | 2 | IV_FALSE | received<3> | IV_FALSE | received<2>
+SPPTERM | 3 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<0>
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<0>
+
+SRFF_INSTANCE | Display<5>_MC.REG | Display<5>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<5>_MC.D | 6079 | ? | 0 | 0 | Display<5>_MC | NULL | NULL | Display<5>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<5>_MC.Q | 6082 | ? | 0 | 0 | Display<5>_MC | NULL | NULL | Display<5>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<5> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<5>_MC.Q | 6083 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<5>_MC.Q | Display<5>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<5> | 6084 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<5> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<6>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<6>_MC.Q | 6089 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<6>_MC.Q | Display<6>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<6>_MC.SI | Display<6>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<6>_MC.D1 | 6087 | ? | 0 | 0 | Display<6>_MC | NULL | NULL | Display<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<6>_MC.D2 | 6086 | ? | 0 | 0 | Display<6>_MC | NULL | NULL | Display<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_FALSE | received<0>
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<6>_MC.REG | Display<6>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<6>_MC.D | 6085 | ? | 0 | 0 | Display<6>_MC | NULL | NULL | Display<6>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<6>_MC.Q | 6088 | ? | 0 | 0 | Display<6>_MC | NULL | NULL | Display<6>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<6> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<6>_MC.Q | 6089 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<6>_MC.Q | Display<6>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<6> | 6090 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<6> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | Display<7>_MC | TopLevel_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<7>_MC.Q | 6095 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<7>_MC.Q | Display<7>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<7>_MC.SI | Display<7>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<1> | 5845 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<1>_MC.Q | received<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<3> | 5938 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<3>_MC.Q | received<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<0> | 6047 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<0>_MC.Q | received<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<2> | 5949 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<2>_MC.Q | received<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<7>_MC.D1 | 6093 | ? | 0 | 0 | Display<7>_MC | NULL | NULL | Display<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<7>_MC.D2 | 6092 | ? | 0 | 0 | Display<7>_MC | NULL | NULL | Display<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<0>
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_FALSE | received<0>
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_TRUE | received<0>
+
+SRFF_INSTANCE | Display<7>_MC.REG | Display<7>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<7>_MC.D | 6091 | ? | 0 | 0 | Display<7>_MC | NULL | NULL | Display<7>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<7>_MC.Q | 6094 | ? | 0 | 0 | Display<7>_MC | NULL | NULL | Display<7>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<7> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<7>_MC.Q | 6095 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<7>_MC.Q | Display<7>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<7> | 6096 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<7> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Display<8>_MC | TopLevel_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<8>_MC.Q | 6101 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<8>_MC.Q | Display<8>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<8>_MC.SI | Display<8>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<8>_MC.D1 | 6099 | ? | 0 | 0 | Display<8>_MC | NULL | NULL | Display<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<8>_MC.D2 | 6098 | ? | 0 | 0 | Display<8>_MC | NULL | NULL | Display<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | received<5> | IV_TRUE | received<7>
+SPPTERM | 2 | IV_TRUE | received<6> | IV_TRUE | received<7>
+
+SRFF_INSTANCE | Display<8>_MC.REG | Display<8>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<8>_MC.D | 6097 | ? | 0 | 0 | Display<8>_MC | NULL | NULL | Display<8>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<8>_MC.Q | 6100 | ? | 0 | 0 | Display<8>_MC | NULL | NULL | Display<8>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<8> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<8>_MC.Q | 6101 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<8>_MC.Q | Display<8>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<8> | 6102 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<8> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | Display<9>_MC | TopLevel_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display<9>_MC.Q | 6107 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<9>_MC.Q | Display<9>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display<9>_MC.SI | Display<9>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<5> | 5966 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<5>_MC.Q | received<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<6> | 5978 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<6>_MC.Q | received<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<7> | 5989 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<7>_MC.Q | received<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | received<4> | 6000 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | received<4>_MC.Q | received<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display<9>_MC.D1 | 6105 | ? | 0 | 0 | Display<9>_MC | NULL | NULL | Display<9>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display<9>_MC.D2 | 6104 | ? | 0 | 0 | Display<9>_MC | NULL | NULL | Display<9>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | received<5> | IV_FALSE | received<6>
+SPPTERM | 2 | IV_TRUE | received<6> | IV_FALSE | received<7>
+SPPTERM | 2 | IV_FALSE | received<7> | IV_TRUE | received<4>
+
+SRFF_INSTANCE | Display<9>_MC.REG | Display<9>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display<9>_MC.D | 6103 | ? | 0 | 0 | Display<9>_MC | NULL | NULL | Display<9>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display<9>_MC.Q | 6106 | ? | 0 | 0 | Display<9>_MC | NULL | NULL | Display<9>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display<9> | TopLevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display<9>_MC.Q | 6107 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Display<9>_MC.Q | Display<9>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display<9> | 6108 | PO | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | Display<9> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | Display<2>_MC | 1 | NULL | 0 | Display<2> | 1 | 38 | 49152
+FBPIN | 2 | Display<1>_MC | 1 | NULL | 0 | Display<1> | 1 | 37 | 49152
+FBPIN | 3 | Display<0>_MC | 1 | NULL | 0 | Display<0> | 1 | 36 | 49152
+FBPIN | 4 | Controller/state<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | N_PZ_86_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 6 | Controller/state_or000012_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 7 | Controller/count_add0000<4>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | Controller/count_add0000<3>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | Display<3>_MC | 1 | NULL | 0 | Display<3> | 1 | 34 | 53248
+FBPIN | 10 | Display<10>_MC | 1 | NULL | 0 | Display<10> | 1 | 33 | 53248
+FBPIN | 11 | Display<9>_MC | 1 | NULL | 0 | Display<9> | 1 | 32 | 53248
+FBPIN | 12 | Display<8>_MC | 1 | NULL | 0 | Display<8> | 1 | 31 | 53248
+FBPIN | 13 | Display<11>_MC | 1 | NULL | 0 | Display<11> | 1 | 30 | 51200
+FBPIN | 14 | Controller/count_add0000<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | Controller/count_add0000<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | Controller/count<0>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | Display<7>_MC | 1 | NULL | 0 | Display<7> | 1 | 39 | 49152
+FBPIN | 2 | Display<6>_MC | 1 | NULL | 0 | Display<6> | 1 | 40 | 49152
+FBPIN | 3 | Controller/bitsReceived<3>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 4 | Controller/bitsReceived<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | Display<5>_MC | 1 | NULL | 0 | Display<5> | 1 | 41 | 49152
+FBPIN | 6 | Display<4>_MC | 1 | NULL | 0 | Display<4> | 1 | 42 | 49152
+FBPIN | 7 | Controller/bitsReceived<4>_MC | 1 | NULL | 0 | NULL | 0 | 43 | 57344
+FBPIN | 8 | Display<15>_MC | 1 | NULL | 0 | Display<15> | 1 | 44 | 57344
+FBPIN | 9 | Controller/bitsReceived<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | Display<14>_MC | 1 | NULL | 0 | Display<14> | 1 | 1 | 57344
+FBPIN | 11 | Controller/bitsReceived<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 12 | Display<13>_MC | 1 | NULL | 0 | Display<13> | 1 | 2 | 49152
+FBPIN | 13 | Display<12>_MC | 1 | NULL | 0 | Display<12> | 1 | 3 | 49152
+FBPIN | 14 | N_PZ_90_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | N_PZ_115_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | Controller/state<0>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | received<4>_MC | 1 | NULL | 0 | NULL | 0 | 28 | 49152
+FBPIN | 3 | received<3>_MC | 1 | NULL | 0 | NULL | 0 | 27 | 49152
+FBPIN | 4 | Controller/count_cmp_eq0000_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | Controller/bitCounter<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 6 | received<2>_MC | 1 | NULL | 0 | NULL | 0 | 23 | 49152
+FBPIN | 7 | Controller/bitCounter<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | Controller/bitCounter<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | Controller/bitsReceived<7>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | received<1>_MC | 1 | NULL | 0 | NULL | 0 | 22 | 49152
+FBPIN | 11 | received<0>_MC | 1 | NULL | 0 | NULL | 0 | 21 | 49152
+FBPIN | 12 | received<7>_MC | 1 | NULL | 0 | NULL | 0 | 20 | 49152
+FBPIN | 13 | Controller/bitsReceived<6>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 14 | received<6>_MC | 1 | NULL | 0 | NULL | 0 | 19 | 49152
+FBPIN | 15 | received<5>_MC | 1 | NULL | 0 | NULL | 0 | 18 | 49152
+FBPIN | 16 | Controller/bitsReceived<5>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR4_ | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 15 | NULL | 0 | Data_II | 1 | NULL | 0 | 16 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | TopLevel_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_90 | 5867 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_90_MC.Q | N_PZ_90_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Controller/state_or000012 | 5918 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | Controller/state_or000012_MC.Q | Controller/state_or000012_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 5935 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | TopLevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 5936 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | TopLevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_86 | 5882 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | N_PZ_86_MC.Q | N_PZ_86_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR3__ctinst/4 | 5976 | ? | 0 | 0 | TopLevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR3__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | TopLevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 47
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_TRUE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 1 | 
+SPPTERM | 4 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 2 | 
+SPPTERM | 4 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+PLA_TERM | 3 | 
+SPPTERM | 3 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7>
+PLA_TERM | 4 | 
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+PLA_TERM | 5 | 
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_TRUE | received<4>
+PLA_TERM | 6 | 
+SPPTERM | 2 | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 7 | 
+SPPTERM | 2 | IV_FALSE | received<1> | IV_FALSE | received<2>
+PLA_TERM | 8 | 
+SPPTERM | 2 | IV_FALSE | received<3> | IV_TRUE | received<2>
+PLA_TERM | 9 | 
+SPPTERM | 2 | IV_FALSE | received<3> | IV_TRUE | received<0>
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_TRUE | received<0>
+PLA_TERM | 11 | 
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_TRUE | received<0>
+PLA_TERM | 12 | 
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_FALSE | received<0>
+PLA_TERM | 13 | 
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2>
+PLA_TERM | 14 | 
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<2> | IV_TRUE | received<0>
+PLA_TERM | 15 | 
+SPPTERM | 2 | IV_FALSE | received<5> | IV_FALSE | received<6>
+PLA_TERM | 16 | 
+SPPTERM | 2 | IV_TRUE | received<6> | IV_FALSE | received<7>
+PLA_TERM | 17 | 
+SPPTERM | 2 | IV_TRUE | received<1> | IV_TRUE | received<3>
+PLA_TERM | 18 | 
+SPPTERM | 2 | IV_TRUE | received<3> | IV_TRUE | received<2>
+PLA_TERM | 19 | 
+SPPTERM | 2 | IV_TRUE | received<5> | IV_TRUE | received<7>
+PLA_TERM | 20 | 
+SPPTERM | 2 | IV_TRUE | received<6> | IV_TRUE | received<7>
+PLA_TERM | 21 | 
+SPPTERM | 2 | IV_TRUE | Controller/state<0> | IV_FALSE | Controller/count<0>
+PLA_TERM | 22 | 
+SPPTERM | 5 | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+PLA_TERM | 23 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_90 | IV_FALSE | Controller/count<0>
+PLA_TERM | 24 | 
+SPPTERM | 2 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<1>
+PLA_TERM | 25 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count_add0000<1>
+PLA_TERM | 26 | 
+SPPTERM | 3 | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+PLA_TERM | 27 | 
+SPPTERM | 2 | IV_FALSE | Controller/count<0> | IV_FALSE | Controller/count_add0000<2>
+PLA_TERM | 28 | 
+SPPTERM | 1 | IV_FALSE | Controller/count_add0000<4>
+PLA_TERM | 29 | 
+SPPTERM | 2 | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2>
+PLA_TERM | 30 | 
+SPPTERM | 2 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90
+PLA_TERM | 31 | 
+SPPTERM | 1 | IV_FALSE | Controller/count_add0000<3>
+PLA_TERM | 32 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+PLA_TERM | 33 | 
+SPPTERM | 8 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_FALSE | Controller/count_add0000<4>
+PLA_TERM | 34 | 
+SPPTERM | 4 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+PLA_TERM | 35 | 
+SPPTERM | 3 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/count_add0000<3>
+PLA_TERM | 36 | 
+SPPTERM | 5 | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+PLA_TERM | 37 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+PLA_TERM | 38 | 
+SPPTERM | 7 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_TRUE | Controller/count_add0000<4>
+PLA_TERM | 39 | 
+SPPTERM | 5 | IV_TRUE | N_PZ_90 | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_TRUE | Controller/count_add0000<1> | IV_TRUE | Controller/count_add0000<2>
+PLA_TERM | 40 | 
+SPPTERM | 3 | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/count_add0000<4>
+PLA_TERM | 41 | 
+SPPTERM | 1 | IV_FALSE | Controller/state<0>
+PLA_TERM | 42 | 
+SPPTERM | 6 | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/count_add0000<3> | IV_TRUE | Controller/count<0> | IV_FALSE | Controller/count_add0000<1> | IV_FALSE | Controller/count_add0000<2> | IV_FALSE | Controller/count_add0000<4>
+PLA_TERM | 43 | 
+SPPTERM | 2 | IV_TRUE | Controller/state<1> | IV_TRUE | N_PZ_86
+PLA_TERM | 44 | 
+SPPTERM | 3 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0>
+PLA_TERM | 45 | 
+SPPTERM | 2 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0>
+PLA_TERM | 52 | 
+SPPTERM | 1 | IV_TRUE | Controller/count<0>
+
+PLA | FOOBAR2_ | 40
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_FALSE | received<5> | IV_FALSE | received<6>
+PLA_TERM | 1 | 
+SPPTERM | 2 | IV_FALSE | received<6> | IV_FALSE | received<7>
+PLA_TERM | 2 | 
+SPPTERM | 3 | IV_TRUE | received<5> | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 3 | 
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<7> | IV_FALSE | received<4>
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+PLA_TERM | 5 | 
+SPPTERM | 2 | IV_FALSE | received<1> | IV_FALSE | received<2>
+PLA_TERM | 6 | 
+SPPTERM | 2 | IV_FALSE | received<3> | IV_FALSE | received<2>
+PLA_TERM | 7 | 
+SPPTERM | 3 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<0>
+PLA_TERM | 8 | 
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<0>
+PLA_TERM | 9 | 
+SPPTERM | 4 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_TRUE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+PLA_TERM | 11 | 
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_TRUE | received<0>
+PLA_TERM | 12 | 
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2> | IV_FALSE | received<0>
+PLA_TERM | 13 | 
+SPPTERM | 3 | IV_FALSE | received<5> | IV_FALSE | received<6> | IV_FALSE | received<7>
+PLA_TERM | 14 | 
+SPPTERM | 4 | IV_TRUE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_TRUE | received<4>
+PLA_TERM | 15 | 
+SPPTERM | 4 | IV_FALSE | received<5> | IV_TRUE | received<6> | IV_FALSE | received<7> | IV_FALSE | received<4>
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<3>
+PLA_TERM | 17 | 
+SPPTERM | 3 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_FALSE | received<2>
+PLA_TERM | 18 | 
+SPPTERM | 4 | IV_TRUE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_TRUE | received<0>
+PLA_TERM | 19 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<2>
+PLA_TERM | 20 | 
+SPPTERM | 4 | IV_FALSE | received<1> | IV_FALSE | received<3> | IV_TRUE | received<2> | IV_FALSE | received<0>
+PLA_TERM | 21 | 
+SPPTERM | 1 | IV_FALSE | Controller/state<0>
+PLA_TERM | 22 | 
+SPPTERM | 4 | IV_FALSE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | Controller/state_or000012
+PLA_TERM | 23 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/state_or000012
+PLA_TERM | 24 | 
+SPPTERM | 3 | IV_TRUE | Data_II/UIM | IV_FALSE | Controller/state<1> | IV_FALSE | Controller/state<0>
+PLA_TERM | 25 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/count_cmp_eq0000
+PLA_TERM | 26 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<0>
+PLA_TERM | 27 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<0>
+PLA_TERM | 28 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<4>
+PLA_TERM | 29 | 
+SPPTERM | 7 | IV_TRUE | Controller/bitsReceived<1> | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+PLA_TERM | 30 | 
+SPPTERM | 7 | IV_FALSE | Controller/bitsReceived<1> | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+PLA_TERM | 31 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<2>
+PLA_TERM | 32 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<2>
+PLA_TERM | 33 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<3>
+PLA_TERM | 34 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<1>
+PLA_TERM | 35 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<3>
+PLA_TERM | 36 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<4>
+PLA_TERM | 37 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<4>
+PLA_TERM | 40 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<0>
+PLA_TERM | 55 | 
+SPPTERM | 2 | IV_FALSE | N_PZ_90 | IV_TRUE | Controller/state_or000012
+
+PLA | FOOBAR3_ | 40
+PLA_TERM | 0 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<5>
+PLA_TERM | 1 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<5>
+PLA_TERM | 2 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<6>
+PLA_TERM | 3 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<6>
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_86
+PLA_TERM | 5 | 
+SPPTERM | 7 | IV_FALSE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_TRUE | Controller/bitsReceived<7>
+PLA_TERM | 6 | 
+SPPTERM | 7 | IV_TRUE | Data_II/UIM | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2> | IV_FALSE | Controller/bitsReceived<7>
+PLA_TERM | 7 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<2>
+PLA_TERM | 8 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+PLA_TERM | 9 | 
+SPPTERM | 6 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_FALSE | Controller/bitCounter<2>
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<2>
+PLA_TERM | 11 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | Controller/bitCounter<1>
+PLA_TERM | 12 | 
+SPPTERM | 5 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_FALSE | Controller/bitCounter<1>
+PLA_TERM | 13 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 14 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1>
+PLA_TERM | 15 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 16 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 17 | 
+SPPTERM | 4 | IV_TRUE | Controller/state<1> | IV_FALSE | Controller/state<0> | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | N_PZ_86
+PLA_TERM | 18 | 
+SPPTERM | 4 | IV_FALSE | Controller/bitCounter<0> | IV_TRUE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+PLA_TERM | 19 | 
+SPPTERM | 4 | IV_TRUE | Controller/bitCounter<0> | IV_FALSE | N_PZ_86 | IV_TRUE | Controller/bitCounter<1> | IV_TRUE | Controller/bitCounter<2>
+PLA_TERM | 20 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<5>
+PLA_TERM | 21 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<6>
+PLA_TERM | 22 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+PLA_TERM | 23 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<7>
+PLA_TERM | 24 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<0>
+PLA_TERM | 25 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 26 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<1>
+PLA_TERM | 27 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<2>
+PLA_TERM | 28 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+PLA_TERM | 29 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<3>
+PLA_TERM | 30 | 
+SPPTERM | 1 | IV_TRUE | Controller/bitsReceived<4>
+PLA_TERM | 31 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_115
+PLA_TERM | 34 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<7>
+PLA_TERM | 37 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 40 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 43 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 46 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<6>
+PLA_TERM | 49 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 52 | 
+SPPTERM | 3 | IV_TRUE | Controller/state<1> | IV_TRUE | Controller/state<0> | IV_TRUE | N_PZ_86
+PLA_TERM | 55 | 
+SPPTERM | 1 | IV_FALSE | Controller/bitsReceived<5>
+
+BUSINFO | DISPLAY<15:0> | 16 | 0 | 1 | Display<0> | 15 | Display<10> | 5 | Display<11> | 4 | Display<12> | 3 | Display<13> | 2 | Display<14> | 1 | Display<15> | 0 | Display<1> | 14 | Display<2> | 13 | Display<3> | 12 | Display<4> | 11 | Display<5> | 10 | Display<6> | 9 | Display<7> | 8 | Display<8> | 7 | Display<9> | 6
+
+IOSTD | LVCMOS18
+Data | LVCMOS18
+Display<0> | LVCMOS18
+Display<10> | LVCMOS18
+Display<11> | LVCMOS18
+Display<12> | LVCMOS18
+Display<13> | LVCMOS18
+Display<14> | LVCMOS18
+Display<15> | LVCMOS18
+Display<1> | LVCMOS18
+Display<2> | LVCMOS18
+Display<3> | LVCMOS18
+Display<4> | LVCMOS18
+Display<5> | LVCMOS18
+Display<6> | LVCMOS18
+Display<7> | LVCMOS18
+Display<8> | LVCMOS18
+Display<9> | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | N_PZ_86 | NULL | 1 | received<3> | NULL | 2 | received<5> | NULL | 3 | Controller/count_add0000<3> | NULL | 4 | Controller/state<0> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 5 | received<0> | NULL | 6 | received<4> | NULL | 7 | received<6> | NULL | 8 | received<2> | NULL | 9 | received<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 10 | received<7> | NULL | 14 | Controller/state<1> | NULL | 15 | Controller/count<0> | NULL | 17 | N_PZ_90 | NULL | 20 | Controller/count_add0000<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 21 | Controller/count_add0000<2> | NULL | 22 | Controller/state_or000012 | NULL | 24 | Data | 16 | 29 | Controller/count_add0000<4> | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | 68 | 98 | 110 | 71 | 95 | 106 | 97 | 109 | 101 | 105 | 107 | -1 | -1 | -1 | 67 | 79 | -1 | 93 | -1 | -1 | 78 | 77 | 69 | -1 | 62 | -1 | -1 | -1 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 0 | N_PZ_86 | NULL | 1 | received<3> | NULL | 2 | received<5> | NULL | 3 | Controller/bitCounter<2> | NULL | 4 | Controller/state<0> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 5 | received<0> | NULL | 6 | received<4> | NULL | 7 | received<6> | NULL | 8 | received<2> | NULL | 9 | received<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 10 | Controller/state<1> | NULL | 11 | Controller/count_cmp_eq0000 | NULL | 12 | Controller/bitCounter<1> | NULL | 14 | Controller/bitsReceived<1> | NULL | 15 | Controller/bitCounter<0> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 17 | N_PZ_90 | NULL | 18 | Controller/bitsReceived<4> | NULL | 19 | received<7> | NULL | 21 | Controller/bitsReceived<0> | NULL | 22 | Controller/state_or000012 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 24 | Data | 16 | 28 | Controller/bitsReceived<2> | NULL | 30 | Controller/bitsReceived<3> | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | 68 | 98 | 110 | 103 | 95 | 106 | 97 | 109 | 101 | 105 | 67 | 99 | 102 | -1 | 88 | 100 | -1 | 93 | 86 | 107 | -1 | 90 | 69 | -1 | 62 | -1 | -1 | -1 | 83 | -1 | 82 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 0 | Controller/bitsReceived<7> | NULL | 1 | Controller/bitsReceived<1> | NULL | 2 | Controller/bitCounter<0> | NULL | 3 | Controller/bitCounter<2> | NULL | 4 | Controller/state<0> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 5 | Controller/bitsReceived<3> | NULL | 6 | Controller/bitsReceived<5> | NULL | 8 | Controller/bitsReceived<6> | NULL | 9 | Controller/bitsReceived<0> | NULL | 10 | Controller/bitCounter<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 13 | N_PZ_115 | NULL | 14 | Controller/bitsReceived<2> | NULL | 17 | Data | 16 | 18 | Controller/bitsReceived<4> | NULL | 23 | N_PZ_86 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 30 | Controller/state<1> | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | 104 | 88 | 100 | 103 | 95 | 82 | 111 | -1 | 108 | 90 | 102 | -1 | -1 | 94 | 83 | -1 | -1 | 62 | 86 | -1 | -1 | -1 | -1 | 68 | -1 | -1 | -1 | -1 | -1 | -1 | 67 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+

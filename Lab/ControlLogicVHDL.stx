@@ -1,36 +1,35 @@
 Release 13.4 - xst O.87xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/David/Documents/GitHub/CPLD/Lab/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.16 secs
  
---> Parameter xsthdpdir set to C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/xst
+--> Parameter xsthdpdir set to C:/Users/David/Documents/GitHub/CPLD/Lab/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
 Entity <controllogicvhdl> compiled.
-ERROR:HDLParsers:808 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" Line 65. & can not have such operands in this context.
-ERROR:HDLParsers:800 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" Line 77. Type of sample is incompatible with type of flag.
+Entity <controllogicvhdl> (Architecture <behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> 
 
-Total memory usage is 210500 kilobytes
+Total memory usage is 209988 kilobytes
 
-Number of errors   :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

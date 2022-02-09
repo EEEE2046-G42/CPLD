@@ -1,14 +1,16 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: David Way
 -- 
 -- Create Date:    13:54:51 02/07/2022 
 -- Design Name: 
--- Module Name:    ControlLogicVHDL - Behavioral 
+-- Module Name:    UARTReceiverVHDL - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
--- Description: 
+-- Description: Detects start and stop of 8b0p1s UART, and takes samples in the 
+--	middle of the bit. When a full byte is received, the output is updated all at
+-- once, and an indicator flag is pulsed.
 --
 -- Dependencies: 
 --
@@ -29,60 +31,78 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ControlLogicVHDL is
-    Port ( clock : in  STD_LOGIC; 			-- Clock at 8x baud rate
-			  data_in : in STD_LOGIC;
-           read_enable : out  STD_LOGIC;	
-			  sample : out STD_LOGIC;			-- Indicates time to sample
-           clear : out  STD_LOGIC);
-end ControlLogicVHDL;
+entity UARTReceiverVHDL is
+	Port ( 
+		clock : in  STD_LOGIC; 			-- Clock at 8x baud rate
+		data_in : in STD_LOGIC;			-- UART data input
+		
+		data_out : out STD_LOGIC_VECTOR (7 downto 0) := "00000000";	-- Byte output
+		dataReceivedFlag : out STD_LOGIC := '0'	-- Signals entire byte has been read
+	);
+end UARTReceiverVHDL;
 
-architecture Behavioral of ControlLogicVHDL is
+architecture Behavioral of UARTReceiverVHDL is
+	constant clocksPerBaud : integer := 16;	-- Set number of clocks per baud (DDR)
+	type system_states is (idle, start, data, stop);
+	-- Idle: No activity
+	--	Start: Start bit detected, verify and wait half a baud to offset samples
+	-- Data:	Sample every bit
+	-- Stop: Ensure stop bit received
 begin
 
 process(clock)
-	variable counter : integer range 0 to 255 := 0;	-- Counts number of clock pulses
-	variable sampleCount : integer range 0 to 15 := 0;
-	variable startDetected : bit; -- start bit detected flag
+	variable count : integer range 0 to 16 := 0; 		-- Clock cycle counter
+	variable bitCounter : integer range 0 to 7 := 0;	-- Counts bits received
 	
-	variable flag : integer range 0 to 1 := 0;
+	variable bitsReceived : STD_LOGIC_VECTOR (7 downto 0) := "00000000"; -- Stores bits as they are received
+
+	variable state : system_states := idle;				-- Current system state
 begin
-	-- Detect start bit
-	if (falling_edge(data_in) AND (startDetected = '0')) then
-		startDetected := '1';
-		counter := 0;
-		sampleCount := 0;
-		read_enable <= '1';
-	end if;
 	
-	-- Detect stop bit
-	if sampleCount = 8 then
-		startDetected := '0';
-		sample <= '0';
-		read_enable <= '0';
-	end if;
-	
-	-- AAAAAAAAAAAAAAHHHHH help i need to shrink this thing
-	--flag := ((counter - 10) MOD 16 = 0) & ((counter > 10) & startDetected);
-	
-	-- Take samples
-	--              12       8                     12
---	if (((counter - 10) MOD 16 = 0) AND (counter > 10) AND (startDetected = '1')) then
---	--if ((((counter - 10) srl 4) & x"01" = 0) AND (startDetected = '1')) then
---		sample <= '1';
---		sampleCount := sampleCount + 1;
---	else
---		sample <= '0';
---	end if;
+	count := count + 1;	-- Increment clock cycle counter
 
-	sample <= flag;
-	samplecount := samplecount + flag;
-
-	-- Increment clock counter
-	if startDetected = '1' then 
-		counter := counter + 1;
-	end if;
-	
+	case state is
+		when idle => 
+			if (data_in = '0') then 		-- Detect start bit
+				count := 0; 					-- Reset clock count
+				dataReceivedFlag <= '0';	-- Disable full byte received flag
+				state := start; 				-- Transition to start state on next clock
+			end if;
+			
+		when start =>
+			if (count = clocksPerBaud / 2) then -- Wait half a baud
+				if (data_in = '0') then 			-- Verify start bit and not noise
+					count := 0; 						-- Reset clock count
+					bitCounter := 0;					-- Reset bit count					
+					state := data; 					-- Transition to data state on next clock
+				else
+					state := idle; 					-- Return to idle if invalid
+				end if;
+			end if;
+			
+		when data =>
+			if (count = clocksPerBaud) then	-- Wait for full baud
+				bitsReceived(bitCounter) := data_in;
+				bitCounter := bitCounter + 1;	-- Increment bit counter
+				count := 0;							-- Reset clock counter
+			end if;
+			
+			if (bitCounter = 7) then			-- Stop at 8th bit
+				count := 0;							-- Reset clock counter
+				state := stop;						-- Transition to stop state
+			end if;
+			
+		when stop =>			
+			if (count = clocksPerBaud) then	-- Wait for full baud
+				data_out <= bitsReceived;		-- Set output to number of bits received
+				dataReceivedFlag <= '1';		-- Enable full byte received flag
+				
+				state := idle;						-- Transition to idle state
+			end if;
+			
+		when others =>
+			state := idle;	-- Default to idle state
+	end case;	
 	
 end process;
 

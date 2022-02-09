@@ -37,27 +37,19 @@ entity TopLevel is
 		Data : in  STD_LOGIC;
 		Display : out STD_LOGIC_VECTOR (15 downto 0)
 	);
-           --UDisplay : out  STD_LOGIC_VECTOR (7 downto 0);
-			  --LDisplay : out  STD_LOGIC_VECTOR (7 downto 0));
 end TopLevel;
 
 architecture Behavioral of TopLevel is
-	--signal updateSevenSeg : STD_LOGIC;	-- 7seg update signal
 	signal divClock : STD_LOGIC;	-- Divided clock
-	signal read_Enable : STD_LOGIC := '0';	-- Enable shift register
-	signal sample : STD_LOGIC := '0';	-- Trigger shift register to sample
-	signal clear : STD_LOGIC := '0';	-- Clear shift register
 	signal received : STD_LOGIC_VECTOR (7 downto 0);
 	
-	
 	-- UART controller
-	COMPONENT ControlLogicVHDL
+	COMPONENT UARTReceiverVHDL
    PORT(
 		clock : IN  std_logic;
 		data_in : IN  std_logic;
-		read_enable : OUT  std_logic;
-		sample : OUT  std_logic;
-		clear : OUT  std_logic
+		data_out : out STD_LOGIC_VECTOR (7 downto 0);	-- Byte output
+		dataReceivedFlag : out STD_LOGIC
 	  );
 	END COMPONENT;
 	
@@ -65,19 +57,10 @@ architecture Behavioral of TopLevel is
 	COMPONENT SevenSegDriverVHDL
 	PORT(
 		 BCD : in  std_logic_vector (3 downto 0);
+		 update : in std_logic;
 		 sevenSeg : out  std_logic_vector (7 downto 0)
 		);
 	END COMPONENT;
-	
-	-- Shift register for UART
-	COMPONENT UARTReceiver
-   PORT(  CLK	:	IN	STD_LOGIC; 
-          Data_in	:	IN	STD_LOGIC; 
-          EN	:	IN	STD_LOGIC; 
-          CLR	:	IN	STD_LOGIC; 
-          Data_out	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0)
-		 );
-   END COMPONENT; 
 	
 	-- Clock divider
 	COMPONENT ClockDiv
@@ -86,6 +69,8 @@ architecture Behavioral of TopLevel is
 		 CLKOUT : OUT STD_LOGIC
 		 );
 	END COMPONENT;
+	
+	signal updateDisplay : std_logic := '0';
 		
 	signal LowerBCD : std_logic_vector (3 downto 0);
 	signal UpperBCD : std_logic_vector (3 downto 0);
@@ -96,42 +81,30 @@ ClockDivider: ClockDiv PORT MAP (
 	CLKOUT => divClock
 );
 
-Controller: ControlLogicVHDL PORT MAP (
+UARTReceiver: UARTReceiverVHDL PORT MAP (
 	clock => divClock,
 	data_in => data,
-	read_enable => read_enable,
-	sample => sample,
-	clear => clear 
+	data_out => received,
+	dataReceivedFlag => updateDisplay
 );
 		  
 LowerSevenSeg: SevenSegDriverVHDL PORT MAP (
 	BCD => received(3 downto 0),
-	sevenSeg => Display(7 downto 0)
+	sevenSeg => Display(7 downto 0),
+	update => updateDisplay
 );
 
 UpperSevenSeg: SevenSegDriverVHDL PORT MAP (
 	BCD => received(7 downto 4),
-	sevenSeg => Display(15 downto 8)
+	sevenSeg => Display(15 downto 8),
+	update => updateDisplay
 );
 
-UARTRecv: UARTReceiver PORT MAP (
-	CLK => sample, 
-	Data_in => data, 
-	EN => read_enable, 
-	CLR => clear, 
-	Data_out => received
-);
+--process(clock)
 
-process(clock)
---	variable LowerBCD : std_logic_vector (3 downto 0);
---	variable UpperBCD : std_logic_vector (3 downto 0);
---	
---	variable updateSevenSeg : std_logic;
-begin
-	-- Split received data into nibbles
-	--LowerBCD <= received & x"0f";
-	--UpperBCD <= received srl 4;
-end process;
+--begin
+
+--end process;
 
 end Behavioral;
 

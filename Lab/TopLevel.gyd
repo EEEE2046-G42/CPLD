@@ -1,0 +1,41 @@
+Pin Freeze File:  version O.87xd
+
+2C64A44VQ XC2C64A-5-VQ44
+Data S:PIN16
+Display<0> S:PIN36
+Display<1> S:PIN37
+Display<2> S:PIN38
+Display<3> S:PIN34
+Display<4> S:PIN42
+Display<5> S:PIN41
+Display<6> S:PIN40
+Display<7> S:PIN39
+Display<8> S:PIN31
+Display<9> S:PIN32
+Display<10> S:PIN33
+Display<11> S:PIN30
+Display<12> S:PIN3
+Display<13> S:PIN2
+Display<14> S:PIN1
+Display<15> S:PIN44
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 Display<2> Display<1> Display<0> Controller/state<1>
+		 N_PZ_86 Controller/state_or000012 Controller/count_add0000<4> Controller/count_add0000<3>
+		 Display<3> Display<10> Display<9> Display<8>
+		 Display<11> Controller/count_add0000<2> Controller/count_add0000<1> Controller/count<0>
+		
+PARTITION FB2_1 Display<7> Display<6> Controller/bitsReceived<3> Controller/bitsReceived<2>
+		 Display<5> Display<4> Controller/bitsReceived<4> Display<15>
+		 Controller/bitsReceived<1> Display<14> Controller/bitsReceived<0> Display<13>
+		 Display<12> N_PZ_90 N_PZ_115 Controller/state<0>
+		
+PARTITION FB3_2 received<4> received<3> Controller/count_cmp_eq0000 Controller/bitCounter<0>
+		 received<2> Controller/bitCounter<1> Controller/bitCounter<2> Controller/bitsReceived<7>
+		 received<1> received<0> received<7> Controller/bitsReceived<6>
+		 received<6> received<5> Controller/bitsReceived<5>
+
+

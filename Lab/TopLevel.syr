@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: TopLevel.prj
 
@@ -75,25 +75,17 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" in Library work.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf" in Library work.
 Architecture behavioral of Entity fd_mxilinx_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv2_muser_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv is up to date.
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
-Entity <controllogicvhdl> compiled.
-Entity <controllogicvhdl> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" in Library work.
-WARNING:HDLParsers:1406 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" Line 42. No sensitivity list and no wait in the process
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
+Architecture behavioral of Entity controllogicvhdl is up to date.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" in Library work.
 Architecture behavioral of Entity sevensegdrivervhdl is up to date.
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" in Library work.
-Architecture behavioral of Entity fd_mxilinx_uartreceiver is up to date.
-Architecture behavioral of Entity clockdiv2_muser_uartreceiver is up to date.
-Architecture behavioral of Entity sr8ce_mxilinx_uartreceiver is up to date.
-Architecture behavioral of Entity fdd8ce_mxilinx_uartreceiver is up to date.
-Architecture behavioral of Entity uartreceiver is up to date.
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd" in Library work.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd" in Library work.
 Architecture behavioral of Entity toplevel is up to date.
-Compiling vhdl file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" in Library work.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf" in Library work.
 Architecture behavioral of Entity fd_mxilinx_clockdiv2 is up to date.
 Architecture behavioral of Entity clockdiv2 is up to date.
 
@@ -108,20 +100,9 @@ Analyzing hierarchy for entity <ControlLogicVHDL> in library <work> (architectur
 
 Analyzing hierarchy for entity <SevenSegDriverVHDL> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UARTReceiver> in library <work> (architecture <behavioral>).
-
 Analyzing hierarchy for entity <ClockDiv2_MUSER_ClockDiv> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <SR8CE_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <FDD8CE_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <ClockDiv2_MUSER_UARTReceiver> in library <work> (architecture <behavioral>).
-
 Analyzing hierarchy for entity <FD_MXILINX_ClockDiv> in library <work> (architecture <behavioral>) with generics.
-	INIT = '0'
-
-Analyzing hierarchy for entity <FD_MXILINX_UARTReceiver> in library <work> (architecture <behavioral>) with generics.
 	INIT = '0'
 
 
@@ -144,50 +125,14 @@ Analyzing generic Entity <FD_MXILINX_ClockDiv> in library <work> (Architecture <
 Entity <FD_MXILINX_ClockDiv> analyzed. Unit <FD_MXILINX_ClockDiv> generated.
 
 Analyzing Entity <ControlLogicVHDL> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" line 49: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" line 57: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <data_in>
 Entity <ControlLogicVHDL> analyzed. Unit <ControlLogicVHDL> generated.
 
 Analyzing Entity <SevenSegDriverVHDL> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <BCD>
 Entity <SevenSegDriverVHDL> analyzed. Unit <SevenSegDriverVHDL> generated.
-
-Analyzing Entity <UARTReceiver> in library <work> (Architecture <behavioral>).
-    Set user-defined property "HU_SET =  XLXI_8_7" for instance <XLXI_8> in unit <UARTReceiver>.
-    Set user-defined property "HU_SET =  XLXI_9_6" for instance <XLXI_9> in unit <UARTReceiver>.
-Entity <UARTReceiver> analyzed. Unit <UARTReceiver> generated.
-
-Analyzing Entity <SR8CE_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
-    Set user-defined property "INIT =  0" for instance <Q0> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q1> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q2> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q3> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q4> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q5> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q6> in unit <SR8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <Q7> in unit <SR8CE_MXILINX_UARTReceiver>.
-Entity <SR8CE_MXILINX_UARTReceiver> analyzed. Unit <SR8CE_MXILINX_UARTReceiver> generated.
-
-Analyzing Entity <FDD8CE_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
-    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <FDD8CE_MXILINX_UARTReceiver>.
-    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <FDD8CE_MXILINX_UARTReceiver>.
-Entity <FDD8CE_MXILINX_UARTReceiver> analyzed. Unit <FDD8CE_MXILINX_UARTReceiver> generated.
-
-Analyzing Entity <ClockDiv2_MUSER_UARTReceiver> in library <work> (Architecture <behavioral>).
-    Set user-defined property "HU_SET =  XLXI_4_5" for instance <XLXI_4> in unit <ClockDiv2_MUSER_UARTReceiver>.
-Entity <ClockDiv2_MUSER_UARTReceiver> analyzed. Unit <ClockDiv2_MUSER_UARTReceiver> generated.
-
-Analyzing generic Entity <FD_MXILINX_UARTReceiver> in library <work> (Architecture <behavioral>).
-	INIT = '0'
-    Set user-defined property "INIT =  0" for instance <U0> in unit <FD_MXILINX_UARTReceiver>.
-Entity <FD_MXILINX_UARTReceiver> analyzed. Unit <FD_MXILINX_UARTReceiver> generated.
 
 
 =========================================================================
@@ -197,26 +142,34 @@ Entity <FD_MXILINX_UARTReceiver> analyzed. Unit <FD_MXILINX_UARTReceiver> genera
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ControlLogicVHDL>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd".
-WARNING:Xst:1305 - Output <clear> is never assigned. Tied to value 0.
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd".
 WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <read_enable>.
-    Found 4-bit adder for signal <$add0000> created at line 68.
-    Found 8-bit adder for signal <$add0001> created at line 75.
-    Found 9-bit subtractor for signal <$sub0000> created at line 65.
-    Found 8-bit register for signal <counter>.
-    Found 8-bit comparator greater for signal <sample$cmp_gt0000> created at line 65.
-    Found 4-bit register for signal <sampleCount>.
-    Found 1-bit register for signal <startDetected>.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <data_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 3-bit latch for signal <bitCounter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 2-bit latch for signal <state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataReceivedFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 3-bit adder for signal <bitCounter$addsub0000> created at line 94.
+    Found 5-bit 4-to-1 multiplexer for signal <count>.
+    Found 5-bit adder for signal <count$add0000> created at line 66.
     Summary:
-	inferred  14 D-type flip-flop(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
+	inferred   2 Adder/Subtractor(s).
 Unit <ControlLogicVHDL> synthesized.
 
 
 Synthesizing Unit <SevenSegDriverVHDL>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/SevenSegDriver.vhd".
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd".
+WARNING:Xst:647 - Input <update> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16x8-bit ROM for signal <sevenSeg>.
     Summary:
 	inferred   1 ROM(s).
@@ -224,47 +177,22 @@ Unit <SevenSegDriverVHDL> synthesized.
 
 
 Synthesizing Unit <FD_MXILINX_ClockDiv>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf".
 Unit <FD_MXILINX_ClockDiv> synthesized.
 
 
-Synthesizing Unit <SR8CE_MXILINX_UARTReceiver>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
-Unit <SR8CE_MXILINX_UARTReceiver> synthesized.
-
-
-Synthesizing Unit <FDD8CE_MXILINX_UARTReceiver>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
-Unit <FDD8CE_MXILINX_UARTReceiver> synthesized.
-
-
-Synthesizing Unit <FD_MXILINX_UARTReceiver>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
-Unit <FD_MXILINX_UARTReceiver> synthesized.
-
-
 Synthesizing Unit <ClockDiv2_MUSER_ClockDiv>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf".
 Unit <ClockDiv2_MUSER_ClockDiv> synthesized.
 
 
-Synthesizing Unit <ClockDiv2_MUSER_UARTReceiver>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
-Unit <ClockDiv2_MUSER_UARTReceiver> synthesized.
-
-
 Synthesizing Unit <ClockDiv>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf".
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf".
 Unit <ClockDiv> synthesized.
 
 
-Synthesizing Unit <UARTReceiver>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf".
-Unit <UARTReceiver> synthesized.
-
-
 Synthesizing Unit <TopLevel>.
-    Related source file is "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/TopLevel.vhd".
+    Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd".
 WARNING:Xst:1780 - Signal <UpperBCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <LowerBCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <TopLevel> synthesized.
@@ -276,14 +204,16 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 2
  16x8-bit ROM                                          : 2
-# Adders/Subtractors                                   : 3
- 4-bit adder                                           : 1
- 8-bit adder                                           : 1
- 9-bit subtractor                                      : 1
-# Registers                                            : 14
- 1-bit register                                        : 14
-# Comparators                                          : 1
- 8-bit comparator greater                              : 1
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 9
+ 2-bit latch                                           : 1
+ 3-bit latch                                           : 1
+ 8-bit latch                                           : 1
+# Multiplexers                                         : 1
+ 5-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -298,19 +228,26 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 2
  16x8-bit ROM                                          : 2
-# Adders/Subtractors                                   : 3
- 4-bit adder                                           : 1
- 8-bit adder                                           : 1
- 9-bit subtractor                                      : 1
-# Registers                                            : 35
- Flip-Flops                                            : 35
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Latches                                              : 12
+ 1-bit latch                                           : 9
+ 2-bit latch                                           : 1
+ 3-bit latch                                           : 1
+ 8-bit latch                                           : 1
+# Multiplexers                                         : 1
+ 5-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <startDetected> in Unit <ControlLogicVHDL> is equivalent to the following FF/Latch, which will be removed : <read_enable> 
+WARNING:Xst:2170 - Unit ControlLogicVHDL : the following signal(s) form a combinatorial loop: count_mux0002<0>, count<0>, count_cmp_eq0000, count_mux0002<4>, count<4>, bitsReceived_7_cmp_eq0000, bitCounter_mux0001<0>.
+WARNING:Xst:2170 - Unit ControlLogicVHDL : the following signal(s) form a combinatorial loop: count<0>.
 
 Optimizing unit <TopLevel> ...
 
@@ -319,51 +256,16 @@ Optimizing unit <SevenSegDriverVHDL> ...
 Optimizing unit <FD_MXILINX_ClockDiv> ...
   implementation constraint: INIT=0	 : U0
 
-Optimizing unit <SR8CE_MXILINX_UARTReceiver> ...
-  implementation constraint: INIT=0	 : Q0
-  implementation constraint: INIT=0	 : Q1
-  implementation constraint: INIT=0	 : Q2
-  implementation constraint: INIT=0	 : Q3
-  implementation constraint: INIT=0	 : Q4
-  implementation constraint: INIT=0	 : Q5
-  implementation constraint: INIT=0	 : Q6
-  implementation constraint: INIT=0	 : Q7
-
-Optimizing unit <FDD8CE_MXILINX_UARTReceiver> ...
-  implementation constraint: INIT=0	 : XLXI_1
-  implementation constraint: INIT=0	 : XLXI_2
-  implementation constraint: INIT=0	 : XLXI_3
-  implementation constraint: INIT=0	 : XLXI_4
-  implementation constraint: INIT=0	 : XLXI_5
-  implementation constraint: INIT=0	 : XLXI_6
-  implementation constraint: INIT=0	 : XLXI_7
-  implementation constraint: INIT=0	 : XLXI_8
-
-Optimizing unit <FD_MXILINX_UARTReceiver> ...
-  implementation constraint: INIT=0	 : U0
-
 Optimizing unit <ControlLogicVHDL> ...
-  implementation constraint: INIT=r	 : startDetected
-  implementation constraint: INIT=r	 : sampleCount_3
-  implementation constraint: INIT=r	 : sampleCount_2
-  implementation constraint: INIT=r	 : sampleCount_1
-  implementation constraint: INIT=r	 : sampleCount_0
-  implementation constraint: INIT=r	 : counter_7
-  implementation constraint: INIT=r	 : counter_6
-  implementation constraint: INIT=r	 : counter_5
-  implementation constraint: INIT=r	 : counter_4
-  implementation constraint: INIT=r	 : counter_3
-  implementation constraint: INIT=r	 : counter_2
-  implementation constraint: INIT=r	 : counter_1
-  implementation constraint: INIT=r	 : counter_0
 
 Optimizing unit <ClockDiv2_MUSER_ClockDiv> ...
 
-Optimizing unit <ClockDiv2_MUSER_UARTReceiver> ...
-
 Optimizing unit <ClockDiv> ...
-
-Optimizing unit <UARTReceiver> ...
+WARNING:Xst:2677 - Node <dataReceivedFlag> of sequential type is unconnected in block <Controller>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: Controller/count_add0000<1>, Controller/count<1>, Result, Data<1>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: Data<1>, Controller/count<2>, Result, Controller/count_add0000<2>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: Controller/count_add0000<3>, Result, Data<1>, Controller/count<3>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Controller/count_add0000<4>, Controller/count<4>, Data<1>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -395,36 +297,31 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 216
-#      AND2                        : 76
-#      AND3                        : 9
-#      AND4                        : 6
-#      GND                         : 6
-#      INV                         : 76
-#      OR2                         : 25
-#      OR3                         : 2
-#      OR4                         : 1
-#      VCC                         : 1
-#      XOR2                        : 14
-# FlipFlops/Latches                : 34
-#      FDCE                        : 9
-#      FDCP                        : 13
-#      FDCPE                       : 4
-#      FDDCE                       : 8
+# BELS                             : 300
+#      AND2                        : 94
+#      AND3                        : 27
+#      GND                         : 2
+#      INV                         : 116
+#      OR2                         : 44
+#      OR3                         : 8
+#      XOR2                        : 9
+# FlipFlops/Latches                : 23
+#      FDCP                        : 2
+#      LD                          : 21
 # IO Buffers                       : 18
 #      IBUF                        : 2
 #      OBUF                        : 16
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.31 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.50 secs
  
 --> 
 
-Total memory usage is 233120 kilobytes
+Total memory usage is 233632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

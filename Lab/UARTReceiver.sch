@@ -87,9 +87,9 @@
         <attr value="4" name="GridsPerUnit" />
         <instance x="1168" y="560" name="XLXI_9" orien="R0" />
         <branch name="XLXN_17(7:0)">
-            <wire x2="1152" y1="256" y2="256" x1="640" />
-            <wire x2="1152" y1="256" y2="304" x1="1152" />
-            <wire x2="1168" y1="304" y2="304" x1="1152" />
+            <wire x2="896" y1="256" y2="256" x1="640" />
+            <wire x2="896" y1="256" y2="304" x1="896" />
+            <wire x2="1168" y1="304" y2="304" x1="896" />
         </branch>
         <branch name="Data_out(7:0)">
             <wire x2="1584" y1="304" y2="304" x1="1552" />

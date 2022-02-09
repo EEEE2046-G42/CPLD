@@ -1,14 +1,14 @@
-Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest_isim_beh.exe -prj C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest_beh.prj work.ControlLogicTest 
+Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.exe -prj C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_beh.prj work.ControlLogicTest 
 ISim O.87xd (signature 0x2f00eba5)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicVHDL.vhd" into library work
-Parsing VHDL file "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest.vhd" into library work
+Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" into library work
+Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 159104 KB
-Fuse CPU Usage: 406 ms
+Fuse Memory Usage: 159680 KB
+Fuse CPU Usage: 280 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling architecture behavioral of entity ControlLogicVHDL [controllogicvhdl_default]
@@ -16,6 +16,6 @@ Compiling architecture behavior of entity controllogictest
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 5 VHDL Units
-Built simulation executable C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ControlLogicTest_isim_beh.exe
-Fuse Memory Usage: 169956 KB
-Fuse CPU Usage: 515 ms
+Built simulation executable C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.exe
+Fuse Memory Usage: 169508 KB
+Fuse CPU Usage: 359 ms

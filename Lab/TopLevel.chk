@@ -1,25 +1,103 @@
 
-----------------------------------
-|  P a r t i t i o n    F a i l  |
-----------------------------------
-
-There are 59 outputs and 1 inputs not partitioned
-Output: Display<0> Display<10> Display<11> Display<12> Display<13> Display<14> Display<15> Display<1> 
-        Display<2> Display<3> Display<4> Display<5> Display<6> Display<7> Display<8> Display<9> 
-        Controller/_add0000<1> Controller/_add0000<2> Controller/_add0000<3> Controller/_add0001<1> 
-        Controller/_add0001<2> Controller/_add0001<3> Controller/_add0001<4> Controller/_add0001<5> 
-        Controller/_add0001<6> Controller/_add0001<7> Controller/counter<0> Controller/counter<1> 
-        Controller/counter<2> Controller/counter<3> Controller/counter<4> Controller/counter<5> 
-        Controller/counter<6> Controller/counter<7> Controller/sampleCount<0> Controller/sampleCount<1> 
-        Controller/sampleCount<2> Controller/sampleCount<3> Controller/sample_cmp_gt0000 UARTRecv/XLXN_17<0> 
-        UARTRecv/XLXN_17<1> UARTRecv/XLXN_17<2> UARTRecv/XLXN_17<3> UARTRecv/XLXN_17<4> UARTRecv/XLXN_17<5> 
-        UARTRecv/XLXN_17<6> UARTRecv/XLXN_17<7> UARTRecv/XLXN_41 UARTRecv/XLXN_42 UARTRecv/XLXN_43 
-        read_Enable received<0> received<1> received<2> received<3> received<4> received<5> received<6> 
-        received<7>
-Input: Data
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
 0 Group(s)
 
 ----------------- B l o c k 0 ------------------
+PLApt(47/56), Fanin(19/38), Clk(0/3), Bct(1/4), Pin(8/8), Mcell(16/16)
+PLApts[47/53] 32 33 35 16 179 29 30 4 9 22 24 25 27 10 21 5 15 7 8 13 14 121 141 147 124 150 131 138 119 140 
+              162 117 132 145 156 163 133 142 143 157 164 1 144 167 0 2 () () () () () () 120
+Fanins[19] Controller/count<0>.n Controller/count_add0000<1>.n Controller/count_add0000<2>.n 
+           Controller/count_add0000<3>.n Controller/count_add0000<4>.n Controller/state<0>.n 
+           Controller/state<1>.n Controller/state_or000012.n N_PZ_86.n N_PZ_90.n received<0>.n received<1>.n 
+           received<2>.n received<3>.n received<4>.n received<5>.n received<6>.n received<7>.n Data.p
+clk[0] 
+CTC: (pt=179) N_PZ_90' Controller/state_or000012 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [Display<10>(54),Display<10>(33)] [Display<11>(57),Display<11>(30)]  
+           [Display<1>(46),Display<1>(37)] [Display<2>(45),Display<2>(38)] [Display<3>(53),Display<3>(34)]  
+           [Display<9>(55),Display<9>(32)] [Display<0>(47),Display<0>(36)] [Display<8>(56),Display<8>(31)]  
+           [Controller/count<0>(60)] [Controller/count_add0000<1>(59)] [Controller/count_add0000<2>(58)]  
+           [Controller/count_add0000<3>(52)] [Controller/count_add0000<4>(51)]  
+           [Controller/state_or000012(50)] [N_PZ_86(49)] [Controller/state<1>(48)] 
+Signal[16] [ 0: Display<2>(45) Display<2>(38)  ][ 1: Display<1>(46) Display<1>(37)  ][ 2: Display<0>(47)  
+           Display<0>(36)  ][ 3: Controller/state<1>(48)  ][ 4: N_PZ_86(49)  ][ 5:  
+           Controller/state_or000012(50)  ][ 6: Controller/count_add0000<4>(51)  ][ 7:  
+           Controller/count_add0000<3>(52)  ][ 8: Display<3>(53) Display<3>(34)  ][ 9: Display<10>(54)  
+           Display<10>(33)  ][ 10: Display<9>(55) Display<9>(32)  ][ 11: Display<8>(56) Display<8>(31)  ] 
+           [ 12: Display<11>(57) Display<11>(30)  ][ 13: Controller/count_add0000<2>(58)  ][ 14:  
+           Controller/count_add0000<1>(59)  ][ 15: Controller/count<0>(60)  ]
 ----------------- B l o c k 1 ------------------
+PLApt(40/56), Fanin(23/38), Clk(0/3), Bct(1/4), Pin(8/9), Mcell(16/16)
+PLApts[40/56] 5 17 31 34 166 4 11 23 26 33 36 25 28 18 32 35 75 12 24 65 27 1 177 178 3 180 44 46 85 54 56 64 
+              66 74 55 76 83 86 () () 45 () () () () () () () () () () () () () () 179
+Fanins[23] Controller/bitCounter<0>.n Controller/bitCounter<1>.n Controller/bitCounter<2>.n 
+           Controller/bitsReceived<0>.n Controller/bitsReceived<1>.n Controller/bitsReceived<2>.n 
+           Controller/bitsReceived<3>.n Controller/bitsReceived<4>.n Controller/count_cmp_eq0000.n 
+           Controller/state<0>.n Controller/state<1>.n Controller/state_or000012.n N_PZ_86.n N_PZ_90.n 
+           received<0>.n received<1>.n received<2>.n received<3>.n received<4>.n received<5>.n received<6>.n 
+           received<7>.n Data.p
+clk[0] 
+CTC: (pt=166) N_PZ_86 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [Display<13>(72),Display<13>(2)] [Display<5>(65),Display<5>(41)]  
+           [Display<15>(68),Display<15>(44)] [Display<7>(61),Display<7>(39)]  
+           [Display<12>(73),Display<12>(3)] [Display<14>(70),Display<14>(1)] [Display<4>(66),Display<4>(42)]  
+           [Display<6>(62),Display<6>(40)] [Controller/state<0>(76)] [N_PZ_115(75)] [N_PZ_90(74)]  
+           [Controller/bitsReceived<0>(71)] [Controller/bitsReceived<1>(69)]  
+           [Controller/bitsReceived<2>(64)] [Controller/bitsReceived<3>(63)]  
+           [Controller/bitsReceived<4>(67)] 
+Signal[16] [ 0: Display<7>(61) Display<7>(39)  ][ 1: Display<6>(62) Display<6>(40)  ][ 2:  
+           Controller/bitsReceived<3>(63)  ][ 3: Controller/bitsReceived<2>(64)  ][ 4: Display<5>(65)  
+           Display<5>(41)  ][ 5: Display<4>(66) Display<4>(42)  ][ 6: Controller/bitsReceived<4>(67) (43)  ] 
+           [ 7: Display<15>(68) Display<15>(44)  ][ 8: Controller/bitsReceived<1>(69)  ][ 9: Display<14>(70)  
+           Display<14>(1)  ][ 10: Controller/bitsReceived<0>(71)  ][ 11: Display<13>(72) Display<13>(2)  ] 
+           [ 12: Display<12>(73) Display<12>(3)  ][ 13: N_PZ_90(74)  ][ 14: N_PZ_115(75)  ][ 15:  
+           Controller/state<0>(76)  ]
 ----------------- B l o c k 2 ------------------
+PLApt(40/56), Fanin(16/38), Clk(0/3), Bct(1/4), Pin(0/9), Mcell(15/16)
+PLApts[40/56] 93 96 103 106 166 113 116 19 20 172 175 6 170 168 174 169 168 173 171 176 87 97 181 107 37 168 
+              47 57 181 67 77 181 () () 115 () () 168 () () 168 () () 168 () () 105 () () 168 () () 168 () () 
+              95
+Fanins[16] Controller/bitCounter<0>.n Controller/bitCounter<1>.n Controller/bitCounter<2>.n 
+           Controller/bitsReceived<0>.n Controller/bitsReceived<1>.n Controller/bitsReceived<2>.n 
+           Controller/bitsReceived<3>.n Controller/bitsReceived<4>.n Controller/bitsReceived<5>.n 
+           Controller/bitsReceived<6>.n Controller/bitsReceived<7>.n Controller/state<0>.n 
+           Controller/state<1>.n N_PZ_115.n N_PZ_86.n Data.p
+clk[0] 
+CTC: (pt=166) N_PZ_86 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [Controller/bitsReceived<5>(92)] [Controller/bitsReceived<6>(89)]  
+           [Controller/bitsReceived<7>(85)] [Controller/bitCounter<2>(84)] [Controller/bitCounter<1>(83)]  
+           [Controller/bitCounter<0>(81)] [Controller/count_cmp_eq0000(80)] [received<5>(91)]  
+           [received<6>(90)] [received<7>(88)] [received<0>(87)] [received<1>(86)] [received<2>(82)]  
+           [received<3>(79)] [received<4>(78)] 
+Signal[15] [ 0: (29)  ][ 1: received<4>(78) (28)  ][ 2: received<3>(79) (27)  ][ 3:  
+           Controller/count_cmp_eq0000(80)  ][ 4: Controller/bitCounter<0>(81)  ][ 5: received<2>(82) (23)  ] 
+           [ 6: Controller/bitCounter<1>(83)  ][ 7: Controller/bitCounter<2>(84)  ][ 8:  
+           Controller/bitsReceived<7>(85)  ][ 9: received<1>(86) (22)  ][ 10: received<0>(87) (21)  ][ 11:  
+           received<7>(88) (20)  ][ 12: Controller/bitsReceived<6>(89)  ][ 13: received<6>(90) (19)  ][ 14:  
+           received<5>(91) (18)  ][ 15: Controller/bitsReceived<5>(92)  ]
 ----------------- B l o c k 3 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/7), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [Data(16)] 
+Signal[ 1] [ 0: (5)  ][ 1: (6)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6: (8)  ][ 7:  ][ 8:  ][ 9:  ][ 10: (12)  ] 
+           [ 11:  ][ 12: (13)  ][ 13: (14)  ][ 14: Data(16)  ][ 15:  ]

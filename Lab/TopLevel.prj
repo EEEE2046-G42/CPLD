@@ -1,5 +1,4 @@
 vhdl work "ClockDiv2.vhf"
-vhdl work "UARTReceiver.vhf"
 vhdl work "SevenSegDriver.vhd"
 vhdl work "ControlLogicVHDL.vhd"
 vhdl work "ClockDiv.vhf"

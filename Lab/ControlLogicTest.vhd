@@ -43,9 +43,11 @@ ARCHITECTURE behavior OF ControlLogicTest IS
     PORT(
          clock : IN  std_logic;
          data_in : IN  std_logic;
-         read_enable : OUT  std_logic;
-         sample : OUT  std_logic;
-         clear : OUT  std_logic
+         --read_enable : OUT  std_logic;
+         --sample : OUT  std_logic;
+         --clear : OUT  std_logic
+			data_out : out STD_LOGIC_VECTOR (7 downto 0);
+			dataReceivedFlag : out STD_LOGIC
         );
     END COMPONENT;
     
@@ -55,9 +57,11 @@ ARCHITECTURE behavior OF ControlLogicTest IS
    signal data_in : std_logic := '1';
 
  	--Outputs
-   signal read_enable : std_logic := '0';
-   signal sample : std_logic := '0';
-   signal clear : std_logic := '0'; 
+   --signal read_enable : std_logic := '0';
+   --signal sample : std_logic := '0';
+   --signal clear : std_logic := '0'; 
+	signal data_out : STD_LOGIC_VECTOR (7 downto 0);
+	signal dataReceivedFlag : STD_LOGIC; 
 
    -- Clock period definitions
    constant clock_period : time := 1 ns;
@@ -69,9 +73,11 @@ BEGIN
    uut: ControlLogicVHDL PORT MAP (
           clock => clock,
           data_in => data_in,
-          read_enable => read_enable,
-          sample => sample,
-          clear => clear
+			 data_out => data_out,
+			 dataReceivedFlag => dataReceivedFlag
+          --read_enable => read_enable,
+          --sample => sample,
+          --clear => clear
         );
 
    -- Clock process definitions
@@ -89,25 +95,5 @@ BEGIN
 		clock <= '0'; wait for clock_period/2;
 		clock <= '1'; wait for clock_period/2;
 	end process;
- 
-
---   -- Stimulus process
---   stim_proc: process
---   begin		
---	
---		for i in 0 to 9 loop
---			data_in <= input(i MOD 10);
---			wait for clock_period;
---		end loop;
---		
---      -- hold reset state for 100 ns.
---      wait for 100 ns;	
---
---      wait for clock_period*10;
---
---      -- insert stimulus here 
---
---      wait;
---   end process;
 
 END;

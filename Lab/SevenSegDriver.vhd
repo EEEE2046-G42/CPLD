@@ -31,6 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity SevenSegDriverVHDL is
     Port ( BCD : in  std_logic_vector (3 downto 0);
+			  update : in std_logic;
            sevenSeg : out  std_logic_vector (7 downto 0)
 			  );
 end SevenSegDriverVHDL;
@@ -39,7 +40,7 @@ architecture Behavioral of SevenSegDriverVHDL is
 
 begin
 
-process
+process(update)
 begin
 	-- Using results from EEEE1004 CW1, LSB is for DP
 	case BCD is

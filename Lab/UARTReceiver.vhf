@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 13.4
 --  \   \         Application : sch2hdl
 --  /   /         Filename : UARTReceiver.vhf
--- /___/   /\     Timestamp : 02/08/2022 15:43:27
+-- /___/   /\     Timestamp : 02/09/2022 15:25:01
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family xbr -flat -suppress -vhdl "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.vhf" -w "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/UARTReceiver.sch"
+--Command: sch2hdl -intstyle ise -family xbr -flat -suppress -vhdl C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf -w C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.sch
 --Design Name: UARTReceiver
 --Device: xbr
 --Purpose:
@@ -95,7 +95,7 @@ architecture BEHAVIORAL of ClockDiv2_MUSER_UARTReceiver is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_5";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_0";
 begin
    CLKOUT <= CLKOUT_DUMMY;
    XLXI_4 : FD_MXILINX_UARTReceiver
@@ -328,8 +328,8 @@ architecture BEHAVIORAL of UARTReceiver is
              CLKOUT : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_8 : label is "XLXI_8_7";
-   attribute HU_SET of XLXI_9 : label is "XLXI_9_6";
+   attribute HU_SET of XLXI_8 : label is "XLXI_8_2";
+   attribute HU_SET of XLXI_9 : label is "XLXI_9_1";
 begin
    XLXI_8 : SR8CE_MXILINX_UARTReceiver
       port map (C=>CLK,
