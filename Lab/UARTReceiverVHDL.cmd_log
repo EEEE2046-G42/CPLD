@@ -1,0 +1,3 @@
+vhdtdtfi -prj Lab -o C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiverVHDL.vhi -module UARTReceiverVHDL -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ControlLogicVHDL.vhd 
+vhdtdtfi -lib work ControlLogicVHDL.vhd -prj Lab -o UARTReceiverVHDL.spl -module UARTReceiverVHDL -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr UARTReceiverVHDL.spl C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiverVHDL.sym 

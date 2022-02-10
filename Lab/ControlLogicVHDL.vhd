@@ -30,11 +30,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
-
+ 
 entity UARTReceiverVHDL is
 	Port ( 
-		clock : in  STD_LOGIC; 			-- Clock at 8x baud rate
-		data_in : in STD_LOGIC;			-- UART data input
+		clock : in  STD_LOGIC; 	-- Clock at 8x baud rate
+		data_in : in STD_LOGIC;	-- UART data input
 		
 		data_out : out STD_LOGIC_VECTOR (7 downto 0) := "00000000";	-- Byte output
 		dataReceivedFlag : out STD_LOGIC := '0'	-- Signals entire byte has been read
@@ -62,7 +62,7 @@ begin
 	count := count + 1;	-- Increment clock cycle counter
 
 	case state is
-		when idle => 
+		when idle =>
 			if (data_in = '0') then 		-- Detect start bit
 				count := 0; 					-- Reset clock count
 				dataReceivedFlag <= '0';	-- Disable full byte received flag
@@ -81,10 +81,10 @@ begin
 			end if;
 			
 		when data =>
-			if (count = clocksPerBaud) then	-- Wait for full baud
-				bitsReceived(bitCounter) := data_in;
-				bitCounter := bitCounter + 1;	-- Increment bit counter
-				count := 0;							-- Reset clock counter
+			if (count = clocksPerBaud) then					-- Wait for full baud
+				bitsReceived(7 - bitCounter) := data_in;	-- Reverse bit order and store (convert to little-endian)
+				bitCounter := bitCounter + 1;					-- Increment bit counter
+				count := 0;											-- Reset clock counter
 			end if;
 			
 			if (bitCounter = 7) then			-- Stop at 8th bit
@@ -92,7 +92,7 @@ begin
 				state := stop;						-- Transition to stop state
 			end if;
 			
-		when stop =>			
+		when stop =>
 			if (count = clocksPerBaud) then	-- Wait for full baud
 				data_out <= bitsReceived;		-- Set output to number of bits received
 				dataReceivedFlag <= '1';		-- Enable full byte received flag

@@ -100,11 +100,5 @@ UpperSevenSeg: SevenSegDriverVHDL PORT MAP (
 	update => updateDisplay
 );
 
---process(clock)
-
---begin
-
---end process;
-
 end Behavioral;
 

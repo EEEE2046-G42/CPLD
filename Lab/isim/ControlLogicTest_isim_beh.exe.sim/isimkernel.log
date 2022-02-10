@@ -2,9 +2,9 @@ Command line:
    ControlLogicTest_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  59838
+     -socket  50725
 
-Wed Feb 09 15:54:40 2022
+Thu Feb 10 11:14:17 2022
 
 
- Elaboration Time: 0.03125 sec
+ Elaboration Time: 0.046875 sec

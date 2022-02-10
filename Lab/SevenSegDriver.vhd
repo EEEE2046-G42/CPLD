@@ -36,11 +36,12 @@ entity SevenSegDriverVHDL is
 			  );
 end SevenSegDriverVHDL;
 
+
 architecture Behavioral of SevenSegDriverVHDL is
 
 begin
 
-process(update)
+process(BCD, update) -- Update on BCD change
 begin
 	-- Using results from EEEE1004 CW1, LSB is for DP
 	case BCD is

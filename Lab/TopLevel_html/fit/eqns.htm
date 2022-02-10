@@ -3,9 +3,9 @@
 <script src="paths.js"></script><script src="eqns.js"></script><script>
       var design = "TopLevel";
       var device = "XC2C64A";
-      signals = new Array("ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","ControllerbitsReceived0_SPECSIG","ControllerbitsReceived1_SPECSIG","ControllerbitsReceived2_SPECSIG","ControllerbitsReceived3_SPECSIG","ControllerbitsReceived4_SPECSIG","ControllerbitsReceived5_SPECSIG","ControllerbitsReceived6_SPECSIG","ControllerbitsReceived7_SPECSIG","Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG","Controllercount_add00003_SPECSIG","Controllercount_add00004_SPECSIG","Controllercount_cmp_eq0000_SPECSIG","Controllerstate0_SPECSIG","Controllerstate1_SPECSIG","Controllerstate_or000012_SPECSIG","Display0_SPECSIG","Display10_SPECSIG","Display11_SPECSIG","Display12_SPECSIG","Display13_SPECSIG","Display14_SPECSIG","Display15_SPECSIG","Display1_SPECSIG","Display2_SPECSIG","Display3_SPECSIG","Display4_SPECSIG","Display5_SPECSIG","Display6_SPECSIG","Display7_SPECSIG","Display8_SPECSIG","Display9_SPECSIG","N_PZ_115","N_PZ_86","N_PZ_90","received0_SPECSIG","received1_SPECSIG","received2_SPECSIG","received3_SPECSIG","received4_SPECSIG","received5_SPECSIG","received6_SPECSIG","received7_SPECSIG");
-      sigNegs = new Array("OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","ON","OFF","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","ON","OFF","OFF","ON","OFF","OFF","OFF","ON","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
-      sigTypes = new Array("LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","","","","","","","LATCH","LATCH","","","","","","","","","","","","","","","","","","","","","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH");
+      signals = new Array("Display0_SPECSIG","Display10_SPECSIG","Display11_SPECSIG","Display12_SPECSIG","Display13_SPECSIG","Display14_SPECSIG","Display15_SPECSIG","Display1_SPECSIG","Display2_SPECSIG","Display3_SPECSIG","Display4_SPECSIG","Display5_SPECSIG","Display6_SPECSIG","Display7_SPECSIG","Display8_SPECSIG","Display9_SPECSIG","N_PZ_115","N_PZ_86","N_PZ_90","UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived0_SPECSIG","UARTReceiverbitsReceived1_SPECSIG","UARTReceiverbitsReceived2_SPECSIG","UARTReceiverbitsReceived3_SPECSIG","UARTReceiverbitsReceived4_SPECSIG","UARTReceiverbitsReceived5_SPECSIG","UARTReceiverbitsReceived6_SPECSIG","UARTReceiverbitsReceived7_SPECSIG","UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG","UARTReceivercount_add00003_SPECSIG","UARTReceivercount_add00004_SPECSIG","UARTReceivercount_cmp_eq0000_SPECSIG","UARTReceiverstate0_SPECSIG","UARTReceiverstate1_SPECSIG","UARTReceiverstate_or000012_SPECSIG","received0_SPECSIG","received1_SPECSIG","received2_SPECSIG","received3_SPECSIG","received4_SPECSIG","received5_SPECSIG","received6_SPECSIG","received7_SPECSIG");
+      sigNegs = new Array("ON","OFF","OFF","OFF","ON","OFF","OFF","ON","OFF","OFF","OFF","ON","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","ON","ON","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","","","","","","","","","","","","","","","","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","","","","","","","LATCH","LATCH","","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH","LATCH");
 
       
            iostyle["Data"]=new Array("KPR");
@@ -36,7 +36,7 @@
       
         specSig["b_SPECSIG"]=new Array("(b)");
       
-        specSig["ControllerbitsReceived4_SPECSIG"]=new Array("Controller/bitsReceived<4>");
+        specSig["UARTReceiverbitsReceived4_SPECSIG"]=new Array("UARTReceiver/bitsReceived<4>");
       
         specSig["Display15_SPECSIG"]=new Array("Display<15>");
       
@@ -62,43 +62,43 @@
       
         specSig["received5_SPECSIG"]=new Array("received<5>");
       
-        specSig["Controllerstate1_SPECSIG"]=new Array("Controller/state<1>");
+        specSig["UARTReceiverstate1_SPECSIG"]=new Array("UARTReceiver/state<1>");
       
-        specSig["Controllerstate_or000012_SPECSIG"]=new Array("Controller/state_or000012");
+        specSig["UARTReceiverstate_or000012_SPECSIG"]=new Array("UARTReceiver/state_or000012");
       
-        specSig["Controllercount_add00004_SPECSIG"]=new Array("Controller/count_add0000<4>");
+        specSig["UARTReceivercount_add00004_SPECSIG"]=new Array("UARTReceiver/count_add0000<4>");
       
-        specSig["Controllercount_add00003_SPECSIG"]=new Array("Controller/count_add0000<3>");
+        specSig["UARTReceivercount_add00003_SPECSIG"]=new Array("UARTReceiver/count_add0000<3>");
       
-        specSig["Controllercount_add00002_SPECSIG"]=new Array("Controller/count_add0000<2>");
+        specSig["UARTReceivercount_add00002_SPECSIG"]=new Array("UARTReceiver/count_add0000<2>");
       
-        specSig["Controllercount_add00001_SPECSIG"]=new Array("Controller/count_add0000<1>");
+        specSig["UARTReceivercount_add00001_SPECSIG"]=new Array("UARTReceiver/count_add0000<1>");
       
-        specSig["Controllercount0_SPECSIG"]=new Array("Controller/count<0>");
+        specSig["UARTReceivercount0_SPECSIG"]=new Array("UARTReceiver/count<0>");
       
-        specSig["Controllerstate0_SPECSIG"]=new Array("Controller/state<0>");
+        specSig["UARTReceiverstate0_SPECSIG"]=new Array("UARTReceiver/state<0>");
       
-        specSig["ControllerbitsReceived3_SPECSIG"]=new Array("Controller/bitsReceived<3>");
+        specSig["UARTReceiverbitsReceived3_SPECSIG"]=new Array("UARTReceiver/bitsReceived<3>");
       
-        specSig["ControllerbitsReceived2_SPECSIG"]=new Array("Controller/bitsReceived<2>");
+        specSig["UARTReceiverbitsReceived2_SPECSIG"]=new Array("UARTReceiver/bitsReceived<2>");
       
-        specSig["ControllerbitsReceived1_SPECSIG"]=new Array("Controller/bitsReceived<1>");
+        specSig["UARTReceiverbitsReceived1_SPECSIG"]=new Array("UARTReceiver/bitsReceived<1>");
       
-        specSig["ControllerbitsReceived0_SPECSIG"]=new Array("Controller/bitsReceived<0>");
+        specSig["UARTReceiverbitsReceived0_SPECSIG"]=new Array("UARTReceiver/bitsReceived<0>");
       
-        specSig["ControllerbitCounter0_SPECSIG"]=new Array("Controller/bitCounter<0>");
+        specSig["UARTReceiverbitCounter0_SPECSIG"]=new Array("UARTReceiver/bitCounter<0>");
       
-        specSig["ControllerbitCounter1_SPECSIG"]=new Array("Controller/bitCounter<1>");
+        specSig["UARTReceiverbitCounter1_SPECSIG"]=new Array("UARTReceiver/bitCounter<1>");
       
-        specSig["ControllerbitCounter2_SPECSIG"]=new Array("Controller/bitCounter<2>");
+        specSig["UARTReceiverbitCounter2_SPECSIG"]=new Array("UARTReceiver/bitCounter<2>");
       
-        specSig["Controllercount_cmp_eq0000_SPECSIG"]=new Array("Controller/count_cmp_eq0000");
+        specSig["UARTReceivercount_cmp_eq0000_SPECSIG"]=new Array("UARTReceiver/count_cmp_eq0000");
       
-        specSig["ControllerbitsReceived7_SPECSIG"]=new Array("Controller/bitsReceived<7>");
+        specSig["UARTReceiverbitsReceived7_SPECSIG"]=new Array("UARTReceiver/bitsReceived<7>");
       
-        specSig["ControllerbitsReceived6_SPECSIG"]=new Array("Controller/bitsReceived<6>");
+        specSig["UARTReceiverbitsReceived6_SPECSIG"]=new Array("UARTReceiver/bitsReceived<6>");
       
-        specSig["ControllerbitsReceived5_SPECSIG"]=new Array("Controller/bitsReceived<5>");
+        specSig["UARTReceiverbitsReceived5_SPECSIG"]=new Array("UARTReceiver/bitsReceived<5>");
       
             pterms["FB1_0"]=new Array("received5_SPECSIG","received6_SPECSIG","/received7_SPECSIG","received4_SPECSIG");
           
@@ -108,7 +108,7 @@
           
             pterms["FB1_3"]=new Array("/received5_SPECSIG","received6_SPECSIG","/received7_SPECSIG");
           
-            pterms["FB1_4"]=new Array("/N_PZ_90","Controllerstate_or000012_SPECSIG");
+            pterms["FB1_4"]=new Array("/N_PZ_90","UARTReceiverstate_or000012_SPECSIG");
           
             pterms["FB1_5"]=new Array("/received5_SPECSIG","/received6_SPECSIG","received4_SPECSIG");
           
@@ -142,57 +142,53 @@
           
             pterms["FB1_20"]=new Array("received6_SPECSIG","received7_SPECSIG");
           
-            pterms["FB1_21"]=new Array("Controllerstate0_SPECSIG","/Controllercount0_SPECSIG");
+            pterms["FB1_21"]=new Array("/UARTReceiverstate0_SPECSIG","/N_PZ_90");
           
-            pterms["FB1_22"]=new Array("/Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG","Controllercount_add00004_SPECSIG");
+            pterms["FB1_22"]=new Array("/UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG","UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_23"]=new Array("N_PZ_90","/Controllercount0_SPECSIG");
+            pterms["FB1_23"]=new Array("UARTReceiverstate0_SPECSIG","UARTReceivercount_add00001_SPECSIG");
           
-            pterms["FB1_24"]=new Array("Controllerstate0_SPECSIG","Controllercount_add00001_SPECSIG");
+            pterms["FB1_24"]=new Array("N_PZ_90","UARTReceivercount_add00001_SPECSIG");
           
-            pterms["FB1_25"]=new Array("N_PZ_90","Controllercount_add00001_SPECSIG");
+            pterms["FB1_25"]=new Array("UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_26"]=new Array("Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG");
+            pterms["FB1_26"]=new Array("/UARTReceivercount0_SPECSIG","/UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_27"]=new Array("/Controllercount0_SPECSIG","/Controllercount_add00002_SPECSIG");
+            pterms["FB1_27"]=new Array("/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_28"]=new Array("/Controllercount_add00004_SPECSIG");
+            pterms["FB1_28"]=new Array("/UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_29"]=new Array("/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG");
+            pterms["FB1_29"]=new Array("UARTReceiverstate0_SPECSIG","UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_30"]=new Array("/Controllerstate0_SPECSIG","/N_PZ_90");
+            pterms["FB1_30"]=new Array("/Data","/UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG","/UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_31"]=new Array("/Controllercount_add00003_SPECSIG");
+            pterms["FB1_31"]=new Array("/UARTReceivercount_add00003_SPECSIG");
           
-            pterms["FB1_32"]=new Array("Controllerstate0_SPECSIG","Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG");
+            pterms["FB1_32"]=new Array("N_PZ_90","UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_33"]=new Array("/Data","/Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG","/Controllercount_add00004_SPECSIG");
+            pterms["FB1_33"]=new Array("/UARTReceiverstate0_SPECSIG","/N_PZ_90","UARTReceivercount_add00003_SPECSIG");
           
-            pterms["FB1_34"]=new Array("N_PZ_90","Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG");
+            pterms["FB1_34"]=new Array("UARTReceiverstate0_SPECSIG","UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_35"]=new Array("/Controllerstate0_SPECSIG","/N_PZ_90","Controllercount_add00003_SPECSIG");
+            pterms["FB1_35"]=new Array("/Data","/UARTReceiverstate0_SPECSIG","/UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG","UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_36"]=new Array("Controllerstate0_SPECSIG","Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG");
+            pterms["FB1_36"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG","UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_37"]=new Array("/Data","/Controllerstate0_SPECSIG","/Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG","Controllercount_add00004_SPECSIG");
+            pterms["FB1_37"]=new Array("N_PZ_90","UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","UARTReceivercount_add00001_SPECSIG","UARTReceivercount_add00002_SPECSIG");
           
-            pterms["FB1_38"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG","Controllercount_add00004_SPECSIG");
+            pterms["FB1_38"]=new Array("/UARTReceiverstate0_SPECSIG","/N_PZ_90","UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_39"]=new Array("N_PZ_90","Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","Controllercount_add00001_SPECSIG","Controllercount_add00002_SPECSIG");
+            pterms["FB1_39"]=new Array("/UARTReceiverstate0_SPECSIG");
           
-            pterms["FB1_40"]=new Array("/Controllerstate0_SPECSIG","/N_PZ_90","Controllercount_add00004_SPECSIG");
+            pterms["FB1_40"]=new Array("/UARTReceiverstate1_SPECSIG","UARTReceivercount_add00003_SPECSIG","UARTReceivercount0_SPECSIG","/UARTReceivercount_add00001_SPECSIG","/UARTReceivercount_add00002_SPECSIG","/UARTReceivercount_add00004_SPECSIG");
           
-            pterms["FB1_41"]=new Array("/Controllerstate0_SPECSIG");
+            pterms["FB1_41"]=new Array("UARTReceiverstate1_SPECSIG","N_PZ_86");
           
-            pterms["FB1_42"]=new Array("/Controllerstate1_SPECSIG","Controllercount_add00003_SPECSIG","Controllercount0_SPECSIG","/Controllercount_add00001_SPECSIG","/Controllercount_add00002_SPECSIG","/Controllercount_add00004_SPECSIG");
+            pterms["FB1_42"]=new Array("/Data","/UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG");
           
-            pterms["FB1_43"]=new Array("Controllerstate1_SPECSIG","N_PZ_86");
+            pterms["FB1_43"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG");
           
-            pterms["FB1_44"]=new Array("/Data","/Controllerstate1_SPECSIG","Controllerstate0_SPECSIG");
-          
-            pterms["FB1_45"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG");
-          
-            pterms["FB1_52"]=new Array("Controllercount0_SPECSIG");
+            pterms["FB1_52"]=new Array("UARTReceivercount0_SPECSIG");
           
             pterms["FB2_0"]=new Array("/received5_SPECSIG","/received6_SPECSIG");
           
@@ -226,133 +222,133 @@
           
             pterms["FB2_15"]=new Array("/received5_SPECSIG","received6_SPECSIG","/received7_SPECSIG","/received4_SPECSIG");
           
-            pterms["FB2_16"]=new Array("/ControllerbitsReceived3_SPECSIG");
+            pterms["FB2_16"]=new Array("/UARTReceiverbitsReceived3_SPECSIG");
           
             pterms["FB2_17"]=new Array("/received1_SPECSIG","/received3_SPECSIG","/received2_SPECSIG");
           
             pterms["FB2_18"]=new Array("received1_SPECSIG","/received3_SPECSIG","received2_SPECSIG","received0_SPECSIG");
           
-            pterms["FB2_19"]=new Array("/ControllerbitsReceived2_SPECSIG");
+            pterms["FB2_19"]=new Array("/UARTReceiverbitsReceived2_SPECSIG");
           
             pterms["FB2_20"]=new Array("/received1_SPECSIG","/received3_SPECSIG","received2_SPECSIG","/received0_SPECSIG");
           
-            pterms["FB2_21"]=new Array("/Controllerstate0_SPECSIG");
+            pterms["FB2_21"]=new Array("/UARTReceiverstate0_SPECSIG");
           
-            pterms["FB2_22"]=new Array("/Data","/Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","Controllerstate_or000012_SPECSIG");
+            pterms["FB2_22"]=new Array("/Data","/UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","UARTReceiverstate_or000012_SPECSIG");
           
-            pterms["FB2_23"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","Controllerstate_or000012_SPECSIG");
+            pterms["FB2_23"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverstate_or000012_SPECSIG");
           
-            pterms["FB2_24"]=new Array("Data","/Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG");
+            pterms["FB2_24"]=new Array("Data","/UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG");
           
-            pterms["FB2_25"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/Controllercount_cmp_eq0000_SPECSIG");
+            pterms["FB2_25"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceivercount_cmp_eq0000_SPECSIG");
           
-            pterms["FB2_26"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","ControllerbitsReceived0_SPECSIG");
+            pterms["FB2_26"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived0_SPECSIG");
           
-            pterms["FB2_27"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","/ControllerbitsReceived0_SPECSIG");
+            pterms["FB2_27"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived0_SPECSIG");
           
-            pterms["FB2_28"]=new Array("/ControllerbitsReceived4_SPECSIG");
+            pterms["FB2_28"]=new Array("/UARTReceiverbitsReceived4_SPECSIG");
           
-            pterms["FB2_29"]=new Array("ControllerbitsReceived1_SPECSIG","/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG");
+            pterms["FB2_29"]=new Array("UARTReceiverbitsReceived1_SPECSIG","/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB2_30"]=new Array("/ControllerbitsReceived1_SPECSIG","Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG");
+            pterms["FB2_30"]=new Array("/UARTReceiverbitsReceived1_SPECSIG","Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB2_31"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","ControllerbitsReceived2_SPECSIG");
+            pterms["FB2_31"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived2_SPECSIG");
           
-            pterms["FB2_32"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","/ControllerbitsReceived2_SPECSIG");
+            pterms["FB2_32"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived2_SPECSIG");
           
-            pterms["FB2_33"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","ControllerbitsReceived3_SPECSIG");
+            pterms["FB2_33"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived3_SPECSIG");
           
-            pterms["FB2_34"]=new Array("/ControllerbitsReceived1_SPECSIG");
+            pterms["FB2_34"]=new Array("/UARTReceiverbitsReceived1_SPECSIG");
           
-            pterms["FB2_35"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG","/ControllerbitsReceived3_SPECSIG");
+            pterms["FB2_35"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived3_SPECSIG");
           
-            pterms["FB2_36"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","ControllerbitsReceived4_SPECSIG");
+            pterms["FB2_36"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived4_SPECSIG");
           
-            pterms["FB2_37"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","/ControllerbitsReceived4_SPECSIG");
+            pterms["FB2_37"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived4_SPECSIG");
           
-            pterms["FB2_40"]=new Array("/ControllerbitsReceived0_SPECSIG");
+            pterms["FB2_40"]=new Array("/UARTReceiverbitsReceived0_SPECSIG");
           
-            pterms["FB2_55"]=new Array("/N_PZ_90","Controllerstate_or000012_SPECSIG");
+            pterms["FB2_55"]=new Array("/N_PZ_90","UARTReceiverstate_or000012_SPECSIG");
           
-            pterms["FB3_0"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","ControllerbitsReceived5_SPECSIG");
+            pterms["FB3_0"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived5_SPECSIG");
           
-            pterms["FB3_1"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","/ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","/ControllerbitsReceived5_SPECSIG");
+            pterms["FB3_1"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived5_SPECSIG");
           
-            pterms["FB3_2"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","ControllerbitsReceived6_SPECSIG");
+            pterms["FB3_2"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived6_SPECSIG");
           
-            pterms["FB3_3"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","/ControllerbitsReceived6_SPECSIG");
+            pterms["FB3_3"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived6_SPECSIG");
           
             pterms["FB3_4"]=new Array("N_PZ_86");
           
-            pterms["FB3_5"]=new Array("/Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","ControllerbitsReceived7_SPECSIG");
+            pterms["FB3_5"]=new Array("/Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","UARTReceiverbitsReceived7_SPECSIG");
           
-            pterms["FB3_6"]=new Array("Data","Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG","/ControllerbitsReceived7_SPECSIG");
+            pterms["FB3_6"]=new Array("Data","UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG","/UARTReceiverbitsReceived7_SPECSIG");
           
-            pterms["FB3_7"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter2_SPECSIG");
+            pterms["FB3_7"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_8"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG");
+            pterms["FB3_8"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_9"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","N_PZ_86","ControllerbitCounter1_SPECSIG","/ControllerbitCounter2_SPECSIG");
+            pterms["FB3_9"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","N_PZ_86","UARTReceiverbitCounter1_SPECSIG","/UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_10"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/N_PZ_86","ControllerbitCounter2_SPECSIG");
+            pterms["FB3_10"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/N_PZ_86","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_11"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","ControllerbitCounter1_SPECSIG");
+            pterms["FB3_11"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","UARTReceiverbitCounter1_SPECSIG");
           
-            pterms["FB3_12"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","N_PZ_86","/ControllerbitCounter1_SPECSIG");
+            pterms["FB3_12"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","N_PZ_86","/UARTReceiverbitCounter1_SPECSIG");
           
-            pterms["FB3_13"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_13"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_14"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/N_PZ_86","ControllerbitCounter1_SPECSIG");
+            pterms["FB3_14"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/N_PZ_86","UARTReceiverbitCounter1_SPECSIG");
           
-            pterms["FB3_15"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","/ControllerbitCounter0_SPECSIG","N_PZ_86");
+            pterms["FB3_15"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","/UARTReceiverbitCounter0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_16"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_16"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_17"]=new Array("Controllerstate1_SPECSIG","/Controllerstate0_SPECSIG","ControllerbitCounter0_SPECSIG","/N_PZ_86");
+            pterms["FB3_17"]=new Array("UARTReceiverstate1_SPECSIG","/UARTReceiverstate0_SPECSIG","UARTReceiverbitCounter0_SPECSIG","/N_PZ_86");
           
-            pterms["FB3_18"]=new Array("/ControllerbitCounter0_SPECSIG","N_PZ_86","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG");
+            pterms["FB3_18"]=new Array("/UARTReceiverbitCounter0_SPECSIG","N_PZ_86","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_19"]=new Array("ControllerbitCounter0_SPECSIG","/N_PZ_86","ControllerbitCounter1_SPECSIG","ControllerbitCounter2_SPECSIG");
+            pterms["FB3_19"]=new Array("UARTReceiverbitCounter0_SPECSIG","/N_PZ_86","UARTReceiverbitCounter1_SPECSIG","UARTReceiverbitCounter2_SPECSIG");
           
-            pterms["FB3_20"]=new Array("ControllerbitsReceived5_SPECSIG");
+            pterms["FB3_20"]=new Array("UARTReceiverbitsReceived5_SPECSIG");
           
-            pterms["FB3_21"]=new Array("ControllerbitsReceived6_SPECSIG");
+            pterms["FB3_21"]=new Array("UARTReceiverbitsReceived6_SPECSIG");
           
             pterms["FB3_22"]=new Array("N_PZ_115");
           
-            pterms["FB3_23"]=new Array("ControllerbitsReceived7_SPECSIG");
+            pterms["FB3_23"]=new Array("UARTReceiverbitsReceived7_SPECSIG");
           
-            pterms["FB3_24"]=new Array("ControllerbitsReceived0_SPECSIG");
+            pterms["FB3_24"]=new Array("UARTReceiverbitsReceived0_SPECSIG");
           
-            pterms["FB3_25"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_25"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_26"]=new Array("ControllerbitsReceived1_SPECSIG");
+            pterms["FB3_26"]=new Array("UARTReceiverbitsReceived1_SPECSIG");
           
-            pterms["FB3_27"]=new Array("ControllerbitsReceived2_SPECSIG");
+            pterms["FB3_27"]=new Array("UARTReceiverbitsReceived2_SPECSIG");
           
             pterms["FB3_28"]=new Array("N_PZ_115");
           
-            pterms["FB3_29"]=new Array("ControllerbitsReceived3_SPECSIG");
+            pterms["FB3_29"]=new Array("UARTReceiverbitsReceived3_SPECSIG");
           
-            pterms["FB3_30"]=new Array("ControllerbitsReceived4_SPECSIG");
+            pterms["FB3_30"]=new Array("UARTReceiverbitsReceived4_SPECSIG");
           
             pterms["FB3_31"]=new Array("N_PZ_115");
           
-            pterms["FB3_34"]=new Array("/ControllerbitsReceived7_SPECSIG");
+            pterms["FB3_34"]=new Array("/UARTReceiverbitsReceived7_SPECSIG");
           
-            pterms["FB3_37"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_37"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_40"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_40"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_43"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_43"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_46"]=new Array("/ControllerbitsReceived6_SPECSIG");
+            pterms["FB3_46"]=new Array("/UARTReceiverbitsReceived6_SPECSIG");
           
-            pterms["FB3_49"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_49"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_52"]=new Array("Controllerstate1_SPECSIG","Controllerstate0_SPECSIG","N_PZ_86");
+            pterms["FB3_52"]=new Array("UARTReceiverstate1_SPECSIG","UARTReceiverstate0_SPECSIG","N_PZ_86");
           
-            pterms["FB3_55"]=new Array("/ControllerbitsReceived5_SPECSIG");
+            pterms["FB3_55"]=new Array("/UARTReceiverbitsReceived5_SPECSIG");
           
           d2["Display2_SPECSIG"]=new Array("FB1_10","FB1_12","FB1_11");
           
@@ -360,21 +356,21 @@
           
           d2["Display0_SPECSIG"]=new Array("FB1_17","FB1_18");
           
-          d2["Controllerstate1_SPECSIG"]=new Array("FB1_45","FB1_44");
+          d2["UARTReceiverstate1_SPECSIG"]=new Array("FB1_43","FB1_42");
           
-              clk["Controllerstate1_SPECSIG"]=new Array("FB1_4");
-              prld["Controllerstate1_SPECSIG"]="GND";
+              clk["UARTReceiverstate1_SPECSIG"]=new Array("FB1_4");
+              prld["UARTReceiverstate1_SPECSIG"]="GND";
           d1["N_PZ_86"]=new Array("FB1_22");
           
-          d2["Controllerstate_or000012_SPECSIG"]=new Array("FB1_41","FB1_43","FB1_42");
+          d2["UARTReceiverstate_or000012_SPECSIG"]=new Array("FB1_39","FB1_41","FB1_40");
           
-          d1["Controllercount_add00004_SPECSIG"]=new Array("FB1_28");
+          d1["UARTReceivercount_add00004_SPECSIG"]=new Array("FB1_28");
           
-          d2["Controllercount_add00004_SPECSIG"]=new Array("FB1_40","FB1_36","FB1_39","FB1_37","FB1_38");
+          d2["UARTReceivercount_add00004_SPECSIG"]=new Array("FB1_38","FB1_34","FB1_37","FB1_35","FB1_36");
           
-          d1["Controllercount_add00003_SPECSIG"]=new Array("FB1_31");
+          d1["UARTReceivercount_add00003_SPECSIG"]=new Array("FB1_31");
           
-          d2["Controllercount_add00003_SPECSIG"]=new Array("FB1_35","FB1_32","FB1_34","FB1_33");
+          d2["UARTReceivercount_add00003_SPECSIG"]=new Array("FB1_33","FB1_29","FB1_32","FB1_30");
           
           d2["Display3_SPECSIG"]=new Array("FB1_9","FB1_13","FB1_14");
           
@@ -386,56 +382,56 @@
           
           d2["Display11_SPECSIG"]=new Array("FB1_6","FB1_3","FB1_5");
           
-          d2["Controllercount_add00002_SPECSIG"]=new Array("FB1_30","FB1_27","FB1_29","FB1_26");
+          d2["UARTReceivercount_add00002_SPECSIG"]=new Array("FB1_21","FB1_26","FB1_27","FB1_25");
           
-          d1["Controllercount_add00001_SPECSIG"]=new Array("FB1_52");
+          d1["UARTReceivercount_add00001_SPECSIG"]=new Array("FB1_52");
           
-          d2["Controllercount_add00001_SPECSIG"]=new Array("FB1_24","FB1_25");
+          d2["UARTReceivercount_add00001_SPECSIG"]=new Array("FB1_23","FB1_24");
           
-          d2["Controllercount0_SPECSIG"]=new Array("FB1_21","FB1_23");
+          d2["UARTReceivercount0_SPECSIG"]=new Array("FB1_52","FB1_21");
           
           d2["Display7_SPECSIG"]=new Array("FB2_7","FB2_12","FB2_11");
           
           d2["Display6_SPECSIG"]=new Array("FB2_20","FB2_11");
           
-          d1["ControllerbitsReceived3_SPECSIG"]=new Array("FB2_16");
+          d1["UARTReceiverbitsReceived3_SPECSIG"]=new Array("FB2_16");
           
-          d2["ControllerbitsReceived3_SPECSIG"]=new Array("FB2_35","FB2_33");
+          d2["UARTReceiverbitsReceived3_SPECSIG"]=new Array("FB2_35","FB2_33");
           
-              clk["ControllerbitsReceived3_SPECSIG"]=new Array("FB2_4");
-              prld["ControllerbitsReceived3_SPECSIG"]="GND";
-          d1["ControllerbitsReceived2_SPECSIG"]=new Array("FB2_19");
+              clk["UARTReceiverbitsReceived3_SPECSIG"]=new Array("FB2_4");
+              prld["UARTReceiverbitsReceived3_SPECSIG"]="GND";
+          d1["UARTReceiverbitsReceived2_SPECSIG"]=new Array("FB2_19");
           
-          d2["ControllerbitsReceived2_SPECSIG"]=new Array("FB2_32","FB2_31");
+          d2["UARTReceiverbitsReceived2_SPECSIG"]=new Array("FB2_32","FB2_31");
           
-              clk["ControllerbitsReceived2_SPECSIG"]=new Array("FB2_4");
-              prld["ControllerbitsReceived2_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived2_SPECSIG"]=new Array("FB2_4");
+              prld["UARTReceiverbitsReceived2_SPECSIG"]="GND";
           d2["Display5_SPECSIG"]=new Array("FB2_5","FB2_6","FB2_7","FB2_8");
           
           d2["Display4_SPECSIG"]=new Array("FB2_17","FB2_18");
           
-          d1["ControllerbitsReceived4_SPECSIG"]=new Array("FB2_28");
+          d1["UARTReceiverbitsReceived4_SPECSIG"]=new Array("FB2_28");
           
-          d2["ControllerbitsReceived4_SPECSIG"]=new Array("FB2_37","FB2_36");
+          d2["UARTReceiverbitsReceived4_SPECSIG"]=new Array("FB2_37","FB2_36");
           
-              clk["ControllerbitsReceived4_SPECSIG"]=new Array("FB2_4");
-              prld["ControllerbitsReceived4_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived4_SPECSIG"]=new Array("FB2_4");
+              prld["UARTReceiverbitsReceived4_SPECSIG"]="GND";
           d2["Display15_SPECSIG"]=new Array("FB2_2","FB2_10","FB2_9");
           
-          d1["ControllerbitsReceived1_SPECSIG"]=new Array("FB2_34");
+          d1["UARTReceiverbitsReceived1_SPECSIG"]=new Array("FB2_34");
           
-          d2["ControllerbitsReceived1_SPECSIG"]=new Array("FB2_29","FB2_30");
+          d2["UARTReceiverbitsReceived1_SPECSIG"]=new Array("FB2_29","FB2_30");
           
-              clk["ControllerbitsReceived1_SPECSIG"]=new Array("FB2_4");
-              prld["ControllerbitsReceived1_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived1_SPECSIG"]=new Array("FB2_4");
+              prld["UARTReceiverbitsReceived1_SPECSIG"]="GND";
           d2["Display14_SPECSIG"]=new Array("FB2_15","FB2_9");
           
-          d1["ControllerbitsReceived0_SPECSIG"]=new Array("FB2_40");
+          d1["UARTReceiverbitsReceived0_SPECSIG"]=new Array("FB2_40");
           
-          d2["ControllerbitsReceived0_SPECSIG"]=new Array("FB2_27","FB2_26");
+          d2["UARTReceiverbitsReceived0_SPECSIG"]=new Array("FB2_27","FB2_26");
           
-              clk["ControllerbitsReceived0_SPECSIG"]=new Array("FB2_4");
-              prld["ControllerbitsReceived0_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived0_SPECSIG"]=new Array("FB2_4");
+              prld["UARTReceiverbitsReceived0_SPECSIG"]="GND";
           d2["Display13_SPECSIG"]=new Array("FB2_0","FB2_1","FB2_2","FB2_3");
           
           d2["Display12_SPECSIG"]=new Array("FB2_13","FB2_14");
@@ -444,10 +440,10 @@
           
           d2["N_PZ_115"]=new Array("FB2_23","FB2_22");
           
-          d2["Controllerstate0_SPECSIG"]=new Array("FB2_21");
+          d2["UARTReceiverstate0_SPECSIG"]=new Array("FB2_21");
           
-              clk["Controllerstate0_SPECSIG"]=new Array("FB2_55");
-              prld["Controllerstate0_SPECSIG"]="GND";
+              clk["UARTReceiverstate0_SPECSIG"]=new Array("FB2_55");
+              prld["UARTReceiverstate0_SPECSIG"]="GND";
           d2["received4_SPECSIG"]=new Array("FB3_30");
           
               clk["received4_SPECSIG"]=new Array("FB3_13");
@@ -456,30 +452,30 @@
           
               clk["received3_SPECSIG"]=new Array("FB3_13");
               prld["received3_SPECSIG"]="GND";
-          d2["Controllercount_cmp_eq0000_SPECSIG"]=new Array("FB3_19","FB3_18");
+          d2["UARTReceivercount_cmp_eq0000_SPECSIG"]=new Array("FB3_19","FB3_18");
           
-          d2["ControllerbitCounter0_SPECSIG"]=new Array("FB3_17","FB3_15");
+          d2["UARTReceiverbitCounter0_SPECSIG"]=new Array("FB3_17","FB3_15");
           
-              clk["ControllerbitCounter0_SPECSIG"]=new Array("FB3_22");
-              prld["ControllerbitCounter0_SPECSIG"]="GND";
+              clk["UARTReceiverbitCounter0_SPECSIG"]=new Array("FB3_22");
+              prld["UARTReceiverbitCounter0_SPECSIG"]="GND";
           d2["received2_SPECSIG"]=new Array("FB3_27");
           
               clk["received2_SPECSIG"]=new Array("FB3_13");
               prld["received2_SPECSIG"]="GND";
-          d2["ControllerbitCounter1_SPECSIG"]=new Array("FB3_11","FB3_14","FB3_12");
+          d2["UARTReceiverbitCounter1_SPECSIG"]=new Array("FB3_11","FB3_14","FB3_12");
           
-              clk["ControllerbitCounter1_SPECSIG"]=new Array("FB3_22");
-              prld["ControllerbitCounter1_SPECSIG"]="GND";
-          d2["ControllerbitCounter2_SPECSIG"]=new Array("FB3_7","FB3_10","FB3_8","FB3_9");
+              clk["UARTReceiverbitCounter1_SPECSIG"]=new Array("FB3_22");
+              prld["UARTReceiverbitCounter1_SPECSIG"]="GND";
+          d2["UARTReceiverbitCounter2_SPECSIG"]=new Array("FB3_7","FB3_10","FB3_8","FB3_9");
           
-              clk["ControllerbitCounter2_SPECSIG"]=new Array("FB3_22");
-              prld["ControllerbitCounter2_SPECSIG"]="GND";
-          d1["ControllerbitsReceived7_SPECSIG"]=new Array("FB3_34");
+              clk["UARTReceiverbitCounter2_SPECSIG"]=new Array("FB3_22");
+              prld["UARTReceiverbitCounter2_SPECSIG"]="GND";
+          d1["UARTReceiverbitsReceived7_SPECSIG"]=new Array("FB3_34");
           
-          d2["ControllerbitsReceived7_SPECSIG"]=new Array("FB3_6","FB3_5");
+          d2["UARTReceiverbitsReceived7_SPECSIG"]=new Array("FB3_6","FB3_5");
           
-              clk["ControllerbitsReceived7_SPECSIG"]=new Array("FB3_4");
-              prld["ControllerbitsReceived7_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived7_SPECSIG"]=new Array("FB3_4");
+              prld["UARTReceiverbitsReceived7_SPECSIG"]="GND";
           d2["received1_SPECSIG"]=new Array("FB3_26");
           
               clk["received1_SPECSIG"]=new Array("FB3_13");
@@ -492,12 +488,12 @@
           
               clk["received7_SPECSIG"]=new Array("FB3_13");
               prld["received7_SPECSIG"]="GND";
-          d1["ControllerbitsReceived6_SPECSIG"]=new Array("FB3_46");
+          d1["UARTReceiverbitsReceived6_SPECSIG"]=new Array("FB3_46");
           
-          d2["ControllerbitsReceived6_SPECSIG"]=new Array("FB3_3","FB3_2");
+          d2["UARTReceiverbitsReceived6_SPECSIG"]=new Array("FB3_3","FB3_2");
           
-              clk["ControllerbitsReceived6_SPECSIG"]=new Array("FB3_4");
-              prld["ControllerbitsReceived6_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived6_SPECSIG"]=new Array("FB3_4");
+              prld["UARTReceiverbitsReceived6_SPECSIG"]="GND";
           d2["received6_SPECSIG"]=new Array("FB3_21");
           
               clk["received6_SPECSIG"]=new Array("FB3_13");
@@ -506,12 +502,12 @@
           
               clk["received5_SPECSIG"]=new Array("FB3_13");
               prld["received5_SPECSIG"]="GND";
-          d1["ControllerbitsReceived5_SPECSIG"]=new Array("FB3_55");
+          d1["UARTReceiverbitsReceived5_SPECSIG"]=new Array("FB3_55");
           
-          d2["ControllerbitsReceived5_SPECSIG"]=new Array("FB3_1","FB3_0");
+          d2["UARTReceiverbitsReceived5_SPECSIG"]=new Array("FB3_1","FB3_0");
           
-              clk["ControllerbitsReceived5_SPECSIG"]=new Array("FB3_4");
-              prld["ControllerbitsReceived5_SPECSIG"]="GND";
+              clk["UARTReceiverbitsReceived5_SPECSIG"]=new Array("FB3_4");
+              prld["UARTReceiverbitsReceived5_SPECSIG"]="GND";
 
       uimSignals = new Array();
 

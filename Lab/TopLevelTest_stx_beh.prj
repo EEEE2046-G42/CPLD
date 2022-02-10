@@ -1,0 +1,6 @@
+vhdl isim_temp "ClockDiv2.vhf"
+vhdl isim_temp "SevenSegDriver.vhd"
+vhdl isim_temp "ControlLogicVHDL.vhd"
+vhdl isim_temp "ClockDiv.vhf"
+vhdl isim_temp "TopLevel.vhd"
+vhdl isim_temp "TopLevelTest.vhd"

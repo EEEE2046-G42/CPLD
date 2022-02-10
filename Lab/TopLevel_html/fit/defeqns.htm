@@ -5,170 +5,6 @@
 </td></tr><tr><td>
 ********** Mapped Logic **********
 </td></tr><tr><td>
-LDCP_Controller/bitCounter0: LDCP port map (Controller/bitCounter(0),Controller/bitCounter_D(0),N_PZ_115,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitCounter_D(0) <= ((Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND NOT N_PZ_86)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND N_PZ_86));
-</td></tr><tr><td>
-LDCP_Controller/bitCounter1: LDCP port map (Controller/bitCounter(1),Controller/bitCounter_D(1),N_PZ_115,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitCounter_D(1) <= ((Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_86 AND Controller/bitCounter(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND N_PZ_86 AND NOT Controller/bitCounter(1)));
-</td></tr><tr><td>
-LDCP_Controller/bitCounter2: LDCP port map (Controller/bitCounter(2),Controller/bitCounter_D(2),N_PZ_115,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitCounter_D(2) <= ((Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_86 AND Controller/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(1) AND Controller/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND N_PZ_86 AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2)));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived0: LDCP port map (Controller/bitsReceived(0),Controller/bitsReceived_D(0),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(0) <= NOT (NOT Controller/bitsReceived(0)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND NOT Controller/bitsReceived(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND Controller/bitsReceived(0))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived1: LDCP port map (Controller/bitsReceived(1),Controller/bitsReceived_D(1),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(1) <= NOT (NOT Controller/bitsReceived(1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Controller/bitsReceived(1) AND NOT Data AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/state(1) AND NOT Controller/state(0) AND Controller/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(1) AND NOT Controller/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/bitsReceived(1) AND Data AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/state(1) AND NOT Controller/state(0) AND Controller/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(1) AND NOT Controller/bitCounter(2))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived2: LDCP port map (Controller/bitsReceived(2),Controller/bitsReceived_D(2),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(2) <= NOT (NOT Controller/bitsReceived(2)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND NOT Controller/bitsReceived(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND Controller/bitsReceived(2))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived3: LDCP port map (Controller/bitsReceived(3),Controller/bitsReceived_D(3),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(3) <= NOT (NOT Controller/bitsReceived(3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND NOT Controller/bitsReceived(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(2) AND Controller/bitsReceived(3))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived4: LDCP port map (Controller/bitsReceived(4),Controller/bitsReceived_D(4),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(4) <= NOT (NOT Controller/bitsReceived(4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND NOT Controller/bitsReceived(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND Controller/bitsReceived(4))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived5: LDCP port map (Controller/bitsReceived(5),Controller/bitsReceived_D(5),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(5) <= NOT (NOT Controller/bitsReceived(5)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND NOT Controller/bitsReceived(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND NOT Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND Controller/bitsReceived(5))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived6: LDCP port map (Controller/bitsReceived(6),Controller/bitsReceived_D(6),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(6) <= NOT (NOT Controller/bitsReceived(6)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND NOT Controller/bitsReceived(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND Controller/bitsReceived(6))));
-</td></tr><tr><td>
-LDCP_Controller/bitsReceived7: LDCP port map (Controller/bitsReceived(7),Controller/bitsReceived_D(7),N_PZ_86,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/bitsReceived_D(7) <= NOT (NOT Controller/bitsReceived(7)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND NOT Controller/bitsReceived(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(0) AND Controller/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(2) AND Controller/bitsReceived(7))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count(0) <= ((Controller/state(0) AND NOT Controller/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND NOT Controller/count(0)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count_add0000(1) <= Controller/count(0)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Controller/state(0) AND Controller/count_add0000(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND Controller/count_add0000(1)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count_add0000(2) <= NOT (((NOT Controller/state(0) AND NOT N_PZ_90)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/count(0) AND NOT Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/count(0) AND Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(2))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count_add0000(3) <= NOT (NOT Controller/count_add0000(3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT Controller/state(0) AND NOT N_PZ_90 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(0) AND Controller/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(1) AND Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND Controller/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(1) AND Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT Controller/state(1) AND Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(3) AND Controller/count(0) AND NOT Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(2) AND NOT Controller/count_add0000(4))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count_add0000(4) <= NOT (NOT Controller/count_add0000(4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT Controller/state(0) AND NOT N_PZ_90 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(0) AND Controller/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count(0) AND Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND Controller/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count(0) AND Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(3) AND Controller/count(0) AND NOT Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(2) AND Controller/count_add0000(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(3) AND Controller/count(0) AND NOT Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(2) AND Controller/count_add0000(4))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/count_cmp_eq0000 <= ((Controller/bitCounter(0) AND NOT N_PZ_86 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(1) AND Controller/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/bitCounter(0) AND N_PZ_86 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/bitCounter(1) AND Controller/bitCounter(2)));
-</td></tr><tr><td>
-LDCP_Controller/state0: LDCP port map (Controller/state(0),NOT Controller/state(0),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/state_G(0) <= (NOT N_PZ_90 AND Controller/state_or000012);
-</td></tr><tr><td>
-LDCP_Controller/state1: LDCP port map (Controller/state(1),Controller/state_D(1),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/state_D(1) <= ((Controller/state(1) AND NOT Controller/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT Controller/state(1) AND Controller/state(0)));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controller/state_G(1) <= (NOT N_PZ_90 AND Controller/state_or000012);
-</td></tr><tr><td>
-</td></tr><tr><td>
-Controller/state_or000012 <= ((NOT Controller/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND N_PZ_86)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Controller/state(1) AND Controller/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count(0) AND NOT Controller/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(2) AND NOT Controller/count_add0000(4)));
-</td></tr><tr><td>
 </td></tr><tr><td>
 Display(0) <= NOT (((received(1) AND received(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (received(3) AND received(2))));
@@ -262,51 +98,239 @@ Display(15) <= ((received(5) AND NOT received(7) AND received(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	received(4)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_115 <= ((Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/state_or000012)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT Controller/state(1) AND Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/state_or000012));
+N_PZ_115 <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_or000012)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(0) AND UARTReceiver/state_or000012));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_86 <= (NOT Controller/count_add0000(3) AND Controller/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_add0000(1) AND NOT Controller/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Controller/count_add0000(4));
+N_PZ_86 <= (NOT UARTReceiver/count_add0000(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_90 <= ((Data AND NOT Controller/state(1) AND NOT Controller/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Controller/state(1) AND NOT Controller/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Controller/count_cmp_eq0000));
+N_PZ_90 <= ((Data AND NOT UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_cmp_eq0000));
 </td></tr><tr><td>
-LDCP_received0: LDCP port map (received(0),Controller/bitsReceived(0),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(0) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_UARTReceiver/bitCounter0: LDCP port map (UARTReceiver/bitCounter(0),UARTReceiver/bitCounter_D(0),N_PZ_115,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(0) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND NOT N_PZ_86)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND N_PZ_86));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitCounter1: LDCP port map (UARTReceiver/bitCounter(1),UARTReceiver/bitCounter_D(1),N_PZ_115,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_86 AND UARTReceiver/bitCounter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND N_PZ_86 AND NOT UARTReceiver/bitCounter(1)));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitCounter2: LDCP port map (UARTReceiver/bitCounter(2),UARTReceiver/bitCounter_D(2),N_PZ_115,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(2) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_86 AND UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND N_PZ_86 AND UARTReceiver/bitCounter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(2)));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived0: LDCP port map (UARTReceiver/bitsReceived(0),UARTReceiver/bitsReceived_D(0),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(0) <= NOT (NOT UARTReceiver/bitsReceived(0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(0))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived1: LDCP port map (UARTReceiver/bitsReceived(1),UARTReceiver/bitsReceived_D(1),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(1) <= NOT (NOT UARTReceiver/bitsReceived(1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((UARTReceiver/bitsReceived(1) AND NOT Data AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitsReceived(1) AND Data AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(2))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived2: LDCP port map (UARTReceiver/bitsReceived(2),UARTReceiver/bitsReceived_D(2),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(2) <= NOT (NOT UARTReceiver/bitsReceived(2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(2))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived3: LDCP port map (UARTReceiver/bitsReceived(3),UARTReceiver/bitsReceived_D(3),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(3) <= NOT (NOT UARTReceiver/bitsReceived(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(3))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived4: LDCP port map (UARTReceiver/bitsReceived(4),UARTReceiver/bitsReceived_D(4),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(4) <= NOT (NOT UARTReceiver/bitsReceived(4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(4))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived5: LDCP port map (UARTReceiver/bitsReceived(5),UARTReceiver/bitsReceived_D(5),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(5) <= NOT (NOT UARTReceiver/bitsReceived(5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(5))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived6: LDCP port map (UARTReceiver/bitsReceived(6),UARTReceiver/bitsReceived_D(6),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(6) <= NOT (NOT UARTReceiver/bitsReceived(6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(6))));
+</td></tr><tr><td>
+LDCP_UARTReceiver/bitsReceived7: LDCP port map (UARTReceiver/bitsReceived(7),UARTReceiver/bitsReceived_D(7),N_PZ_86,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(7) <= NOT (NOT UARTReceiver/bitsReceived(7)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(7))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count(0) <= NOT (((UARTReceiver/count(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/state(0) AND NOT N_PZ_90)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count_add0000(1) <= UARTReceiver/count(0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND UARTReceiver/count_add0000(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count_add0000(2) <= NOT (((NOT UARTReceiver/state(0) AND NOT N_PZ_90)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count_add0000(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count_add0000(3) <= NOT (NOT UARTReceiver/count_add0000(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT UARTReceiver/state(0) AND NOT N_PZ_90 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(0) AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(0) AND UARTReceiver/count_add0000(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count_add0000(4) <= NOT (NOT UARTReceiver/count_add0000(4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT UARTReceiver/state(0) AND NOT N_PZ_90 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_90 AND UARTReceiver/count_add0000(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/count_cmp_eq0000 <= ((UARTReceiver/bitCounter(0) AND NOT N_PZ_86 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(0) AND N_PZ_86 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2)));
+</td></tr><tr><td>
+LDCP_UARTReceiver/state0: LDCP port map (UARTReceiver/state(0),NOT UARTReceiver/state(0),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_G(0) <= (NOT N_PZ_90 AND UARTReceiver/state_or000012);
+</td></tr><tr><td>
+LDCP_UARTReceiver/state1: LDCP port map (UARTReceiver/state(1),UARTReceiver/state_D(1),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(0)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_G(1) <= (NOT N_PZ_90 AND UARTReceiver/state_or000012);
+</td></tr><tr><td>
+</td></tr><tr><td>
+UARTReceiver/state_or000012 <= ((NOT UARTReceiver/state(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND N_PZ_86)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(4)));
+</td></tr><tr><td>
+LDCP_received0: LDCP port map (received(0),UARTReceiver/bitsReceived(0),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(0) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received1: LDCP port map (received(1),Controller/bitsReceived(1),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(1) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received1: LDCP port map (received(1),UARTReceiver/bitsReceived(1),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(1) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received2: LDCP port map (received(2),Controller/bitsReceived(2),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(2) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received2: LDCP port map (received(2),UARTReceiver/bitsReceived(2),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(2) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received3: LDCP port map (received(3),Controller/bitsReceived(3),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(3) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received3: LDCP port map (received(3),UARTReceiver/bitsReceived(3),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(3) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received4: LDCP port map (received(4),Controller/bitsReceived(4),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(4) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received4: LDCP port map (received(4),UARTReceiver/bitsReceived(4),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(4) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received5: LDCP port map (received(5),Controller/bitsReceived(5),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(5) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received5: LDCP port map (received(5),UARTReceiver/bitsReceived(5),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(5) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received6: LDCP port map (received(6),Controller/bitsReceived(6),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(6) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received6: LDCP port map (received(6),UARTReceiver/bitsReceived(6),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(6) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
-LDCP_received7: LDCP port map (received(7),Controller/bitsReceived(7),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(7) <= (Controller/state(1) AND Controller/state(0) AND 
+LDCP_received7: LDCP port map (received(7),UARTReceiver/bitsReceived(7),,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received_G(7) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_86);
 </td></tr><tr><td>
 </td></tr><tr><td>

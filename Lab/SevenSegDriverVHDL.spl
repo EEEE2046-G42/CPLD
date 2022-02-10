@@ -1,0 +1,6 @@
+[Inputs]
+update
+=BCD[3:0]=
+[Outputs]
+=sevenSeg[7:0]=
+[BiDir]

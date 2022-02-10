@@ -1,99 +1,99 @@
-V3 56
+V3 54
 FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf 2022/02/08.15:43:29 O.87xd
-EN work/FD_MXILINX_ClockDiv 1644423071 \
+EN work/FD_MXILINX_ClockDiv 1644492681 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/FD_MXILINX_ClockDiv/BEHAVIORAL 1644423072 \
+AR work/FD_MXILINX_ClockDiv/BEHAVIORAL 1644492682 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
-      EN work/FD_MXILINX_ClockDiv 1644423071 CP GND CP FDCP
-EN work/ClockDiv2_MUSER_ClockDiv 1644423073 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
-      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
-      PH unisim/VCOMPONENTS 1325952880
-AR work/ClockDiv2_MUSER_ClockDiv/BEHAVIORAL 1644423074 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
-      EN work/ClockDiv2_MUSER_ClockDiv 1644423073 CP FD_MXILINX_ClockDiv CP INV
-EN work/ClockDiv 1644423075 \
+      EN work/FD_MXILINX_ClockDiv 1644492681 CP GND CP FDCP
+EN work/ClockDiv2_MUSER_ClockDiv 1644492683 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/ClockDiv/BEHAVIORAL 1644423076 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf EN work/ClockDiv 1644423075 \
+AR work/ClockDiv2_MUSER_ClockDiv/BEHAVIORAL 1644492684 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
+      EN work/ClockDiv2_MUSER_ClockDiv 1644492683 CP FD_MXILINX_ClockDiv CP INV
+EN work/ClockDiv 1644492685 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/ClockDiv/BEHAVIORAL 1644492686 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf EN work/ClockDiv 1644492685 \
       CP ClockDiv2_MUSER_ClockDiv
 FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf 2022/02/08.15:43:27 O.87xd
-EN work/FD_MXILINX_ClockDiv2 1644423083 \
+EN work/FD_MXILINX_ClockDiv2 1644492703 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/FD_MXILINX_ClockDiv2/BEHAVIORAL 1644423084 \
+AR work/FD_MXILINX_ClockDiv2/BEHAVIORAL 1644492704 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf \
-      EN work/FD_MXILINX_ClockDiv2 1644423083 CP GND CP FDCP
-EN work/ClockDiv2 1644423085 \
+      EN work/FD_MXILINX_ClockDiv2 1644492703 CP GND CP FDCP
+EN work/ClockDiv2 1644492705 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/ClockDiv2/BEHAVIORAL 1644423086 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf EN work/ClockDiv2 1644423085 \
+AR work/ClockDiv2/BEHAVIORAL 1644492706 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf EN work/ClockDiv2 1644492705 \
       CP FD_MXILINX_ClockDiv2 CP INV
-FL C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd 2022/02/09.16:02:59 O.87xd
-EN work/UARTReceiverVHDL 1644423077 \
+FL C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd 2022/02/10.10:44:24 O.87xd
+EN work/UARTReceiverVHDL 1644492687 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd \
       PB ieee/std_logic_1164 1325952872
-AR work/UARTReceiverVHDL/Behavioral 1644423078 \
+AR work/UARTReceiverVHDL/Behavioral 1644492688 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd \
-      EN work/UARTReceiverVHDL 1644423077
-FL C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd 2022/02/09.15:55:58 O.87xd
-EN work/SevenSegDriverVHDL 1644423079 \
+      EN work/UARTReceiverVHDL 1644492687
+FL C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd 2022/02/10.10:46:22 O.87xd
+EN work/SevenSegDriverVHDL 1644492689 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd \
       PB ieee/std_logic_1164 1325952872
-AR work/SevenSegDriverVHDL/Behavioral 1644423080 \
+AR work/SevenSegDriverVHDL/Behavioral 1644492690 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd \
-      EN work/SevenSegDriverVHDL 1644423079
-FL C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd 2022/02/09.16:11:08 O.87xd
-EN work/TopLevel 1644423081 \
+      EN work/SevenSegDriverVHDL 1644492689
+FL C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd 2022/02/10.11:26:57 O.87xd
+EN work/TopLevel 1644492701 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd \
       PB ieee/std_logic_1164 1325952872
-AR work/TopLevel/Behavioral 1644423082 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd EN work/TopLevel 1644423081 \
+AR work/TopLevel/Behavioral 1644492702 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd EN work/TopLevel 1644492701 \
       CP ClockDiv CP UARTReceiverVHDL CP SevenSegDriverVHDL
 FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf 2022/02/09.15:25:01 O.87xd
-EN work/FD_MXILINX_UARTReceiver 1644420314 \
+EN work/FD_MXILINX_UARTReceiver 1644492691 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/FD_MXILINX_UARTReceiver/BEHAVIORAL 1644420315 \
+AR work/FD_MXILINX_UARTReceiver/BEHAVIORAL 1644492692 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      EN work/FD_MXILINX_UARTReceiver 1644420314 CP GND CP FDCP
-EN work/ClockDiv2_MUSER_UARTReceiver 1644420316 \
+      EN work/FD_MXILINX_UARTReceiver 1644492691 CP GND CP FDCP
+EN work/ClockDiv2_MUSER_UARTReceiver 1644492693 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/ClockDiv2_MUSER_UARTReceiver/BEHAVIORAL 1644420317 \
+AR work/ClockDiv2_MUSER_UARTReceiver/BEHAVIORAL 1644492694 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      EN work/ClockDiv2_MUSER_UARTReceiver 1644420316 CP FD_MXILINX_UARTReceiver \
+      EN work/ClockDiv2_MUSER_UARTReceiver 1644492693 CP FD_MXILINX_UARTReceiver \
       CP INV
-EN work/SR8CE_MXILINX_UARTReceiver 1644420318 \
+EN work/SR8CE_MXILINX_UARTReceiver 1644492695 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/SR8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644420319 \
+AR work/SR8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644492696 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      EN work/SR8CE_MXILINX_UARTReceiver 1644420318 CP FDCE
-EN work/FDD8CE_MXILINX_UARTReceiver 1644420320 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
-      PH unisim/VCOMPONENTS 1325952880
-AR work/FDD8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644420321 \
-      FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      EN work/FDD8CE_MXILINX_UARTReceiver 1644420320 CP FDDCE
-EN work/UARTReceiver 1644420322 \
+      EN work/SR8CE_MXILINX_UARTReceiver 1644492695 CP FDCE
+EN work/FDD8CE_MXILINX_UARTReceiver 1644492697 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
       PH unisim/VCOMPONENTS 1325952880
-AR work/UARTReceiver/BEHAVIORAL 1644420323 \
+AR work/FDD8CE_MXILINX_UARTReceiver/BEHAVIORAL 1644492698 \
       FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
-      EN work/UARTReceiver 1644420322 CP SR8CE_MXILINX_UARTReceiver \
+      EN work/FDD8CE_MXILINX_UARTReceiver 1644492697 CP FDDCE
+EN work/UARTReceiver 1644492699 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB UNISIM \
+      PH unisim/VCOMPONENTS 1325952880
+AR work/UARTReceiver/BEHAVIORAL 1644492700 \
+      FL C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf \
+      EN work/UARTReceiver 1644492699 CP SR8CE_MXILINX_UARTReceiver \
       CP FDD8CE_MXILINX_UARTReceiver CP ClockDiv2_MUSER_UARTReceiver
 FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv.vhf" 2022/02/08.15:43:29 O.87xd
 FL "C:/Users/David/OneDrive - The University of Nottingham/Modules/EEEE2046/Electronics/CPLD/Lab/ClockDiv2.vhf" 2022/02/08.15:43:27 O.87xd

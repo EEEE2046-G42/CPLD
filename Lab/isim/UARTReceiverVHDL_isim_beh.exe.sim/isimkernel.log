@@ -1,0 +1,29 @@
+Command line:
+   UARTReceiverVHDL_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50719
+
+Thu Feb 10 11:12:23 2022
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5145.06 Meg
+
+ Total Signals          : 4
+ Total Nets             : 11
+ Total Signal Drivers   : 2
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 1
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 372
+Total Line Count : 24
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 4987.78 Meg
+
+Thu Feb 10 11:13:55 2022
+

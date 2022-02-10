@@ -1,16 +1,16 @@
-Release 13.4 - xst O.87xd (nt)
+Release 13.4 - xst O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Reading design: TopLevel.prj
 
@@ -80,9 +80,15 @@ Architecture behavioral of Entity fd_mxilinx_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv2_muser_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv is up to date.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
-Architecture behavioral of Entity controllogicvhdl is up to date.
+Architecture behavioral of Entity uartreceivervhdl is up to date.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" in Library work.
 Architecture behavioral of Entity sevensegdrivervhdl is up to date.
+Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf" in Library work.
+Architecture behavioral of Entity fd_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity clockdiv2_muser_uartreceiver is up to date.
+Architecture behavioral of Entity sr8ce_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity fdd8ce_mxilinx_uartreceiver is up to date.
+Architecture behavioral of Entity uartreceiver is up to date.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd" in Library work.
 Architecture behavioral of Entity toplevel is up to date.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf" in Library work.
@@ -96,7 +102,7 @@ Analyzing hierarchy for entity <TopLevel> in library <work> (architecture <behav
 
 Analyzing hierarchy for entity <ClockDiv> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ControlLogicVHDL> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <UARTReceiverVHDL> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <SevenSegDriverVHDL> in library <work> (architecture <behavioral>).
 
@@ -124,14 +130,12 @@ Analyzing generic Entity <FD_MXILINX_ClockDiv> in library <work> (Architecture <
     Set user-defined property "INIT =  0" for instance <U0> in unit <FD_MXILINX_ClockDiv>.
 Entity <FD_MXILINX_ClockDiv> analyzed. Unit <FD_MXILINX_ClockDiv> generated.
 
-Analyzing Entity <ControlLogicVHDL> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" line 57: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+Analyzing Entity <UARTReceiverVHDL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" line 53: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <data_in>
-Entity <ControlLogicVHDL> analyzed. Unit <ControlLogicVHDL> generated.
+Entity <UARTReceiverVHDL> analyzed. Unit <UARTReceiverVHDL> generated.
 
 Analyzing Entity <SevenSegDriverVHDL> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <BCD>
 Entity <SevenSegDriverVHDL> analyzed. Unit <SevenSegDriverVHDL> generated.
 
 
@@ -141,7 +145,7 @@ Entity <SevenSegDriverVHDL> analyzed. Unit <SevenSegDriverVHDL> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <ControlLogicVHDL>.
+Synthesizing Unit <UARTReceiverVHDL>.
     Related source file is "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd".
 WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:737 - Found 1-bit latch for signal <bitsReceived_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -159,12 +163,12 @@ WARNING:Xst:737 - Found 2-bit latch for signal <state>. Latches may be generated
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <dataReceivedFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 3-bit adder for signal <bitCounter$addsub0000> created at line 94.
+    Found 3-bit adder for signal <bitCounter$addsub0000> created at line 86.
     Found 5-bit 4-to-1 multiplexer for signal <count>.
-    Found 5-bit adder for signal <count$add0000> created at line 66.
+    Found 5-bit adder for signal <count$add0000> created at line 62.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-Unit <ControlLogicVHDL> synthesized.
+Unit <UARTReceiverVHDL> synthesized.
 
 
 Synthesizing Unit <SevenSegDriverVHDL>.
@@ -246,8 +250,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2170 - Unit ControlLogicVHDL : the following signal(s) form a combinatorial loop: count_mux0002<0>, count<0>, count_cmp_eq0000, count_mux0002<4>, count<4>, bitsReceived_7_cmp_eq0000, bitCounter_mux0001<0>.
-WARNING:Xst:2170 - Unit ControlLogicVHDL : the following signal(s) form a combinatorial loop: count<0>.
+WARNING:Xst:2170 - Unit UARTReceiverVHDL : the following signal(s) form a combinatorial loop: count_mux0002<4>, bitsReceived_7_cmp_eq0000, bitCounter_mux0001<0>, count<4>, count<0>, count_cmp_eq0000, count_mux0002<0>.
+WARNING:Xst:2170 - Unit UARTReceiverVHDL : the following signal(s) form a combinatorial loop: count<0>.
 
 Optimizing unit <TopLevel> ...
 
@@ -256,16 +260,16 @@ Optimizing unit <SevenSegDriverVHDL> ...
 Optimizing unit <FD_MXILINX_ClockDiv> ...
   implementation constraint: INIT=0	 : U0
 
-Optimizing unit <ControlLogicVHDL> ...
+Optimizing unit <UARTReceiverVHDL> ...
 
 Optimizing unit <ClockDiv2_MUSER_ClockDiv> ...
 
 Optimizing unit <ClockDiv> ...
-WARNING:Xst:2677 - Node <dataReceivedFlag> of sequential type is unconnected in block <Controller>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: Controller/count_add0000<1>, Controller/count<1>, Result, Data<1>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: Data<1>, Controller/count<2>, Result, Controller/count_add0000<2>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: Controller/count_add0000<3>, Result, Data<1>, Controller/count<3>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Controller/count_add0000<4>, Controller/count<4>, Data<1>.
+WARNING:Xst:2677 - Node <dataReceivedFlag> of sequential type is unconnected in block <UARTReceiver>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: Result, UARTReceiver/count<1>, UARTReceiver/count_add0000<1>, Data<1>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: UARTReceiver/count_add0000<2>, Data<1>, Result, UARTReceiver/count<2>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: UARTReceiver/count<3>, UARTReceiver/count_add0000<3>, Data<1>, Result.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Data<1>, UARTReceiver/count<4>, UARTReceiver/count_add0000<4>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -314,14 +318,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.50 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.42 secs
  
 --> 
 
-Total memory usage is 233632 kilobytes
+Total memory usage is 4510824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   25 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

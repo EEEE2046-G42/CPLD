@@ -23,19 +23,19 @@ Display<15> S:PIN44
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 Display<2> Display<1> Display<0> Controller/state<1>
-		 N_PZ_86 Controller/state_or000012 Controller/count_add0000<4> Controller/count_add0000<3>
+PARTITION FB1_1 Display<2> Display<1> Display<0> UARTReceiver/state<1>
+		 N_PZ_86 UARTReceiver/state_or000012 UARTReceiver/count_add0000<4> UARTReceiver/count_add0000<3>
 		 Display<3> Display<10> Display<9> Display<8>
-		 Display<11> Controller/count_add0000<2> Controller/count_add0000<1> Controller/count<0>
+		 Display<11> UARTReceiver/count_add0000<2> UARTReceiver/count_add0000<1> UARTReceiver/count<0>
 		
-PARTITION FB2_1 Display<7> Display<6> Controller/bitsReceived<3> Controller/bitsReceived<2>
-		 Display<5> Display<4> Controller/bitsReceived<4> Display<15>
-		 Controller/bitsReceived<1> Display<14> Controller/bitsReceived<0> Display<13>
-		 Display<12> N_PZ_90 N_PZ_115 Controller/state<0>
+PARTITION FB2_1 Display<7> Display<6> UARTReceiver/bitsReceived<3> UARTReceiver/bitsReceived<2>
+		 Display<5> Display<4> UARTReceiver/bitsReceived<4> Display<15>
+		 UARTReceiver/bitsReceived<1> Display<14> UARTReceiver/bitsReceived<0> Display<13>
+		 Display<12> N_PZ_90 N_PZ_115 UARTReceiver/state<0>
 		
-PARTITION FB3_2 received<4> received<3> Controller/count_cmp_eq0000 Controller/bitCounter<0>
-		 received<2> Controller/bitCounter<1> Controller/bitCounter<2> Controller/bitsReceived<7>
-		 received<1> received<0> received<7> Controller/bitsReceived<6>
-		 received<6> received<5> Controller/bitsReceived<5>
+PARTITION FB3_2 received<4> received<3> UARTReceiver/count_cmp_eq0000 UARTReceiver/bitCounter<0>
+		 received<2> UARTReceiver/bitCounter<1> UARTReceiver/bitCounter<2> UARTReceiver/bitsReceived<7>
+		 received<1> received<0> received<7> UARTReceiver/bitsReceived<6>
+		 received<6> received<5> UARTReceiver/bitsReceived<5>
 
 

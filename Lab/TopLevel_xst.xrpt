@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="nt" product="ISE" version="13.4">
+<document OS="nt64" product="ISE" version="13.4">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Wed Feb 09 15:59:51 2022">
+  <application stringID="Xst" timeStamp="Thu Feb 10 11:31:20 2022">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\13.4\ISE_DS\ISE\\lib\nt;C:\Xilinx\13.4\ISE_DS\ISE\\bin\nt;C:\Xilinx\13.4\ISE_DS\PlanAhead\bin;C:\Xilinx\13.4\ISE_DS\ISE\bin\nt;C:\Xilinx\13.4\ISE_DS\ISE\lib\nt;C:\Xilinx\13.4\ISE_DS\EDK\bin\nt;C:\Xilinx\13.4\ISE_DS\EDK\lib\nt;C:\Xilinx\13.4\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\13.4\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\13.4\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\13.4\ISE_DS\common\bin\nt;C:\Xilinx\13.4\ISE_DS\common\lib\nt;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files\PuTTY\;C:\Program Files\WireGuard\;C:\Program Files\Git\cmd;C:\Program Files\Tcl86\bin;C:\Program Files\MATLAB\R2021b\bin;C:\Users\David\AppData\Local\Microsoft\WindowsApps;C:\Users\David\AppData\Local\GitHubDesktop\bin;C:\Users\David\.dotnet\tools"/>
+          <item stringID="value" value="C:\Xilinx\13.4\ISE_DS\ISE\\lib\nt64;C:\Xilinx\13.4\ISE_DS\ISE\\bin\nt64;C:\Xilinx\13.4\ISE_DS\PlanAhead\bin;C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64;C:\Xilinx\13.4\ISE_DS\ISE\lib\nt64;C:\Xilinx\13.4\ISE_DS\EDK\bin\nt64;C:\Xilinx\13.4\ISE_DS\EDK\lib\nt64;C:\Xilinx\13.4\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\13.4\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\13.4\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\13.4\ISE_DS\common\bin\nt64;C:\Xilinx\13.4\ISE_DS\common\lib\nt64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files\PuTTY\;C:\Program Files\WireGuard\;C:\Program Files\Git\cmd;C:\Program Files\Tcl86\bin;C:\Program Files\MATLAB\R2021b\bin;C:\Users\David\AppData\Local\Microsoft\WindowsApps;C:\Users\David\AppData\Local\GitHubDesktop\bin;C:\Users\David\.dotnet\tools"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -125,7 +125,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="25"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="24"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="3"/>
     </section>
   </application>

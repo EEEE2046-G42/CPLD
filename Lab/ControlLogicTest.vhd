@@ -39,7 +39,7 @@ ARCHITECTURE behavior OF ControlLogicTest IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT ControlLogicVHDL
+    COMPONENT UARTReceiverVHDL
     PORT(
          clock : IN  std_logic;
          data_in : IN  std_logic;
@@ -70,7 +70,7 @@ ARCHITECTURE behavior OF ControlLogicTest IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: ControlLogicVHDL PORT MAP (
+   uut: UARTReceiverVHDL PORT MAP (
           clock => clock,
           data_in => data_in,
 			 data_out => data_out,
