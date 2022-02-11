@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: TopLevel.prj
 
@@ -80,9 +80,11 @@ Architecture behavioral of Entity fd_mxilinx_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv2_muser_clockdiv is up to date.
 Architecture behavioral of Entity clockdiv is up to date.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" in Library work.
-Architecture behavioral of Entity uartreceivervhdl is up to date.
+Entity <uartreceivervhdl> compiled.
+Entity <uartreceivervhdl> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" in Library work.
-Architecture behavioral of Entity sevensegdrivervhdl is up to date.
+Entity <sevensegdrivervhdl> compiled.
+Entity <sevensegdrivervhdl> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf" in Library work.
 Architecture behavioral of Entity fd_mxilinx_uartreceiver is up to date.
 Architecture behavioral of Entity clockdiv2_muser_uartreceiver is up to date.
@@ -250,7 +252,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2170 - Unit UARTReceiverVHDL : the following signal(s) form a combinatorial loop: count_mux0002<4>, bitsReceived_7_cmp_eq0000, bitCounter_mux0001<0>, count<4>, count<0>, count_cmp_eq0000, count_mux0002<0>.
+WARNING:Xst:2170 - Unit UARTReceiverVHDL : the following signal(s) form a combinatorial loop: count<4>, count_cmp_eq0000, count_mux0002<4>, count<0>, bitCounter_mux0001<0>, count_mux0002<0>, bitsReceived_7_cmp_eq0000.
 WARNING:Xst:2170 - Unit UARTReceiverVHDL : the following signal(s) form a combinatorial loop: count<0>.
 
 Optimizing unit <TopLevel> ...
@@ -266,10 +268,10 @@ Optimizing unit <ClockDiv2_MUSER_ClockDiv> ...
 
 Optimizing unit <ClockDiv> ...
 WARNING:Xst:2677 - Node <dataReceivedFlag> of sequential type is unconnected in block <UARTReceiver>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: Result, UARTReceiver/count<1>, UARTReceiver/count_add0000<1>, Data<1>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: UARTReceiver/count_add0000<2>, Data<1>, Result, UARTReceiver/count<2>.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: UARTReceiver/count<3>, UARTReceiver/count_add0000<3>, Data<1>, Result.
-WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Data<1>, UARTReceiver/count<4>, UARTReceiver/count_add0000<4>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: UARTReceiver/count_add0000<1>, UARTReceiver/count<1>, Result, Data<1>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: Data<1>, UARTReceiver/count<2>, UARTReceiver/count_add0000<2>, Result.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: UARTReceiver/count_add0000<3>, Data<1>, Result, UARTReceiver/count<3>.
+WARNING:Xst:2170 - Unit Madd_count_add0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Data<1>, UARTReceiver/count_add0000<4>, UARTReceiver/count<4>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -318,8 +320,8 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.42 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.46 secs
  
 --> 
 

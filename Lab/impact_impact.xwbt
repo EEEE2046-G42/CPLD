@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=C:\Users\David\Documents\GitHub\CPLD\Lab\impact.xsl
 OUTFILE=C:\Users\David\Documents\GitHub\CPLD\Lab\impact.xsl
-FAMILY=Single
-PART=Single
+FAMILY=None
+PART=None
 WORKINGDIR=C:\Users\David\Documents\GitHub\CPLD\Lab
 LICENSE=iMPACT
 USER_INFO=iMPACT

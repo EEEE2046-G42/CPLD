@@ -12,6 +12,7 @@ NET "Display(5)" LOC = "P41";
 NET "Display(6)" LOC = "P40";
 NET "Display(7)" LOC = "P39";
 
+
 # Upper display
 NET "Display(8)" LOC = "P31";
 NET "Display(9)" LOC = "P32";

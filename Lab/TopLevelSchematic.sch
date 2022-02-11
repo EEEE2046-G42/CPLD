@@ -6,13 +6,18 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
         <signal name="XLXN_2" />
         <signal name="Clock" />
         <signal name="Data" />
         <signal name="XLXN_6" />
+        <signal name="UART_OUT(7:4)" />
+        <signal name="UART_OUT(3:0)" />
+        <signal name="Upper7S(7:0)" />
+        <signal name="Lower7S(7:0)" />
         <port polarity="Input" name="Clock" />
         <port polarity="Input" name="Data" />
+        <port polarity="Output" name="Upper7S(7:0)" />
+        <port polarity="Output" name="Lower7S(7:0)" />
         <blockdef name="UARTReceiverVHDL">
             <timestamp>2022-2-10T11:21:48</timestamp>
             <rect width="304" x="64" y="-128" height="152" />
@@ -45,13 +50,13 @@
         </block>
         <block symbolname="SevenSegDriverVHDL" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="update" />
-            <blockpin name="BCD(3:0)" />
-            <blockpin name="sevenSeg(7:0)" />
+            <blockpin signalname="UART_OUT(7:4)" name="BCD(3:0)" />
+            <blockpin signalname="Upper7S(7:0)" name="sevenSeg(7:0)" />
         </block>
         <block symbolname="SevenSegDriverVHDL" name="XLXI_3">
             <blockpin signalname="XLXN_2" name="update" />
-            <blockpin name="BCD(3:0)" />
-            <blockpin name="sevenSeg(7:0)" />
+            <blockpin signalname="UART_OUT(3:0)" name="BCD(3:0)" />
+            <blockpin signalname="Lower7S(7:0)" name="sevenSeg(7:0)" />
         </block>
         <block symbolname="ClockDiv" name="XLXI_4">
             <blockpin signalname="Clock" name="CLKIN" />
@@ -86,5 +91,19 @@
         <branch name="XLXN_6">
             <wire x2="624" y1="224" y2="224" x1="544" />
         </branch>
+        <branch name="UART_OUT(7:4)">
+            <wire x2="1248" y1="288" y2="288" x1="1184" />
+        </branch>
+        <branch name="UART_OUT(3:0)">
+            <wire x2="1248" y1="512" y2="512" x1="1184" />
+        </branch>
+        <branch name="Upper7S(7:0)">
+            <wire x2="1664" y1="224" y2="224" x1="1632" />
+        </branch>
+        <iomarker fontsize="28" x="1664" y="224" name="Upper7S(7:0)" orien="R0" />
+        <branch name="Lower7S(7:0)">
+            <wire x2="1664" y1="448" y2="448" x1="1632" />
+        </branch>
+        <iomarker fontsize="28" x="1664" y="448" name="Lower7S(7:0)" orien="R0" />
     </sheet>
 </drawing>

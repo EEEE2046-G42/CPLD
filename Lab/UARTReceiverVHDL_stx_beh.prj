@@ -1,1 +1,2 @@
 vhdl isim_temp "ControlLogicVHDL.vhd"
+vhdl isim_temp "UARTReceiver.vhf"

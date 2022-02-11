@@ -63,9 +63,9 @@ begin
 
 	case state is
 		when idle =>
+			dataReceivedFlag <= '0';		-- Disable full byte received flag
 			if (data_in = '0') then 		-- Detect start bit
 				count := 0; 					-- Reset clock count
-				dataReceivedFlag <= '0';	-- Disable full byte received flag
 				state := start; 				-- Transition to start state on next clock
 			end if;
 			
@@ -82,12 +82,13 @@ begin
 			
 		when data =>
 			if (count = clocksPerBaud) then					-- Wait for full baud
-				bitsReceived(7 - bitCounter) := data_in;	-- Reverse bit order and store (convert to little-endian)
+				--bitsReceived(7 - bitCounter) := data_in;	-- Reverse bit order and store (convert to little-endian)
+				bitsReceived(bitCounter) := data_in;
 				bitCounter := bitCounter + 1;					-- Increment bit counter
 				count := 0;											-- Reset clock counter
 			end if;
 			
-			if (bitCounter = 7) then			-- Stop at 8th bit
+			if (bitCounter = 8) then			-- Stop at 8th bit
 				count := 0;							-- Reset clock counter
 				state := stop;						-- Transition to stop state
 			end if;

@@ -65,8 +65,8 @@ ARCHITECTURE behavior OF ControlLogicTest IS
 
    -- Clock period definitions
    constant clock_period : time := 1 ns;
-	constant baud_period : time := 8 ns;              -- XXXXXXE12345678BXXXXXX
- 	constant input : STD_LOGIC_VECTOR (21 DOWNTO 0) := b"1111111000010010111111";
+	constant baud_period : time := 8 ns;              -- XXXXXXE12345678BXXXXXXE12345678BXXXX = 09 55
+ 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111111010101001111";
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
@@ -85,7 +85,7 @@ BEGIN
 		variable counter : integer := 0;
    begin
 		
-		data_in <= input(counter MOD 21);
+		data_in <= input(counter MOD 35);
 		counter := counter + 1;
 		wait for baud_period;
    end process;

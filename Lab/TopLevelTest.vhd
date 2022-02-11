@@ -56,11 +56,11 @@ ARCHITECTURE behavior OF TopLevelTest IS
    signal Display : std_logic_vector(15 downto 0);
 
    -- Clock period definitions
-   constant Clock_period : time := 1 ns;
-	constant Baud_period : time := 8 ns;
+   constant Clock_period : time := 2 ns;
+	constant Baud_period : time := 16 ns;
 
-	-- Input data stream                                 XXXXXXE12345678BXXXXXX = 09
- 	constant input : STD_LOGIC_VECTOR (21 DOWNTO 0) := b"1111111000010010111111";
+	-- Input data stream                                 XXXXXXE12345678BXXXXXXE12345678BXXXX = 09 55
+ 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111111010101001111";
 
   
 BEGIN
@@ -83,7 +83,7 @@ BEGIN
 	Data_process : process
 		variable counter : integer := 0;
 	begin
-		Data <= input(counter MOD 21);
+		Data <= input(counter MOD 35);
 		counter := counter + 1;
 		wait for Baud_period;
 	end process;
