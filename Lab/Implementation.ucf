@@ -3,22 +3,22 @@ NET "Clock" LOC = "P44";
 NET "Data" LOC = "P16";
 
 # Lower display
-NET "Display(0)" LOC = "P36";
-NET "Display(1)" LOC = "P37";
-NET "Display(2)" LOC = "P38";
-NET "Display(3)" LOC = "P34";
-NET "Display(4)" LOC = "P42";
-NET "Display(5)" LOC = "P41";
-NET "Display(6)" LOC = "P40";
-NET "Display(7)" LOC = "P39";
+NET "Display(0)" LOC = "P36"; # DP
+NET "Display(1)" LOC = "P37"; # a
+NET "Display(2)" LOC = "P38";	# b
+NET "Display(3)" LOC = "P34";	# c
+NET "Display(4)" LOC = "P42";	# d
+NET "Display(5)" LOC = "P41";	# e
+NET "Display(6)" LOC = "P40";	# f
+NET "Display(7)" LOC = "P39";	# g
 
 
 # Upper display
-NET "Display(8)" LOC = "P31";
-NET "Display(9)" LOC = "P32";
-NET "Display(10)" LOC = "P33";
-NET "Display(11)" LOC = "P30";
-NET "Display(12)" LOC = "P3";
-NET "Display(13)" LOC = "P2";
-NET "Display(14)" LOC = "P1";
-NET "Display(15)" LOC = "P44";
+NET "Display(8)" LOC = "P31";		# DP
+NET "Display(9)" LOC = "P32";		# a
+NET "Display(10)" LOC = "P33";	# b
+NET "Display(11)" LOC = "P30";	# c
+NET "Display(12)" LOC = "P3";		# d
+NET "Display(13)" LOC = "P2";		# e
+NET "Display(14)" LOC = "P1";		# f
+NET "Display(15)" LOC = "P44";	# g

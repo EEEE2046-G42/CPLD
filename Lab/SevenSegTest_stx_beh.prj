@@ -1,2 +1,3 @@
 vhdl isim_temp "SevenSegDriver.vhd"
 vhdl isim_temp "SevenSegTest.vhd"
+vhdl isim_temp "UARTReceiver.vhf"

@@ -43,30 +43,30 @@ begin
 
 process(BCD, update) -- Update on BCD change
 begin
-	-- Using results from EEEE1004 CW1, LSB is for DP
+	-- LSB is for DP
 	case BCD is
 		when b"0000" => -- 0
-			sevenSeg <= b"0000_0011"; 
+			sevenSeg <= b"1000_0001"; 
 		when b"0001" => -- 1
-			sevenSeg <= b"1001_1111";	
+			sevenSeg <= b"1111_1001";
 		when b"0010" => -- 2
-			sevenSeg <= b"0010_0101";
-		when b"0011" => -- 3
-			sevenSeg <= b"0000_1101";
-		when b"0100" => -- 4
-			sevenSeg <= b"1001_1001";
-		when b"0101" => -- 5
 			sevenSeg <= b"0100_1001";
+		when b"0011" => -- 3
+			sevenSeg <= b"0110_0001";
+		when b"0100" => -- 4
+			sevenSeg <= b"0011_0011";
+		when b"0101" => -- 5
+			sevenSeg <= b"0010_0101";
 		when b"0110" => -- 6
-			sevenSeg <= b"0100_0001";
+			sevenSeg <= b"0000_0101";
 		when b"0111" => -- 7
-			sevenSeg <= b"0001_1111";
+			sevenSeg <= b"1111_0001";
 		when b"1000" => -- 8
 			sevenSeg <= b"0000_0001";
 		when b"1001" => -- 9
-			sevenSeg <= b"0001_1001";
+			sevenSeg <= b"0010_0001";
 		when others => -- E.
-			sevenSeg <= b"0110_0001"; 
+			sevenSeg <= b"0000_1100"; 
 	end case;
 end process;
 

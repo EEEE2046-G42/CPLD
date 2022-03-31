@@ -64,9 +64,9 @@ ARCHITECTURE behavior OF ControlLogicTest IS
 	signal dataReceivedFlag : STD_LOGIC; 
 
    -- Clock period definitions
-   constant clock_period : time := 1 ns;
-	constant baud_period : time := 8 ns;              -- XXXXXXE12345678BXXXXXXE12345678BXXXX = 09 55
- 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111111010101001111";
+   constant clock_period : time := 542.53 ns;
+	constant baud_period : time := 17.36 us;          -- XXXXXXE12345678BXXXXXXE12345678BXXXX = 09 55
+ 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111110101010101111";
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
@@ -75,9 +75,6 @@ BEGIN
           data_in => data_in,
 			 data_out => data_out,
 			 dataReceivedFlag => dataReceivedFlag
-          --read_enable => read_enable,
-          --sample => sample,
-          --clear => clear
         );
 
    -- Clock process definitions

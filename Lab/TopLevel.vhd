@@ -36,11 +36,11 @@ entity TopLevel is
 		Clock : in  STD_LOGIC;
 		Data : in  STD_LOGIC;
 		Display : out STD_LOGIC_VECTOR (15 downto 0)
-	);
+	);	
 end TopLevel;
 
 architecture Behavioral of TopLevel is
-	signal divClock : STD_LOGIC;	-- Divided clock
+	--signal divClock : STD_LOGIC;	-- Divided clock
 	signal received : STD_LOGIC_VECTOR (7 downto 0);
 	
 	-- UART controller
@@ -62,41 +62,43 @@ architecture Behavioral of TopLevel is
 		);
 	END COMPONENT;
 	
-	-- Clock divider
-	COMPONENT ClockDiv
-	PORT(
-	    CLKIN : IN STD_LOGIC;
-		 CLKOUT : OUT STD_LOGIC
-		 );
-	END COMPONENT;
+--	-- Clock divider
+--	COMPONENT ClockDiv
+--	PORT(
+--	    CLKIN : IN STD_LOGIC;
+--		 CLKOUT : OUT STD_LOGIC
+--		 );
+--	END COMPONENT;
 	
 	signal updateDisplay : std_logic := '0';
 		
 	signal LowerBCD : std_logic_vector (3 downto 0);
 	signal UpperBCD : std_logic_vector (3 downto 0);
+	
 begin
 
-ClockDivider: ClockDiv PORT MAP (
-	CLKIN => clock,
-	CLKOUT => divClock
-);
+--ClockDivider: ClockDiv PORT MAP (
+--	CLKIN => clock,
+--	CLKOUT => divClock
+--); 
 
 UARTReceiver: UARTReceiverVHDL PORT MAP (
-	clock => divClock,
+	--clock => divClock,
+	clock => clock,
 	data_in => data,
 	data_out => received,
 	dataReceivedFlag => updateDisplay
-);
-		  
-LowerSevenSeg: SevenSegDriverVHDL PORT MAP (
-	BCD => received(3 downto 0),
-	sevenSeg => Display(7 downto 0),
-	update => updateDisplay
 );
 
 UpperSevenSeg: SevenSegDriverVHDL PORT MAP (
 	BCD => received(7 downto 4),
 	sevenSeg => Display(15 downto 8),
+	update => updateDisplay
+);  
+
+LowerSevenSeg: SevenSegDriverVHDL PORT MAP (
+	BCD => received(3 downto 0),
+	sevenSeg => Display(7 downto 0),
 	update => updateDisplay
 );
 

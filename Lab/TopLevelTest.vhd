@@ -60,7 +60,7 @@ ARCHITECTURE behavior OF TopLevelTest IS
 	constant Baud_period : time := 16 ns;
 
 	-- Input data stream                                 XXXXXXE12345678BXXXXXXE12345678BXXXX = 09 55
- 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111111010101001111";
+ 	constant input : STD_LOGIC_VECTOR (35 DOWNTO 0) := b"111111100001001011111110101010101111";
 
   
 BEGIN
