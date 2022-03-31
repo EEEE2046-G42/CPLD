@@ -54,11 +54,7 @@ ARCHITECTURE behavior OF SevenSegTest IS
 
  	--Outputs
    signal sevenSeg : std_logic_vector(7 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
-   --constant <clock>_period : time := 10 ns;
- 
+	
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
@@ -67,9 +63,7 @@ BEGIN
           update => update,
           sevenSeg => sevenSeg
         );
- 
-
-   
+    
    process
    begin
 		

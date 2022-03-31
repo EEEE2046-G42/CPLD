@@ -43,9 +43,6 @@ ARCHITECTURE behavior OF ControlLogicTest IS
     PORT(
          clock : IN  std_logic;
          data_in : IN  std_logic;
-         --read_enable : OUT  std_logic;
-         --sample : OUT  std_logic;
-         --clear : OUT  std_logic
 			data_out : out STD_LOGIC_VECTOR (7 downto 0);
 			dataReceivedFlag : out STD_LOGIC
         );
@@ -57,9 +54,6 @@ ARCHITECTURE behavior OF ControlLogicTest IS
    signal data_in : std_logic := '1';
 
  	--Outputs
-   --signal read_enable : std_logic := '0';
-   --signal sample : std_logic := '0';
-   --signal clear : std_logic := '0'; 
 	signal data_out : STD_LOGIC_VECTOR (7 downto 0);
 	signal dataReceivedFlag : STD_LOGIC; 
 

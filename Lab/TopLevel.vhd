@@ -40,8 +40,6 @@ entity TopLevel is
 end TopLevel;
 
 architecture Behavioral of TopLevel is
-	--signal divClock : STD_LOGIC;	-- Divided clock
-	signal received : STD_LOGIC_VECTOR (7 downto 0);
 	
 	-- UART controller
 	COMPONENT UARTReceiverVHDL
@@ -62,25 +60,13 @@ architecture Behavioral of TopLevel is
 		);
 	END COMPONENT;
 	
---	-- Clock divider
---	COMPONENT ClockDiv
---	PORT(
---	    CLKIN : IN STD_LOGIC;
---		 CLKOUT : OUT STD_LOGIC
---		 );
---	END COMPONENT;
-	
 	signal updateDisplay : std_logic := '0';
-		
+	signal received : STD_LOGIC_VECTOR (7 downto 0);	
+	
 	signal LowerBCD : std_logic_vector (3 downto 0);
 	signal UpperBCD : std_logic_vector (3 downto 0);
 	
 begin
-
---ClockDivider: ClockDiv PORT MAP (
---	CLKIN => clock,
---	CLKOUT => divClock
---); 
 
 UARTReceiver: UARTReceiverVHDL PORT MAP (
 	--clock => divClock,
