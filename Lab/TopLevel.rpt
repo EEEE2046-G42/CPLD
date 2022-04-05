@@ -1,7 +1,7 @@
  
 cpldfit:  version O.87xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: TopLevel                            Date:  2-10-2022,  2:02PM
+Design Name: TopLevel                            Date:  4- 5-2022,  3:08PM
 Device Used: XC2C64A-5-VQ44
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-47 /64  ( 73%) 125 /224  ( 56%) 58  /160  ( 36%) 21 /64  ( 33%) 17 /33  ( 52%)
+46 /64  ( 72%) 111 /224  ( 50%) 55  /160  ( 34%) 21 /64  ( 33%) 25 /33  ( 76%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    19/40    45/56     8/ 8*   1/1*     0/1      0/1      0/1
-FB2      16/16*    23/40    40/56     8/ 9    1/1*     0/1      0/1      0/1
-FB3      15/16     16/40    40/56     0/ 9    1/1*     0/1      0/1      0/1
+FB1      16/16*    23/40    42/56     8/ 8*   1/1*     0/1      0/1      0/1
+FB2      16/16*    18/40    41/56     8/ 9    1/1*     0/1      0/1      0/1
+FB3      14/16     14/40    28/56     8/ 9    1/1*     0/1      0/1      0/1
 FB4       0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    47/64     58/160  125/224   16/33    3/4      0/4      0/4      0/4 
+Total    46/64     55/160  111/224   24/33    3/4      0/4      0/4      0/4 
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -40,14 +40,14 @@ Used/Tot    Used/Tot    Used/Tot    Used/Tot
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    1           1    |  I/O              :    10     25
-Output        :   16          16    |  GCK/IO           :     2      3
+Input         :    1           1    |  I/O              :    18     25
+Output        :   24          24    |  GCK/IO           :     2      3
 Bidirectional :    0           0    |  GTS/IO           :     4      4
 GCK           :    0           0    |  GSR/IO           :     1      1
 GTS           :    0           0    |  
 GSR           :    0           0    |  
                  ----        ----
-        Total     17          17
+        Total     25          25
 
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -55,12 +55,17 @@ End of Mapped Resource Summary
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'TopLevel.ise'.
 INFO:Cpld - Inferring BUFG constraint for signal 'Clock' based upon the LOC
-   constraint 'P44'. It is recommended that you declare this BUFG explicitedly
+   constraint 'P43'. It is recommended that you declare this BUFG explicitedly
    in your design. Note that for certain device families the output of a BUFG
    constraint can not drive a gated clock, and the BUFG constraint will be
    ignored.
 WARNING:Cpld:1007 - Removing unused input(s) 'Clock'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
+WARNING:Cpld - The signal(s) 'UARTReceiver/count<0>' are in combinational
+   feedback loops.
+   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
+   hazard reduction circuitry.
+   Timing analysis of paths involving this node may be inaccurate or incomplete.
 WARNING:Cpld - The signal(s) 'UARTReceiver/bitsReceived_7_cmp_eq0000' are in
    combinational feedback loops.
    These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
@@ -86,69 +91,63 @@ WARNING:Cpld - The signal(s) 'UARTReceiver/count<1>' are in combinational
    These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
    hazard reduction circuitry.
    Timing analysis of paths involving this node may be inaccurate or incomplete.
-WARNING:Cpld - The signal(s) 'UARTReceiver/count<0>' are in combinational
-   feedback loops.
-   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
-   hazard reduction circuitry.
-   Timing analysis of paths involving this node may be inaccurate or incomplete.
 *************************  Summary of Mapped Logic  ************************
 
-** 16 Outputs **
+** 24 Outputs **
 
 Signal                         Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
 Name                           Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
-Display<2>                     3     4     2    FB1_1   38    I/O       O       LVCMOS18           FAST         
-Display<1>                     3     4     2    FB1_2   37    I/O       O       LVCMOS18           FAST         
-Display<0>                     2     3     2    FB1_3   36    I/O       O       LVCMOS18           FAST         
-Display<3>                     3     4     2    FB1_9   34    GTS/I/O   O       LVCMOS18           FAST         
-Display<10>                    3     4     2    FB1_10  33    GTS/I/O   O       LVCMOS18           FAST         
-Display<9>                     3     4     2    FB1_11  32    GTS/I/O   O       LVCMOS18           FAST         
-Display<8>                     2     3     2    FB1_12  31    GTS/I/O   O       LVCMOS18           FAST         
-Display<11>                    3     4     2    FB1_13  30    GSR/I/O   O       LVCMOS18           FAST         
-Display<7>                     3     4     1    FB2_1   39    I/O       O       LVCMOS18           FAST         
-Display<6>                     2     4     1    FB2_2   40    I/O       O       LVCMOS18           FAST         
-Display<5>                     4     4     1    FB2_5   41    I/O       O       LVCMOS18           FAST         
-Display<4>                     2     4     1    FB2_6   42    I/O       O       LVCMOS18           FAST         
-Display<15>                    3     4     1    FB2_8   44    GCK/I/O   O       LVCMOS18           FAST         
-Display<14>                    2     4     1    FB2_10  1     GCK/I/O   O       LVCMOS18           FAST         
-Display<13>                    4     4     1    FB2_12  2     I/O       O       LVCMOS18           FAST         
-Display<12>                    2     4     1    FB2_13  3     I/O       O       LVCMOS18           FAST         
+Display<1>                     1     4     2    FB1_1   38    I/O       O       LVCMOS18           FAST         
+Display<2>                     4     4     2    FB1_2   37    I/O       O       LVCMOS18           FAST         
+Display<6>                     3     4     2    FB1_3   36    I/O       O       LVCMOS18           FAST         
+Display<7>                     2     4     2    FB1_9   34    GTS/I/O   O       LVCMOS18           FAST         
+Received<2>                    2     8     2    FB1_10  33    GTS/I/O   O       LVCMOS18           FAST LATCH   RESET
+Received<1>                    2     8     2    FB1_11  32    GTS/I/O   O       LVCMOS18           FAST LATCH   RESET
+Received<6>                    2     8     2    FB1_12  31    GTS/I/O   O       LVCMOS18           FAST LATCH   RESET
+Received<7>                    2     8     2    FB1_13  30    GSR/I/O   O       LVCMOS18           FAST LATCH   RESET
+Display<0>                     2     3     1    FB2_1   39    I/O       O       LVCMOS18           FAST         
+Display<3>                     4     4     1    FB2_2   40    I/O       O       LVCMOS18           FAST         
+Display<4>                     3     4     1    FB2_5   41    I/O       O       LVCMOS18           FAST         
+Display<5>                     3     4     1    FB2_6   42    I/O       O       LVCMOS18           FAST         
+Received<0>                    2     8     1    FB2_8   44    GCK/I/O   O       LVCMOS18           FAST LATCH   RESET
+Received<3>                    2     8     1    FB2_10  1     GCK/I/O   O       LVCMOS18           FAST LATCH   RESET
+Received<4>                    2     8     1    FB2_12  2     I/O       O       LVCMOS18           FAST LATCH   RESET
+Received<5>                    2     8     1    FB2_13  3     I/O       O       LVCMOS18           FAST LATCH   RESET
+Display<8>                     2     3     2    FB3_1   29    I/O       O       LVCMOS18           FAST         
+Display<9>                     1     4     2    FB3_2   28    I/O       O       LVCMOS18           FAST         
+Display<12>                    3     4     2    FB3_3   27    I/O       O       LVCMOS18           FAST         
+Display<15>                    2     4     2    FB3_6   23    I/O       O       LVCMOS18           FAST         
+Display<14>                    3     4     2    FB3_10  22    I/O       O       LVCMOS18           FAST         
+Display<10>                    4     4     2    FB3_11  21    I/O       O       LVCMOS18           FAST         
+Display<11>                    4     4     2    FB3_12  20    I/O       O       LVCMOS18           FAST         
+Display<13>                    3     4     2    FB3_14  19    I/O       O       LVCMOS18           FAST         
 
-** 31 Buried Nodes **
+** 22 Buried Nodes **
 
 Signal                         Total Total Loc     Reg     Reg Init
 Name                           Pts   Inps          Use     State
-UARTReceiver/state<1>          3     5     FB1_4   LATCH   RESET
-N_PZ_86                        1     5     FB1_5           
-UARTReceiver/state_or000012    3     8     FB1_6           
-UARTReceiver/count_add0000<4>  6     9     FB1_7           
-UARTReceiver/count_add0000<3>  5     9     FB1_8           
-UARTReceiver/count_add0000<2>  4     5     FB1_14          
-UARTReceiver/count_add0000<1>  3     4     FB1_15          
-UARTReceiver/count<0>          2     3     FB1_16          
-UARTReceiver/bitsReceived<3>   4     8     FB2_3   LATCH   RESET
-UARTReceiver/bitsReceived<2>   4     8     FB2_4   LATCH   RESET
-UARTReceiver/bitsReceived<4>   4     8     FB2_7   LATCH   RESET
-UARTReceiver/bitsReceived<1>   4     8     FB2_9   LATCH   RESET
-UARTReceiver/bitsReceived<0>   4     8     FB2_11  LATCH   RESET
-N_PZ_90                        2     4     FB2_14          
-N_PZ_115                       2     4     FB2_15          
-UARTReceiver/state<0>          2     3     FB2_16  LATCH   RESET
-received<4>                    2     4     FB3_2   LATCH   RESET
-received<3>                    2     4     FB3_3   LATCH   RESET
-UARTReceiver/count_cmp_eq0000  2     4     FB3_4           
-UARTReceiver/bitCounter<0>     3     5     FB3_5   LATCH   RESET
-received<2>                    2     4     FB3_6   LATCH   RESET
-UARTReceiver/bitCounter<1>     4     6     FB3_7   LATCH   RESET
-UARTReceiver/bitCounter<2>     5     7     FB3_8   LATCH   RESET
-UARTReceiver/bitsReceived<7>   4     8     FB3_9   LATCH   RESET
-received<1>                    2     4     FB3_10  LATCH   RESET
-received<0>                    2     4     FB3_11  LATCH   RESET
-received<7>                    2     4     FB3_12  LATCH   RESET
-UARTReceiver/bitsReceived<6>   4     8     FB3_13  LATCH   RESET
-received<6>                    2     4     FB3_14  LATCH   RESET
-received<5>                    2     4     FB3_15  LATCH   RESET
-UARTReceiver/bitsReceived<5>   4     8     FB3_16  LATCH   RESET
+UARTReceiver/bitsReceived<5>   4     12    FB1_4   LATCH   RESET
+UARTReceiver/bitsReceived<4>   4     12    FB1_5   LATCH   RESET
+UARTReceiver/bitsReceived<3>   4     12    FB1_6   LATCH   RESET
+UARTReceiver/bitsReceived<0>   4     12    FB1_7   LATCH   RESET
+UARTReceiver/bitsReceived<7>   4     12    FB1_8   LATCH   RESET
+UARTReceiver/bitsReceived<6>   4     12    FB1_14  LATCH   RESET
+UARTReceiver/bitsReceived<2>   4     12    FB1_15  LATCH   RESET
+UARTReceiver/bitsReceived<1>   4     12    FB1_16  LATCH   RESET
+UARTReceiver/count_add0000<1>  3     5     FB2_3           
+UARTReceiver/count_add0000<3>  5     7     FB2_4           
+UARTReceiver/count<0>          2     4     FB2_7           
+UARTReceiver/count_add0000<2>  4     6     FB2_9           
+UARTReceiver/count_add0000<4>  6     9     FB2_11          
+N_PZ_113                       2     8     FB2_14          
+UARTReceiver/state_or00007     3     7     FB2_15          
+UARTReceiver/state_or00008     2     7     FB2_16          
+UARTReceiver/bitCounter<2>     4     6     FB3_5   LATCH   RESET
+UARTReceiver/bitCounter<1>     3     5     FB3_7   LATCH   RESET
+UARTReceiver/bitCounter<0>     2     4     FB3_8   LATCH   RESET
+UARTReceiver/state<0>          2     5     FB3_9   LATCH   RESET
+UARTReceiver/state<1>          2     6     FB3_13  LATCH   RESET
+UARTReceiver/state_or00001     1     3     FB3_16          
 
 ** 1 Inputs **
 
@@ -182,180 +181,178 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               19/21
+Number of function block inputs used/remaining:               23/17
 Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   45/11
+Number of PLA product terms used/remaining:                   42/14
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-Display<2>                    3     FB1_1   38   I/O     O                 
-Display<1>                    3     FB1_2   37   I/O     O                 
-Display<0>                    2     FB1_3   36   I/O     O                 
-UARTReceiver/state<1>         3     FB1_4        (b)     (b)    +          
-N_PZ_86                       1     FB1_5        (b)     (b)               
-UARTReceiver/state_or000012   3     FB1_6        (b)     (b)               
-UARTReceiver/count_add0000<4> 6     FB1_7        (b)     (b)               
-UARTReceiver/count_add0000<3> 5     FB1_8        (b)     (b)               
-Display<3>                    3     FB1_9   34   GTS/I/O O                 
-Display<10>                   3     FB1_10  33   GTS/I/O O                 
-Display<9>                    3     FB1_11  32   GTS/I/O O                 
-Display<8>                    2     FB1_12  31   GTS/I/O O                 
-Display<11>                   3     FB1_13  30   GSR/I/O O                 
-UARTReceiver/count_add0000<2> 4     FB1_14       (b)     (b)               
-UARTReceiver/count_add0000<1> 3     FB1_15       (b)     (b)               
-UARTReceiver/count<0>         2     FB1_16       (b)     (b)               
+Display<1>                    1     FB1_1   38   I/O     O                 
+Display<2>                    4     FB1_2   37   I/O     O                 
+Display<6>                    3     FB1_3   36   I/O     O                 
+UARTReceiver/bitsReceived<5>  4     FB1_4        (b)     (b)    +          
+UARTReceiver/bitsReceived<4>  4     FB1_5        (b)     (b)    +          
+UARTReceiver/bitsReceived<3>  4     FB1_6        (b)     (b)    +          
+UARTReceiver/bitsReceived<0>  4     FB1_7        (b)     (b)    +          
+UARTReceiver/bitsReceived<7>  4     FB1_8        (b)     (b)    +          
+Display<7>                    2     FB1_9   34   GTS/I/O O                 
+Received<2>                   2     FB1_10  33   GTS/I/O O                 
+Received<1>                   2     FB1_11  32   GTS/I/O O                 
+Received<6>                   2     FB1_12  31   GTS/I/O O                 
+Received<7>                   2     FB1_13  30   GSR/I/O O                 
+UARTReceiver/bitsReceived<6>  4     FB1_14       (b)     (b)    +          
+UARTReceiver/bitsReceived<2>  4     FB1_15       (b)     (b)    +          
+UARTReceiver/bitsReceived<1>  4     FB1_16       (b)     (b)    +          
 
 Signals Used by Logic in Function Block
-  1: Data                            8: UARTReceiver/count_add0000<4>  14: received<2> 
-  2: N_PZ_86                         9: UARTReceiver/state<0>          15: received<3> 
-  3: N_PZ_90                        10: UARTReceiver/state<1>          16: received<4> 
-  4: UARTReceiver/count<0>          11: UARTReceiver/state_or000012    17: received<5> 
-  5: UARTReceiver/count_add0000<1>  12: received<0>                    18: received<6> 
-  6: UARTReceiver/count_add0000<2>  13: received<1>                    19: received<7> 
-  7: UARTReceiver/count_add0000<3> 
+  1: Data                         9: UARTReceiver/bitsReceived<0>  17: UARTReceiver/count<0> 
+  2: Received<0>                 10: UARTReceiver/bitsReceived<1>  18: UARTReceiver/count_add0000<1> 
+  3: Received<1>                 11: UARTReceiver/bitsReceived<2>  19: UARTReceiver/count_add0000<2> 
+  4: Received<2>                 12: UARTReceiver/bitsReceived<3>  20: UARTReceiver/count_add0000<3> 
+  5: Received<3>                 13: UARTReceiver/bitsReceived<4>  21: UARTReceiver/count_add0000<4> 
+  6: UARTReceiver/bitCounter<0>  14: UARTReceiver/bitsReceived<5>  22: UARTReceiver/state<0> 
+  7: UARTReceiver/bitCounter<1>  15: UARTReceiver/bitsReceived<6>  23: UARTReceiver/state<1> 
+  8: UARTReceiver/bitCounter<2>  16: UARTReceiver/bitsReceived<7> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-Display<2>        ...........XXXX......................... 4       
-Display<1>        ...........XXXX......................... 4       
-Display<0>        ............XXX......................... 3       
-UARTReceiver/state<1> 
-                  X.X.....XXX............................. 5       
-N_PZ_86           ...XXXXX................................ 5       
-UARTReceiver/state_or000012 
-                  .X.XXXXXXX.............................. 8       
-UARTReceiver/count_add0000<4> 
-                  X.XXXXXXXX.............................. 9       
-UARTReceiver/count_add0000<3> 
-                  X.XXXXXXXX.............................. 9       
-Display<3>        ...........XXXX......................... 4       
-Display<10>       ...............XXXX..................... 4       
-Display<9>        ...............XXXX..................... 4       
-Display<8>        ................XXX..................... 3       
-Display<11>       ...............XXXX..................... 4       
-UARTReceiver/count_add0000<2> 
-                  ..XXXX..X............................... 5       
-UARTReceiver/count_add0000<1> 
-                  ..XXX...X............................... 4       
-UARTReceiver/count<0> 
-                  ..XX....X............................... 3       
+Display<1>        .XXXX................................... 4       
+Display<2>        .XXXX................................... 4       
+Display<6>        .XXXX................................... 4       
+UARTReceiver/bitsReceived<5> 
+                  X....XXX.....X..XXXXXXX................. 12      
+UARTReceiver/bitsReceived<4> 
+                  X....XXX....X...XXXXXXX................. 12      
+UARTReceiver/bitsReceived<3> 
+                  X....XXX...X....XXXXXXX................. 12      
+UARTReceiver/bitsReceived<0> 
+                  X....XXXX.......XXXXXXX................. 12      
+UARTReceiver/bitsReceived<7> 
+                  X....XXX.......XXXXXXXX................. 12      
+Display<7>        .XXXX................................... 4       
+Received<2>       ..........X.....XXXXXXX................. 8       
+Received<1>       .........X......XXXXXXX................. 8       
+Received<6>       ..............X.XXXXXXX................. 8       
+Received<7>       ...............XXXXXXXX................. 8       
+UARTReceiver/bitsReceived<6> 
+                  X....XXX......X.XXXXXXX................. 12      
+UARTReceiver/bitsReceived<2> 
+                  X....XXX..X.....XXXXXXX................. 12      
+UARTReceiver/bitsReceived<1> 
+                  X....XXX.X......XXXXXXX................. 12      
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               23/17
+Number of function block inputs used/remaining:               18/22
 Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   40/16
+Number of PLA product terms used/remaining:                   41/15
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-Display<7>                    3     FB2_1   39   I/O     O                 
-Display<6>                    2     FB2_2   40   I/O     O                 
-UARTReceiver/bitsReceived<3>  4     FB2_3        (b)     (b)    +          
-UARTReceiver/bitsReceived<2>  4     FB2_4        (b)     (b)    +          
-Display<5>                    4     FB2_5   41   I/O     O                 
-Display<4>                    2     FB2_6   42   I/O     O                 
-UARTReceiver/bitsReceived<4>  4     FB2_7   43   GCK/I/O (b)    +          
-Display<15>                   3     FB2_8   44   GCK/I/O O                 
-UARTReceiver/bitsReceived<1>  4     FB2_9        (b)     (b)    +          
-Display<14>                   2     FB2_10  1    GCK/I/O O                 
-UARTReceiver/bitsReceived<0>  4     FB2_11       (b)     (b)    +          
-Display<13>                   4     FB2_12  2    I/O     O                 
-Display<12>                   2     FB2_13  3    I/O     O                 
-N_PZ_90                       2     FB2_14       (b)     (b)               
-N_PZ_115                      2     FB2_15       (b)     (b)               
-UARTReceiver/state<0>         2     FB2_16       (b)     (b)               
+Display<0>                    2     FB2_1   39   I/O     O                 
+Display<3>                    4     FB2_2   40   I/O     O                 
+UARTReceiver/count_add0000<1> 3     FB2_3        (b)     (b)               
+UARTReceiver/count_add0000<3> 5     FB2_4        (b)     (b)               
+Display<4>                    3     FB2_5   41   I/O     O                 
+Display<5>                    3     FB2_6   42   I/O     O                 
+UARTReceiver/count<0>         2     FB2_7   43   GCK/I/O (b)               
+Received<0>                   2     FB2_8   44   GCK/I/O O      +          
+UARTReceiver/count_add0000<2> 4     FB2_9        (b)     (b)               
+Received<3>                   2     FB2_10  1    GCK/I/O O      +          
+UARTReceiver/count_add0000<4> 6     FB2_11       (b)     (b)               
+Received<4>                   2     FB2_12  2    I/O     O      +          
+Received<5>                   2     FB2_13  3    I/O     O      +          
+N_PZ_113                      2     FB2_14       (b)     (b)               
+UARTReceiver/state_or00007    3     FB2_15       (b)     (b)               
+UARTReceiver/state_or00008    2     FB2_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: Data                           9: UARTReceiver/bitsReceived<2>   17: received<1> 
-  2: N_PZ_86                       10: UARTReceiver/bitsReceived<3>   18: received<2> 
-  3: N_PZ_90                       11: UARTReceiver/bitsReceived<4>   19: received<3> 
-  4: UARTReceiver/bitCounter<0>    12: UARTReceiver/count_cmp_eq0000  20: received<4> 
-  5: UARTReceiver/bitCounter<1>    13: UARTReceiver/state<0>          21: received<5> 
-  6: UARTReceiver/bitCounter<2>    14: UARTReceiver/state<1>          22: received<6> 
-  7: UARTReceiver/bitsReceived<0>  15: UARTReceiver/state_or000012    23: received<7> 
-  8: UARTReceiver/bitsReceived<1>  16: received<0>                   
+  1: Data               7: UARTReceiver/bitsReceived<0>   13: UARTReceiver/count_add0000<2> 
+  2: N_PZ_113           8: UARTReceiver/bitsReceived<3>   14: UARTReceiver/count_add0000<3> 
+  3: Received<0>        9: UARTReceiver/bitsReceived<4>   15: UARTReceiver/count_add0000<4> 
+  4: Received<1>       10: UARTReceiver/bitsReceived<5>   16: UARTReceiver/state<0> 
+  5: Received<2>       11: UARTReceiver/count<0>          17: UARTReceiver/state<1> 
+  6: Received<3>       12: UARTReceiver/count_add0000<1>  18: UARTReceiver/state_or00007 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-Display<7>        ...............XXXX..................... 4       
-Display<6>        ...............XXXX..................... 4       
-UARTReceiver/bitsReceived<3> 
-                  XX.XXX...X..XX.......................... 8       
-UARTReceiver/bitsReceived<2> 
-                  XX.XXX..X...XX.......................... 8       
-Display<5>        ...............XXXX..................... 4       
-Display<4>        ...............XXXX..................... 4       
-UARTReceiver/bitsReceived<4> 
-                  XX.XXX....X.XX.......................... 8       
-Display<15>       ...................XXXX................. 4       
-UARTReceiver/bitsReceived<1> 
-                  XX.XXX.X....XX.......................... 8       
-Display<14>       ...................XXXX................. 4       
-UARTReceiver/bitsReceived<0> 
-                  XX.XXXX.....XX.......................... 8       
-Display<13>       ...................XXXX................. 4       
-Display<12>       ...................XXXX................. 4       
-N_PZ_90           X..........XXX.......................... 4       
-N_PZ_115          X...........XXX......................... 4       
-UARTReceiver/state<0> 
-                  ..X.........X.X......................... 3       
+Display<0>        ...XXX.................................. 3       
+Display<3>        ..XXXX.................................. 4       
+UARTReceiver/count_add0000<1> 
+                  X.........XX...XX....................... 5       
+UARTReceiver/count_add0000<3> 
+                  X.........XXXX..XX...................... 7       
+Display<4>        ..XXXX.................................. 4       
+Display<5>        ..XXXX.................................. 4       
+UARTReceiver/count<0> 
+                  X.........X....XX....................... 4       
+Received<0>       ......X...XXXXXXX....................... 8       
+UARTReceiver/count_add0000<2> 
+                  X.........XXX..XX....................... 6       
+Received<3>       .......X..XXXXXXX....................... 8       
+UARTReceiver/count_add0000<4> 
+                  XX........XXXXXXX....................... 9       
+Received<4>       ........X.XXXXXXX....................... 8       
+Received<5>       .........XXXXXXXX....................... 8       
+N_PZ_113          X.........XXXXXXX....................... 8       
+UARTReceiver/state_or00007 
+                  ..........XXXXXXX....................... 7       
+UARTReceiver/state_or00008 
+                  ..........XXXXXXX....................... 7       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               16/24
+Number of function block inputs used/remaining:               14/26
 Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   40/16
+Number of PLA product terms used/remaining:                   28/28
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-(unused)                      0     FB3_1   29   I/O           
-received<4>                   2     FB3_2   28   I/O     (b)               
-received<3>                   2     FB3_3   27   I/O     (b)               
-UARTReceiver/count_cmp_eq0000 2     FB3_4        (b)     (b)               
-UARTReceiver/bitCounter<0>    3     FB3_5        (b)     (b)               
-received<2>                   2     FB3_6   23   I/O     (b)               
-UARTReceiver/bitCounter<1>    4     FB3_7        (b)     (b)               
-UARTReceiver/bitCounter<2>    5     FB3_8        (b)     (b)               
-UARTReceiver/bitsReceived<7>  4     FB3_9        (b)     (b)    +          
-received<1>                   2     FB3_10  22   I/O     (b)               
-received<0>                   2     FB3_11  21   I/O     (b)               
-received<7>                   2     FB3_12  20   I/O     (b)               
-UARTReceiver/bitsReceived<6>  4     FB3_13       (b)     (b)    +          
-received<6>                   2     FB3_14  19   I/O     (b)               
-received<5>                   2     FB3_15  18   I/O     (b)               
-UARTReceiver/bitsReceived<5>  4     FB3_16       (b)     (b)    +          
+Display<8>                    2     FB3_1   29   I/O     O                 
+Display<9>                    1     FB3_2   28   I/O     O                 
+Display<12>                   3     FB3_3   27   I/O     O                 
+(unused)                      0     FB3_4        (b)           
+UARTReceiver/bitCounter<2>    4     FB3_5        (b)     (b)    +          
+Display<15>                   2     FB3_6   23   I/O     O                 
+UARTReceiver/bitCounter<1>    3     FB3_7        (b)     (b)    +          
+UARTReceiver/bitCounter<0>    2     FB3_8        (b)     (b)    +          
+UARTReceiver/state<0>         2     FB3_9        (b)     (b)               
+Display<14>                   3     FB3_10  22   I/O     O                 
+Display<10>                   4     FB3_11  21   I/O     O                 
+Display<11>                   4     FB3_12  20   I/O     O                 
+UARTReceiver/state<1>         2     FB3_13       (b)     (b)               
+Display<13>                   3     FB3_14  19   I/O     O                 
+(unused)                      0     FB3_15  18   I/O           
+UARTReceiver/state_or00001    1     FB3_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: Data                         7: UARTReceiver/bitsReceived<0>  12: UARTReceiver/bitsReceived<5> 
-  2: N_PZ_115                     8: UARTReceiver/bitsReceived<1>  13: UARTReceiver/bitsReceived<6> 
-  3: N_PZ_86                      9: UARTReceiver/bitsReceived<2>  14: UARTReceiver/bitsReceived<7> 
-  4: UARTReceiver/bitCounter<0>  10: UARTReceiver/bitsReceived<3>  15: UARTReceiver/state<0> 
-  5: UARTReceiver/bitCounter<1>  11: UARTReceiver/bitsReceived<4>  16: UARTReceiver/state<1> 
-  6: UARTReceiver/bitCounter<2> 
+  1: Data               6: Received<7>                 11: UARTReceiver/state<1> 
+  2: N_PZ_113           7: UARTReceiver/bitCounter<0>  12: UARTReceiver/state_or00001 
+  3: Received<4>        8: UARTReceiver/bitCounter<1>  13: UARTReceiver/state_or00007 
+  4: Received<5>        9: UARTReceiver/bitCounter<2>  14: UARTReceiver/state_or00008 
+  5: Received<6>       10: UARTReceiver/state<0>      
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-received<4>       ..X.......X...XX........................ 4       
-received<3>       ..X......X....XX........................ 4       
-UARTReceiver/count_cmp_eq0000 
-                  ..XXXX.................................. 4       
-UARTReceiver/bitCounter<0> 
-                  .XXX..........XX........................ 5       
-received<2>       ..X.....X.....XX........................ 4       
-UARTReceiver/bitCounter<1> 
-                  .XXXX.........XX........................ 6       
+Display<8>        ...XXX.................................. 3       
+Display<9>        ..XXXX.................................. 4       
+Display<12>       ..XXXX.................................. 4       
 UARTReceiver/bitCounter<2> 
-                  .XXXXX........XX........................ 7       
-UARTReceiver/bitsReceived<7> 
-                  X.XXXX.......XXX........................ 8       
-received<1>       ..X....X......XX........................ 4       
-received<0>       ..X...X.......XX........................ 4       
-received<7>       ..X..........XXX........................ 4       
-UARTReceiver/bitsReceived<6> 
-                  X.XXXX......X.XX........................ 8       
-received<6>       ..X.........X.XX........................ 4       
-received<5>       ..X........X..XX........................ 4       
-UARTReceiver/bitsReceived<5> 
-                  X.XXXX.....X..XX........................ 8       
+                  .X....XXXXX............................. 6       
+Display<15>       ..XXXX.................................. 4       
+UARTReceiver/bitCounter<1> 
+                  .X....XX.XX............................. 5       
+UARTReceiver/bitCounter<0> 
+                  .X....X..XX............................. 4       
+UARTReceiver/state<0> 
+                  .........XXXXX.......................... 5       
+Display<14>       ..XXXX.................................. 4       
+Display<10>       ..XXXX.................................. 4       
+Display<11>       ..XXXX.................................. 4       
+UARTReceiver/state<1> 
+                  X........XXXXX.......................... 6       
+Display<13>       ..XXXX.................................. 4       
+UARTReceiver/state_or00001 
+                  X........XX............................. 3       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB4  ***********************************
@@ -386,332 +383,361 @@ Name                          Pt            No.  Type    Use
 ********** Mapped Logic **********
 
 
-Display(0) <= NOT (((received(1) AND received(3))
-	OR (received(3) AND received(2))));
+Display(0) <= NOT (((Received(1) AND Received(3))
+	OR (Received(3) AND Received(2))));
 
 
-Display(1) <= NOT (((NOT received(1) AND NOT received(2))
-	OR (NOT received(3) AND received(2))
-	OR (NOT received(3) AND received(0))));
+Display(1) <= (NOT Received(1) AND NOT Received(3) AND Received(2) AND 
+	NOT Received(0));
 
 
-Display(2) <= ((received(1) AND NOT received(3) AND received(2) AND 
-	received(0))
-	OR (NOT received(1) AND NOT received(3) AND received(2) AND 
-	NOT received(0))
-	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
-	received(0)));
+Display(2) <= NOT (((NOT Received(1) AND NOT Received(2))
+	OR (NOT Received(3) AND NOT Received(2))
+	OR (Received(1) AND NOT Received(3) AND Received(0))
+	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(0))));
 
 
-Display(3) <= ((NOT received(3) AND received(0))
-	OR (NOT received(1) AND NOT received(3) AND received(2))
-	OR (NOT received(1) AND NOT received(2) AND received(0)));
+Display(3) <= NOT (((NOT Received(3) AND Received(2))
+	OR (Received(1) AND NOT Received(3) AND Received(0))
+	OR (NOT Received(1) AND Received(3) AND NOT Received(2))
+	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(0))));
 
 
-Display(4) <= ((NOT received(1) AND NOT received(3) AND NOT received(2))
-	OR (received(1) AND NOT received(3) AND received(2) AND 
-	received(0)));
+Display(4) <= ((Received(1) AND NOT Received(3) AND Received(2) AND 
+	Received(0))
+	OR (NOT Received(1) AND NOT Received(3) AND Received(2) AND 
+	NOT Received(0))
+	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+	Received(0)));
 
 
-Display(5) <= NOT (((NOT received(1) AND NOT received(2))
-	OR (NOT received(3) AND NOT received(2))
-	OR (received(1) AND NOT received(3) AND received(0))
-	OR (NOT received(1) AND NOT received(3) AND NOT received(0))));
+Display(5) <= ((NOT Received(3) AND Received(0))
+	OR (NOT Received(1) AND NOT Received(3) AND Received(2))
+	OR (NOT Received(1) AND NOT Received(2) AND Received(0)));
 
 
-Display(6) <= ((NOT received(1) AND NOT received(3) AND received(2) AND 
-	NOT received(0))
-	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
-	received(0)));
+Display(6) <= ((Received(1) AND NOT Received(3) AND Received(0))
+	OR (Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+	NOT Received(0))
+	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+	Received(0)));
 
 
-Display(7) <= ((received(1) AND NOT received(3) AND received(0))
-	OR (received(1) AND NOT received(3) AND NOT received(2) AND 
-	NOT received(0))
-	OR (NOT received(1) AND NOT received(3) AND NOT received(2) AND 
-	received(0)));
+Display(7) <= ((NOT Received(1) AND NOT Received(3) AND NOT Received(2))
+	OR (Received(1) AND NOT Received(3) AND Received(2) AND 
+	Received(0)));
 
 
-Display(8) <= NOT (((received(5) AND received(7))
-	OR (received(6) AND received(7))));
+Display(8) <= NOT (((Received(5) AND Received(7))
+	OR (Received(6) AND Received(7))));
 
 
-Display(9) <= NOT (((NOT received(5) AND NOT received(6))
-	OR (received(6) AND NOT received(7))
-	OR (NOT received(7) AND received(4))));
+Display(9) <= (NOT Received(5) AND Received(6) AND NOT Received(7) AND 
+	NOT Received(4));
 
 
-Display(10) <= ((received(5) AND received(6) AND NOT received(7) AND 
-	received(4))
-	OR (NOT received(5) AND received(6) AND NOT received(7) AND 
-	NOT received(4))
-	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
-	received(4)));
+Display(10) <= NOT (((NOT Received(5) AND NOT Received(6))
+	OR (NOT Received(6) AND NOT Received(7))
+	OR (Received(5) AND NOT Received(7) AND Received(4))
+	OR (NOT Received(5) AND NOT Received(7) AND NOT Received(4))));
 
 
-Display(11) <= ((NOT received(7) AND received(4))
-	OR (NOT received(5) AND received(6) AND NOT received(7))
-	OR (NOT received(5) AND NOT received(6) AND received(4)));
+Display(11) <= NOT (((Received(6) AND NOT Received(7))
+	OR (Received(5) AND NOT Received(7) AND Received(4))
+	OR (NOT Received(5) AND NOT Received(6) AND Received(7))
+	OR (NOT Received(5) AND NOT Received(7) AND NOT Received(4))));
 
 
-Display(12) <= ((NOT received(5) AND NOT received(6) AND NOT received(7))
-	OR (received(5) AND received(6) AND NOT received(7) AND 
-	received(4)));
+Display(12) <= ((Received(5) AND Received(6) AND NOT Received(7) AND 
+	Received(4))
+	OR (NOT Received(5) AND Received(6) AND NOT Received(7) AND 
+	NOT Received(4))
+	OR (NOT Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+	Received(4)));
 
 
-Display(13) <= NOT (((NOT received(5) AND NOT received(6))
-	OR (NOT received(6) AND NOT received(7))
-	OR (received(5) AND NOT received(7) AND received(4))
-	OR (NOT received(5) AND NOT received(7) AND NOT received(4))));
+Display(13) <= ((NOT Received(7) AND Received(4))
+	OR (NOT Received(5) AND Received(6) AND NOT Received(7))
+	OR (NOT Received(5) AND NOT Received(6) AND Received(4)));
 
 
-Display(14) <= ((NOT received(5) AND received(6) AND NOT received(7) AND 
-	NOT received(4))
-	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
-	received(4)));
+Display(14) <= ((Received(5) AND NOT Received(7) AND Received(4))
+	OR (Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+	NOT Received(4))
+	OR (NOT Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+	Received(4)));
 
 
-Display(15) <= ((received(5) AND NOT received(7) AND received(4))
-	OR (received(5) AND NOT received(6) AND NOT received(7) AND 
-	NOT received(4))
-	OR (NOT received(5) AND NOT received(6) AND NOT received(7) AND 
-	received(4)));
+Display(15) <= ((NOT Received(5) AND NOT Received(6) AND NOT Received(7))
+	OR (Received(5) AND Received(6) AND NOT Received(7) AND 
+	Received(4)));
 
 
-N_PZ_115 <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	UARTReceiver/state_or000012)
+N_PZ_113 <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4))
 	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-	UARTReceiver/state(0) AND UARTReceiver/state_or000012));
+	UARTReceiver/state(0) AND UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4)));
 
+LDCP_Received0: LDCP port map (Received(0),UARTReceiver/bitsReceived(0),,'0','0');
+Received_G(0) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
 
-N_PZ_86 <= (NOT UARTReceiver/count_add0000(3) AND 
+LDCP_Received1: LDCP port map (Received(1),UARTReceiver/bitsReceived(1),,'0','0');
+Received_G(1) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received2: LDCP port map (Received(2),UARTReceiver/bitsReceived(2),,'0','0');
+Received_G(2) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received3: LDCP port map (Received(3),UARTReceiver/bitsReceived(3),,'0','0');
+Received_G(3) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received4: LDCP port map (Received(4),UARTReceiver/bitsReceived(4),,'0','0');
+Received_G(4) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received5: LDCP port map (Received(5),UARTReceiver/bitsReceived(5),,'0','0');
+Received_G(5) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received6: LDCP port map (Received(6),UARTReceiver/bitsReceived(6),,'0','0');
+Received_G(6) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_Received7: LDCP port map (Received(7),UARTReceiver/bitsReceived(7),,'0','0');
+Received_G(7) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
+	UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitCounter0: LDCP port map (UARTReceiver/bitCounter(0),UARTReceiver/bitCounter_D(0),N_PZ_113,'0','0');
+UARTReceiver/bitCounter_D(0) <= (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	NOT UARTReceiver/bitCounter(0));
+
+LDCP_UARTReceiver/bitCounter1: LDCP port map (UARTReceiver/bitCounter(1),UARTReceiver/bitCounter_D(1),N_PZ_113,'0','0');
+UARTReceiver/bitCounter_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1))
+	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1)));
+
+LDCP_UARTReceiver/bitCounter2: LDCP port map (UARTReceiver/bitCounter(2),UARTReceiver/bitCounter_D(2),N_PZ_113,'0','0');
+UARTReceiver/bitCounter_D(2) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(2))
+	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
+	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
+	NOT UARTReceiver/bitCounter(2)));
+
+LDCP_UARTReceiver/bitsReceived0: LDCP port map (UARTReceiver/bitsReceived(0),UARTReceiver/bitsReceived_D(0),,'0','0');
+UARTReceiver/bitsReceived_D(0) <= NOT (NOT UARTReceiver/bitsReceived(0)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(0))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(0))));
+UARTReceiver/bitsReceived_G(0) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived1: LDCP port map (UARTReceiver/bitsReceived(1),UARTReceiver/bitsReceived_D(1),,'0','0');
+UARTReceiver/bitsReceived_D(1) <= NOT (NOT UARTReceiver/bitsReceived(1)
+	XOR ((UARTReceiver/bitsReceived(1) AND NOT Data AND 
+	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1) AND 
+	NOT UARTReceiver/bitCounter(2))
+	OR (NOT UARTReceiver/bitsReceived(1) AND Data AND 
+	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
+	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1) AND 
+	NOT UARTReceiver/bitCounter(2))));
+UARTReceiver/bitsReceived_G(1) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived2: LDCP port map (UARTReceiver/bitsReceived(2),UARTReceiver/bitsReceived_D(2),,'0','0');
+UARTReceiver/bitsReceived_D(2) <= NOT (NOT UARTReceiver/bitsReceived(2)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(2))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(2))));
+UARTReceiver/bitsReceived_G(2) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived3: LDCP port map (UARTReceiver/bitsReceived(3),UARTReceiver/bitsReceived_D(3),,'0','0');
+UARTReceiver/bitsReceived_D(3) <= NOT (NOT UARTReceiver/bitsReceived(3)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(3))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(3))));
+UARTReceiver/bitsReceived_G(3) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived4: LDCP port map (UARTReceiver/bitsReceived(4),UARTReceiver/bitsReceived_D(4),,'0','0');
+UARTReceiver/bitsReceived_D(4) <= NOT (NOT UARTReceiver/bitsReceived(4)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(4))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(4))));
+UARTReceiver/bitsReceived_G(4) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived5: LDCP port map (UARTReceiver/bitsReceived(5),UARTReceiver/bitsReceived_D(5),,'0','0');
+UARTReceiver/bitsReceived_D(5) <= NOT (NOT UARTReceiver/bitsReceived(5)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(5))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(5))));
+UARTReceiver/bitsReceived_G(5) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived6: LDCP port map (UARTReceiver/bitsReceived(6),UARTReceiver/bitsReceived_D(6),,'0','0');
+UARTReceiver/bitsReceived_D(6) <= NOT (NOT UARTReceiver/bitsReceived(6)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(6))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(6))));
+UARTReceiver/bitsReceived_G(6) <= (NOT UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+
+LDCP_UARTReceiver/bitsReceived7: LDCP port map (UARTReceiver/bitsReceived(7),UARTReceiver/bitsReceived_D(7),,'0','0');
+UARTReceiver/bitsReceived_D(7) <= NOT (NOT UARTReceiver/bitsReceived(7)
+	XOR ((Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	NOT UARTReceiver/bitsReceived(7))
+	OR (NOT Data AND UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
+	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
+	UARTReceiver/bitsReceived(7))));
+UARTReceiver/bitsReceived_G(7) <= (NOT UARTReceiver/count_add0000(3) AND 
 	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
 	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
 
 
-N_PZ_90 <= ((Data AND NOT UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/count_cmp_eq0000));
-
-LDCP_UARTReceiver/bitCounter0: LDCP port map (UARTReceiver/bitCounter(0),UARTReceiver/bitCounter_D(0),N_PZ_115,'0','0');
-UARTReceiver/bitCounter_D(0) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	UARTReceiver/bitCounter(0) AND NOT N_PZ_86)
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(0) AND N_PZ_86));
-
-LDCP_UARTReceiver/bitCounter1: LDCP port map (UARTReceiver/bitCounter(1),UARTReceiver/bitCounter_D(1),N_PZ_115,'0','0');
-UARTReceiver/bitCounter_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT N_PZ_86 AND UARTReceiver/bitCounter(1))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	UARTReceiver/bitCounter(0) AND N_PZ_86 AND NOT UARTReceiver/bitCounter(1)));
-
-LDCP_UARTReceiver/bitCounter2: LDCP port map (UARTReceiver/bitCounter(2),UARTReceiver/bitCounter_D(2),N_PZ_115,'0','0');
-UARTReceiver/bitCounter_D(2) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(2))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT N_PZ_86 AND UARTReceiver/bitCounter(2))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	UARTReceiver/bitCounter(0) AND N_PZ_86 AND UARTReceiver/bitCounter(1) AND 
-	NOT UARTReceiver/bitCounter(2)));
-
-LDCP_UARTReceiver/bitsReceived0: LDCP port map (UARTReceiver/bitsReceived(0),UARTReceiver/bitsReceived_D(0),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(0) <= NOT (NOT UARTReceiver/bitsReceived(0)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(0))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(0))));
-
-LDCP_UARTReceiver/bitsReceived1: LDCP port map (UARTReceiver/bitsReceived(1),UARTReceiver/bitsReceived_D(1),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(1) <= NOT (NOT UARTReceiver/bitsReceived(1)
-	XOR ((UARTReceiver/bitsReceived(1) AND NOT Data AND 
-	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
-	UARTReceiver/bitCounter(2))
-	OR (NOT UARTReceiver/bitsReceived(1) AND Data AND 
-	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
-	UARTReceiver/bitCounter(2))));
-
-LDCP_UARTReceiver/bitsReceived2: LDCP port map (UARTReceiver/bitsReceived(2),UARTReceiver/bitsReceived_D(2),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(2) <= NOT (NOT UARTReceiver/bitsReceived(2)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(2))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(2))));
-
-LDCP_UARTReceiver/bitsReceived3: LDCP port map (UARTReceiver/bitsReceived(3),UARTReceiver/bitsReceived_D(3),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(3) <= NOT (NOT UARTReceiver/bitsReceived(3)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(3))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(3))));
-
-LDCP_UARTReceiver/bitsReceived4: LDCP port map (UARTReceiver/bitsReceived(4),UARTReceiver/bitsReceived_D(4),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(4) <= NOT (NOT UARTReceiver/bitsReceived(4)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(4))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(4))));
-
-LDCP_UARTReceiver/bitsReceived5: LDCP port map (UARTReceiver/bitsReceived(5),UARTReceiver/bitsReceived_D(5),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(5) <= NOT (NOT UARTReceiver/bitsReceived(5)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(5))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(5))));
-
-LDCP_UARTReceiver/bitsReceived6: LDCP port map (UARTReceiver/bitsReceived(6),UARTReceiver/bitsReceived_D(6),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(6) <= NOT (NOT UARTReceiver/bitsReceived(6)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(6))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(6))));
-
-LDCP_UARTReceiver/bitsReceived7: LDCP port map (UARTReceiver/bitsReceived(7),UARTReceiver/bitsReceived_D(7),N_PZ_86,'0','0');
-UARTReceiver/bitsReceived_D(7) <= NOT (NOT UARTReceiver/bitsReceived(7)
-	XOR ((Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	NOT UARTReceiver/bitsReceived(7))
-	OR (NOT Data AND UARTReceiver/state(1) AND 
-	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-	UARTReceiver/bitsReceived(7))));
-
-
 UARTReceiver/count(0) <= NOT (((UARTReceiver/count(0))
-	OR (NOT UARTReceiver/state(0) AND NOT N_PZ_90)));
+	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0))));
 
 
-UARTReceiver/count_add0000(1) <= UARTReceiver/count(0)
-	XOR ((UARTReceiver/state(0) AND 
-	UARTReceiver/count_add0000(1))
-	OR (N_PZ_90 AND UARTReceiver/count_add0000(1)));
+UARTReceiver/count_add0000(1) <= NOT (UARTReceiver/count(0)
+	XOR ((NOT UARTReceiver/count_add0000(1))
+	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0))));
 
 
-UARTReceiver/count_add0000(2) <= NOT (((NOT UARTReceiver/state(0) AND NOT N_PZ_90)
-	OR (NOT UARTReceiver/count(0) AND 
+UARTReceiver/count_add0000(2) <= NOT (((NOT UARTReceiver/count(0) AND 
 	NOT UARTReceiver/count_add0000(2))
 	OR (NOT UARTReceiver/count_add0000(1) AND 
 	NOT UARTReceiver/count_add0000(2))
+	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0))
 	OR (UARTReceiver/count(0) AND 
 	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))));
 
 
-UARTReceiver/count_add0000(3) <= NOT (NOT UARTReceiver/count_add0000(3)
-	XOR ((NOT UARTReceiver/state(0) AND NOT N_PZ_90 AND 
-	UARTReceiver/count_add0000(3))
-	OR (UARTReceiver/state(0) AND UARTReceiver/count(0) AND 
-	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
-	OR (N_PZ_90 AND UARTReceiver/count(0) AND 
-	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
+UARTReceiver/count_add0000(3) <= NOT (((NOT UARTReceiver/count_add0000(3) AND 
+	NOT UARTReceiver/count(0))
+	OR (NOT UARTReceiver/count_add0000(3) AND 
+	NOT UARTReceiver/count_add0000(1))
+	OR (NOT UARTReceiver/count_add0000(3) AND 
+	NOT UARTReceiver/count_add0000(2))
 	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-	UARTReceiver/state(0) AND UARTReceiver/count_add0000(3) AND 
-	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4))));
+	UARTReceiver/state_or00007)
+	OR (UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
+	UARTReceiver/count_add0000(2))));
 
 
 UARTReceiver/count_add0000(4) <= NOT (NOT UARTReceiver/count_add0000(4)
-	XOR ((NOT UARTReceiver/state(0) AND NOT N_PZ_90 AND 
-	UARTReceiver/count_add0000(4))
+	XOR ((UARTReceiver/count_add0000(4) AND N_PZ_113)
+	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0) AND UARTReceiver/count_add0000(4))
+	OR (Data AND UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
+	UARTReceiver/count_add0000(2) AND NOT N_PZ_113)
+	OR (UARTReceiver/state(1) AND 
+	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2) AND NOT N_PZ_113)
 	OR (UARTReceiver/state(0) AND 
 	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))
-	OR (N_PZ_90 AND UARTReceiver/count_add0000(3) AND 
-	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
-	UARTReceiver/count_add0000(2))
-	OR (NOT Data AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-	UARTReceiver/count_add0000(4))
-	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-	UARTReceiver/count_add0000(4))));
+	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2) AND NOT N_PZ_113)));
 
-
-UARTReceiver/count_cmp_eq0000 <= ((UARTReceiver/bitCounter(0) AND NOT N_PZ_86 AND 
-	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
-	OR (NOT UARTReceiver/bitCounter(0) AND N_PZ_86 AND 
-	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2)));
-
-LDCP_UARTReceiver/state0: LDCP port map (UARTReceiver/state(0),NOT UARTReceiver/state(0),,'0','0');
-UARTReceiver/state_G(0) <= (NOT N_PZ_90 AND UARTReceiver/state_or000012);
+LDCP_UARTReceiver/state0: LDCP port map (UARTReceiver/state(0),UARTReceiver/state_D(0),,'0','0');
+UARTReceiver/state_D(0) <= (NOT UARTReceiver/state(1) AND NOT UARTReceiver/state(0));
+UARTReceiver/state_G(0) <= (UARTReceiver/state_or00007 AND 
+	NOT UARTReceiver/state_or00001 AND UARTReceiver/state_or00008);
 
 LDCP_UARTReceiver/state1: LDCP port map (UARTReceiver/state(1),UARTReceiver/state_D(1),,'0','0');
-UARTReceiver/state_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0))
-	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-	UARTReceiver/state(0)));
-UARTReceiver/state_G(1) <= (NOT N_PZ_90 AND UARTReceiver/state_or000012);
+UARTReceiver/state_D(1) <= (NOT Data AND NOT UARTReceiver/state(1) AND 
+	UARTReceiver/state(0));
+UARTReceiver/state_G(1) <= (UARTReceiver/state_or00007 AND 
+	NOT UARTReceiver/state_or00001 AND UARTReceiver/state_or00008);
 
 
-UARTReceiver/state_or000012 <= ((NOT UARTReceiver/state(0))
-	OR (UARTReceiver/state(1) AND N_PZ_86)
-	OR (NOT UARTReceiver/state(1) AND 
-	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
+UARTReceiver/state_or00001 <= (Data AND NOT UARTReceiver/state(1) AND 
+	NOT UARTReceiver/state(0));
+
+
+UARTReceiver/state_or00007 <= ((UARTReceiver/state(1))
+	OR (NOT UARTReceiver/state(0))
+	OR (UARTReceiver/count_add0000(3) AND 
+	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
+	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4)));
+
+
+UARTReceiver/state_or00008 <= ((NOT UARTReceiver/state(1))
+	OR (UARTReceiver/state(0) AND 
+	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
 	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-	NOT UARTReceiver/count_add0000(4)));
-
-LDCP_received0: LDCP port map (received(0),UARTReceiver/bitsReceived(0),,'0','0');
-received_G(0) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received1: LDCP port map (received(1),UARTReceiver/bitsReceived(1),,'0','0');
-received_G(1) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received2: LDCP port map (received(2),UARTReceiver/bitsReceived(2),,'0','0');
-received_G(2) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received3: LDCP port map (received(3),UARTReceiver/bitsReceived(3),,'0','0');
-received_G(3) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received4: LDCP port map (received(4),UARTReceiver/bitsReceived(4),,'0','0');
-received_G(4) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received5: LDCP port map (received(5),UARTReceiver/bitsReceived(5),,'0','0');
-received_G(5) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received6: LDCP port map (received(6),UARTReceiver/bitsReceived(6),,'0','0');
-received_G(6) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
-
-LDCP_received7: LDCP port map (received(7),UARTReceiver/bitsReceived(7),,'0','0');
-received_G(7) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-	N_PZ_86);
+	UARTReceiver/count_add0000(4)));
 
 
 Register Legend:
@@ -745,28 +771,28 @@ Device : XC2C64A-5-VQ44
 
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
-  1 Display<14>                      23 KPR                           
-  2 Display<13>                      24 TDO                           
-  3 Display<12>                      25 GND                           
+  1 Received<3>                      23 Display<15>                   
+  2 Received<4>                      24 TDO                           
+  3 Received<5>                      25 GND                           
   4 GND                              26 VCCIO-1.8                     
-  5 KPR                              27 KPR                           
-  6 KPR                              28 KPR                           
-  7 VCCIO-1.8                        29 KPR                           
-  8 KPR                              30 Display<11>                   
-  9 TDI                              31 Display<8>                    
- 10 TMS                              32 Display<9>                    
- 11 TCK                              33 Display<10>                   
- 12 KPR                              34 Display<3>                    
+  5 KPR                              27 Display<12>                   
+  6 KPR                              28 Display<9>                    
+  7 VCCIO-1.8                        29 Display<8>                    
+  8 KPR                              30 Received<7>                   
+  9 TDI                              31 Received<6>                   
+ 10 TMS                              32 Received<1>                   
+ 11 TCK                              33 Received<2>                   
+ 12 KPR                              34 Display<7>                    
  13 KPR                              35 VCCAUX                        
- 14 KPR                              36 Display<0>                    
- 15 VCC                              37 Display<1>                    
- 16 Data                             38 Display<2>                    
- 17 GND                              39 Display<7>                    
- 18 KPR                              40 Display<6>                    
- 19 KPR                              41 Display<5>                    
- 20 KPR                              42 Display<4>                    
- 21 KPR                              43 KPR                           
- 22 KPR                              44 Display<15>                   
+ 14 KPR                              36 Display<6>                    
+ 15 VCC                              37 Display<2>                    
+ 16 Data                             38 Display<1>                    
+ 17 GND                              39 Display<0>                    
+ 18 KPR                              40 Display<3>                    
+ 19 Display<13>                      41 Display<4>                    
+ 20 Display<11>                      42 Display<5>                    
+ 21 Display<10>                      43 KPR                           
+ 22 Display<14>                      44 Received<0>                   
 
 
 Legend :  NC  = Not Connected, unbonded pin

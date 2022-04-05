@@ -2,40 +2,49 @@ Pin Freeze File:  version O.87xd
 
 2C64A44VQ XC2C64A-5-VQ44
 Data S:PIN16
-Display<0> S:PIN36
-Display<1> S:PIN37
-Display<2> S:PIN38
-Display<3> S:PIN34
-Display<4> S:PIN42
-Display<5> S:PIN41
-Display<6> S:PIN40
-Display<7> S:PIN39
-Display<8> S:PIN31
-Display<9> S:PIN32
-Display<10> S:PIN33
-Display<11> S:PIN30
-Display<12> S:PIN3
-Display<13> S:PIN2
-Display<14> S:PIN1
-Display<15> S:PIN44
+Display<0> S:PIN39
+Display<1> S:PIN38
+Display<2> S:PIN37
+Display<3> S:PIN40
+Display<4> S:PIN41
+Display<5> S:PIN42
+Display<6> S:PIN36
+Display<7> S:PIN34
+Display<8> S:PIN29
+Display<9> S:PIN28
+Display<10> S:PIN21
+Display<11> S:PIN20
+Display<12> S:PIN27
+Display<13> S:PIN19
+Display<14> S:PIN22
+Display<15> S:PIN23
+Received<0> S:PIN44
+Received<1> S:PIN32
+Received<2> S:PIN33
+Received<3> S:PIN1
+Received<4> S:PIN2
+Received<5> S:PIN3
+Received<6> S:PIN31
+Received<7> S:PIN30
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 Display<2> Display<1> Display<0> UARTReceiver/state<1>
-		 N_PZ_86 UARTReceiver/state_or000012 UARTReceiver/count_add0000<4> UARTReceiver/count_add0000<3>
-		 Display<3> Display<10> Display<9> Display<8>
-		 Display<11> UARTReceiver/count_add0000<2> UARTReceiver/count_add0000<1> UARTReceiver/count<0>
+PARTITION FB1_1 Display<1> Display<2> Display<6> UARTReceiver/bitsReceived<5>
+		 UARTReceiver/bitsReceived<4> UARTReceiver/bitsReceived<3> UARTReceiver/bitsReceived<0> UARTReceiver/bitsReceived<7>
+		 Display<7> Received<2> Received<1> Received<6>
+		 Received<7> UARTReceiver/bitsReceived<6> UARTReceiver/bitsReceived<2> UARTReceiver/bitsReceived<1>
 		
-PARTITION FB2_1 Display<7> Display<6> UARTReceiver/bitsReceived<3> UARTReceiver/bitsReceived<2>
-		 Display<5> Display<4> UARTReceiver/bitsReceived<4> Display<15>
-		 UARTReceiver/bitsReceived<1> Display<14> UARTReceiver/bitsReceived<0> Display<13>
-		 Display<12> N_PZ_90 N_PZ_115 UARTReceiver/state<0>
+PARTITION FB2_1 Display<0> Display<3> UARTReceiver/count_add0000<1> UARTReceiver/count_add0000<3>
+		 Display<4> Display<5> UARTReceiver/count<0> Received<0>
+		 UARTReceiver/count_add0000<2> Received<3> UARTReceiver/count_add0000<4> Received<4>
+		 Received<5> N_PZ_113 UARTReceiver/state_or00007 UARTReceiver/state_or00008
 		
-PARTITION FB3_2 received<4> received<3> UARTReceiver/count_cmp_eq0000 UARTReceiver/bitCounter<0>
-		 received<2> UARTReceiver/bitCounter<1> UARTReceiver/bitCounter<2> UARTReceiver/bitsReceived<7>
-		 received<1> received<0> received<7> UARTReceiver/bitsReceived<6>
-		 received<6> received<5> UARTReceiver/bitsReceived<5>
+PARTITION FB3_1 Display<8> Display<9> Display<12>
+PARTITION FB3_5 UARTReceiver/bitCounter<2> Display<15> UARTReceiver/bitCounter<1> UARTReceiver/bitCounter<0>
+		 UARTReceiver/state<0> Display<14> Display<10> Display<11>
+		 UARTReceiver/state<1> Display<13>
+PARTITION FB3_16 UARTReceiver/state_or00001
 
 

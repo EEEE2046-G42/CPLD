@@ -8,9 +8,6 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;UARTReceiver/count_add0000&lt;3&gt;&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
 </msg>
 
-<msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;N_PZ_86&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
 <msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;UARTReceiver/count&lt;0&gt;&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
 </msg>
 
@@ -23,7 +20,10 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;UARTReceiver/count_add0000&lt;4&gt;&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
 </msg>
 
-<msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;N_PZ_90&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
+<msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;UARTReceiver/state_or00007&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
+</msg>
+
+<msg type="warning" file="Cpld" num="0" delta="new" >Combinatorial feedback is detected on the clock path at signal &apos;N_PZ_113&apos;. Timing analysis of paths involving this node may be inaccurate or incomplete.
 </msg>
 
 </messages>

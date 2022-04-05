@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Feb 10 14:02:15 2022">
+  <application stringID="Xst" timeStamp="Tue Apr 05 15:06:56 2022">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -105,21 +105,22 @@
         <item stringID="XST_KEEP_HIERARCHY" value="Yes"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="18"/>
+        <item stringID="XST_IOS" value="26"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="300">
-          <item dataType="int" stringID="XST_AND2" value="94"/>
-          <item dataType="int" stringID="XST_AND3" value="27"/>
+        <item dataType="int" stringID="XST_BELS" value="285">
+          <item dataType="int" stringID="XST_AND2" value="83"/>
+          <item dataType="int" stringID="XST_AND3" value="25"/>
+          <item dataType="int" stringID="XST_AND4" value="4"/>
           <item dataType="int" stringID="XST_GND" value="2"/>
           <item dataType="int" stringID="XST_INV" value="116"/>
-          <item dataType="int" stringID="XST_OR2" value="44"/>
-          <item dataType="int" stringID="XST_XOR2" value="9"/>
+          <item dataType="int" stringID="XST_OR2" value="40"/>
+          <item dataType="int" stringID="XST_XOR2" value="6"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="23"></item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="18">
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="26">
           <item dataType="int" stringID="XST_IBUF" value="2"/>
-          <item dataType="int" stringID="XST_OBUF" value="16"/>
+          <item dataType="int" stringID="XST_OBUF" value="24"/>
         </item>
       </section>
     </section>

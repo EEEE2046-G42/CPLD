@@ -5,74 +5,76 @@
 0 Group(s)
 
 ----------------- B l o c k 0 ------------------
-PLApt(45/56), Fanin(19/38), Clk(0/3), Bct(1/4), Pin(8/8), Mcell(16/16)
-PLApts[45/53] 32 33 35 16 177 29 30 4 9 22 24 25 27 10 21 5 15 7 8 13 14 160 140 123 148 130 137 139 119 131 144 117 154 161 132 141 142 155 162 1 143 165 0 2 () () () () () () () () 120
-Fanins[19] N_PZ_86.n N_PZ_90.n UARTReceiver/count<0>.n UARTReceiver/count_add0000<1>.n UARTReceiver/count_add0000<2>.n UARTReceiver/count_add0000<3>.n UARTReceiver/count_add0000<4>.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n UARTReceiver/state_or000012.n received<0>.n received<1>.n received<2>.n received<3>.n received<4>.n received<5>.n received<6>.n received<7>.n Data.p
+PLApt(42/56), Fanin(23/38), Clk(0/3), Bct(1/4), Pin(8/8), Mcell(16/16)
+PLApts[42/56] 55 65 105 115 141 0 6 10 13 12 14 15 7 11 62 64 72 74 111 103 114 121 93 124 52 83 54 82 53 84 91 123 94 101 104 () () 143 () () 143 () () 143 () () 143 () () 113 () () 73 () () 63
+Fanins[23] Received<0>.n Received<1>.n Received<2>.n Received<3>.n UARTReceiver/bitCounter<0>.n UARTReceiver/bitCounter<1>.n UARTReceiver/bitCounter<2>.n UARTReceiver/bitsReceived<0>.n UARTReceiver/bitsReceived<1>.n UARTReceiver/bitsReceived<2>.n UARTReceiver/bitsReceived<3>.n UARTReceiver/bitsReceived<4>.n UARTReceiver/bitsReceived<5>.n UARTReceiver/bitsReceived<6>.n UARTReceiver/bitsReceived<7>.n UARTReceiver/count<0>.n UARTReceiver/count_add0000<1>.n UARTReceiver/count_add0000<2>.n UARTReceiver/count_add0000<3>.n UARTReceiver/count_add0000<4>.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n Data.p
 clk[0] 
-CTC: (pt=177) N_PZ_90' UARTReceiver/state_or000012 ;
+CTC: (pt=141) UARTReceiver/count_add0000<3>' UARTReceiver/count<0> UARTReceiver/count_add0000<4> UARTReceiver/count_add0000<1>' UARTReceiver/count_add0000<2>' ;
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[16] [Display<10>(54),Display<10>(33)] [Display<11>(57),Display<11>(30)]  
-           [Display<1>(46),Display<1>(37)] [Display<2>(45),Display<2>(38)] [Display<3>(53),Display<3>(34)]  
-           [Display<9>(55),Display<9>(32)] [Display<0>(47),Display<0>(36)] [Display<8>(56),Display<8>(31)]  
-           [UARTReceiver/count<0>(60)] [UARTReceiver/count_add0000<1>(59)]  
-           [UARTReceiver/count_add0000<2>(58)] [UARTReceiver/count_add0000<3>(52)]  
-           [UARTReceiver/count_add0000<4>(51)] [UARTReceiver/state_or000012(50)] [N_PZ_86(49)]  
-           [UARTReceiver/state<1>(48)] 
-Signal[16] [ 0: Display<2>(45) Display<2>(38)  ][ 1: Display<1>(46) Display<1>(37)  ][ 2: Display<0>(47)  
-           Display<0>(36)  ][ 3: UARTReceiver/state<1>(48)  ][ 4: N_PZ_86(49)  ][ 5:  
-           UARTReceiver/state_or000012(50)  ][ 6: UARTReceiver/count_add0000<4>(51)  ][ 7:  
-           UARTReceiver/count_add0000<3>(52)  ][ 8: Display<3>(53) Display<3>(34)  ][ 9: Display<10>(54)  
-           Display<10>(33)  ][ 10: Display<9>(55) Display<9>(32)  ][ 11: Display<8>(56) Display<8>(31)  ] 
-           [ 12: Display<11>(57) Display<11>(30)  ][ 13: UARTReceiver/count_add0000<2>(58)  ][ 14:  
-           UARTReceiver/count_add0000<1>(59)  ][ 15: UARTReceiver/count<0>(60)  ]
+Signal[16] [Received<1>(55),Received<1>(32)] [Received<2>(54),Received<2>(33)]  
+           [Received<6>(56),Received<6>(31)] [Received<7>(57),Received<7>(30)]  
+           [Display<1>(45),Display<1>(38)] [Display<2>(46),Display<2>(37)] [Display<6>(47),Display<6>(36)]  
+           [Display<7>(53),Display<7>(34)] [UARTReceiver/bitsReceived<1>(60)]  
+           [UARTReceiver/bitsReceived<2>(59)] [UARTReceiver/bitsReceived<6>(58)]  
+           [UARTReceiver/bitsReceived<7>(52)] [UARTReceiver/bitsReceived<0>(51)]  
+           [UARTReceiver/bitsReceived<3>(50)] [UARTReceiver/bitsReceived<4>(49)]  
+           [UARTReceiver/bitsReceived<5>(48)] 
+Signal[16] [ 0: Display<1>(45) Display<1>(38)  ][ 1: Display<2>(46) Display<2>(37)  ][ 2: Display<6>(47)  
+           Display<6>(36)  ][ 3: UARTReceiver/bitsReceived<5>(48)  ][ 4: UARTReceiver/bitsReceived<4>(49)  ] 
+           [ 5: UARTReceiver/bitsReceived<3>(50)  ][ 6: UARTReceiver/bitsReceived<0>(51)  ][ 7:  
+           UARTReceiver/bitsReceived<7>(52)  ][ 8: Display<7>(53) Display<7>(34)  ][ 9: Received<2>(54)  
+           Received<2>(33)  ][ 10: Received<1>(55) Received<1>(32)  ][ 11: Received<6>(56) Received<6>(31)  ] 
+           [ 12: Received<7>(57) Received<7>(30)  ][ 13: UARTReceiver/bitsReceived<6>(58)  ][ 14:  
+           UARTReceiver/bitsReceived<2>(59)  ][ 15: UARTReceiver/bitsReceived<1>(60)  ]
 ----------------- B l o c k 1 ------------------
-PLApt(40/56), Fanin(23/38), Clk(0/3), Bct(1/4), Pin(8/9), Mcell(16/16)
-PLApts[40/56] 5 17 31 34 164 4 11 23 26 33 36 25 28 18 32 35 75 12 24 65 27 1 175 176 3 178 43 46 85 53 56 63 66 73 55 76 84 86 () () 45 () () () () () () () () () () () () () () 177
-Fanins[23] N_PZ_86.n N_PZ_90.n UARTReceiver/bitCounter<0>.n UARTReceiver/bitCounter<1>.n UARTReceiver/bitCounter<2>.n UARTReceiver/bitsReceived<0>.n UARTReceiver/bitsReceived<1>.n UARTReceiver/bitsReceived<2>.n UARTReceiver/bitsReceived<3>.n UARTReceiver/bitsReceived<4>.n UARTReceiver/count_cmp_eq0000.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n UARTReceiver/state_or000012.n received<0>.n received<1>.n received<2>.n received<3>.n received<4>.n received<5>.n received<6>.n received<7>.n Data.p
+PLApt(41/56), Fanin(18/38), Clk(0/3), Bct(1/4), Pin(8/9), Mcell(16/16)
+PLApts[41/47] 1 2 3 4 143 10 13 11 12 14 5 8 9 33 142 32 125 35 145 144 146 128 150 160 161 162 38 136 139 140 127 45 134 137 138 147 133 75 () () 129 () () 85 () () 95
+Fanins[18] Received<0>.n Received<1>.n Received<2>.n Received<3>.n N_PZ_113.n UARTReceiver/bitsReceived<0>.n UARTReceiver/bitsReceived<3>.n UARTReceiver/bitsReceived<4>.n UARTReceiver/bitsReceived<5>.n UARTReceiver/count<0>.n UARTReceiver/count_add0000<1>.n UARTReceiver/count_add0000<2>.n UARTReceiver/count_add0000<3>.n UARTReceiver/count_add0000<4>.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n UARTReceiver/state_or00007.n Data.p
 clk[0] 
-CTC: (pt=164) N_PZ_86 ;
+CTC: (pt=143) UARTReceiver/state<1> UARTReceiver/state<0> UARTReceiver/count_add0000<3>' UARTReceiver/count<0> UARTReceiver/count_add0000<4> UARTReceiver/count_add0000<1>' UARTReceiver/count_add0000<2>' ;
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[16] [Display<13>(72),Display<13>(2)] [Display<5>(65),Display<5>(41)]  
-           [Display<15>(68),Display<15>(44)] [Display<7>(61),Display<7>(39)]  
-           [Display<12>(73),Display<12>(3)] [Display<14>(70),Display<14>(1)] [Display<4>(66),Display<4>(42)]  
-           [Display<6>(62),Display<6>(40)] [UARTReceiver/state<0>(76)] [N_PZ_115(75)] [N_PZ_90(74)]  
-           [UARTReceiver/bitsReceived<0>(71)] [UARTReceiver/bitsReceived<1>(69)]  
-           [UARTReceiver/bitsReceived<2>(64)] [UARTReceiver/bitsReceived<3>(63)]  
-           [UARTReceiver/bitsReceived<4>(67)] 
-Signal[16] [ 0: Display<7>(61) Display<7>(39)  ][ 1: Display<6>(62) Display<6>(40)  ][ 2:  
-           UARTReceiver/bitsReceived<3>(63)  ][ 3: UARTReceiver/bitsReceived<2>(64)  ][ 4: Display<5>(65)  
-           Display<5>(41)  ][ 5: Display<4>(66) Display<4>(42)  ][ 6: UARTReceiver/bitsReceived<4>(67) (43)  
-            ][ 7: Display<15>(68) Display<15>(44)  ][ 8: UARTReceiver/bitsReceived<1>(69)  ][ 9:  
-           Display<14>(70) Display<14>(1)  ][ 10: UARTReceiver/bitsReceived<0>(71)  ][ 11: Display<13>(72)  
-           Display<13>(2)  ][ 12: Display<12>(73) Display<12>(3)  ][ 13: N_PZ_90(74)  ][ 14: N_PZ_115(75)  ] 
-           [ 15: UARTReceiver/state<0>(76)  ]
+Signal[16] [Received<0>(68),Received<0>(44)] [Received<3>(70),Received<3>(1)]  
+           [Received<4>(72),Received<4>(2)] [Received<5>(73),Received<5>(3)] [Display<0>(61),Display<0>(39)]  
+           [Display<3>(62),Display<3>(40)] [Display<4>(65),Display<4>(41)] [Display<5>(66),Display<5>(42)]  
+           [UARTReceiver/state_or00008(76)] [UARTReceiver/state_or00007(75)] [N_PZ_113(74)]  
+           [UARTReceiver/count_add0000<4>(71)] [UARTReceiver/count_add0000<2>(69)]  
+           [UARTReceiver/count_add0000<3>(64)] [UARTReceiver/count_add0000<1>(63)]  
+           [UARTReceiver/count<0>(67)] 
+Signal[16] [ 0: Display<0>(61) Display<0>(39)  ][ 1: Display<3>(62) Display<3>(40)  ][ 2:  
+           UARTReceiver/count_add0000<1>(63)  ][ 3: UARTReceiver/count_add0000<3>(64)  ][ 4: Display<4>(65)  
+           Display<4>(41)  ][ 5: Display<5>(66) Display<5>(42)  ][ 6: UARTReceiver/count<0>(67) (43)  ][ 7:  
+           Received<0>(68) Received<0>(44)  ][ 8: UARTReceiver/count_add0000<2>(69)  ][ 9: Received<3>(70)  
+           Received<3>(1)  ][ 10: UARTReceiver/count_add0000<4>(71)  ][ 11: Received<4>(72) Received<4>(2)  ] 
+           [ 12: Received<5>(73) Received<5>(3)  ][ 13: N_PZ_113(74)  ][ 14: UARTReceiver/state_or00007(75)  
+            ][ 15: UARTReceiver/state_or00008(76)  ]
 ----------------- B l o c k 2 ------------------
-PLApt(40/56), Fanin(16/38), Clk(0/3), Bct(1/4), Pin(0/9), Mcell(15/16)
-PLApts[40/56] 94 96 104 106 164 114 116 19 20 170 173 6 168 166 172 167 166 171 169 174 87 97 179 107 37 166 47 57 179 67 77 179 () () 115 () () 166 () () 166 () () 166 () () 105 () () 166 () () 166 () () 95
-Fanins[16] N_PZ_115.n N_PZ_86.n UARTReceiver/bitCounter<0>.n UARTReceiver/bitCounter<1>.n UARTReceiver/bitCounter<2>.n UARTReceiver/bitsReceived<0>.n UARTReceiver/bitsReceived<1>.n UARTReceiver/bitsReceived<2>.n UARTReceiver/bitsReceived<3>.n UARTReceiver/bitsReceived<4>.n UARTReceiver/bitsReceived<5>.n UARTReceiver/bitsReceived<6>.n UARTReceiver/bitsReceived<7>.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n Data.p
+PLApt(28/56), Fanin(14/38), Clk(0/3), Bct(1/4), Pin(8/9), Mcell(14/16)
+PLApts[28/56] 16 22 26 29 149 19 20 27 28 21 24 25 31 30 23 17 18 34 36 40 41 42 43 44 () () () () () () () 39 () () 148 () () () () () () () () () () () 148 () () () () () () () () 37
+Fanins[14] Received<4>.n Received<5>.n Received<6>.n Received<7>.n N_PZ_113.n UARTReceiver/bitCounter<0>.n UARTReceiver/bitCounter<1>.n UARTReceiver/bitCounter<2>.n UARTReceiver/state<0>.n UARTReceiver/state<1>.n UARTReceiver/state_or00001.n UARTReceiver/state_or00007.n UARTReceiver/state_or00008.n Data.p
 clk[0] 
-CTC: (pt=164) N_PZ_86 ;
+CTC: (pt=149) N_PZ_113 ;
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[15] [UARTReceiver/bitsReceived<5>(92)] [UARTReceiver/bitsReceived<6>(89)]  
-           [UARTReceiver/bitsReceived<7>(85)] [UARTReceiver/bitCounter<2>(84)]  
-           [UARTReceiver/bitCounter<1>(83)] [UARTReceiver/bitCounter<0>(81)]  
-           [UARTReceiver/count_cmp_eq0000(80)] [received<5>(91)] [received<6>(90)] [received<7>(88)]  
-           [received<0>(87)] [received<1>(86)] [received<2>(82)] [received<3>(79)] [received<4>(78)] 
-Signal[15] [ 0: (29)  ][ 1: received<4>(78) (28)  ][ 2: received<3>(79) (27)  ][ 3:  
-           UARTReceiver/count_cmp_eq0000(80)  ][ 4: UARTReceiver/bitCounter<0>(81)  ][ 5: received<2>(82)  
-           (23)  ][ 6: UARTReceiver/bitCounter<1>(83)  ][ 7: UARTReceiver/bitCounter<2>(84)  ][ 8:  
-           UARTReceiver/bitsReceived<7>(85)  ][ 9: received<1>(86) (22)  ][ 10: received<0>(87) (21)  ][ 11:  
-           received<7>(88) (20)  ][ 12: UARTReceiver/bitsReceived<6>(89)  ][ 13: received<6>(90) (19)  ] 
-           [ 14: received<5>(91) (18)  ][ 15: UARTReceiver/bitsReceived<5>(92)  ]
+Signal[14] [Display<10>(87),Display<10>(21)] [Display<11>(88),Display<11>(20)]  
+           [Display<12>(79),Display<12>(27)] [Display<13>(90),Display<13>(19)]  
+           [Display<14>(86),Display<14>(22)] [Display<15>(82),Display<15>(23)]  
+           [Display<8>(77),Display<8>(29)] [Display<9>(78),Display<9>(28)] [UARTReceiver/state_or00001(92)]  
+           [UARTReceiver/state<1>(89)] [UARTReceiver/state<0>(85)] [UARTReceiver/bitCounter<0>(84)]  
+           [UARTReceiver/bitCounter<1>(83)] [UARTReceiver/bitCounter<2>(81)] 
+Signal[14] [ 0: Display<8>(77) Display<8>(29)  ][ 1: Display<9>(78) Display<9>(28)  ][ 2: Display<12>(79)  
+           Display<12>(27)  ][ 3:  ][ 4: UARTReceiver/bitCounter<2>(81)  ][ 5: Display<15>(82)  
+           Display<15>(23)  ][ 6: UARTReceiver/bitCounter<1>(83)  ][ 7: UARTReceiver/bitCounter<0>(84)  ] 
+           [ 8: UARTReceiver/state<0>(85)  ][ 9: Display<14>(86) Display<14>(22)  ][ 10: Display<10>(87)  
+           Display<10>(21)  ][ 11: Display<11>(88) Display<11>(20)  ][ 12: UARTReceiver/state<1>(89)  ][ 13:  
+           Display<13>(90) Display<13>(19)  ][ 14: (18)  ][ 15: UARTReceiver/state_or00001(92)  ]
 ----------------- B l o c k 3 ------------------
 PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/7), Mcell(0/16)
 PLApts[0/0]

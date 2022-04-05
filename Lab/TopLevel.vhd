@@ -35,14 +35,15 @@ entity TopLevel is
 	Port ( 
 		Clock : in  STD_LOGIC;
 		Data : in  STD_LOGIC;
-		Display : out STD_LOGIC_VECTOR (15 downto 0)
+		Display : out STD_LOGIC_VECTOR (15 downto 0);
+		Received : inout STD_LOGIC_VECTOR (7 downto 0) 
 	);	
 end TopLevel;
 
 architecture Behavioral of TopLevel is
 	
 	-- UART controller
-	COMPONENT UARTReceiverVHDL
+	COMPONENT UARTReceiverVHDL 
    PORT(
 		clock : IN  std_logic;
 		data_in : IN  std_logic;
@@ -71,7 +72,7 @@ architecture Behavioral of TopLevel is
 	signal divClock : STD_LOGIC;	-- Divided clock
 	
 	signal updateDisplay : std_logic := '0';
-	signal received : STD_LOGIC_VECTOR (7 downto 0);	
+	--signal received : STD_LOGIC_VECTOR (7 downto 0);
 	
 	signal LowerBCD : std_logic_vector (3 downto 0);
 	signal UpperBCD : std_logic_vector (3 downto 0);

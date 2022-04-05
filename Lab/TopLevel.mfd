@@ -1,608 +1,640 @@
 MDF Database:  version 1.0
 MDF_INFO | TopLevel | XC2C64A-5-VQ44
-MACROCELL | 0 | 2 | Display<0>_MC
+MACROCELL | 1 | 0 | Display<0>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 3 | received<1>  | received<3>  | received<2>
-INPUTMC | 3 | 2 | 9 | 2 | 2 | 2 | 5
+INPUTS | 3 | Received<1>  | Received<3>  | Received<2>
+INPUTMC | 3 | 0 | 10 | 1 | 9 | 0 | 9
 EQ | 2 | 
-   !Display<0> = received<1> & received<3>
-	# received<3> & received<2>;	// (2 pt, 3 inp)
+   !Display<0> = Received<1> & Received<3>
+	# Received<3> & Received<2>;	// (2 pt, 3 inp)
 
-MACROCELL | 2 | 9 | received<1>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 0 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 0
-INPUTS | 4 | UARTReceiver/bitsReceived<1>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 1 | 8 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<1>.D = UARTReceiver/bitsReceived<1>;	// (1 pt, 1 inp)
-    received<1>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 0 | 10 | Received<1>_MC
+ATTRIBUTES | 2148270882 | 0
+OUTPUTMC | 8 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 4 | 1 | 5 | 0 | 2 | 0 | 8
+INPUTS | 8 | UARTReceiver/bitsReceived<1>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 8 | 0 | 15 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   Received<1>.D = UARTReceiver/bitsReceived<1>;	// (1 pt, 1 inp)
+    Received<1>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// PTC	(1 pt, 7 inp)
 
-MACROCELL | 1 | 8 | UARTReceiver/bitsReceived<1>_MC
+MACROCELL | 0 | 15 | UARTReceiver/bitsReceived<1>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 1 | 8 | 2 | 9
+OUTPUTMC | 2 | 0 | 15 | 0 | 10
 INPUTS | 7 | UARTReceiver/bitsReceived<1>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 1 | 8 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<1>.D = !UARTReceiver/bitsReceived<1>
 	$ UARTReceiver/bitsReceived<1> & !Data & 
 	UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<1> & 
-	UARTReceiver/bitCounter<2>
+	UARTReceiver/bitCounter<0> & !UARTReceiver/bitCounter<1> & 
+	!UARTReceiver/bitCounter<2>
 	# !UARTReceiver/bitsReceived<1> & Data & 
 	UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<1> & 
-	UARTReceiver/bitCounter<2>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<1>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 0 | 3 | UARTReceiver/state<1>_MC
-ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 25 | 0 | 6 | 0 | 7 | 2 | 4 | 0 | 5 | 1 | 14 | 2 | 6 | 2 | 7 | 1 | 13 | 0 | 3 | 1 | 8 | 2 | 9 | 1 | 2 | 2 | 2 | 1 | 3 | 2 | 5 | 2 | 15 | 2 | 14 | 2 | 12 | 2 | 13 | 2 | 8 | 2 | 11 | 1 | 6 | 2 | 1 | 1 | 10 | 2 | 10
-INPUTS | 3 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | Data
-INPUTMC | 2 | 0 | 3 | 1 | 15
-INPUTP | 1 | 51
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   UARTReceiver/state<1>.D = UARTReceiver/state<1> & !UARTReceiver/state<0>
-	# !Data & !UARTReceiver/state<1> & 
-	UARTReceiver/state<0>;	// (2 pt, 3 inp)
-    UARTReceiver/state<1>.LH = !N_PZ_90 & UARTReceiver/state_or000012;	// CTC	(1 pt, 2 inp)
-
-MACROCELL | 1 | 15 | UARTReceiver/state<0>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 29 | 1 | 15 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 6 | 0 | 7 | 2 | 4 | 0 | 5 | 1 | 14 | 2 | 6 | 2 | 7 | 1 | 13 | 0 | 3 | 1 | 8 | 2 | 9 | 1 | 2 | 2 | 2 | 1 | 3 | 2 | 5 | 2 | 15 | 2 | 14 | 2 | 12 | 2 | 13 | 2 | 8 | 2 | 11 | 1 | 6 | 2 | 1 | 1 | 10 | 2 | 10
-INPUTS | 3 | UARTReceiver/state<0>  | N_PZ_90  | UARTReceiver/state_or000012
-INPUTMC | 3 | 1 | 15 | 1 | 13 | 0 | 5
-EQ | 2 | 
-   UARTReceiver/state<0>.D = !UARTReceiver/state<0>;	// (1 pt, 1 inp)
-    UARTReceiver/state<0>.LH = !N_PZ_90 & UARTReceiver/state_or000012;	// PTC	(1 pt, 2 inp)
-
-MACROCELL | 1 | 13 | N_PZ_90_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 6 | 0 | 7 | 1 | 15
-INPUTS | 4 | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_cmp_eq0000
-INPUTMC | 3 | 0 | 3 | 1 | 15 | 2 | 3
-INPUTP | 1 | 51
-EQ | 4 | 
-   N_PZ_90 = Data & !UARTReceiver/state<1> & 
-	!UARTReceiver/state<0>
-	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!UARTReceiver/count_cmp_eq0000;	// (2 pt, 4 inp)
-
-MACROCELL | 2 | 3 | UARTReceiver/count_cmp_eq0000_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 1 | 13
-INPUTS | 4 | UARTReceiver/bitCounter<0>  | N_PZ_86  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 4 | 2 | 4 | 0 | 4 | 2 | 6 | 2 | 7
-EQ | 4 | 
-   UARTReceiver/count_cmp_eq0000 = UARTReceiver/bitCounter<0> & !N_PZ_86 & 
-	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2>
-	# !UARTReceiver/bitCounter<0> & N_PZ_86 & 
-	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2>;	// (2 pt, 4 inp)
-
-MACROCELL | 2 | 4 | UARTReceiver/bitCounter<0>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 12 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 3 | 1 | 8 | 1 | 2 | 1 | 3 | 2 | 15 | 2 | 12 | 2 | 8 | 1 | 6 | 1 | 10
-INPUTS | 5 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | N_PZ_86  | N_PZ_115
-INPUTMC | 5 | 0 | 3 | 1 | 15 | 2 | 4 | 0 | 4 | 1 | 14
-EQ | 5 | 
-   UARTReceiver/bitCounter<0>.D = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	UARTReceiver/bitCounter<0> & !N_PZ_86
-	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!UARTReceiver/bitCounter<0> & N_PZ_86;	// (2 pt, 4 inp)
-    UARTReceiver/bitCounter<0>.LH = N_PZ_115;	// PTC	(1 pt, 1 inp)
-
-MACROCELL | 0 | 4 | N_PZ_86_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 13 | 2 | 4 | 0 | 5 | 2 | 6 | 2 | 7 | 2 | 3 | 2 | 9 | 2 | 2 | 2 | 5 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1 | 2 | 10
-INPUTS | 5 | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
-INPUTMC | 5 | 0 | 7 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 6
-EQ | 3 | 
-   N_PZ_86 = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/bitCounter<0> & !UARTReceiver/bitCounter<1> & 
+	!UARTReceiver/bitCounter<2>;	// (3 pt, 7 inp)
+    UARTReceiver/bitsReceived<1>.LH = !UARTReceiver/count_add0000<3> & 
 	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
-	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// (1 pt, 5 inp)
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 0 | 7 | UARTReceiver/count_add0000<3>_MC
+MACROCELL | 2 | 12 | UARTReceiver/state<1>_MC
+ATTRIBUTES | 2148008736 | 0
+OUTPUTMC | 26 | 2 | 8 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 3 | 1 | 13 | 1 | 10 | 1 | 14 | 2 | 15 | 1 | 15 | 2 | 12 | 2 | 7 | 2 | 6 | 2 | 4 | 0 | 15 | 0 | 10 | 0 | 5 | 0 | 14 | 0 | 9 | 0 | 3 | 0 | 13 | 0 | 11 | 0 | 7 | 0 | 12 | 0 | 4 | 0 | 6
+INPUTS | 6 | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/state_or00007  | UARTReceiver/state_or00001  | UARTReceiver/state_or00008
+INPUTMC | 5 | 2 | 12 | 2 | 8 | 1 | 14 | 2 | 15 | 1 | 15
+INPUTP | 1 | 51
+EQ | 4 | 
+   UARTReceiver/state<1>.D = !Data & !UARTReceiver/state<1> & 
+	UARTReceiver/state<0>;	// (1 pt, 3 inp)
+    UARTReceiver/state<1>.LH = UARTReceiver/state_or00007 & 
+	!UARTReceiver/state_or00001 & UARTReceiver/state_or00008;	// PTC	(1 pt, 3 inp)
+
+MACROCELL | 2 | 8 | UARTReceiver/state<0>_MC
+ATTRIBUTES | 2148008736 | 0
+OUTPUTMC | 25 | 2 | 8 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 13 | 1 | 10 | 1 | 14 | 2 | 15 | 1 | 15 | 2 | 12 | 2 | 7 | 2 | 6 | 2 | 4 | 0 | 15 | 0 | 10 | 0 | 5 | 0 | 14 | 0 | 9 | 0 | 3 | 0 | 13 | 0 | 11 | 0 | 7 | 0 | 12 | 0 | 4 | 0 | 6
+INPUTS | 5 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/state_or00007  | UARTReceiver/state_or00001  | UARTReceiver/state_or00008
+INPUTMC | 5 | 2 | 12 | 2 | 8 | 1 | 14 | 2 | 15 | 1 | 15
+EQ | 3 | 
+   UARTReceiver/state<0>.D = !UARTReceiver/state<1> & !UARTReceiver/state<0>;	// (1 pt, 2 inp)
+    UARTReceiver/state<0>.LH = UARTReceiver/state_or00007 & 
+	!UARTReceiver/state_or00001 & UARTReceiver/state_or00008;	// PTC	(1 pt, 3 inp)
+
+MACROCELL | 1 | 14 | UARTReceiver/state_or00007_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 5
-INPUTS | 9 | UARTReceiver/count_add0000<3>  | UARTReceiver/state<0>  | N_PZ_90  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | Data  | UARTReceiver/state<1>  | UARTReceiver/count_add0000<4>
-INPUTMC | 8 | 0 | 7 | 1 | 15 | 1 | 13 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 3 | 0 | 6
+OUTPUTMC | 3 | 1 | 3 | 2 | 8 | 2 | 12
+INPUTS | 7 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 7 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   UARTReceiver/state_or00007 = UARTReceiver/state<1>
+	# !UARTReceiver/state<0>
+	# UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & !UARTReceiver/count_add0000<4>;	// (3 pt, 7 inp)
+
+MACROCELL | 1 | 3 | UARTReceiver/count_add0000<3>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 9 | 1 | 3 | 1 | 13 | 1 | 10 | 1 | 14 | 1 | 15 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 7 | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state_or00007
+INPUTMC | 6 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 2 | 12 | 1 | 14
 INPUTP | 1 | 51
 EQ | 11 | 
-   !UARTReceiver/count_add0000<3> = !UARTReceiver/count_add0000<3>
-	$ !UARTReceiver/state<0> & !N_PZ_90 & 
-	UARTReceiver/count_add0000<3>
-	# UARTReceiver/state<0> & UARTReceiver/count<0> & 
-	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2>
-	# N_PZ_90 & UARTReceiver/count<0> & 
-	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2>
+   !UARTReceiver/count_add0000<3> = !UARTReceiver/count_add0000<3> & 
+	!UARTReceiver/count<0>
+	# !UARTReceiver/count_add0000<3> & 
+	!UARTReceiver/count_add0000<1>
+	# !UARTReceiver/count_add0000<3> & 
+	!UARTReceiver/count_add0000<2>
 	# !Data & !UARTReceiver/state<1> & 
-	UARTReceiver/state<0> & UARTReceiver/count_add0000<3> & 
-	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
-	!UARTReceiver/count_add0000<2> & !UARTReceiver/count_add0000<4>;	// (5 pt, 9 inp)
+	UARTReceiver/state_or00007
+	# UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & UARTReceiver/count_add0000<1> & 
+	UARTReceiver/count_add0000<2>;	// (5 pt, 7 inp)
 
-MACROCELL | 0 | 15 | UARTReceiver/count<0>_MC
+MACROCELL | 1 | 6 | UARTReceiver/count<0>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 5
-INPUTS | 3 | UARTReceiver/count<0>  | UARTReceiver/state<0>  | N_PZ_90
-INPUTMC | 3 | 0 | 15 | 1 | 15 | 1 | 13
-EQ | 2 | 
+OUTPUTMC | 12 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 3 | 1 | 13 | 1 | 10 | 1 | 14 | 1 | 15 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 4 | UARTReceiver/count<0>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>
+INPUTMC | 3 | 1 | 6 | 2 | 12 | 2 | 8
+INPUTP | 1 | 51
+EQ | 3 | 
    !UARTReceiver/count<0> = UARTReceiver/count<0>
-	# !UARTReceiver/state<0> & !N_PZ_90;	// (2 pt, 3 inp)
+	# !Data & !UARTReceiver/state<1> & 
+	!UARTReceiver/state<0>;	// (2 pt, 4 inp)
 
-MACROCELL | 0 | 14 | UARTReceiver/count_add0000<1>_MC
+MACROCELL | 1 | 2 | UARTReceiver/count_add0000<1>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 0 | 14 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 5
-INPUTS | 4 | UARTReceiver/count<0>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<1>  | N_PZ_90
-INPUTMC | 4 | 0 | 15 | 1 | 15 | 0 | 14 | 1 | 13
+OUTPUTMC | 11 | 1 | 2 | 1 | 8 | 1 | 3 | 1 | 13 | 1 | 10 | 1 | 14 | 1 | 15 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 5 | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>
+INPUTMC | 4 | 1 | 6 | 1 | 2 | 2 | 12 | 2 | 8
+INPUTP | 1 | 51
 EQ | 4 | 
-   UARTReceiver/count_add0000<1> = UARTReceiver/count<0>
-	$ UARTReceiver/state<0> & 
-	UARTReceiver/count_add0000<1>
-	# N_PZ_90 & UARTReceiver/count_add0000<1>;	// (3 pt, 4 inp)
+   !UARTReceiver/count_add0000<1> = UARTReceiver/count<0>
+	$ !UARTReceiver/count_add0000<1>
+	# !Data & !UARTReceiver/state<1> & 
+	!UARTReceiver/state<0>;	// (3 pt, 5 inp)
 
-MACROCELL | 0 | 13 | UARTReceiver/count_add0000<2>_MC
+MACROCELL | 1 | 8 | UARTReceiver/count_add0000<2>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 5 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 5
-INPUTS | 5 | UARTReceiver/state<0>  | N_PZ_90  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<1>
-INPUTMC | 5 | 1 | 15 | 1 | 13 | 0 | 15 | 0 | 13 | 0 | 14
-EQ | 7 | 
-   !UARTReceiver/count_add0000<2> = !UARTReceiver/state<0> & !N_PZ_90
-	# !UARTReceiver/count<0> & 
+OUTPUTMC | 10 | 1 | 8 | 1 | 3 | 1 | 13 | 1 | 10 | 1 | 14 | 1 | 15 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 6 | UARTReceiver/count<0>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<1>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>
+INPUTMC | 5 | 1 | 6 | 1 | 8 | 1 | 2 | 2 | 12 | 2 | 8
+INPUTP | 1 | 51
+EQ | 8 | 
+   !UARTReceiver/count_add0000<2> = !UARTReceiver/count<0> & 
 	!UARTReceiver/count_add0000<2>
 	# !UARTReceiver/count_add0000<1> & 
 	!UARTReceiver/count_add0000<2>
+	# !Data & !UARTReceiver/state<1> & 
+	!UARTReceiver/state<0>
 	# UARTReceiver/count<0> & 
-	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2>;	// (4 pt, 5 inp)
+	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2>;	// (4 pt, 6 inp)
 
-MACROCELL | 0 | 6 | UARTReceiver/count_add0000<4>_MC
+MACROCELL | 1 | 10 | UARTReceiver/count_add0000<4>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 5
-INPUTS | 9 | UARTReceiver/count_add0000<4>  | UARTReceiver/state<0>  | N_PZ_90  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | Data  | UARTReceiver/state<1>
-INPUTMC | 8 | 0 | 6 | 1 | 15 | 1 | 13 | 0 | 7 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 3
+OUTPUTMC | 8 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 9 | UARTReceiver/count_add0000<4>  | N_PZ_113  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>
+INPUTMC | 8 | 1 | 10 | 1 | 13 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8
 INPUTP | 1 | 51
-EQ | 17 | 
+EQ | 13 | 
    !UARTReceiver/count_add0000<4> = !UARTReceiver/count_add0000<4>
-	$ !UARTReceiver/state<0> & !N_PZ_90 & 
-	UARTReceiver/count_add0000<4>
+	$ UARTReceiver/count_add0000<4> & N_PZ_113
+	# !Data & !UARTReceiver/state<1> & 
+	!UARTReceiver/state<0> & UARTReceiver/count_add0000<4>
+	# Data & UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & UARTReceiver/count_add0000<1> & 
+	UARTReceiver/count_add0000<2> & !N_PZ_113
+	# UARTReceiver/state<1> & 
+	UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2> & !N_PZ_113
 	# UARTReceiver/state<0> & 
 	UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
-	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2>
-	# N_PZ_90 & UARTReceiver/count_add0000<3> & 
-	UARTReceiver/count<0> & UARTReceiver/count_add0000<1> & 
-	UARTReceiver/count_add0000<2>
-	# !Data & !UARTReceiver/state<0> & 
+	UARTReceiver/count_add0000<1> & UARTReceiver/count_add0000<2> & !N_PZ_113;	// (6 pt, 9 inp)
+
+MACROCELL | 1 | 13 | N_PZ_113_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 1 | 10
+INPUTS | 8 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>  | Data
+INPUTMC | 7 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+INPUTP | 1 | 51
+EQ | 8 | 
+   N_PZ_113 = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
 	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
 	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
 	UARTReceiver/count_add0000<4>
-	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
+	# !Data & !UARTReceiver/state<1> & 
+	UARTReceiver/state<0> & UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & !UARTReceiver/count_add0000<4>;	// (2 pt, 8 inp)
+
+MACROCELL | 2 | 15 | UARTReceiver/state_or00001_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 2 | 8 | 2 | 12
+INPUTS | 3 | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>
+INPUTMC | 2 | 2 | 12 | 2 | 8
+INPUTP | 1 | 51
+EQ | 2 | 
+   UARTReceiver/state_or00001 = Data & !UARTReceiver/state<1> & 
+	!UARTReceiver/state<0>;	// (1 pt, 3 inp)
+
+MACROCELL | 1 | 15 | UARTReceiver/state_or00008_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 2 | 8 | 2 | 12
+INPUTS | 7 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 7 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   UARTReceiver/state_or00008 = !UARTReceiver/state<1>
+	# UARTReceiver/state<0> & 
 	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
 	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
-	UARTReceiver/count_add0000<4>;	// (6 pt, 9 inp)
+	UARTReceiver/count_add0000<4>;	// (2 pt, 7 inp)
 
-MACROCELL | 1 | 14 | N_PZ_115_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 2 | 4 | 2 | 6 | 2 | 7
-INPUTS | 4 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/state_or000012  | Data
-INPUTMC | 3 | 0 | 3 | 1 | 15 | 0 | 5
-INPUTP | 1 | 51
-EQ | 4 | 
-   N_PZ_115 = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	UARTReceiver/state_or000012
-	# !Data & !UARTReceiver/state<1> & 
-	UARTReceiver/state<0> & UARTReceiver/state_or000012;	// (2 pt, 4 inp)
-
-MACROCELL | 0 | 5 | UARTReceiver/state_or000012_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 1 | 14 | 1 | 15
-INPUTS | 8 | UARTReceiver/state<0>  | UARTReceiver/state<1>  | N_PZ_86  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
-INPUTMC | 8 | 1 | 15 | 0 | 3 | 0 | 4 | 0 | 7 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 6
-EQ | 6 | 
-   UARTReceiver/state_or000012 = !UARTReceiver/state<0>
-	# UARTReceiver/state<1> & N_PZ_86
-	# !UARTReceiver/state<1> & 
-	UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
-	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
-	!UARTReceiver/count_add0000<4>;	// (3 pt, 8 inp)
+MACROCELL | 2 | 7 | UARTReceiver/bitCounter<0>_MC
+ATTRIBUTES | 2282226432 | 0
+OUTPUTMC | 11 | 2 | 7 | 2 | 6 | 2 | 4 | 0 | 15 | 0 | 5 | 0 | 14 | 0 | 3 | 0 | 13 | 0 | 7 | 0 | 4 | 0 | 6
+INPUTS | 3 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>
+INPUTMC | 3 | 2 | 12 | 2 | 8 | 2 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   UARTReceiver/bitCounter<0>.D = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
+	!UARTReceiver/bitCounter<0>;	// (1 pt, 3 inp)
+    UARTReceiver/bitCounter<0>.LH = N_PZ_113;	// CTC	(1 pt, 1 inp)
 
 MACROCELL | 2 | 6 | UARTReceiver/bitCounter<1>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 11 | 2 | 6 | 2 | 7 | 2 | 3 | 1 | 8 | 1 | 2 | 1 | 3 | 2 | 15 | 2 | 12 | 2 | 8 | 1 | 6 | 1 | 10
-INPUTS | 6 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | N_PZ_86  | N_PZ_115
-INPUTMC | 6 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 0 | 4 | 1 | 14
-EQ | 7 | 
+ATTRIBUTES | 2282226432 | 0
+OUTPUTMC | 10 | 2 | 6 | 2 | 4 | 0 | 15 | 0 | 5 | 0 | 14 | 0 | 3 | 0 | 13 | 0 | 7 | 0 | 4 | 0 | 6
+INPUTS | 4 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>
+INPUTMC | 4 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
    UARTReceiver/bitCounter<1>.D = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<1>
+	UARTReceiver/bitCounter<0> & !UARTReceiver/bitCounter<1>
 	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!N_PZ_86 & UARTReceiver/bitCounter<1>
-	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	UARTReceiver/bitCounter<0> & N_PZ_86 & !UARTReceiver/bitCounter<1>;	// (3 pt, 5 inp)
-    UARTReceiver/bitCounter<1>.LH = N_PZ_115;	// PTC	(1 pt, 1 inp)
+	!UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<1>;	// (2 pt, 4 inp)
+    UARTReceiver/bitCounter<1>.LH = N_PZ_113;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 2 | 7 | UARTReceiver/bitCounter<2>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 10 | 2 | 7 | 2 | 3 | 1 | 8 | 1 | 2 | 1 | 3 | 2 | 15 | 2 | 12 | 2 | 8 | 1 | 6 | 1 | 10
-INPUTS | 7 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<2>  | N_PZ_86  | UARTReceiver/bitCounter<1>  | N_PZ_115
-INPUTMC | 7 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 7 | 0 | 4 | 2 | 6 | 1 | 14
-EQ | 10 | 
+MACROCELL | 2 | 4 | UARTReceiver/bitCounter<2>_MC
+ATTRIBUTES | 2282226432 | 0
+OUTPUTMC | 9 | 2 | 4 | 0 | 15 | 0 | 5 | 0 | 14 | 0 | 3 | 0 | 13 | 0 | 7 | 0 | 4 | 0 | 6
+INPUTS | 5 | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<2>  | UARTReceiver/bitCounter<1>
+INPUTMC | 5 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 8 | 
    UARTReceiver/bitCounter<2>.D = UARTReceiver/state<1> & !UARTReceiver/state<0> & 
 	!UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<2>
 	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	!N_PZ_86 & UARTReceiver/bitCounter<2>
-	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
 	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2>
 	# UARTReceiver/state<1> & !UARTReceiver/state<0> & 
-	UARTReceiver/bitCounter<0> & N_PZ_86 & UARTReceiver/bitCounter<1> & 
-	!UARTReceiver/bitCounter<2>;	// (4 pt, 6 inp)
-    UARTReceiver/bitCounter<2>.LH = N_PZ_115;	// PTC	(1 pt, 1 inp)
+	UARTReceiver/bitCounter<0> & UARTReceiver/bitCounter<1> & 
+	!UARTReceiver/bitCounter<2>;	// (3 pt, 5 inp)
+    UARTReceiver/bitCounter<2>.LH = N_PZ_113;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 2 | 2 | received<3>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 0 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 0
-INPUTS | 4 | UARTReceiver/bitsReceived<3>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 1 | 2 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<3>.D = UARTReceiver/bitsReceived<3>;	// (1 pt, 1 inp)
-    received<3>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 1 | 9 | Received<3>_MC
+ATTRIBUTES | 2282488578 | 0
+OUTPUTMC | 8 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 4 | 1 | 5 | 0 | 2 | 0 | 8
+INPUTS | 1 | UARTReceiver/bitsReceived<3>
+INPUTMC | 1 | 0 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Received<3>.D = UARTReceiver/bitsReceived<3>;	// (1 pt, 1 inp)
+    Received<3>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 7 inp)
 
-MACROCELL | 1 | 2 | UARTReceiver/bitsReceived<3>_MC
+MACROCELL | 0 | 5 | UARTReceiver/bitsReceived<3>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 1 | 2 | 2 | 2
+OUTPUTMC | 2 | 0 | 5 | 1 | 9
 INPUTS | 7 | UARTReceiver/bitsReceived<3>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 1 | 2 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 5 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<3>.D = !UARTReceiver/bitsReceived<3>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<3>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<3>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<3>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<3>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 2 | 5 | received<2>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 0 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 0
-INPUTS | 4 | UARTReceiver/bitsReceived<2>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 1 | 3 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<2>.D = UARTReceiver/bitsReceived<2>;	// (1 pt, 1 inp)
-    received<2>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 0 | 9 | Received<2>_MC
+ATTRIBUTES | 2148270882 | 0
+OUTPUTMC | 8 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 4 | 1 | 5 | 0 | 2 | 0 | 8
+INPUTS | 8 | UARTReceiver/bitsReceived<2>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 8 | 0 | 14 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   Received<2>.D = UARTReceiver/bitsReceived<2>;	// (1 pt, 1 inp)
+    Received<2>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// PTC	(1 pt, 7 inp)
 
-MACROCELL | 1 | 3 | UARTReceiver/bitsReceived<2>_MC
+MACROCELL | 0 | 14 | UARTReceiver/bitsReceived<2>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 1 | 3 | 2 | 5
+OUTPUTMC | 2 | 0 | 14 | 0 | 9
 INPUTS | 7 | UARTReceiver/bitsReceived<2>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 1 | 3 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 14 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<2>.D = !UARTReceiver/bitsReceived<2>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<2>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<2>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<2>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<2>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 0 | 9 | Display<10>_MC
+MACROCELL | 2 | 10 | Display<10>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<6>  | received<7>  | received<4>
-INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1
-EQ | 6 | 
-   Display<10> = received<5> & received<6> & !received<7> & 
-	received<4>
-	# !received<5> & received<6> & !received<7> & 
-	!received<4>
-	# !received<5> & !received<6> & !received<7> & 
-	received<4>;	// (3 pt, 4 inp)
+INPUTS | 4 | Received<5>  | Received<6>  | Received<7>  | Received<4>
+INPUTMC | 4 | 1 | 12 | 0 | 11 | 0 | 12 | 1 | 11
+EQ | 4 | 
+   !Display<10> = !Received<5> & !Received<6>
+	# !Received<6> & !Received<7>
+	# Received<5> & !Received<7> & Received<4>
+	# !Received<5> & !Received<7> & !Received<4>;	// (4 pt, 4 inp)
 
-MACROCELL | 2 | 14 | received<5>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 9 | 0 | 12 | 1 | 12 | 1 | 11 | 1 | 9 | 1 | 7 | 0 | 11 | 0 | 10
-INPUTS | 4 | UARTReceiver/bitsReceived<5>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 2 | 15 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<5>.D = UARTReceiver/bitsReceived<5>;	// (1 pt, 1 inp)
-    received<5>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 1 | 12 | Received<5>_MC
+ATTRIBUTES | 2282488578 | 0
+OUTPUTMC | 8 | 2 | 10 | 2 | 11 | 2 | 2 | 2 | 13 | 2 | 9 | 2 | 5 | 2 | 0 | 2 | 1
+INPUTS | 1 | UARTReceiver/bitsReceived<5>
+INPUTMC | 1 | 0 | 3
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Received<5>.D = UARTReceiver/bitsReceived<5>;	// (1 pt, 1 inp)
+    Received<5>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 7 inp)
 
-MACROCELL | 2 | 15 | UARTReceiver/bitsReceived<5>_MC
+MACROCELL | 0 | 3 | UARTReceiver/bitsReceived<5>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 2 | 15 | 2 | 14
+OUTPUTMC | 2 | 0 | 3 | 1 | 12
 INPUTS | 7 | UARTReceiver/bitsReceived<5>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 2 | 15 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 3 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<5>.D = !UARTReceiver/bitsReceived<5>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<5>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<5>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<5>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<5>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 2 | 13 | received<6>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 9 | 0 | 12 | 1 | 12 | 1 | 11 | 1 | 9 | 1 | 7 | 0 | 11 | 0 | 10
-INPUTS | 4 | UARTReceiver/bitsReceived<6>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 2 | 12 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<6>.D = UARTReceiver/bitsReceived<6>;	// (1 pt, 1 inp)
-    received<6>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 0 | 11 | Received<6>_MC
+ATTRIBUTES | 2148270882 | 0
+OUTPUTMC | 8 | 2 | 10 | 2 | 11 | 2 | 2 | 2 | 13 | 2 | 9 | 2 | 5 | 2 | 0 | 2 | 1
+INPUTS | 8 | UARTReceiver/bitsReceived<6>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 8 | 0 | 13 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   Received<6>.D = UARTReceiver/bitsReceived<6>;	// (1 pt, 1 inp)
+    Received<6>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// PTC	(1 pt, 7 inp)
 
-MACROCELL | 2 | 12 | UARTReceiver/bitsReceived<6>_MC
+MACROCELL | 0 | 13 | UARTReceiver/bitsReceived<6>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 2 | 12 | 2 | 13
+OUTPUTMC | 2 | 0 | 13 | 0 | 11
 INPUTS | 7 | UARTReceiver/bitsReceived<6>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 2 | 12 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 13 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<6>.D = !UARTReceiver/bitsReceived<6>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<6>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<6>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<6>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<6>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 2 | 11 | received<7>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 8 | 0 | 9 | 0 | 12 | 1 | 12 | 1 | 11 | 1 | 9 | 1 | 7 | 0 | 11 | 0 | 10
-INPUTS | 4 | UARTReceiver/bitsReceived<7>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 2 | 8 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<7>.D = UARTReceiver/bitsReceived<7>;	// (1 pt, 1 inp)
-    received<7>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 0 | 12 | Received<7>_MC
+ATTRIBUTES | 2148270882 | 0
+OUTPUTMC | 8 | 2 | 10 | 2 | 11 | 2 | 2 | 2 | 13 | 2 | 9 | 2 | 5 | 2 | 0 | 2 | 1
+INPUTS | 8 | UARTReceiver/bitsReceived<7>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/count_add0000<3>  | UARTReceiver/count<0>  | UARTReceiver/count_add0000<1>  | UARTReceiver/count_add0000<2>  | UARTReceiver/count_add0000<4>
+INPUTMC | 8 | 0 | 7 | 2 | 12 | 2 | 8 | 1 | 3 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 10
+EQ | 5 | 
+   Received<7>.D = UARTReceiver/bitsReceived<7>;	// (1 pt, 1 inp)
+    Received<7>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// PTC	(1 pt, 7 inp)
 
-MACROCELL | 2 | 8 | UARTReceiver/bitsReceived<7>_MC
+MACROCELL | 0 | 7 | UARTReceiver/bitsReceived<7>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 2 | 8 | 2 | 11
+OUTPUTMC | 2 | 0 | 7 | 0 | 12
 INPUTS | 7 | UARTReceiver/bitsReceived<7>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 2 | 8 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 7 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<7>.D = !UARTReceiver/bitsReceived<7>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<7>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
-	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
+	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<7>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<7>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<7>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 2 | 1 | received<4>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 7 | 0 | 9 | 0 | 12 | 1 | 12 | 1 | 11 | 1 | 9 | 1 | 7 | 0 | 10
-INPUTS | 4 | UARTReceiver/bitsReceived<4>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 1 | 6 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<4>.D = UARTReceiver/bitsReceived<4>;	// (1 pt, 1 inp)
-    received<4>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 1 | 11 | Received<4>_MC
+ATTRIBUTES | 2282488578 | 0
+OUTPUTMC | 7 | 2 | 10 | 2 | 11 | 2 | 2 | 2 | 13 | 2 | 9 | 2 | 5 | 2 | 1
+INPUTS | 1 | UARTReceiver/bitsReceived<4>
+INPUTMC | 1 | 0 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Received<4>.D = UARTReceiver/bitsReceived<4>;	// (1 pt, 1 inp)
+    Received<4>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 7 inp)
 
-MACROCELL | 1 | 6 | UARTReceiver/bitsReceived<4>_MC
+MACROCELL | 0 | 4 | UARTReceiver/bitsReceived<4>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 1 | 6 | 2 | 1
+OUTPUTMC | 2 | 0 | 4 | 1 | 11
 INPUTS | 7 | UARTReceiver/bitsReceived<4>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 1 | 6 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 4 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<4>.D = !UARTReceiver/bitsReceived<4>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<4>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<4>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<4>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<4>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 0 | 12 | Display<11>_MC
+MACROCELL | 2 | 11 | Display<11>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<7>  | received<4>  | received<5>  | received<6>
-INPUTMC | 4 | 2 | 11 | 2 | 1 | 2 | 14 | 2 | 13
-EQ | 3 | 
-   Display<11> = !received<7> & received<4>
-	# !received<5> & received<6> & !received<7>
-	# !received<5> & !received<6> & received<4>;	// (3 pt, 4 inp)
-
-MACROCELL | 1 | 12 | Display<12>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<6>  | received<7>  | received<4>
-INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1
-EQ | 3 | 
-   Display<12> = !received<5> & !received<6> & !received<7>
-	# received<5> & received<6> & !received<7> & 
-	received<4>;	// (2 pt, 4 inp)
-
-MACROCELL | 1 | 11 | Display<13>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<6>  | received<7>  | received<4>
-INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1
+INPUTS | 4 | Received<6>  | Received<7>  | Received<5>  | Received<4>
+INPUTMC | 4 | 0 | 11 | 0 | 12 | 1 | 12 | 1 | 11
 EQ | 4 | 
-   !Display<13> = !received<5> & !received<6>
-	# !received<6> & !received<7>
-	# received<5> & !received<7> & received<4>
-	# !received<5> & !received<7> & !received<4>;	// (4 pt, 4 inp)
+   !Display<11> = Received<6> & !Received<7>
+	# Received<5> & !Received<7> & Received<4>
+	# !Received<5> & !Received<6> & Received<7>
+	# !Received<5> & !Received<7> & !Received<4>;	// (4 pt, 4 inp)
 
-MACROCELL | 1 | 9 | Display<14>_MC
+MACROCELL | 2 | 2 | Display<12>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<6>  | received<7>  | received<4>
-INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1
-EQ | 4 | 
-   Display<14> = !received<5> & received<6> & !received<7> & 
-	!received<4>
-	# !received<5> & !received<6> & !received<7> & 
-	received<4>;	// (2 pt, 4 inp)
+INPUTS | 4 | Received<5>  | Received<6>  | Received<7>  | Received<4>
+INPUTMC | 4 | 1 | 12 | 0 | 11 | 0 | 12 | 1 | 11
+EQ | 6 | 
+   Display<12> = Received<5> & Received<6> & !Received<7> & 
+	Received<4>
+	# !Received<5> & Received<6> & !Received<7> & 
+	!Received<4>
+	# !Received<5> & !Received<6> & !Received<7> & 
+	Received<4>;	// (3 pt, 4 inp)
 
-MACROCELL | 1 | 7 | Display<15>_MC
+MACROCELL | 2 | 13 | Display<13>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<7>  | received<4>  | received<6>
-INPUTMC | 4 | 2 | 14 | 2 | 11 | 2 | 1 | 2 | 13
+INPUTS | 4 | Received<7>  | Received<4>  | Received<5>  | Received<6>
+INPUTMC | 4 | 0 | 12 | 1 | 11 | 1 | 12 | 0 | 11
+EQ | 3 | 
+   Display<13> = !Received<7> & Received<4>
+	# !Received<5> & Received<6> & !Received<7>
+	# !Received<5> & !Received<6> & Received<4>;	// (3 pt, 4 inp)
+
+MACROCELL | 2 | 9 | Display<14>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Received<5>  | Received<7>  | Received<4>  | Received<6>
+INPUTMC | 4 | 1 | 12 | 0 | 12 | 1 | 11 | 0 | 11
 EQ | 5 | 
-   Display<15> = received<5> & !received<7> & received<4>
-	# received<5> & !received<6> & !received<7> & 
-	!received<4>
-	# !received<5> & !received<6> & !received<7> & 
-	received<4>;	// (3 pt, 4 inp)
+   Display<14> = Received<5> & !Received<7> & Received<4>
+	# Received<5> & !Received<6> & !Received<7> & 
+	!Received<4>
+	# !Received<5> & !Received<6> & !Received<7> & 
+	Received<4>;	// (3 pt, 4 inp)
 
-MACROCELL | 0 | 1 | Display<1>_MC
+MACROCELL | 2 | 5 | Display<15>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<2>  | received<3>  | received<0>
-INPUTMC | 4 | 2 | 9 | 2 | 5 | 2 | 2 | 2 | 10
+INPUTS | 4 | Received<5>  | Received<6>  | Received<7>  | Received<4>
+INPUTMC | 4 | 1 | 12 | 0 | 11 | 0 | 12 | 1 | 11
 EQ | 3 | 
-   !Display<1> = !received<1> & !received<2>
-	# !received<3> & received<2>
-	# !received<3> & received<0>;	// (3 pt, 4 inp)
+   Display<15> = !Received<5> & !Received<6> & !Received<7>
+	# Received<5> & Received<6> & !Received<7> & 
+	Received<4>;	// (2 pt, 4 inp)
 
-MACROCELL | 2 | 10 | received<0>_MC
-ATTRIBUTES | 2148008736 | 0
-OUTPUTMC | 7 | 0 | 1 | 0 | 0 | 0 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 0
-INPUTS | 4 | UARTReceiver/bitsReceived<0>  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | N_PZ_86
-INPUTMC | 4 | 1 | 10 | 0 | 3 | 1 | 15 | 0 | 4
-EQ | 3 | 
-   received<0>.D = UARTReceiver/bitsReceived<0>;	// (1 pt, 1 inp)
-    received<0>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
-	N_PZ_86;	// PTC	(1 pt, 3 inp)
+MACROCELL | 0 | 0 | Display<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Received<1>  | Received<3>  | Received<2>  | Received<0>
+INPUTMC | 4 | 0 | 10 | 1 | 9 | 0 | 9 | 1 | 7
+EQ | 2 | 
+   Display<1> = !Received<1> & !Received<3> & Received<2> & 
+	!Received<0>;	// (1 pt, 4 inp)
 
-MACROCELL | 1 | 10 | UARTReceiver/bitsReceived<0>_MC
+MACROCELL | 1 | 7 | Received<0>_MC
+ATTRIBUTES | 2282488578 | 0
+OUTPUTMC | 7 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 4 | 1 | 5 | 0 | 2 | 0 | 8
+INPUTS | 1 | UARTReceiver/bitsReceived<0>
+INPUTMC | 1 | 0 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   Received<0>.D = UARTReceiver/bitsReceived<0>;	// (1 pt, 1 inp)
+    Received<0>.LH = UARTReceiver/state<1> & UARTReceiver/state<0> & 
+	!UARTReceiver/count_add0000<3> & UARTReceiver/count<0> & 
+	!UARTReceiver/count_add0000<1> & !UARTReceiver/count_add0000<2> & 
+	UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 7 inp)
+
+MACROCELL | 0 | 6 | UARTReceiver/bitsReceived<0>_MC
 ATTRIBUTES | 2282226432 | 0
-OUTPUTMC | 2 | 1 | 10 | 2 | 10
+OUTPUTMC | 2 | 0 | 6 | 1 | 7
 INPUTS | 7 | UARTReceiver/bitsReceived<0>  | Data  | UARTReceiver/state<1>  | UARTReceiver/state<0>  | UARTReceiver/bitCounter<0>  | UARTReceiver/bitCounter<1>  | UARTReceiver/bitCounter<2>
-INPUTMC | 6 | 1 | 10 | 0 | 3 | 1 | 15 | 2 | 4 | 2 | 6 | 2 | 7
+INPUTMC | 6 | 0 | 6 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
 INPUTP | 1 | 51
 LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
+EQ | 12 | 
    !UARTReceiver/bitsReceived<0>.D = !UARTReceiver/bitsReceived<0>
 	$ Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	!UARTReceiver/bitsReceived<0>
 	# !Data & UARTReceiver/state<1> & 
-	!UARTReceiver/state<0> & UARTReceiver/bitCounter<0> & 
-	UARTReceiver/bitCounter<1> & UARTReceiver/bitCounter<2> & 
+	!UARTReceiver/state<0> & !UARTReceiver/bitCounter<0> & 
+	!UARTReceiver/bitCounter<1> & !UARTReceiver/bitCounter<2> & 
 	UARTReceiver/bitsReceived<0>;	// (3 pt, 7 inp)
-    UARTReceiver/bitsReceived<0>.LH = N_PZ_86;	// CTC	(1 pt, 1 inp)
+    UARTReceiver/bitsReceived<0>.LH = !UARTReceiver/count_add0000<3> & 
+	UARTReceiver/count<0> & !UARTReceiver/count_add0000<1> & 
+	!UARTReceiver/count_add0000<2> & UARTReceiver/count_add0000<4>;	// CTC	(1 pt, 5 inp)
 
-MACROCELL | 0 | 0 | Display<2>_MC
+MACROCELL | 0 | 1 | Display<2>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<3>  | received<2>  | received<0>
-INPUTMC | 4 | 2 | 9 | 2 | 2 | 2 | 5 | 2 | 10
+INPUTS | 4 | Received<1>  | Received<2>  | Received<3>  | Received<0>
+INPUTMC | 4 | 0 | 10 | 0 | 9 | 1 | 9 | 1 | 7
+EQ | 4 | 
+   !Display<2> = !Received<1> & !Received<2>
+	# !Received<3> & !Received<2>
+	# Received<1> & !Received<3> & Received<0>
+	# !Received<1> & !Received<3> & !Received<0>;	// (4 pt, 4 inp)
+
+MACROCELL | 1 | 1 | Display<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Received<3>  | Received<2>  | Received<1>  | Received<0>
+INPUTMC | 4 | 1 | 9 | 0 | 9 | 0 | 10 | 1 | 7
+EQ | 4 | 
+   !Display<3> = !Received<3> & Received<2>
+	# Received<1> & !Received<3> & Received<0>
+	# !Received<1> & Received<3> & !Received<2>
+	# !Received<1> & !Received<3> & !Received<0>;	// (4 pt, 4 inp)
+
+MACROCELL | 1 | 4 | Display<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Received<1>  | Received<3>  | Received<2>  | Received<0>
+INPUTMC | 4 | 0 | 10 | 1 | 9 | 0 | 9 | 1 | 7
 EQ | 6 | 
-   Display<2> = received<1> & !received<3> & received<2> & 
-	received<0>
-	# !received<1> & !received<3> & received<2> & 
-	!received<0>
-	# !received<1> & !received<3> & !received<2> & 
-	received<0>;	// (3 pt, 4 inp)
+   Display<4> = Received<1> & !Received<3> & Received<2> & 
+	Received<0>
+	# !Received<1> & !Received<3> & Received<2> & 
+	!Received<0>
+	# !Received<1> & !Received<3> & !Received<2> & 
+	Received<0>;	// (3 pt, 4 inp)
 
-MACROCELL | 0 | 8 | Display<3>_MC
+MACROCELL | 1 | 5 | Display<5>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<3>  | received<0>  | received<1>  | received<2>
-INPUTMC | 4 | 2 | 2 | 2 | 10 | 2 | 9 | 2 | 5
+INPUTS | 4 | Received<3>  | Received<0>  | Received<1>  | Received<2>
+INPUTMC | 4 | 1 | 9 | 1 | 7 | 0 | 10 | 0 | 9
 EQ | 3 | 
-   Display<3> = !received<3> & received<0>
-	# !received<1> & !received<3> & received<2>
-	# !received<1> & !received<2> & received<0>;	// (3 pt, 4 inp)
+   Display<5> = !Received<3> & Received<0>
+	# !Received<1> & !Received<3> & Received<2>
+	# !Received<1> & !Received<2> & Received<0>;	// (3 pt, 4 inp)
 
-MACROCELL | 1 | 5 | Display<4>_MC
+MACROCELL | 0 | 2 | Display<6>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<3>  | received<2>  | received<0>
-INPUTMC | 4 | 2 | 9 | 2 | 2 | 2 | 5 | 2 | 10
-EQ | 3 | 
-   Display<4> = !received<1> & !received<3> & !received<2>
-	# received<1> & !received<3> & received<2> & 
-	received<0>;	// (2 pt, 4 inp)
-
-MACROCELL | 1 | 4 | Display<5>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<2>  | received<3>  | received<0>
-INPUTMC | 4 | 2 | 9 | 2 | 5 | 2 | 2 | 2 | 10
-EQ | 4 | 
-   !Display<5> = !received<1> & !received<2>
-	# !received<3> & !received<2>
-	# received<1> & !received<3> & received<0>
-	# !received<1> & !received<3> & !received<0>;	// (4 pt, 4 inp)
-
-MACROCELL | 1 | 1 | Display<6>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<3>  | received<2>  | received<0>
-INPUTMC | 4 | 2 | 9 | 2 | 2 | 2 | 5 | 2 | 10
-EQ | 4 | 
-   Display<6> = !received<1> & !received<3> & received<2> & 
-	!received<0>
-	# !received<1> & !received<3> & !received<2> & 
-	received<0>;	// (2 pt, 4 inp)
-
-MACROCELL | 1 | 0 | Display<7>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<1>  | received<3>  | received<0>  | received<2>
-INPUTMC | 4 | 2 | 9 | 2 | 2 | 2 | 10 | 2 | 5
+INPUTS | 4 | Received<1>  | Received<3>  | Received<0>  | Received<2>
+INPUTMC | 4 | 0 | 10 | 1 | 9 | 1 | 7 | 0 | 9
 EQ | 5 | 
-   Display<7> = received<1> & !received<3> & received<0>
-	# received<1> & !received<3> & !received<2> & 
-	!received<0>
-	# !received<1> & !received<3> & !received<2> & 
-	received<0>;	// (3 pt, 4 inp)
+   Display<6> = Received<1> & !Received<3> & Received<0>
+	# Received<1> & !Received<3> & !Received<2> & 
+	!Received<0>
+	# !Received<1> & !Received<3> & !Received<2> & 
+	Received<0>;	// (3 pt, 4 inp)
 
-MACROCELL | 0 | 11 | Display<8>_MC
+MACROCELL | 0 | 8 | Display<7>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 3 | received<5>  | received<7>  | received<6>
-INPUTMC | 3 | 2 | 14 | 2 | 11 | 2 | 13
-EQ | 2 | 
-   !Display<8> = received<5> & received<7>
-	# received<6> & received<7>;	// (2 pt, 3 inp)
-
-MACROCELL | 0 | 10 | Display<9>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | received<5>  | received<6>  | received<7>  | received<4>
-INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 1
+INPUTS | 4 | Received<1>  | Received<3>  | Received<2>  | Received<0>
+INPUTMC | 4 | 0 | 10 | 1 | 9 | 0 | 9 | 1 | 7
 EQ | 3 | 
-   !Display<9> = !received<5> & !received<6>
-	# received<6> & !received<7>
-	# !received<7> & received<4>;	// (3 pt, 4 inp)
+   Display<7> = !Received<1> & !Received<3> & !Received<2>
+	# Received<1> & !Received<3> & Received<2> & 
+	Received<0>;	// (2 pt, 4 inp)
 
-PIN | Data | 64 | 16 | LVCMOS18 | 51 | 13 | 0 | 6 | 0 | 7 | 1 | 14 | 1 | 13 | 0 | 3 | 1 | 8 | 1 | 2 | 1 | 3 | 2 | 15 | 2 | 12 | 2 | 8 | 1 | 6 | 1 | 10
-PIN | Display<0> | 536871040 | 0 | LVCMOS18 | 9
-PIN | Display<10> | 536871040 | 0 | LVCMOS18 | 1
-PIN | Display<11> | 536871040 | 0 | LVCMOS18 | 78
-PIN | Display<12> | 536871040 | 0 | LVCMOS18 | 26
-PIN | Display<13> | 536871040 | 0 | LVCMOS18 | 25
-PIN | Display<14> | 536871040 | 0 | LVCMOS18 | 23
-PIN | Display<15> | 536871040 | 0 | LVCMOS18 | 20
-PIN | Display<1> | 536871040 | 0 | LVCMOS18 | 10
-PIN | Display<2> | 536871040 | 0 | LVCMOS18 | 11
-PIN | Display<3> | 536871040 | 0 | LVCMOS18 | 2
-PIN | Display<4> | 536871040 | 0 | LVCMOS18 | 17
-PIN | Display<5> | 536871040 | 0 | LVCMOS18 | 16
-PIN | Display<6> | 536871040 | 0 | LVCMOS18 | 13
-PIN | Display<7> | 536871040 | 0 | LVCMOS18 | 12
-PIN | Display<8> | 536871040 | 0 | LVCMOS18 | 80
-PIN | Display<9> | 536871040 | 0 | LVCMOS18 | 81
+MACROCELL | 2 | 0 | Display<8>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | Received<5>  | Received<7>  | Received<6>
+INPUTMC | 3 | 1 | 12 | 0 | 12 | 0 | 11
+EQ | 2 | 
+   !Display<8> = Received<5> & Received<7>
+	# Received<6> & Received<7>;	// (2 pt, 3 inp)
+
+MACROCELL | 2 | 1 | Display<9>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Received<5>  | Received<6>  | Received<7>  | Received<4>
+INPUTMC | 4 | 1 | 12 | 0 | 11 | 0 | 12 | 1 | 11
+EQ | 2 | 
+   Display<9> = !Received<5> & Received<6> & !Received<7> & 
+	!Received<4>;	// (1 pt, 4 inp)
+
+PIN | Data | 64 | 16 | LVCMOS18 | 51 | 16 | 1 | 6 | 1 | 2 | 1 | 8 | 1 | 3 | 1 | 13 | 1 | 10 | 2 | 15 | 2 | 12 | 0 | 15 | 0 | 5 | 0 | 14 | 0 | 3 | 0 | 13 | 0 | 7 | 0 | 4 | 0 | 6
+PIN | Display<0> | 536871040 | 0 | LVCMOS18 | 12
+PIN | Display<10> | 536871040 | 0 | LVCMOS18 | 60
+PIN | Display<11> | 536871040 | 0 | LVCMOS18 | 59
+PIN | Display<12> | 536871040 | 0 | LVCMOS18 | 71
+PIN | Display<13> | 536871040 | 0 | LVCMOS18 | 56
+PIN | Display<14> | 536871040 | 0 | LVCMOS18 | 61
+PIN | Display<15> | 536871040 | 0 | LVCMOS18 | 65
+PIN | Display<1> | 536871040 | 0 | LVCMOS18 | 11
+PIN | Display<2> | 536871040 | 0 | LVCMOS18 | 10
+PIN | Display<3> | 536871040 | 0 | LVCMOS18 | 13
+PIN | Display<4> | 536871040 | 0 | LVCMOS18 | 16
+PIN | Display<5> | 536871040 | 0 | LVCMOS18 | 17
+PIN | Display<6> | 536871040 | 0 | LVCMOS18 | 9
+PIN | Display<7> | 536871040 | 0 | LVCMOS18 | 2
+PIN | Display<8> | 536871040 | 0 | LVCMOS18 | 73
+PIN | Display<9> | 536871040 | 0 | LVCMOS18 | 72
+PIN | Received<0> | 536871040 | 0 | LVCMOS18 | 20
+PIN | Received<1> | 536871040 | 0 | LVCMOS18 | 81
+PIN | Received<2> | 536871040 | 0 | LVCMOS18 | 1
+PIN | Received<3> | 536871040 | 0 | LVCMOS18 | 23
+PIN | Received<4> | 536871040 | 0 | LVCMOS18 | 25
+PIN | Received<5> | 536871040 | 0 | LVCMOS18 | 26
+PIN | Received<6> | 536871040 | 0 | LVCMOS18 | 80
+PIN | Received<7> | 536871040 | 0 | LVCMOS18 | 78
