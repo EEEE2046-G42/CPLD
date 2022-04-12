@@ -1,0 +1,17 @@
+sch2hdl -intstyle ise -family xbr -flat -suppress -vhdl TopLevelSchematic_drc.vhf -w C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.sch 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c64a-VQ44-7 TopLevelSchematic.ngc TopLevelSchematic.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevelSchematic.ngd 
+tsim -intstyle ise TopLevelSchematic TopLevelSchematic.nga 
+hprep6 -s IEEE1149 -i TopLevelSchematic 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+xst -intstyle ise -ifn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.xst" -ofn "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelSchematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c64a-VQ44-7 TopLevelSchematic.ngc TopLevelSchematic.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 TopLevelSchematic.ngd 
+tsim -intstyle ise TopLevelSchematic TopLevelSchematic.nga 
+netgen -intstyle ise -rpw 100 -ar Structure -tm TopLevelSchematic -w -dir netgen/fit -ofmt vhdl -sim TopLevelSchematic.nga TopLevelSchematic_timesim.vhd 
+netgen -intstyle ise -rpw 100 -ar Structure -tm TopLevelSchematic -w -dir netgen/fit -ofmt vhdl -sim TopLevelSchematic.nga TopLevelSchematic_timesim.vhd 

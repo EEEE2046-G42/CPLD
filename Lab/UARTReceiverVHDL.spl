@@ -4,4 +4,6 @@ data_in
 [Outputs]
 dataReceivedFlag
 =data_out[7:0]=
+=upper_out[3:0]=
+=lower_out[3:0]=
 [BiDir]

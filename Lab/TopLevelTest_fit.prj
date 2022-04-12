@@ -1,0 +1,2 @@
+vhdl work "netgen/fit/TopLevel_timesim.vhd"
+vhdl work "TopLevelTest.vhd"

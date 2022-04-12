@@ -1,7 +1,9 @@
 Pin Freeze File:  version O.87xd
 
-2C64A44VQ XC2C64A-5-VQ44
+2C64A44VQ XC2C64A-7-VQ44
+Clock S:PIN43
 Data S:PIN16
+Debug S:PIN19
 Display<0> S:PIN39
 Display<1> S:PIN38
 Display<2> S:PIN37
@@ -10,41 +12,47 @@ Display<4> S:PIN41
 Display<5> S:PIN42
 Display<6> S:PIN36
 Display<7> S:PIN34
-Display<8> S:PIN29
-Display<9> S:PIN28
-Display<10> S:PIN21
-Display<11> S:PIN20
-Display<12> S:PIN27
-Display<13> S:PIN19
-Display<14> S:PIN22
-Display<15> S:PIN23
-Received<0> S:PIN44
-Received<1> S:PIN32
-Received<2> S:PIN33
-Received<3> S:PIN1
-Received<4> S:PIN2
-Received<5> S:PIN3
-Received<6> S:PIN31
-Received<7> S:PIN30
+Display<8> S:PIN44
+Display<9> S:PIN32
+Display<10> S:PIN33
+Display<11> S:PIN1
+Display<12> S:PIN2
+Display<13> S:PIN3
+Display<14> S:PIN31
+Display<15> S:PIN30
+DivClock S:PIN18
+Received<0> S:PIN29
+Received<1> S:PIN28
+Received<2> S:PIN27
+Received<3> S:PIN23
+Received<4> S:PIN22
+Received<5> S:PIN5
+Received<6> S:PIN6
+Received<7> S:PIN8
+State_debug<0> S:PIN20
+State_debug<1> S:PIN21
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 Display<1> Display<2> Display<6> UARTReceiver/bitsReceived<5>
-		 UARTReceiver/bitsReceived<4> UARTReceiver/bitsReceived<3> UARTReceiver/bitsReceived<0> UARTReceiver/bitsReceived<7>
-		 Display<7> Received<2> Received<1> Received<6>
-		 Received<7> UARTReceiver/bitsReceived<6> UARTReceiver/bitsReceived<2> UARTReceiver/bitsReceived<1>
+PARTITION FB1_1 Display<1> Display<2> Display<6> UARTReceiver/bitCounter<1>
+		 UARTReceiver/bitCounter<0> UARTReceiver/count<0> UARTReceiver/state_FSM_FFd2 UARTReceiver/count<2>
+		 Display<7> Display<10> Display<9> Display<14>
+		 Display<15> UARTReceiver/state_FSM_FFd1 updateDisplay ClockDivider/XLXN_15
 		
-PARTITION FB2_1 Display<0> Display<3> UARTReceiver/count_add0000<1> UARTReceiver/count_add0000<3>
-		 Display<4> Display<5> UARTReceiver/count<0> Received<0>
-		 UARTReceiver/count_add0000<2> Received<3> UARTReceiver/count_add0000<4> Received<4>
-		 Received<5> N_PZ_113 UARTReceiver/state_or00007 UARTReceiver/state_or00008
+PARTITION FB2_1 Display<0> Display<3> UARTReceiver/count<3> N_PZ_211
+		 Display<4> Display<5> UARTReceiver/bitsReceived<1> Display<8>
+		 N_PZ_185 Display<11> UARTReceiver/bitCounter<2> Display<12>
+		 Display<13> UARTReceiver/bitCounter<3> UARTReceiver/count<4> UARTReceiver/count<1>
 		
-PARTITION FB3_1 Display<8> Display<9> Display<12>
-PARTITION FB3_5 UARTReceiver/bitCounter<2> Display<15> UARTReceiver/bitCounter<1> UARTReceiver/bitCounter<0>
-		 UARTReceiver/state<0> Display<14> Display<10> Display<11>
-		 UARTReceiver/state<1> Display<13>
-PARTITION FB3_16 UARTReceiver/state_or00001
+PARTITION FB3_1 Received<0> Received<1> Received<2>
+PARTITION FB3_5 UARTReceiver/bitsReceived<7> Received<3> UARTReceiver/bitsReceived<6> UARTReceiver/bitsReceived<5>
+		 UARTReceiver/bitsReceived<4> Received<4> State_debug<1> State_debug<0>
+		 UARTReceiver/bitsReceived<3> Debug DivClock UARTReceiver/bitsReceived<2>
+		
+PARTITION FB4_1 Received<5> Received<6>
+PARTITION FB4_7 Received<7>
+PARTITION FB4_15 UARTReceiver/bitsReceived<0>
 
 

@@ -5,362 +5,304 @@
 </td></tr><tr><td>
 ********** Mapped Logic **********
 </td></tr><tr><td>
+FTCPE_ClockDivider/XLXN_15: FTCPE port map (ClockDivider/XLXN_15,'0',Clock,'0','0','1');
 </td></tr><tr><td>
-Display(0) <= NOT (((Received(1) AND Received(3))
+</td></tr><tr><td>
+Debug <= Data;
+</td></tr><tr><td>
+FDCPE_Display0: FDCPE port map (Display(0),Display_D(0),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(0) <= NOT (((Received(3) AND Received(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(3) AND Received(2))));
 </td></tr><tr><td>
-</td></tr><tr><td>
-Display(1) <= (NOT Received(1) AND NOT Received(3) AND Received(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(0));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(2) <= NOT (((NOT Received(1) AND NOT Received(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(1) AND NOT Received(3) AND Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(0))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(3) <= NOT (((NOT Received(3) AND Received(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(1) AND NOT Received(3) AND Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND Received(3) AND NOT Received(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(0))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(4) <= ((Received(1) AND NOT Received(3) AND Received(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND Received(2) AND 
+FDCPE_Display1: FDCPE port map (Display(1),Display_D(1),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(1) <= ((NOT Received(3) AND NOT Received(1) AND Received(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND NOT Received(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0)));
 </td></tr><tr><td>
+FDCPE_Display2: FDCPE port map (Display(2),Display_D(2),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(2) <= NOT (((NOT Received(3) AND NOT Received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND Received(1) AND Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND NOT Received(0))));
 </td></tr><tr><td>
-Display(5) <= ((NOT Received(3) AND Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND Received(2))
+FDCPE_Display3: FDCPE port map (Display(3),Display_D(3),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(3) <= NOT (((NOT Received(3) AND Received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(2))));
+</td></tr><tr><td>
+FDCPE_Display4: FDCPE port map (Display(4),Display_D(4),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(4) <= ((NOT Received(3) AND Received(1) AND Received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND Received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND NOT Received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0)));
+</td></tr><tr><td>
+FDCPE_Display5: FDCPE port map (Display(5),Display_D(5),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(5) <= ((NOT Received(3) AND Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND Received(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(2) AND Received(0)));
 </td></tr><tr><td>
-</td></tr><tr><td>
-Display(6) <= ((Received(1) AND NOT Received(3) AND Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+FDCPE_Display6: FDCPE port map (Display(6),Display_D(6),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(6) <= ((NOT Received(3) AND Received(1) AND Received(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND Received(1) AND NOT Received(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(1) AND NOT Received(3) AND NOT Received(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND NOT Received(1) AND NOT Received(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0)));
 </td></tr><tr><td>
-</td></tr><tr><td>
-Display(7) <= ((NOT Received(1) AND NOT Received(3) AND NOT Received(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(1) AND NOT Received(3) AND Received(2) AND 
+FDCPE_Display7: FDCPE port map (Display(7),Display_D(7),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(7) <= ((NOT Received(3) AND NOT Received(1) AND NOT Received(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(3) AND Received(1) AND Received(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(0)));
 </td></tr><tr><td>
+FDCPE_Display8: FDCPE port map (Display(8),Display_D(8),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(8) <= NOT (((Received(7) AND Received(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(7) AND Received(5))));
 </td></tr><tr><td>
-Display(8) <= NOT (((Received(5) AND Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(6) AND Received(7))));
+FDCPE_Display9: FDCPE port map (Display(9),Display_D(9),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(9) <= ((NOT Received(7) AND Received(6) AND NOT Received(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND NOT Received(6) AND NOT Received(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(4)));
 </td></tr><tr><td>
+FDCPE_Display10: FDCPE port map (Display(10),Display_D(10),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(10) <= NOT (((NOT Received(7) AND NOT Received(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(6) AND NOT Received(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND Received(5) AND Received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND NOT Received(5) AND NOT Received(4))));
 </td></tr><tr><td>
-Display(9) <= (NOT Received(5) AND Received(6) AND NOT Received(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(4));
+FDCPE_Display11: FDCPE port map (Display(11),Display_D(11),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(11) <= NOT (((NOT Received(7) AND Received(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND Received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(6) AND NOT Received(5))));
 </td></tr><tr><td>
-</td></tr><tr><td>
-Display(10) <= NOT (((NOT Received(5) AND NOT Received(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(6) AND NOT Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(5) AND NOT Received(7) AND Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(7) AND NOT Received(4))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(11) <= NOT (((Received(6) AND NOT Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(5) AND NOT Received(7) AND Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(6) AND Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(7) AND NOT Received(4))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(12) <= ((Received(5) AND Received(6) AND NOT Received(7) AND 
+FDCPE_Display12: FDCPE port map (Display(12),Display_D(12),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(12) <= ((NOT Received(7) AND Received(6) AND Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND Received(6) AND NOT Received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND Received(6) AND NOT Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND NOT Received(6) AND NOT Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(4)));
 </td></tr><tr><td>
+FDCPE_Display13: FDCPE port map (Display(13),Display_D(13),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(13) <= ((NOT Received(7) AND Received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND Received(6) AND NOT Received(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(6) AND NOT Received(5) AND Received(4)));
 </td></tr><tr><td>
-Display(13) <= ((NOT Received(7) AND Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND Received(6) AND NOT Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(6) AND Received(4)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Display(14) <= ((Received(5) AND NOT Received(7) AND Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+FDCPE_Display14: FDCPE port map (Display(14),Display_D(14),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(14) <= ((NOT Received(7) AND Received(5) AND Received(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND NOT Received(6) AND Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Received(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(5) AND NOT Received(6) AND NOT Received(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND NOT Received(6) AND NOT Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(4)));
 </td></tr><tr><td>
-</td></tr><tr><td>
-Display(15) <= ((NOT Received(5) AND NOT Received(6) AND NOT Received(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Received(5) AND Received(6) AND NOT Received(7) AND 
+FDCPE_Display15: FDCPE port map (Display(15),Display_D(15),updateDisplay,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display_D(15) <= ((NOT Received(7) AND NOT Received(6) AND NOT Received(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Received(7) AND Received(6) AND Received(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Received(4)));
 </td></tr><tr><td>
+FTCPE_DivClock: FTCPE port map (DivClock,'0',ClockDivider/XLXN_15,'0','0','1');
 </td></tr><tr><td>
-N_PZ_113 <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(0) AND UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4)));
 </td></tr><tr><td>
-LDCP_Received0: LDCP port map (Received(0),UARTReceiver/bitsReceived(0),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(0) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
+N_PZ_185 <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
 </td></tr><tr><td>
-LDCP_Received1: LDCP port map (Received(1),UARTReceiver/bitsReceived(1),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(1) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
 </td></tr><tr><td>
-LDCP_Received2: LDCP port map (Received(2),UARTReceiver/bitsReceived(2),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(2) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_Received3: LDCP port map (Received(3),UARTReceiver/bitsReceived(3),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(3) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_Received4: LDCP port map (Received(4),UARTReceiver/bitsReceived(4),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(4) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_Received5: LDCP port map (Received(5),UARTReceiver/bitsReceived(5),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(5) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_Received6: LDCP port map (Received(6),UARTReceiver/bitsReceived(6),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(6) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_Received7: LDCP port map (Received(7),UARTReceiver/bitsReceived(7),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_G(7) <= (UARTReceiver/state(1) AND UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4));
-</td></tr><tr><td>
-LDCP_UARTReceiver/bitCounter0: LDCP port map (UARTReceiver/bitCounter(0),UARTReceiver/bitCounter_D(0),N_PZ_113,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(0) <= (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0));
-</td></tr><tr><td>
-LDCP_UARTReceiver/bitCounter1: LDCP port map (UARTReceiver/bitCounter(1),UARTReceiver/bitCounter_D(1),N_PZ_113,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(1) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1)));
-</td></tr><tr><td>
-LDCP_UARTReceiver/bitCounter2: LDCP port map (UARTReceiver/bitCounter(2),UARTReceiver/bitCounter_D(2),N_PZ_113,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(2) <= ((UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND UARTReceiver/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(2)));
-</td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived0: LDCP port map (UARTReceiver/bitsReceived(0),UARTReceiver/bitsReceived_D(0),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(0) <= NOT (NOT UARTReceiver/bitsReceived(0)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
+N_PZ_211 <= ((NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd1 AND UARTReceiver/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(0))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(0) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(3)));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived1: LDCP port map (UARTReceiver/bitsReceived(1),UARTReceiver/bitsReceived_D(1),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(1) <= NOT (NOT UARTReceiver/bitsReceived(1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((UARTReceiver/bitsReceived(1) AND NOT Data AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1) AND 
+FDCPE_Received0: FDCPE port map (Received(0),UARTReceiver/bitsReceived(0),DivClock,'0','0',Received_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(0) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received1: FDCPE port map (Received(1),UARTReceiver/bitsReceived(1),DivClock,'0','0',Received_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(1) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received2: FDCPE port map (Received(2),UARTReceiver/bitsReceived(2),DivClock,'0','0',Received_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(2) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received3: FDCPE port map (Received(3),UARTReceiver/bitsReceived(3),DivClock,'0','0',Received_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(3) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received4: FDCPE port map (Received(4),UARTReceiver/bitsReceived(4),DivClock,'0','0',Received_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(4) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received5: FDCPE port map (Received(5),UARTReceiver/bitsReceived(5),DivClock,'0','0',Received_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(5) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received6: FDCPE port map (Received(6),UARTReceiver/bitsReceived(6),DivClock,'0','0',Received_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(6) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_Received7: FDCPE port map (Received(7),UARTReceiver/bitsReceived(7),DivClock,'0','0',Received_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received_CE(7) <= (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4));
+</td></tr><tr><td>
+FDCPE_State_debug0: FDCPE port map (State_debug(0),State_debug_D(0),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State_debug_D(0) <= ((UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2));
+</td></tr><tr><td>
+FDCPE_State_debug1: FDCPE port map (State_debug(1),UARTReceiver/state_FSM_FFd1,DivClock,'0','0','1');
+</td></tr><tr><td>
+FDCPE_UARTReceiver/bitCounter0: FDCPE port map (UARTReceiver/bitCounter(0),UARTReceiver/bitCounter_D(0),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(0) <= NOT (((UARTReceiver/bitCounter(0) AND N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(0) AND NOT N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
+</td></tr><tr><td>
+FDCPE_UARTReceiver/bitCounter1: FDCPE port map (UARTReceiver/bitCounter(1),UARTReceiver/bitCounter_D(1),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(1) <= NOT (((NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(1) AND NOT N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
+</td></tr><tr><td>
+FDCPE_UARTReceiver/bitCounter2: FDCPE port map (UARTReceiver/bitCounter(2),UARTReceiver/bitCounter_D(2),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(2) <= NOT (((NOT UARTReceiver/bitCounter(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitsReceived(1) AND Data AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(1) AND NOT UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(0) AND NOT UARTReceiver/bitCounter(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(2))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(1) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_185 AND NOT UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived2: LDCP port map (UARTReceiver/bitsReceived(2),UARTReceiver/bitsReceived_D(2),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(2) <= NOT (NOT UARTReceiver/bitsReceived(2)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(2))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(2) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitCounter3: FDCPE port map (UARTReceiver/bitCounter(3),UARTReceiver/bitCounter_D(3),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitCounter_D(3) <= NOT (((NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_185 AND NOT UARTReceiver/bitCounter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND NOT N_PZ_211 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived3: LDCP port map (UARTReceiver/bitsReceived(3),UARTReceiver/bitsReceived_D(3),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(3) <= NOT (NOT UARTReceiver/bitsReceived(3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND NOT UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(3))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(3) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitsReceived0: FDCPE port map (UARTReceiver/bitsReceived(0),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(0) <= (NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND N_PZ_185 AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived4: LDCP port map (UARTReceiver/bitsReceived(4),UARTReceiver/bitsReceived_D(4),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(4) <= NOT (NOT UARTReceiver/bitsReceived(4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(4))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(4) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitsReceived1: FDCPE port map (UARTReceiver/bitsReceived(1),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(1) <= (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND N_PZ_185 AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived5: LDCP port map (UARTReceiver/bitsReceived(5),UARTReceiver/bitsReceived_D(5),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(5) <= NOT (NOT UARTReceiver/bitsReceived(5)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(5))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(5) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitsReceived2: FDCPE port map (UARTReceiver/bitsReceived(2),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(2) <= (NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived6: LDCP port map (UARTReceiver/bitsReceived(6),UARTReceiver/bitsReceived_D(6),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(6) <= NOT (NOT UARTReceiver/bitsReceived(6)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND NOT UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(6))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(6) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitsReceived3: FDCPE port map (UARTReceiver/bitsReceived(3),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(3) <= (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND NOT UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-LDCP_UARTReceiver/bitsReceived7: LDCP port map (UARTReceiver/bitsReceived(7),UARTReceiver/bitsReceived_D(7),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_D(7) <= NOT (NOT UARTReceiver/bitsReceived(7)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitsReceived(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/bitCounter(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND UARTReceiver/bitCounter(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitsReceived(7))));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_G(7) <= (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND UARTReceiver/count_add0000(4));
+FDCPE_UARTReceiver/bitsReceived4: FDCPE port map (UARTReceiver/bitsReceived(4),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(4) <= (NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
+FDCPE_UARTReceiver/bitsReceived5: FDCPE port map (UARTReceiver/bitsReceived(5),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(5) <= (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-UARTReceiver/count(0) <= NOT (((UARTReceiver/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0))));
+FDCPE_UARTReceiver/bitsReceived6: FDCPE port map (UARTReceiver/bitsReceived(6),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(6) <= (NOT UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
+FDCPE_UARTReceiver/bitsReceived7: FDCPE port map (UARTReceiver/bitsReceived(7),Data,DivClock,'0','0',UARTReceiver/bitsReceived_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/bitsReceived_CE(7) <= (UARTReceiver/bitCounter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/bitCounter(1) AND N_PZ_185 AND UARTReceiver/bitCounter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/bitCounter(3));
 </td></tr><tr><td>
-UARTReceiver/count_add0000(1) <= NOT (UARTReceiver/count(0)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT UARTReceiver/count_add0000(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0))));
+FTCPE_UARTReceiver/count0: FTCPE port map (UARTReceiver/count(0),UARTReceiver/count_T(0),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/count_T(0) <= NOT (((N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count(0) AND N_PZ_211)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
 </td></tr><tr><td>
+FDCPE_UARTReceiver/count1: FDCPE port map (UARTReceiver/count(1),UARTReceiver/count_D(1),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/count_D(1) <= ((UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_211)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count(0) AND UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_211));
 </td></tr><tr><td>
-UARTReceiver/count_add0000(2) <= NOT (((NOT UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2))));
+FTCPE_UARTReceiver/count2: FTCPE port map (UARTReceiver/count(2),UARTReceiver/count_T(2),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/count_T(2) <= ((N_PZ_211 AND UARTReceiver/count(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(0) AND UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_211)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4)));
 </td></tr><tr><td>
+FTCPE_UARTReceiver/count3: FTCPE port map (UARTReceiver/count(3),UARTReceiver/count_T(3),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/count_T(3) <= ((N_PZ_211 AND UARTReceiver/count(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(3) AND N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(0) AND UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_211 AND UARTReceiver/count(2) AND NOT N_PZ_185));
 </td></tr><tr><td>
-UARTReceiver/count_add0000(3) <= NOT (((NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_or00007)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(2))));
+FTCPE_UARTReceiver/count4: FTCPE port map (UARTReceiver/count(4),UARTReceiver/count_T(4),DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/count_T(4) <= ((N_PZ_211 AND UARTReceiver/count(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count(0) AND UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_211 AND UARTReceiver/count(2) AND UARTReceiver/count(3)));
 </td></tr><tr><td>
+FTCPE_UARTReceiver/state_FSM_FFd1: FTCPE port map (UARTReceiver/state_FSM_FFd1,UARTReceiver/state_FSM_FFd1_T,DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_FSM_FFd1_T <= ((UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(2) AND NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4)));
 </td></tr><tr><td>
-UARTReceiver/count_add0000(4) <= NOT (NOT UARTReceiver/count_add0000(4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((UARTReceiver/count_add0000(4) AND N_PZ_113)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0) AND UARTReceiver/count_add0000(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Data AND UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(2) AND NOT N_PZ_113)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2) AND NOT N_PZ_113)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(1) AND UARTReceiver/count_add0000(2) AND NOT N_PZ_113)));
+FDCPE_UARTReceiver/state_FSM_FFd2: FDCPE port map (UARTReceiver/state_FSM_FFd2,UARTReceiver/state_FSM_FFd2_D,DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_FSM_FFd2_D <= NOT (((UARTReceiver/state_FSM_FFd1 AND N_PZ_211)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/state_FSM_FFd2 AND NOT N_PZ_211)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Data AND NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND UARTReceiver/count(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(3) AND NOT UARTReceiver/count(4))));
 </td></tr><tr><td>
-LDCP_UARTReceiver/state0: LDCP port map (UARTReceiver/state(0),UARTReceiver/state_D(0),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_D(0) <= (NOT UARTReceiver/state(1) AND NOT UARTReceiver/state(0));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_G(0) <= (UARTReceiver/state_or00007 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_or00001 AND UARTReceiver/state_or00008);
-</td></tr><tr><td>
-LDCP_UARTReceiver/state1: LDCP port map (UARTReceiver/state(1),UARTReceiver/state_D(1),,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_D(1) <= (NOT Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/state(0));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UARTReceiver/state_G(1) <= (UARTReceiver/state_or00007 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_or00001 AND UARTReceiver/state_or00008);
-</td></tr><tr><td>
-</td></tr><tr><td>
-UARTReceiver/state_or00001 <= (Data AND NOT UARTReceiver/state(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state(0));
-</td></tr><tr><td>
-</td></tr><tr><td>
-UARTReceiver/state_or00007 <= ((UARTReceiver/state(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT UARTReceiver/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/count_add0000(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count(0) AND NOT UARTReceiver/count_add0000(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(2) AND NOT UARTReceiver/count_add0000(4)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-UARTReceiver/state_or00008 <= ((NOT UARTReceiver/state(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(3) AND UARTReceiver/count(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count_add0000(1) AND NOT UARTReceiver/count_add0000(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	UARTReceiver/count_add0000(4)));
+FTCPE_updateDisplay: FTCPE port map (updateDisplay,updateDisplay_T,DivClock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateDisplay_T <= ((NOT UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND updateDisplay)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (UARTReceiver/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/state_FSM_FFd2 AND NOT UARTReceiver/count(0) AND NOT UARTReceiver/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UARTReceiver/count(2) AND UARTReceiver/count(3) AND NOT UARTReceiver/count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT updateDisplay));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:

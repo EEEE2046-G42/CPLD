@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="UARTReceiverVHDL">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-2-10T11:21:48</timestamp>
+    <timestamp>2022-4-7T10:23:8</timestamp>
     <pin polarity="Input" x="0" y="-96" name="clock" />
     <pin polarity="Input" x="0" y="-32" name="data_in" />
     <pin polarity="Output" x="432" y="-96" name="dataReceivedFlag" />
     <pin polarity="Output" x="432" y="-32" name="data_out(7:0)" />
+    <pin polarity="Output" x="432" y="32" name="upper_out(3:0)" />
+    <pin polarity="Output" x="432" y="96" name="lower_out(3:0)" />
     <graph>
-        <rect width="304" x="64" y="-128" height="152" />
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-136" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin clock" />
-        <line x2="0" y1="-96" y2="-96" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin data_in" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-96" type="pin dataReceivedFlag" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-32" type="pin data_out(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="32" type="pin upper_out(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="96" type="pin lower_out(3:0)" />
+        <rect width="64" x="368" y="20" height="24" />
+        <line x2="432" y1="32" y2="32" x1="368" />
+        <rect width="64" x="368" y="84" height="24" />
+        <line x2="432" y1="96" y2="96" x1="368" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
         <line x2="0" y1="-32" y2="-32" x1="64" />
         <rect width="64" x="368" y="-44" height="24" />
         <line x2="432" y1="-96" y2="-96" x1="368" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-96" type="pin dataReceivedFlag" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-32" type="pin data_out(7:0)" />
         <line x2="432" y1="-32" y2="-32" x1="368" />
+        <rect width="304" x="64" y="-128" height="280" />
     </graph>
 </symbol>

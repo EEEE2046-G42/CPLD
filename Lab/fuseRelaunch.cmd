@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_isim_beh.exe" -prj "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_beh.prj" "work.TopLevelTest" 
+-intstyle "ise" -incremental -o "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.exe" -prj "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_beh.prj" "work.ControlLogicTest" 

@@ -1,7 +1,0 @@
-vhdl work "ClockDiv2.vhf"
-vhdl work "SevenSegDriver.vhd"
-vhdl work "ControlLogicVHDL.vhd"
-vhdl work "ClockDiv.vhf"
-vhdl work "TopLevel.vhd"
-vhdl work "TopLevelTest.vhd"
-vhdl work "UARTReceiver.vhf"

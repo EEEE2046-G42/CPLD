@@ -43,7 +43,12 @@ ARCHITECTURE behavior OF TopLevelTest IS
     PORT(
          Clock : IN  std_logic;
          Data : IN  std_logic;
-         Display : OUT  std_logic_vector(15 downto 0)
+         Display : OUT  std_logic_vector(15 downto 0);
+			
+			
+			State_debug : out STD_LOGIC_VECTOR (1 downto 0);
+			Received : inout STD_LOGIC_VECTOR (7 downto 0)
+
         );
     END COMPONENT;
     
@@ -54,6 +59,10 @@ ARCHITECTURE behavior OF TopLevelTest IS
 
  	--Outputs
    signal Display : std_logic_vector(15 downto 0);
+	
+	--Debug only
+	signal state_debug : std_logic_vector (1 downto 0);
+	signal received : STD_LOGIC_VECTOR (7 downto 0);
 
    -- Clock period definitions
    constant Clock_period : time := 542 ns; --542.53 ns; --2 ns;
@@ -68,7 +77,9 @@ BEGIN
    uut: TopLevel PORT MAP (
           Clock => Clock,
           Data => Data,
-          Display => Display
+          Display => Display,
+			 State_debug => state_debug,
+			 received => received
         );
 
    -- Clock process definitions

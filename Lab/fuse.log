@@ -1,34 +1,20 @@
-Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_isim_beh.exe -prj C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_beh.prj work.TopLevelTest 
+Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.exe -prj C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_beh.prj work.ControlLogicTest 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv2.vhf" into library work
-Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/SevenSegDriver.vhd" into library work
 Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicVHDL.vhd" into library work
-Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ClockDiv.vhf" into library work
-Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevel.vhd" into library work
-Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest.vhd" into library work
+Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest.vhd" into library work
 Parsing VHDL file "C:/Users/David/Documents/GitHub/CPLD/Lab/UARTReceiver.vhf" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling package vcomponents
-Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture fdcp_v of entity FDCP [\FDCP('0')\]
-Compiling architecture behavioral of entity FD_MXILINX_ClockDiv [\FD_MXILINX_ClockDiv('0')\]
-Compiling architecture inv_v of entity INV [inv_default]
-Compiling architecture behavioral of entity ClockDiv2_MUSER_ClockDiv [clockdiv2_muser_clockdiv_default]
-Compiling architecture behavioral of entity ClockDiv [clockdiv_default]
 Compiling architecture behavioral of entity UARTReceiverVHDL [uartreceivervhdl_default]
-Compiling architecture behavioral of entity SevenSegDriverVHDL [sevensegdrivervhdl_default]
-Compiling architecture behavioral of entity TopLevel [toplevel_default]
-Compiling architecture behavior of entity topleveltest
+Compiling architecture behavior of entity controllogictest
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 23 VHDL Units
-Built simulation executable C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_isim_beh.exe
-Fuse Memory Usage: 49904 KB
-Fuse CPU Usage: 1234 ms
+Compiled 5 VHDL Units
+Built simulation executable C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.exe
+Fuse Memory Usage: 46404 KB
+Fuse CPU Usage: 483 ms

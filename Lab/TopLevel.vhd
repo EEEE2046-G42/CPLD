@@ -35,8 +35,14 @@ entity TopLevel is
 	Port ( 
 		Clock : in  STD_LOGIC;
 		Data : in  STD_LOGIC;
+		
 		Display : out STD_LOGIC_VECTOR (15 downto 0);
-		Received : inout STD_LOGIC_VECTOR (7 downto 0) 
+		
+		Debug : out STD_LOGIC;
+		State_debug : out STD_LOGIC_VECTOR (1 downto 0);
+		
+		Received : inout STD_LOGIC_VECTOR (7 downto 0); -- port to allow it to be spat out to pins
+		DivClock : inout STD_LOGIC
 	);	
 end TopLevel;
 
@@ -48,7 +54,8 @@ architecture Behavioral of TopLevel is
 		clock : IN  std_logic;
 		data_in : IN  std_logic;
 		data_out : out STD_LOGIC_VECTOR (7 downto 0);	-- Byte output
-		dataReceivedFlag : out STD_LOGIC
+		dataReceivedFlag : out STD_LOGIC;
+		state_debug : out STD_LOGIC_VECTOR (1 downto 0)
 	  );
 	END COMPONENT;
 	
@@ -69,13 +76,10 @@ architecture Behavioral of TopLevel is
 		 );
 	END COMPONENT;
 	
-	signal divClock : STD_LOGIC;	-- Divided clock
+	--signal divClock : STD_LOGIC;	-- Divided clock
 	
 	signal updateDisplay : std_logic := '0';
 	--signal received : STD_LOGIC_VECTOR (7 downto 0);
-	
-	signal LowerBCD : std_logic_vector (3 downto 0);
-	signal UpperBCD : std_logic_vector (3 downto 0);
 	
 begin
 
@@ -89,7 +93,8 @@ UARTReceiver: UARTReceiverVHDL PORT MAP (
 	--clock => clock,
 	data_in => data,
 	data_out => received,
-	dataReceivedFlag => updateDisplay
+	dataReceivedFlag => updateDisplay,
+	state_debug => state_debug
 );
 
 UpperSevenSeg: SevenSegDriverVHDL PORT MAP (
@@ -103,6 +108,13 @@ LowerSevenSeg: SevenSegDriverVHDL PORT MAP (
 	sevenSeg => Display(7 downto 0),
 	update => updateDisplay
 );
+
+process (data) -- I don't knowwwwww, force it to read the data
+begin
+
+	Debug <= data;
+
+end process;
 
 end Behavioral;
 

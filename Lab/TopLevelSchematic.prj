@@ -1,0 +1,6 @@
+vhdl work "ClockDiv2.vhf"
+vhdl work "SevenSegDriver.vhd"
+vhdl work "ControlLogicVHDL.vhd"
+vhdl work "ClockDiv.vhf"
+vhdl work "TopLevelSchematic.vhf"
+vhdl work "UARTReceiver.vhf"

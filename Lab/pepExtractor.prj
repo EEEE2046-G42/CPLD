@@ -1,1 +1,2 @@
-work	"SevenSegDriver.vhd"
+work	"ControlLogicVHDL.vhd"
+work	"UARTReceiver.vhf"

@@ -1,29 +1,29 @@
 Command line:
    ControlLogicTest_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  64033
+     -simrunnum  1
+     -socket  52551
 
-Tue Apr 05 14:46:29 2022
+Thu Apr 07 16:21:25 2022
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 5145.05 Meg
+ Current Memory Usage: 5145.06 Meg
 
- Total Signals          : 8
- Total Nets             : 11
- Total Signal Drivers   : 4
+ Total Signals          : 15
+ Total Nets             : 32
+ Total Signal Drivers   : 11
  Total Blocks           : 3
  Total Primitive Blocks : 2
  Total Processes        : 3
  Total Traceable Variables  : 12
- Total Scalar Nets and Variables : 410
-Total Line Count : 29
+ Total Scalar Nets and Variables : 431
+Total Line Count : 36
 
- Total Simulation Time: 0.1875 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 4673.19 Meg
+ Current Memory Usage: 4673.2 Meg
 
-Tue Apr 05 14:55:35 2022
+Tue Apr 12 11:56:54 2022
 

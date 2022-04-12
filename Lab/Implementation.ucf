@@ -12,6 +12,14 @@ NET "Display(5)" LOC = "P42";	# e
 NET "Display(6)" LOC = "P36";	# f
 NET "Display(7)" LOC = "P34";	# g
 
+#NET "Lower(0)" LOC = "P39"; # DP
+#NET "Lower(1)" LOC = "P38"; # a
+#NET "Lower(2)" LOC = "P37";	# b
+#NET "Lower(3)" LOC = "P40";	# c
+#NET "Lower(4)" LOC = "P41";	# d
+#NET "Lower(5)" LOC = "P42";	# e
+#NET "Lower(6)" LOC = "P36";	# f
+#NET "Lower(7)" LOC = "P34";	# g
 
 # Upper display
 NET "Display(8)" LOC = "P44";		# DP
@@ -23,7 +31,21 @@ NET "Display(13)" LOC = "P3";		# e
 NET "Display(14)" LOC = "P31";	# f
 NET "Display(15)" LOC = "P30";	# g
 
+#NET "Upper(0)" LOC = "P44";		# DP
+#NET "Upper(1)" LOC = "P32";		# a
+#NET "Upper(2)" LOC = "P33";	# b
+#NET "Upper(3)" LOC = "P1";		# c
+#NET "Upper(4)" LOC = "P2";		# d
+#NET "Upper(5)" LOC = "P3";		# e
+#NET "Upper(6)" LOC = "P31";	# f
+#NET "Upper(7)" LOC = "P30";	# g
+
 # Debug purposes
+NET "DivClock" LOC = "P18";
+NET "Debug" LOC = "P19";
+
+NET "State_debug(0)" LOC = "P20";
+NET "State_debug(1)" LOC = "P21";
 #NET "Received(0)" LOC = "P44";		# DP
 #NET "Received(1)" LOC = "P32";		# a
 #NET "Received(2)" LOC = "P33";		# b

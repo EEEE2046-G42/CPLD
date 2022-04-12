@@ -1,0 +1,12 @@
+Command line:
+   TopLevelTest_isim_fit.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/fit/TopLevel_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  52206
+
+Thu Apr 07 15:41:11 2022
+
+
+ Elaboration Time: 0.234375 sec

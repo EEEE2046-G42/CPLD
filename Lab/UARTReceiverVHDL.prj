@@ -1,1 +1,2 @@
 vhdl work "ControlLogicVHDL.vhd"
+vhdl work "UARTReceiver.vhf"

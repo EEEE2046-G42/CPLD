@@ -11,38 +11,5 @@
 <msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">Clock</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P43</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
 </msg>
 
-<msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">Clock</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/count&lt;0&gt;</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/bitsReceived_7_cmp_eq0000</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/count_add0000&lt;4&gt;</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/count&lt;3&gt;</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/count&lt;2&gt;</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">UARTReceiver/count&lt;1&gt;</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
-</msg>
-
 </messages>
 

@@ -1,5 +1,6 @@
 ISim log file
-Running: C:\Users\David\Documents\GitHub\CPLD\Lab\TopLevelTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/David/Documents/GitHub/CPLD/Lab/TopLevelTest_isim_beh.wdb 
+Running: C:\Users\David\Documents\GitHub\CPLD\Lab\ControlLogicTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/David/Documents/GitHub/CPLD/Lab/ControlLogicTest_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim O.87xd (signature 0xc3576ebc)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
